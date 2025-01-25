@@ -1,16 +1,6 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Roboto } from "next/font/google";
 import "./globals.css";
-
-const roboto = Roboto({
-	weight: ["400", "500", "700"],
-	subsets: ["latin"],
-});
-
-const playfairDisplay = Playfair_Display({
-	weight: ["400", "700", "900"],
-	subsets: ["latin"],
-});
+import Toolbar from "@/components/shared/Toolbar";
 
 export const metadata: Metadata = {
 	title:
@@ -29,9 +19,8 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body
-				className={`${roboto.className} ${playfairDisplay.className} antialiased`}
-			>
+			<body className="antialiased">
+				<Toolbar />
 				{children}
 			</body>
 		</html>

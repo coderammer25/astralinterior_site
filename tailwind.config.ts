@@ -15,10 +15,13 @@ export default {
 			fontWeight: {
 				bolder: "900",
 			},
-      colors: {
-        primary: '',
-        secondary: '',
-      }
+			colors: {
+				primary: "#116e67",
+				secondary: "#1b8079",
+				primaryHover: "#0c5751",
+				darkBase: "#191919",
+				darkSecondary: "#333333",
+			},
 		},
 	},
 	plugins: [],
