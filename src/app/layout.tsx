@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Toolbar from "@/components/shared/Toolbar";
+import { Nav } from "@/components/common/Nav";
 
 export const metadata: Metadata = {
-	title:
-		"Astral Interior and Furniture | Premium Interior Solutions in Bangladesh",
+	title: {
+		default:
+			"Astral Interior and Furniture | Premium Interior Solutions in Bangladesh",
+		template: "%s | Astral Interior and Furniture",
+	},
 	description:
 		"Astral Interior and Furniture provides expert interior fixing and furniture solutions across Bangladesh. We specialize in all types of interior work, from repairs to complete design makeovers.",
 	keywords:
@@ -20,7 +23,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className="antialiased">
-				<Toolbar />
+				<Nav />
 				{children}
 			</body>
 		</html>

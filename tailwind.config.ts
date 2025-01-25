@@ -9,8 +9,8 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				roboto: ["Roboto", "sans-serif"],
-				playfair: ["Playfair Display", "serif"],
+				saira: ["Saira", "serif"],
+				orbitron: ["Orbitron", "serif"],
 			},
 			fontWeight: {
 				bolder: "900",

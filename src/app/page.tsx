@@ -1,7 +1,3 @@
-
-
-export default function Home() {
-  return (
-    <h1 className="text-center text-2xl font-bold">Hello</h1>
-  );
+export default function HomePage() {
+	return <div>Home Page</div>;
 }

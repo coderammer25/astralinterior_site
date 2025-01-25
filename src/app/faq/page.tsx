@@ -1,10 +1,8 @@
-
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "FAQ",
+	title: "Frequently Asked Questions",
 };
-
 
 const FaqPage = () => {
 	return <div>Faq Page</div>;
