@@ -14,5 +14,5 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-	return <h1 className="text-center text-2xl font-bold text-primary hover:text-hover">Hello</h1>;
+	return <h1 className="bg-red-500">Hello</h1>;
 }
