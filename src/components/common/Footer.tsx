@@ -13,9 +13,9 @@ export default function Footer() {
       <div className=" px-20 py-12 flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 text-center md:justify-between">
 
       <div className="mb-[150px]">
-        <h2 className="text-4xl font-bold mb-4">ASRTRAL</h2>
+        <h2 className="text-4xl font-semibold mb-4">ASTRAL</h2>
         <div className="bg-white/20 backdrop-blur-sm inline-block px-2">
-          <p className="text-white">Where design meets lifestyle in perfect harmony</p>
+          <p className="text-white">Where design meets lifestyles</p>
         </div>
       </div>
 
