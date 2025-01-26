@@ -74,6 +74,7 @@ export const Nav = () => {
             onClose={onClose}
             open={open}
             mask={false}
+            className=""
           >
             <motion.div
               className="p-10 -ml-10"
@@ -93,7 +94,7 @@ export const Nav = () => {
                         href="/"
                         aria-label="Our product"
                         title="Our product"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700 p-4 border-b-2 border-black"
+                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700 p-4 "
                       >
                         Projects
                       </Link>
@@ -103,7 +104,7 @@ export const Nav = () => {
                         href="/"
                         aria-label="Our product"
                         title="Our product"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700 p-4 border-b-2 border-black"
+                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700 p-4"
                       >
                         About
                       </Link>
@@ -113,7 +114,7 @@ export const Nav = () => {
                         href="/"
                         aria-label="Product pricing"
                         title="Product pricing"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700 p-4 border-b-2 border-black"
+                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700 p-4 "
                       >
                         Blog
                       </Link>
@@ -124,7 +125,7 @@ export const Nav = () => {
                         href="/"
                         aria-label="About us"
                         title="About us"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700 p-4 border-b-2 border-black"
+                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700 p-4"
                       >
                         Licences
                       </Link>
@@ -135,7 +136,7 @@ export const Nav = () => {
                         href="/"
                         aria-label="About us"
                         title="About us"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700 p-4 border-b-2 border-black"
+                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700 p-4"
                       >
                         Contact
                       </Link>
@@ -147,11 +148,11 @@ export const Nav = () => {
               <div className="space-y-3">
                 <h1 className="text-3xl font-bold font-playfair mt-10 mb-4">
                   Schedule Your Design Consultation Today!</h1>
-				<p className="inline-flex ">
+				<p className="inline-flex font-geist text-base ">
         <FaPhoneAlt className="mt-1 mr-2" /> Call: (123) 123-4567 
 				</p>
 
-				<p className="inline-flex">
+				<p className="inline-flex font-geist text-base">
 				<MdEmail className="mt-1 mr-2" /> Email: example@gmail.com
 				</p>
               </div>
