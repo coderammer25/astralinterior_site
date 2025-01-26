@@ -9,8 +9,8 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				saira: ["Saira", "serif"],
-				orbitron: ["Orbitron", "serif"],
+				geist: ["Geist"],
+				playfair: ["Playfair Display"]
 			},
 			fontWeight: {
 				bolder: "900",
