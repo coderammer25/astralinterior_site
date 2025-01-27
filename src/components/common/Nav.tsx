@@ -8,8 +8,6 @@ import { Drawer } from "antd";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
-import logoImg from "../../assets/asset 0.png";
-
 export const Nav = () => {
   //   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
