@@ -148,7 +148,36 @@ export default function About() {
         </div>
       </section>
 
-     
+      <div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden border bg-white -mt-[50px] ">
+      {/* Background text */}
+      <div className="absolute w-full flex justify-center items-center space-x-5 ">
+        <span className="text-9xl leading-none">OUR</span>
+        <span className="text-9xl leading-none">PROCESS</span>
+      </div>
+
+      {/* Card stack effect */}
+      <div className="relative max-w-2xl h-[280px] w-[450px] ">
+
+        <div className="absolute top-2 left-2 w-full h-full border border-gray-200 transform rotate-2" />
+        <div className="absolute top-1 left-1 w-full h-full border border-gray-200 transform rotate-1" />
+
+        {/* Main card */}
+        <div className="relative bg-white border md:p-12 space-y-3">
+        <h1 className="font-playfair text-4xl font-light">01</h1>
+          <h2 className="text-xl font-semibold">DISCOVERY & CONSULTATION</h2>
+          <p>
+            In our first meeting, we get to know your vision, lifestyle, and
+            design preferences. This consultation allows us to understand your
+            goals, budget, and project timeline, setting the foundation for a
+            design that truly reflects you.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    
+
     </div>
   );
 }
