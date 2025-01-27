@@ -9,8 +9,6 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 export const Nav = () => {
-  //   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const [open, setOpen] = useState(false);
 
   const showDrawer = () => {
@@ -22,7 +20,7 @@ export const Nav = () => {
   };
 
   return (
-    <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+    <div className="px-4 py-6 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-4 lg:px-0">
       <div className="relative flex items-center justify-between">
         <Link
           href="/"
