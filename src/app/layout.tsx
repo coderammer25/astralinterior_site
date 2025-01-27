@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className="antialiased font-geist text-[#2c2b28]">
+			<body className="antialiased font-geist text-[#2c2b28] bg-[#fefcf6]">
 				<Nav />
 				{children}
 				<Footer />

@@ -3,9 +3,9 @@ import Image from "next/image";
 import serviceImg from '../../../public/mini-interior-about.webp'
 import { services } from "@/data";
 import IndividualService from "./individualService";
-import React from "react";
 import { FaArrowRight } from "react-icons/fa";
-import Link from "antd/es/typography/Link";
+import Link from "next/link";
+
 
 const ServicesComponent = () => {
   return (
@@ -13,9 +13,9 @@ const ServicesComponent = () => {
 			<div className="flex items-start gap-4 md:gap-0 justify-between min-h-screen">
 				<div className="w-1/2">
 					{services.map((service, idx) => (
-						<React.Fragment key={service.title}>
+						<div key={service.title}>
 							<IndividualService service={service} number={idx} />
-						</React.Fragment>
+						</div>
 					))}
 					<Link
 						href="/services"

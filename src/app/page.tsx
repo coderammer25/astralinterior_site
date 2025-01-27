@@ -1,6 +1,8 @@
 import { AboutUsComponent } from "@/components/home-page/aboutUs";
 import Banner from "@/components/home-page/banner";
+import Projects from "@/components/home-page/projects";
 import ServicesComponent from "@/components/home-page/services";
+import Testimonials from "@/components/home-page/testimonials";
 
 export default function HomePage() {
 	return (
@@ -11,6 +13,8 @@ export default function HomePage() {
 			</h2>
 			<AboutUsComponent />
 			<ServicesComponent />
+			<Projects/>
+			<Testimonials/>
 		</>
 	);
 }
