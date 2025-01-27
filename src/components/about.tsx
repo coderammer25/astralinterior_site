@@ -148,7 +148,7 @@ export default function About() {
         </div>
       </section>
 
-      <div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden border bg-white -mt-[50px] ">
+      <div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-white -mt-[50px] ">
       {/* Background text */}
       <div className="absolute w-full flex justify-center items-center space-x-5 ">
         <span className="text-9xl leading-none">OUR</span>
@@ -362,6 +362,8 @@ export default function About() {
         </div>
       </div>
     </div>
+
+
     </div>
   );
 }
