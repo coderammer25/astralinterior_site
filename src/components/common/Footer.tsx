@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <footer className="bg-gradient-to-tr from-gray-950 via-gray-950 to-black text-white py-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen md:px-24 lg:px-20">
       {/* Logo and Tagline */}
-      <div className=" px-20 py-12 flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 text-center md:justify-between">
+      <div className=" lg:px-20 py-12 flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 text-center md:justify-between">
 
       <div className="mb-[150px]">
         <h2 className="text-4xl font-semibold mb-4">ASTRAL</h2>
@@ -20,7 +20,7 @@ export default function Footer() {
       </div>
 
       {/* Main Navigation Grid */}
-      <div className="flex justify-end space-x-[300px] gap-8 mb-24">
+      <div className="flex justify-end space-x-24 lg:space-x-[300px] gap-8 mb-24">
 
         {/* Column 5 */}
         <div className="space-y-4">
@@ -56,7 +56,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="flex justify-between items-center text-sm border-t border-gray-700 pt-10 mt-16">
+      <div className="lg:flex md:space-x-3 justify-between items-center text-sm border-t border-gray-700 pt-10 lg:mt-16">
         <div className="flex items-center gap-2">
           <span className="text-gray-400">CREATED BY</span>
           <Link href="#" className="hover:underline">
@@ -82,7 +82,7 @@ export default function Footer() {
 
       {/* Back to Top Button */}
       <button
-        className="absolute ml-[130px]  left-8 top-1/2 -translate-y-1/2 w-20 h-20 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors"
+        className="absolute lg:ml-[130px]  left-8 top-1/2 -translate-y-1/2 w-20 h-20 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors"
       >
         <BsArrowUp className="w-5 h-5" />
       </button>
