@@ -1,212 +1,167 @@
 "use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import logo from "../../../public/astral-logo.png";
+import { motion } from "framer-motion";
+import { Drawer } from "antd";
+import { FaPhoneAlt } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 import logoImg from "../../assets/asset 0.png";
 
 export const Nav = () => {
-	const [isMenuOpen, setIsMenuOpen] = useState(false);
+  //   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-	return (
-		<div className="bg-">
-			<div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-				<div className="relative flex items-center justify-between">
-					<Link
-						href="/"
-						aria-label="Company"
-						title="Company"
-						className="inline-flex items-center"
-					>
-						<Image
-							src={logoImg}
-							alt="Astral Interior"
-							width={120}
-							height={120}
-						/>
-					</Link>
-					<ul className="flex items-center space-x-8 lg:flex">
-						<li>
-							<Link
-								href="/services"
-								aria-label="Our product"
-								title="Our product"
-								className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-							>
-								Product
-							</Link>
-						</li>
-						<li>
-							<Link
-								href="/"
-								aria-label="Our product"
-								title="Our product"
-								className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-							>
-								Features
-							</Link>
-						</li>
-						<li>
-							<Link
-								href="/"
-								aria-label="Product pricing"
-								title="Product pricing"
-								className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-							>
-								Pricing
-							</Link>
-						</li>
-						<li>
-							<Link
-								href="/"
-								aria-label="About us"
-								title="About us"
-								className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-							>
-								About us
-							</Link>
-						</li>
-						<li>
-							<Link
-								href="/contact-us"
-								className="inline-flex items-center justify-center p-4 font-medium tracking-wide text-black transition duration-200 rounded shadow-md"
-								aria-label="Contact us"
-								title="Contact us"
-							>
-								Contact Us
-							</Link>
-						</li>{" "}
-					</ul>
-					<div className="lg:hidden">
-						<button
-							aria-label="Open Menu"
-							title="Open Menu"
-							className="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-deep-purple-50 focus:bg-deep-purple-50"
-							onClick={() => setIsMenuOpen(true)}
-						>
-							<svg className="w-5 text-gray-600" viewBox="0 0 24 24">
-								<path
-									fill="currentColor"
-									d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z"
-								/>
-								<path
-									fill="currentColor"
-									d="M23,6H1C0.4,6,0,5.6,0,5s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,6,23,6z"
-								/>
-								<path
-									fill="currentColor"
-									d="M23,20H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,20,23,20z"
-								/>
-							</svg>
-						</button>
-						{isMenuOpen && (
-							<div className="absolute top-0 left-0 w-full">
-								<div className="p-5 bg-white border rounded shadow-sm">
-									<div className="flex items-center justify-between mb-4">
-										<div>
-											<Link
-												href="/"
-												aria-label="Company"
-												title="Company"
-												className="inline-flex items-center"
-											>
-												<svg
-													className="w-8 text-deep-purple-accent-400"
-													viewBox="0 0 24 24"
-													strokeLinejoin="round"
-													strokeWidth="2"
-													strokeLinecap="round"
-													strokeMiterlimit="10"
-													stroke="currentColor"
-													fill="none"
-												>
-													<rect x="3" y="1" width="7" height="12" />
-													<rect x="3" y="17" width="7" height="6" />
-													<rect x="14" y="1" width="7" height="6" />
-													<rect x="14" y="11" width="7" height="12" />
-												</svg>
-												<span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-													Company
-												</span>
-											</Link>
-										</div>
-										<div>
-											<button
-												aria-label="Close Menu"
-												title="Close Menu"
-												className="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-												onClick={() => setIsMenuOpen(false)}
-											>
-												<svg className="w-5 text-gray-600" viewBox="0 0 24 24">
-													<path
-														fill="currentColor"
-														d="M19.7,4.3c-0.4-0.4-1-0.4-1.4,0L12,10.6L5.7,4.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l6.3,6.3l-6.3,6.3 c-0.4,0.4-0.4,1,0,1.4C4.5,19.9,4.7,20,5,20s0.5-0.1,0.7-0.3l6.3-6.3l6.3,6.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3 c0.4-0.4,0.4-1,0-1.4L13.4,12l6.3-6.3C20.1,5.3,20.1,4.7,19.7,4.3z"
-													/>
-												</svg>
-											</button>
-										</div>
-									</div>
-									<nav>
-										<ul className="space-y-4">
-											<li>
-												<Link
-													href="/"
-													aria-label="Our product"
-													title="Our product"
-													className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-												>
-													Product
-												</Link>
-											</li>
-											<li>
-												<Link
-													href="/"
-													aria-label="Our product"
-													title="Our product"
-													className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-												>
-													Features
-												</Link>
-											</li>
-											<li>
-												<Link
-													href="/"
-													aria-label="Product pricing"
-													title="Product pricing"
-													className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-												>
-													Pricing
-												</Link>
-											</li>
-											<li>
-												<Link
-													href="/"
-													aria-label="About us"
-													title="About us"
-													className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-												>
-													About us
-												</Link>
-											</li>
-											<li>
-												<Link
-													href="/"
-													className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-black transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-													aria-label="Sign up"
-													title="Sign up"
-												>
-													Sign up
-												</Link>
-											</li>
-										</ul>
-									</nav>
-								</div>
-							</div>
-						)}
-					</div>
-				</div>
-			</div>
-		</div>
-	);
+  const [open, setOpen] = useState(false);
+
+  const showDrawer = () => {
+    setOpen(true);
+  };
+
+  const onClose = () => {
+    setOpen(false);
+  };
+
+  return (
+    <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+      <div className="relative flex items-center justify-between">
+        <Link
+          href="/"
+          aria-label="Astral"
+          title="Astral"
+          className="inline-flex items-center"
+        >
+          <Image className="w-[140px]" src={logo} alt="" />
+        </Link>
+
+        <div className="flex lg:space-x-[90px]">
+          <ul className="grid justify-end items-center space-x-8">
+            <li>
+              <Link
+                href="/"
+                className="inline-flex items-center justify-center h-12 px-1 font-medium tracking-wide transition duration-200 bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700  border-b-2 border-black"
+                aria-label="Sign up"
+                title="Sign up"
+              >
+                GET IN TOUCH
+              </Link>
+            </li>
+          </ul>
+
+          <button
+            aria-label="Open Menu"
+            title="Open Menu"
+            className="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-deep-purple-50 focus:bg-deep-purple-50"
+            onClick={() => showDrawer()}
+          >
+            <svg className="w-5 text-gray-600" viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z"
+              />
+              <path
+                fill="currentColor"
+                d="M23,6H1C0.4,6,0,5.6,0,5s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,6,23,6z"
+              />
+              <path
+                fill="currentColor"
+                d="M23,20H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,20,23,20z"
+              />
+            </svg>
+          </button>
+          <Drawer
+            placement="right"
+            closable={true}
+            onClose={onClose}
+            open={open}
+            mask={false}
+            className=""
+          >
+            <motion.div
+              className="p-10 -ml-10"
+              initial={{ x: "100%" }}
+              animate={{ x: "6%" }}
+              exit={{ x: "100%" }}
+              transition={{
+                duration: 0.5,
+                ease: [0.25, 0.8, 0.5, 1],
+              }}
+            >
+              <div className="border-b-2 border-gray-300 p-3 py-[80px]">
+                <nav>
+                  <ul className="space-y-7 font-geist text-xl">
+                    <li>
+                      <Link
+                        href="/"
+                        aria-label="Our product"
+                        title="Our product"
+                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700 p-4 "
+                      >
+                        Projects
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/"
+                        aria-label="Our product"
+                        title="Our product"
+                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700 p-4"
+                      >
+                        About
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/"
+                        aria-label="Product pricing"
+                        title="Product pricing"
+                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700 p-4 "
+                      >
+                        Blog
+                      </Link>
+                    </li>
+
+                    <li>
+                      <Link
+                        href="/"
+                        aria-label="About us"
+                        title="About us"
+                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700 p-4"
+                      >
+                        Licences
+                      </Link>
+                    </li>
+
+                    <li>
+                      <Link
+                        href="/"
+                        aria-label="About us"
+                        title="About us"
+                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700 p-4"
+                      >
+                        Contact
+                      </Link>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+     
+              <div className="space-y-3">
+                <h1 className="text-3xl font-bold font-playfair mt-10 mb-4">
+                  Schedule Your Design Consultation Today!</h1>
+				<p className="inline-flex font-geist text-base ">
+        <FaPhoneAlt className="mt-1 mr-2" /> Call: (123) 123-4567 
+				</p>
+
+				<p className="inline-flex font-geist text-base">
+				<MdEmail className="mt-1 mr-2" /> Email: example@gmail.com
+				</p>
+              </div>
+            </motion.div>
+          </Drawer>
+        </div>
+      </div>
+    </div>
+  );
 };
