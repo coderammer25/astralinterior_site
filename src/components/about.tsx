@@ -176,7 +176,49 @@ export default function About() {
     </div>
 
 
-    
+    <section className="mx-auto lg:mr-14 px-4 py-16 md:py-24">
+        <div className="lg:flex md:grid grid-cols-2 md:grid-cols-2 gap-8 md:gap-16 items-center">
+
+        <div className="space-y-8 mt-5 lg:ml-[150px]">
+            <div className="space-y-6">
+              <h2 className="text-sm uppercase tracking-wider text-muted-foreground">
+                OUR MISSION
+              </h2>
+
+              <p className=" lg:text-[24px] leading-relaxed ">
+              Our mission is to create spaces that <br /> inspire, uplift, and enrich the lives of <br /> those who experience them. We believe <br /> that great design goes beyond aesthetics <br />  it’s about creating functional, personalized <br />environments that reflect our clients&apos; unique lifestyles and aspirations.
+              </p>
+            </div>
+
+            <div className="gap-8 pt-8">
+            <Link
+            href="/contact"
+            className="inline-flex text-lg items-center gap-2 rounded-3xl border-b border-black text-black px-3 py-3 hover:bg-black hover:text-white transition-colors"
+          >
+            GET IN TOUCH
+            <FaArrowLeft className="w-4 h-4 " />
+          </Link>
+            </div>
+          </div>
+
+          <div className="relative lg:w-[800px]">
+            <Image
+              src={image5}
+              alt="Interior design professional"
+              width={1600}
+              height={800}
+              className="w-full object-cover"
+              priority
+            />
+            <Image
+              src={image1}
+              alt="mini"
+              className="absolute md:-mt-[310px] md:-ml-[60px] lg:-mt-[490px] w-0 lg:-ml-[100px] md:w-[130px] lg:w-[200px]"
+            />
+          </div>
+
+        </div>
+      </section>
 
     </div>
   );
