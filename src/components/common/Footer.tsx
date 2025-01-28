@@ -1,10 +1,11 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { BsArrowUp, BsInstagram } from "react-icons/bs"
 import { FaFacebook, FaLinkedinIn } from "react-icons/fa"
 import { FiYoutube } from "react-icons/fi"
-
+import logo from "../../../public/astral-logo.png"
 export default function Footer() {
 
   return (
@@ -13,8 +14,11 @@ export default function Footer() {
       <div className=" lg:px-20 py-12 flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 text-center md:justify-between">
 
       <div className="mb-[150px]">
-        <h2 className="text-4xl font-semibold mb-4">ASTRAL</h2>
-        <div className="bg-white/20 backdrop-blur-sm inline-block px-2">
+        <Image
+         src={logo}
+         alt="Astral Logo"
+         className="text-4xl font-semibold mb-4" />
+        <div className="backdrop-blur-sm inline-block px-2">
           <p className="text-white">Where design meets lifestyles</p>
         </div>
       </div>
