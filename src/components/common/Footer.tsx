@@ -83,13 +83,6 @@ export default function Footer() {
           </Link>
         </div>
       </div>
-
-      {/* Back to Top Button */}
-      <button
-        className="absolute lg:ml-[130px]  left-8 top-1/2 -translate-y-1/2 w-20 h-20 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors"
-      >
-        <BsArrowUp className="w-5 h-5" />
-      </button>
       
       </div>
 
