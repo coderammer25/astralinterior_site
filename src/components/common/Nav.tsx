@@ -20,7 +20,7 @@ export const Nav = () => {
   };
 
   return (
-    <div className="px-4 py-6 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-4 lg:px-0">
+    <div className="px-4 py-6 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-4 lg:px-0">
       <div className="relative flex items-center justify-between">
         <Link
           href="/"

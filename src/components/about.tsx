@@ -114,7 +114,7 @@ export default function About() {
             <Image
               src={image4}
               alt="mini"
-              className="absolute md:-mt-[310px] md:ml-[270px] lg:-mt-[490px] w-0 lg:ml-[430px] md:w-[130px] lg:w-[200px]"
+              className="absolute md:-mt-[310px] md:ml-[270px] lg:-mt-[490px] w-0 lg:ml-[550px] md:w-[130px] lg:w-[200px]"
             />
           </div>
 

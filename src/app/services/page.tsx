@@ -1,3 +1,4 @@
+import Services from "@/components/services";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -5,7 +6,11 @@ export const metadata: Metadata = {
 };
 
 const ServicesPage = () => {
-	return <div>Services Page</div>;
+	return (
+	<div>
+    <Services />
+	</div>
+	)
 };
 
 export default ServicesPage;

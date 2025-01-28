@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { BsArrowUp, BsInstagram } from "react-icons/bs"
+import { BsInstagram } from "react-icons/bs"
 import { FaFacebook, FaLinkedinIn } from "react-icons/fa"
 import { FiYoutube } from "react-icons/fi"
 import logo from "../../../public/astral-logo.png"
@@ -83,7 +83,7 @@ export default function Footer() {
           </Link>
         </div>
       </div>
-      
+
       </div>
 
     </footer>
