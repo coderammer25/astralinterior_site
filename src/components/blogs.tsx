@@ -73,6 +73,7 @@ const Blogs = () => {
           {recentPosts.map((post, index) => (
             <article key={index} className="max-w-lg lg:-ml-28">
             <Link href="#" className="grid grid-cols-[250px,1fr] gap-4 group">
+             
               <div className="relative overflow-hidden rounded-md">
                 <Image
                   src={post.image || "/placeholder.svg"}
