@@ -21,13 +21,14 @@ const BlogDetails = async ({ params }: { params: { blogId: string } }) => {
     <div className="container mx-auto px-4 py-16">
       {/* Blog Header */}
       <div className="space-y-4">
-        <h1 className="text-4xl font-bold">{blog.title}</h1>
         <div className="flex items-center space-x-2 text-muted-foreground">
+          <h2>category</h2>
           <Badge className="px-3 py-2 rounded-3xl bg-gray-200 text-black">
             {blog.category}
           </Badge>
           <p>Reading Time: {blog.readingTime} min</p>
         </div>
+        <h1 className="text-8xl py-4 ">{blog.title}</h1>
       </div>
 
       {/* Blog Image */}
@@ -44,22 +45,11 @@ const BlogDetails = async ({ params }: { params: { blogId: string } }) => {
 
       {/* Blog Content */}
       <div className="prose max-w-3xl mx-auto">
-        <p>
-          This is where you can render the blog&apos;s content. Replace this with the
-          actual content data fetched from your database or API.
+        <p className="text-xl">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident doloribus voluptas, necessitatibus assumenda impedit quis illo corrupti exercitationem quod veritatis amet eveniet praesentium rerum sed adipisci illum, dignissimos quae quidem nemo tempore facilis iste fugiat mollitia. Error, esse, voluptatum, inventore non quae similique fugiat molestiae nihil natus nesciunt officiis vitae quia eveniet facilis veniam nam. Atque sed, animi quisquam, magnam consequatur exercitationem laudantium, optio corrupti ipsum recusandae maxime! Excepturi, earum laboriosam quaerat molestiae cumque dignissimos ipsa qui quidem repudiandae repellendus a ipsum placeat fugit. Officiis ad nesciunt autem quam doloribus temporibus voluptate doloremque asperiores repudiandae nisi minus beatae, architecto atque!
         </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
-        <p>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-          non proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum.
-        </p>
+
+       
       </div>
     </div>
   );
