@@ -3,6 +3,7 @@ import Banner from "@/components/home-page/banner";
 import Projects from "@/components/home-page/projects";
 import ServicesComponent from "@/components/home-page/services";
 import Testimonials from "@/components/home-page/testimonials";
+import Transform from "@/components/home-page/transform";
 
 export default function HomePage() {
 	return (
@@ -15,6 +16,7 @@ export default function HomePage() {
 			<ServicesComponent />
 			<Projects/>
 			<Testimonials/>
+			<Transform/>
 		</>
 	);
 }
