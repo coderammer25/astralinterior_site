@@ -10,17 +10,18 @@ export default {
 		extend: {
 			fontFamily: {
 				geist: ["Geist"],
-				playfair: ["Playfair Display"]
+				playfair: ["Playfair Display"],
 			},
 			fontWeight: {
 				bolder: "900",
 			},
 			colors: {
-				primary: "#116e67",
+				primary: "#135a58",
 				secondary: "#1b8079",
 				primaryHover: "#0c5751",
 				darkBase: "#191919",
 				darkSecondary: "#333333",
+				heading: "#18706d",
 			},
 		},
 	},

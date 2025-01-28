@@ -11,3 +11,13 @@ body {
 h6 {
   font-family: 'Playfair Display', serif;
 }
+
+::selection {
+  background-color: #cce8e6; /* Light tint of primary color */
+  color: #18706d; /* Primary color for text */
+}
+
+::-moz-selection {
+  background-color: #cce8e6; /* For Firefox */
+  color: #18706d;
+}

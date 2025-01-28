@@ -9,14 +9,14 @@ export default function HomePage() {
 	return (
 		<>
 			<Banner />
-			<h2 className="uppercase text-center text-8xl xl:text-[14rem] text-[#e9e7e1]">
+			<h2 className="uppercase text-center text-8xl xl:text-[14rem] text-[#D6F1ED]">
 				We are <span className="font-playfair">astral</span>{" "}
 			</h2>
 			<AboutUsComponent />
 			<ServicesComponent />
-			<Projects/>
-			<Testimonials/>
-			<Transform/>
+			<Projects />
+			<Testimonials />
+			<Transform />
 		</>
 	);
 }
