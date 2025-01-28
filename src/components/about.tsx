@@ -7,7 +7,7 @@ import image3 from "../../public/scul-chair-about.webp";
 import image4 from "../../public/mini-interior-about.webp";
 import image5 from "../../public/organic-about.webp";
 import image6 from "../../public/women-about.webp";
-import { FaArrowLeft } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight, } from "react-icons/fa";
 export default function About() {
   return (
     <div>
@@ -114,7 +114,7 @@ export default function About() {
             <Image
               src={image4}
               alt="mini"
-              className="absolute md:-mt-[310px] md:ml-[270px] lg:-mt-[490px] w-0 lg:ml-[430px] md:w-[130px] lg:w-[200px]"
+              className="absolute md:-mt-[310px] md:ml-[270px] lg:-mt-[490px] w-0 lg:ml-[550px] md:w-[130px] lg:w-[200px]"
             />
           </div>
 
@@ -177,31 +177,31 @@ export default function About() {
 
 
     <section className="mx-auto lg:mr-14 px-4 py-16 md:py-24">
-        <div className="lg:flex md:grid grid-cols-2 md:grid-cols-2 gap-8 md:gap-16 items-center">
+        <div className="lg:flex lg:space-x-[250px] md:grid grid-cols-2 md:grid-cols-2 gap-8 md:gap-16 items-center">
 
         <div className="space-y-8 mt-5 lg:ml-[150px]">
-            <div className="space-y-6">
-              <h2 className="text-sm uppercase tracking-wider text-muted-foreground">
+            <div className="space-y-6 ">
+              <h2 className="text-base md:text-base lg:text-lg font-medium uppercase tracking-wider text-muted-foreground">
                 OUR MISSION
               </h2>
 
-              <p className=" lg:text-[24px] leading-relaxed ">
-              Our mission is to create spaces that <br /> inspire, uplift, and enrich the lives of <br /> those who experience them. We believe <br /> that great design goes beyond aesthetics <br />  it’s about creating functional, personalized <br />environments that reflect our clients&apos; unique lifestyles and aspirations.
+              <p className=" md:text-xl lg:text-[25px] leading-relaxed ">
+              Our mission is to create spaces that <br /> inspire, uplift, and enrich the lives of <br /> those who experience them. We believe <br /> that great design goes beyond aesthetics <br />  it’s about creating functional, personalized <br />environments that reflect our clients&apos; unique <br /> lifestyles and aspirations.
               </p>
             </div>
 
             <div className="gap-8 pt-8">
             <Link
             href="/contact"
-            className="inline-flex text-lg items-center gap-2 rounded-3xl border-b border-black text-black px-3 py-3 hover:bg-black hover:text-white transition-colors"
+            className="inline-flex text-lg items-center gap-2 text-black px-3 py-3 hover:bg-black hover:text-white transition-colors"
           >
             GET IN TOUCH
-            <FaArrowLeft className="w-4 h-4 " />
+            <FaArrowRight className="w-4 h-4 " />
           </Link>
             </div>
           </div>
 
-          <div className="relative lg:w-[800px]">
+          <div className="relative lg:w-[600px]">
             <Image
               src={image5}
               alt="Interior design professional"
@@ -213,7 +213,7 @@ export default function About() {
             <Image
               src={image1}
               alt="mini"
-              className="absolute md:-mt-[310px] md:-ml-[60px] lg:-mt-[490px] w-0 lg:-ml-[100px] md:w-[130px] lg:w-[200px]"
+              className="absolute md:-mt-[420px] md:-ml-[90px] lg:-mt-[570px] w-0 lg:-ml-[130px] md:w-[180px] lg:w-[250px]"
             />
           </div>
 
@@ -233,7 +233,7 @@ export default function About() {
             <Image
               height={750}
             width={1260}
-              className="absolute object-cover w-full h-full rounded"
+              className="absolute object-cover w-full h-full rounded-3xl"
               src="https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6730b9136fe128fd28f4e21f_client-01.webp"
               alt="Person"
             />
@@ -266,7 +266,7 @@ export default function About() {
             <Image
             width={1260}
             height={750}
-              className="absolute object-cover w-full h-full rounded"
+              className="absolute object-cover w-full h-full rounded-3xl"
               src="https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6730b913927351d4578c741c_client-04.webp"
               alt="Person"
             />
@@ -299,7 +299,7 @@ export default function About() {
             <Image
               height={750}
              width={1260}
-              className="absolute object-cover w-full h-full rounded"
+              className="absolute object-cover w-full h-full rounded-3xl"
               src="https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6730b913f40f98fed80d3f35_client-02.webp"
               alt="Person"
             />
@@ -332,7 +332,7 @@ export default function About() {
             <Image
               height={750}
              width={1260}
-              className="absolute object-cover w-full h-full rounded"
+              className="absolute object-cover w-full h-full rounded-3xl"
               src="https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6730b9132c39026fe2577661_client-03.webp"
               alt="Person"
             />
@@ -362,6 +362,67 @@ export default function About() {
         </div>
       </div>
     </div>
+
+    <section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+			<div className="flex items-center justify-between">
+				<div className="flex flex-col justify-between w-1/4 space-y-40">
+					<Image
+						src="https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6713b50f14c39bfea0deaefc_Serene%20Geometric%20and%20Organic%20Composition-p-500.webp"
+						alt="Image 1"
+						width={800}
+						height={800}
+						className="w-[224px]"
+					/>
+					<Image
+						src="https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6713b50be6f594839db8f157_Minimalist%20Interior%20with%20Geometric%20Light-p-500.webp"
+						alt="Image 1"
+						width={800}
+						height={800}
+						className="w-[224px]"
+					/>
+				</div>
+
+				<div className="w-2/4 text-center px-5">
+					<p className="text-base mb-[20px]">
+						* LET&apos;S TALK – LET&apos;S TALK – 
+					</p>
+					<h2 className=" text-3xl md:text-5xl lg:text-5xl lg:text-[5rem] uppercase leading-[1] mb-[20px]">
+						Ready to <br /> Transform{" "}Your <br />
+						<span className="font-playfair">Space?</span>
+					</h2>
+					<p className="md:text-[1.125rem] lg:text-[1.125rem] mb-[20px]">
+						Let’s bring your design vision to life! Whether you’re looking <br /> for a
+						complete makeover or just a fresh update, our team is here to help.
+					</p>
+					<Link
+						href="/contact-us"
+						className="flex items-center justify-center gap-2 uppercase text-[14px] text-[#2c2b28] mt-[3rem]"
+					>
+						GET IN TOUCH{" "}
+						<span className="bg-black p-1">
+							<FaArrowLeft className="text-white" />
+						</span>
+					</Link>
+				</div>
+
+				<div className="flex flex-col items-end justify-between w-1/4 space-y-40">
+					<Image
+						src="https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6713b512870cc6e108d4e4e8_Sculptural%20Black%20Shell%20in%20Modern%20Room-p-500.webp"
+						alt="Image 1"
+						width={800}
+						height={800}
+						className="w-[224px]"
+					/>
+					<Image
+						src="https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6713b50be6f594839db8f157_Minimalist%20Interior%20with%20Geometric%20Light-p-500.webp"
+						alt="Image 1"
+						width={800}
+						height={800}
+						className="w-[224px]"
+					/>
+				</div>
+			</div>
+		</section>
 
 
     </div>

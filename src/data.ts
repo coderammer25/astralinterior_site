@@ -122,3 +122,35 @@ export const clients = [
 		client_location: "Delaware",
 	},
 ];
+
+ export const featuredPost = {
+	blogId: 1,
+	category: "Design",
+	title: "UNDERSTANDING WARM VS. COOL TONES",
+	readingTime: 7,
+	image: "https://cdn.prod.website-files.com/6713afdf3556af8f35af46fb/673277d8ebd30f26d58d440a_Modern%20Minimalist%20Interior%20Living%20Space.jpeg",
+  }
+
+  export const recentPosts = [
+	{
+	  blogId: 1,
+	  category: "Trends",
+	  title: "BENEFITS OF NATURAL ELEMENTS IN DESIGN",
+	  readingTime: 9,
+	  image: "https://cdn.prod.website-files.com/6713afdf3556af8f35af46fb/67327a8e786157ed4dff7a6d_Modern%20Minimalist%20Office%20Space-p-2000.jpeg",
+	},
+	{
+		blogId: 2,
+	  category: "Tips",
+	  title: "HOW TO MAKE SMALL SPACES FEEL LARGER",
+	  readingTime: 7,
+	  image: "https://cdn.prod.website-files.com/6713afdf3556af8f35af46fb/6732782eaa93607254513206_Stylish%20Modern%20Room%20with%20Elegant%20Desk%20Setup-p-2000.jpeg",
+	},
+	{
+		blogId: 3,
+	  category: "Design",
+	  title: "THE ESSENTIALS OF GOOD LIGHTING DESIGN",
+	  readingTime: 7,
+	  image: "https://cdn.prod.website-files.com/6713afdf3556af8f35af46fb/6732799323dd4996fe20a58d_Serene%20Rustic%20Sunlit%20Interior-p-2000.jpeg",
+	},
+  ]
