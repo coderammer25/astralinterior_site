@@ -8,7 +8,7 @@ const Banner = () => {
 					* Space Planning - Interior Styling - Lighting Design - Furniture
 					Sourcing -
 				</p>
-				<h1 className="uppercase text-6xl xl:text-[7rem] xl:leading-[0.9]">
+				<h1 className="uppercase text-6xl xl:text-[7rem] xl:leading-[0.9] text-primary">
 					Crafting <br /> luxury <span className="font-playfair">spaces</span>
 				</h1>
 				<div className="relative">

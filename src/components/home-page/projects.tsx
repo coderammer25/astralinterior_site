@@ -14,15 +14,15 @@ const Projects = () => {
   return (
 		<section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
 			<div className="flex justify-between items-end">
-				<h2 className="uppercase text-[8rem] leading-[1.1] w-2/3">
-					Selected <span className="font-playfair">Projects</span>
+				<h2 className="uppercase text-[3rem] lg:text-[8rem] leading-[1.1] w-2/3 text-primary">
+					Selected <br /> <span className="font-playfair">Projects</span>
 				</h2>
 				<Link
 					href="/projects"
 					className="flex items-center gap-2 uppercase text-[14px] text-[#2c2b28]"
 				>
 					All projects{" "}
-					<span className="bg-black p-1">
+					<span className="bg-primary p-1">
 						<FaArrowRight className="text-white" />
 					</span>
 				</Link>

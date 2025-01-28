@@ -7,7 +7,7 @@ const ContactForm = () => {
 	return (
 		<div>
 			<div className="text-center">
-				<h2 className="uppercase text-[8rem] leading-[1] mb-[2rem]">
+				<h2 className="uppercase text-[3rem] xl:text-[8rem] leading-[1] mb-[2rem]">
 					Get in <span className="font-playfair text-heading">touch</span>
 				</h2>
 				<p className="text-[1.125rem] lg:w-1/2 mx-auto leading-[1.4]">
@@ -55,9 +55,9 @@ const ContactForm = () => {
 				</Link>
 			</div>
 
-			<div className="border border-[#d0e5e4] rounded-md my-[3rem] py-[3rem] px-[2rem] w-2/3 mx-auto bg-white shadow-md">
+			<div className="border border-[#d0e5e4] rounded-md my-[3rem] py-[3rem] px-[2rem] lg:w-2/3 mx-auto bg-white shadow-md">
 				<form className="space-y-[1.75rem]">
-					{/* Name Field */}
+
 					<div className="flex flex-col">
 						<label
 							htmlFor="name"
@@ -74,7 +74,7 @@ const ContactForm = () => {
 						/>
 					</div>
 
-					{/* Email Field */}
+
 					<div className="flex flex-col">
 						<label
 							htmlFor="email"
@@ -91,7 +91,7 @@ const ContactForm = () => {
 						/>
 					</div>
 
-					{/* Subject Field */}
+
 					<div className="flex flex-col">
 						<label
 							htmlFor="phone"
@@ -108,7 +108,7 @@ const ContactForm = () => {
 						/>
 					</div>
 
-					{/* Message Field */}
+
 					<div className="flex flex-col">
 						<label
 							htmlFor="message"
@@ -124,7 +124,7 @@ const ContactForm = () => {
 						></textarea>
 					</div>
 
-					{/* Submit Button */}
+
 					<div className="mt-[3rem]">
 						<button
 							type="submit"

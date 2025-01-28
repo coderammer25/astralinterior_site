@@ -8,7 +8,7 @@ import {
 const Information = () => {
 	return (
 		<div className="mt-[4rem] py-[8rem]">
-			<div className="grid grid-cols-3 gap-[3rem]">
+			<div className="grid md:grid-cols-3 gap-[3rem]">
 				<div className="text-center">
 					<MdOutlineEmail className="w-[2.5rem] h-[2.5rem] mx-auto mb-[20px] text-primary" />
 					<h4 className="font-medium text-[2rem] leading-[1] uppercase">

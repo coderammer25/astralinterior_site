@@ -22,17 +22,18 @@ const ServicesComponent = () => {
 						className="flex items-center gap-2 uppercase text-[14px] text-[#2c2b28]"
 					>
 						All services{" "}
-						<span className="bg-black p-1">
+						<span className="bg-primary p-1">
 							<FaArrowRight className="text-white" />
 						</span>
 					</Link>
 				</div>
-				<div className="sticky top-10 w-1/2">
+				<div className="sticky top-10 w-1/2 h-full">
 					<Image
 						src={serviceImg}
 						alt="Service Image"
-						width={600}
-						height={500}
+						width={800}
+						height={800}
+						className="h-full"
 					/>
 				</div>
 			</div>

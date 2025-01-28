@@ -23,10 +23,10 @@ const Item = ({ title, children }: ItemProps) => {
 				type="button"
 				aria-label="Open item"
 				title="Open item"
-				className="flex items-center justify-between w-full p-6 focus:outline-none"
+				className="flex items-center gap-6 justify-between w-full p-6 focus:outline-none"
 				onClick={() => setIsOpen(!isOpen)}
 			>
-				<h4 className="text-left text-[1.4rem] uppercase">{title}</h4>
+				<h4 className="text-left text-[1.2rem] xl:text-[1.4rem] uppercase w-3/4 md:w-full">{title}</h4>
 				<div className="flex items-center justify-center w-8 h-8 border rounded-full">
 					<svg
 						viewBox="0 0 24 24"
@@ -58,7 +58,7 @@ const FAQ = () => {
 	return (
 		<div className="">
 			<div className="mb-[4rem]">
-				<h2 className="text-center text-[5rem] leading-[1] uppercase text-primary">
+				<h2 className="text-center text-[3rem] xl:text-[5rem] leading-[1] uppercase text-primary">
 					Frequently Asked <br /> Questions
 				</h2>
 			</div>

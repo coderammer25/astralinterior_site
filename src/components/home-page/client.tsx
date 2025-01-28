@@ -14,7 +14,7 @@ type ClientProps = {
 
 const Client = ({ client }: ClientProps) => {
 	return (
-		<div className="border p-[2rem]">
+		<div className="border p-[2rem] shadow-[0px_4px_6px_rgba(24,112,109,0.2)] rounded-md">
 			<Image
 				src={client.client_logo}
 				alt={client.client_location}
