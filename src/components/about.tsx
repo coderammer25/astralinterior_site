@@ -7,7 +7,8 @@ import image3 from "../../public/scul-chair-about.webp";
 import image4 from "../../public/mini-interior-about.webp";
 import image5 from "../../public/organic-about.webp";
 import image6 from "../../public/women-about.webp";
-import { FaArrowLeft, FaArrowRight, } from "react-icons/fa";
+import { FaArrowRight, } from "react-icons/fa";
+import Transform from "./home-page/transform";
 export default function About() {
   return (
     <div>
@@ -26,7 +27,7 @@ export default function About() {
             </Link>
           </nav>
 
-          <h1 className="text-[4rem] leading-tight font-light">
+          <h1 className="text-[4rem] leading-tight font-light text-primary">
             BRINGING
             <br />
             IDEAS TO LIFE
@@ -39,7 +40,7 @@ export default function About() {
 
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 hover:bg-gray-800 transition-colors"
+            className="inline-flex items-center gap-2 bg-primary rounded-md text-white px-6 py-3 border border-primary hover:bg-transparent transition-colors duration-500 hover:text-primary"
           >
             GET IN TOUCH
             <BsArrowRight className="w-4 h-4" />
@@ -193,7 +194,7 @@ export default function About() {
             <div className="gap-8 pt-8">
             <Link
             href="/contact"
-            className="inline-flex text-lg items-center gap-2 text-black px-3 py-3 hover:bg-black hover:text-white transition-colors"
+            className="inline-flex text-lg items-center gap-3 hover:text-primary px-6 py-3 bg-primary hover:bg-transparent border border-primary text-white transition-colors duration-500 rounded-md"
           >
             GET IN TOUCH
             <FaArrowRight className="w-4 h-4 " />
@@ -222,7 +223,7 @@ export default function About() {
 
       <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
       <div className="mx-auto mb-10 lg:max-w-xl sm:text-center">
-        <p className="inline-block px-3 py-px mb-4 text-7xl font-semibold tracking-wider uppercase rounded-full bg-teal-accent-400">
+        <p className="inline-block px-3 py-px mb-4 text-7xl font-semibold tracking-wider uppercase rounded-full bg-teal-accent-400 text-primary">
           Discover Our <span className="font-playfair">Team</span>
         </p>
   
@@ -363,66 +364,7 @@ export default function About() {
       </div>
     </div>
 
-    <section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-			<div className="flex items-center justify-between">
-				<div className="flex flex-col justify-between w-1/4 space-y-40">
-					<Image
-						src="https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6713b50f14c39bfea0deaefc_Serene%20Geometric%20and%20Organic%20Composition-p-500.webp"
-						alt="Image 1"
-						width={800}
-						height={800}
-						className="w-[224px]"
-					/>
-					<Image
-						src="https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6713b50be6f594839db8f157_Minimalist%20Interior%20with%20Geometric%20Light-p-500.webp"
-						alt="Image 1"
-						width={800}
-						height={800}
-						className="w-[224px]"
-					/>
-				</div>
-
-				<div className="w-2/4 text-center px-5">
-					<p className="text-base mb-[20px]">
-						* LET&apos;S TALK – LET&apos;S TALK – 
-					</p>
-					<h2 className=" text-3xl md:text-5xl lg:text-5xl lg:text-[5rem] uppercase leading-[1] mb-[20px]">
-						Ready to <br /> Transform{" "}Your <br />
-						<span className="font-playfair">Space?</span>
-					</h2>
-					<p className="md:text-[1.125rem] lg:text-[1.125rem] mb-[20px]">
-						Let’s bring your design vision to life! Whether you’re looking <br /> for a
-						complete makeover or just a fresh update, our team is here to help.
-					</p>
-					<Link
-						href="/contact-us"
-						className="flex items-center justify-center gap-2 uppercase text-[14px] text-[#2c2b28] mt-[3rem]"
-					>
-						GET IN TOUCH{" "}
-						<span className="bg-black p-1">
-							<FaArrowLeft className="text-white" />
-						</span>
-					</Link>
-				</div>
-
-				<div className="flex flex-col items-end justify-between w-1/4 space-y-40">
-					<Image
-						src="https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6713b512870cc6e108d4e4e8_Sculptural%20Black%20Shell%20in%20Modern%20Room-p-500.webp"
-						alt="Image 1"
-						width={800}
-						height={800}
-						className="w-[224px]"
-					/>
-					<Image
-						src="https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6713b50be6f594839db8f157_Minimalist%20Interior%20with%20Geometric%20Light-p-500.webp"
-						alt="Image 1"
-						width={800}
-						height={800}
-						className="w-[224px]"
-					/>
-				</div>
-			</div>
-		</section>
+    <Transform/>
 
 
     </div>

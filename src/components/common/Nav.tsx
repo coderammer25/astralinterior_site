@@ -36,7 +36,7 @@ export const Nav = () => {
             <li>
               <Link
                 href="/"
-                className="inline-flex items-center justify-center h-12 px-1 font-medium tracking-wide transition duration-200 bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700  border-b-2 border-black"
+                className="text-primary inline-flex items-center justify-center h-12 px-1 font-medium tracking-wide transition duration-200 bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700  border-b-2 border-transparent hover:border-primary"
                 aria-label="Sign up"
                 title="Sign up"
               >
