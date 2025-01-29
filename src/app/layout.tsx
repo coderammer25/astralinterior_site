@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Nav } from "@/components/common/Nav";
-import Footer from "@/components/common/Footer";
+import { LayoutProvider } from "./LayoutProvider";
 
 export const metadata: Metadata = {
 	title: {
-		default:
-			"Astral Interior and Furniture | Premium Interior Solutions in Bangladesh",
+		default: "Astral Interior and Furniture | Premium Interior Solutions in Bangladesh",
 		template: "%s | Astral Interior and Furniture",
 	},
 	description:
@@ -24,9 +22,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className="antialiased font-geist text-[#2c2b28] bg-[#f3fbfa] overflow-x-hidden">
-				<Nav />
-				{children}
-				<Footer />
+				<LayoutProvider>{children}</LayoutProvider>
 			</body>
 		</html>
 	);
