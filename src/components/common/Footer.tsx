@@ -1,92 +1,112 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import Link from "next/link"
-import { BsInstagram } from "react-icons/bs"
-import { FaFacebook, FaLinkedinIn } from "react-icons/fa"
-import { FiYoutube } from "react-icons/fi"
-import logo from "../../../public/astral-logo.png"
+import Image from "next/image";
+import Link from "next/link";
+import { BsInstagram } from "react-icons/bs";
+import { FaFacebook, FaLinkedinIn } from "react-icons/fa";
+import { FiYoutube } from "react-icons/fi";
+import logo from "../../../public/astral-logo.png";
 export default function Footer() {
+	//
 
-  return (
-    <footer className="bg-gradient-to-tr from-gray-950 via-gray-950 to-black text-white py-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen md:px-24 lg:px-20">
-      {/* Logo and Tagline */}
-      <div className=" lg:px-20 py-12 flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 text-center md:justify-between">
+	return (
+		<footer className="bg-[#0a3d3b] text-white py-12">
+			{/* Logo and Tagline */}
+			<div className="flex flex-col gap-16 lg:gap-0 lg:flex-row justify-between mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl px-4 md:px-24 lg:px-8">
+				<div className="lg:w-1/2">
+					<Image
+						src={logo}
+						alt="Astral Logo"
+						className="w-40 font-semibold mb-4"
+					/>
+					<div className="backdrop-blur-sm inline-block">
+						<p className="text-white w-2/3">
+							Transforming spaces into timeless experiences. At Astral, we blend
+							creativity, functionality, and elegance to craft interiors that
+							inspire. From concept to completion, we design spaces that reflect
+							your unique style and vision.
+						</p>
+					</div>
+				</div>
 
-      <div className="mb-[150px]">
-        <Image
-         src={logo}
-         alt="Astral Logo"
-         className="text-4xl font-semibold mb-4" />
-        <div className="backdrop-blur-sm inline-block px-2">
-          <p className="text-white">Where design meets lifestyles</p>
-        </div>
-      </div>
+				{/* Main Navigation Grid */}
+				<div className="flex justify-between gap-10 lg:w-1/2">
+					{/* Column 5 */}
+					<div className="space-y-4">
+						<h4 className="font-semibold mb-8 uppercase">Navigate</h4>
+						<Link href="/about-us" className="block hover:underline">
+							ABOUT US
+						</Link>
+						<Link href="/services" className="block hover:underline">
+							SERVICES
+						</Link>
+						<Link href="/blog" className="block hover:underline">
+							BLOG
+						</Link>
+						<Link href="/shop" className="block hover:underline">
+							SHOP
+						</Link>
+					</div>
 
-      {/* Main Navigation Grid */}
-      <div className="flex justify-end space-x-24 lg:space-x-[300px] gap-8 mb-24">
+					<div className="space-y-4">
+						<h4 className="font-semibold mb-8 uppercase">Information</h4>
+						<Link href="#" className="block hover:underline">
+							Terms & Conditions
+						</Link>
+						<Link href="#" className="block hover:underline">
+							Privacy Policy
+						</Link>
+					</div>
 
-        {/* Column 5 */}
-        <div className="space-y-4">
-          <Link href="/about-us" className="block hover:underline">
-            ABOUT US
-          </Link>
-          <Link href="/services" className="block hover:underline">
-            SERVICES
-          </Link>
-          <Link href="/blog" className="block hover:underline">
-            BLOG
-          </Link>
-          <Link href="/shop" className="block hover:underline">
-            SHOP
-          </Link>
-        </div>
+					<div className="space-y-4">
+						<h4 className="font-semibold mb-8 uppercase">Help & Support</h4>
+						<Link href="/contact-us" className="block hover:underline">
+							SUPPORT
+						</Link>
+					</div>
+				</div>
+			</div>
 
-        {/* Social Icons Column */}
-        <div className="space-y-4">
-          <Link href="#" className="block w-6">
-            <BsInstagram className="w-5 h-5" />
-          </Link>
-          <Link href="#" className="block w-6">
-            <FiYoutube className="w-5 h-5" />
-          </Link>
-          <Link href="#" className="block w-6">
-            <FaLinkedinIn className="w-5 h-5" />
-          </Link>
-          <Link href="#" className="block w-6">
-            <FaFacebook className="w-5 h-5" />
-          </Link>
-        </div>
-      </div>
+			{/* Bottom Bar */}
+			<div className="mt-10 flex flex-col gap-10 lg:flex-row md:space-x-3 justify-between lg:items-center text-sm border-t border-gray-700 pt-10 lg:mt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl px-4 md:px-24 lg:px-8">
+				<div className="flex flex-col lg:flex-row lg:items-center gap-4">
+					<span className="text-gray-400 uppercase">
+						All Rights Reserved
+						<Link
+							href="#"
+							className="text-white ml-2 inline-block hover:underline uppercase"
+						>
+							@Astral Interior
+						</Link>
+					</span>
+					<span className="text-gray-400">
+						DEVELOPED BY
+						<Link
+							href="https://coderammer.com"
+							target="_blank"
+							className="text-white ml-2 hover:underline"
+						>
+							CODERAMMER
+						</Link>
+					</span>
+				</div>
 
-      {/* Bottom Bar */}
-      <div className="lg:flex md:space-x-3 justify-between items-center text-sm border-t border-gray-700 pt-10 lg:mt-16">
-        <div className="flex items-center gap-2">
-          <span className="text-gray-400">CREATED BY</span>
-          <Link href="#" className="hover:underline">
-            FLOWAZE
-          </Link>
-          <span className="text-gray-400 ml-4">POWERED</span>
-          <Link href="#" className="hover:underline">
-            WEBFLOW
-          </Link>
-        </div>
-        <div className="flex items-center gap-8">
-          <Link href="/style-guide" className="hover:underline">
-            STYLE GUIDE
-          </Link>
-          <Link href="/licenses" className="hover:underline">
-            LICENSES
-          </Link>
-          <Link href="/changelog" className="hover:underline">
-            CHANGELOG
-          </Link>
-        </div>
-      </div>
-
-      </div>
-
-    </footer>
-  )
+				{/* Social Icons Column */}
+				<div className="flex items-center gap-4">
+					<Link href="#" className="block w-6">
+						<BsInstagram className="w-5 h-5" />
+					</Link>
+					<Link href="#" className="block w-6">
+						<FiYoutube className="w-6 h-6" />
+					</Link>
+					<Link href="#" className="block w-6">
+						<FaLinkedinIn className="w-5 h-5" />
+					</Link>
+					<Link href="#" className="block w-6">
+						<FaFacebook className="w-5 h-5" />
+					</Link>
+				</div>
+			</div>
+		</footer>
+	);
 }
-
