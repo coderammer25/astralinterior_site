@@ -7,10 +7,10 @@ export const metadata: Metadata = {
 
 const BlogPage = () => {
 	return (
-	<div>
-	<Blogs />
-	</div>
-	)
+		<div>
+			<Blogs />
+		</div>
+	);
 };
 
 export default BlogPage;
