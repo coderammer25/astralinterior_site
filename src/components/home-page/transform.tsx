@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
@@ -59,10 +61,12 @@ const Transform = () => {
 						Ready to Transform Your{" "}
 						<span className="font-playfair">Space?</span>.
 					</h2>
+
 					<p className="text-[1.125rem] mb-[20px]">
 						Let’s bring your design vision to life! Whether you’re looking for a
 						complete makeover or just a fresh update, our team is here to help.
 					</p>
+
 					<Link
 						href="/contact-us"
 						className="flex items-center justify-center gap-2 uppercase text-[14px] text-[#2c2b28] mt-[3rem]"

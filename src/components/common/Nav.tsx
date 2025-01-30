@@ -19,7 +19,6 @@ export const Nav = () => {
     setOpen(false);
   };
 
-  //   
 
   return (
 		<div className="px-4 py-6 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
@@ -30,19 +29,19 @@ export const Nav = () => {
 					title="Astral"
 					className="inline-flex items-center"
 				>
-					<Image className="w-[140px]" src={logo} alt="" />
+					<Image className="w-[140px] select-none" src={logo} alt="" />
 				</Link>
 
 				<div className="flex lg:space-x-[90px]">
 					<ul className="grid justify-end items-center space-x-8">
 						<li>
 							<Link
-								href="/"
+								href="/contact-us"
 								className="text-primary inline-flex items-center justify-center h-12 px-1 font-medium tracking-wide transition duration-200 bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700  border-b-2 border-transparent hover:border-primary"
 								aria-label="Sign up"
 								title="Sign up"
 							>
-								GET IN TOUCH
+								Contact Us
 							</Link>
 						</li>
 					</ul>
@@ -91,9 +90,9 @@ export const Nav = () => {
 									<ul className="space-y-7 font-geist text-xl">
 										<li>
 											<Link
-												href="/"
-												aria-label="Our product"
-												title="Our product"
+												href="/projects"
+												aria-label="projects"
+												title="projects"
 												className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700 p-4 "
 											>
 												Projects
@@ -101,9 +100,9 @@ export const Nav = () => {
 										</li>
 										<li>
 											<Link
-												href="/"
-												aria-label="Our product"
-												title="Our product"
+												href="/about-us"
+												aria-label="about us"
+												title="about us"
 												className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700 p-4"
 											>
 												About
@@ -111,9 +110,9 @@ export const Nav = () => {
 										</li>
 										<li>
 											<Link
-												href="/"
-												aria-label="Product pricing"
-												title="Product pricing"
+												href="/blog"
+												aria-label="Blog"
+												title="Blog"
 												className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700 p-4 "
 											>
 												Blog
@@ -122,20 +121,9 @@ export const Nav = () => {
 
 										<li>
 											<Link
-												href="/"
-												aria-label="About us"
-												title="About us"
-												className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700 p-4"
-											>
-												Licences
-											</Link>
-										</li>
-
-										<li>
-											<Link
-												href="/"
-												aria-label="About us"
-												title="About us"
+												href="/contact-us"
+												aria-label="Contact us"
+												title="Contact us"
 												className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700 p-4"
 											>
 												Contact
@@ -150,11 +138,12 @@ export const Nav = () => {
 									Schedule Your Design Consultation Today!
 								</h1>
 								<p className="inline-flex font-geist text-base ">
-									<FaPhoneAlt className="mt-1 mr-2" /> Call: (123) 123-4567
+									<FaPhoneAlt className="mt-1 mr-2" /> Call: +880 1703-706613
 								</p>
 
 								<p className="inline-flex font-geist text-base">
-									<MdEmail className="mt-1 mr-2" /> Email: example@gmail.com
+									<MdEmail className="mt-1 mr-2" /> Email:
+									astralinterior2@gmail.com
 								</p>
 							</div>
 						</motion.div>

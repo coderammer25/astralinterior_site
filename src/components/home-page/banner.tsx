@@ -23,15 +23,15 @@ const Banner = () => {
 						<Slider {...settings}>
 							<p className="text-base">
 								* Space Planning - Interior Styling - Lighting Design -
-								Furniture Sourcing -
+								Furniture Sourcing
 							</p>
 							<p className="text-base">
 								* Space Planning - Interior Styling - Lighting Design -
-								Furniture Sourcing -
+								Furniture Sourcing
 							</p>
 							<p className="text-base">
 								* Space Planning - Interior Styling - Lighting Design -
-								Furniture Sourcing -
+								Furniture Sourcing
 							</p>
 						</Slider>
 					</div>
