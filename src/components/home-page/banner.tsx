@@ -1,13 +1,42 @@
+"use client";
+
 import Image from "next/image";
+import Slider from "react-slick";
 
 const Banner = () => {
+	const settings = {
+		arrows: false,
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		autoplay: true,
+		speed: 5000,
+		autoplaySpeed: 2000,
+		cssEase: "linear",
+	};
+
 	return (
 		<section className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
 			<div className="text-center space-y-8 min-h-screen">
-				<p className="text-base">
-					* Space Planning - Interior Styling - Lighting Design - Furniture
-					Sourcing -
-				</p>
+				<div className="w-[700px] mx-auto">
+					<div className="slider-container">
+						<Slider {...settings}>
+							<p className="text-base">
+								* Space Planning - Interior Styling - Lighting Design -
+								Furniture Sourcing -
+							</p>
+							<p className="text-base">
+								* Space Planning - Interior Styling - Lighting Design -
+								Furniture Sourcing -
+							</p>
+							<p className="text-base">
+								* Space Planning - Interior Styling - Lighting Design -
+								Furniture Sourcing -
+							</p>
+						</Slider>
+					</div>
+				</div>
+
 				<h1 className="uppercase text-6xl xl:text-[7rem] xl:leading-[0.9] text-primary">
 					Crafting <br /> luxury <span className="font-playfair">spaces</span>
 				</h1>

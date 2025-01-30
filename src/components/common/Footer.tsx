@@ -73,7 +73,8 @@ export default function Footer() {
 					<span className="text-gray-400 uppercase">
 						All Rights Reserved
 						<Link
-							href="#"
+							href="https://www.linkedin.com/company/astral-interior-furniture-bd"
+							target="_blank"
 							className="text-white ml-2 inline-block hover:underline uppercase"
 						>
 							@Astral Interior
@@ -93,17 +94,33 @@ export default function Footer() {
 
 				{/* Social Icons Column */}
 				<div className="flex items-center gap-4">
-					<Link href="#" className="block w-6">
+					<Link
+						href="https://www.instagram.com/astralinterior"
+						target="_blank"
+						className="block w-6"
+					>
 						<BsInstagram className="w-5 h-5" />
 					</Link>
-					<Link href="#" className="block w-6">
+					<Link
+						href="https://www.youtube.com/@AstralInteriorFurniture"
+						target="_blank"
+						className="block w-6"
+					>
 						<FiYoutube className="w-6 h-6" />
 					</Link>
-					<Link href="#" className="block w-6">
-						<FaLinkedinIn className="w-5 h-5" />
+					<Link
+						href="https://www.linkedin.com/company/astral-interior-furniture-bd"
+						target="_blank"
+						className="block w-6"
+					>
+						<FaLinkedinIn className="w-6 h-6" />
 					</Link>
-					<Link href="#" className="block w-6">
-						<FaFacebook className="w-5 h-5" />
+					<Link
+						href="https://www.facebook.com/astralinteriorfurniture"
+						target="_blank"
+						className="block w-6"
+					>
+						<FaFacebook className="w-6 h-6" />
 					</Link>
 				</div>
 			</div>

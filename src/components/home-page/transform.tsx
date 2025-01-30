@@ -1,8 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
+import Slider from "react-slick";
 
 const Transform = () => {
+		const settings = {
+			arrows: false,
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			autoplay: true,
+			speed: 5000,
+			autoplaySpeed: 2000,
+			cssEase: "linear",
+		};
+
 	return (
 		<section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
 			<div className="flex flex-col xl:flex-row items-center justify-between gap-8">
@@ -24,10 +36,25 @@ const Transform = () => {
 				</div>
 
 				<div className="text-center">
-					<p className="text-center text-base mb-[20px]">
-						* Let&apos;s talk – Let&apos;s talk – Let&apos;s talk – Let&apos;s
-						talk – Let&apos;s talk – Let&apos;s talk –
-					</p>
+					<div className="w-[700px] mx-auto">
+						<div className="slider-container">
+							<Slider {...settings}>
+								<p className="text-center text-base mb-[20px]">
+									* Let&apos;s talk – Let&apos;s talk – Let&apos;s talk –
+									Let&apos;s talk – Let&apos;s talk – Let&apos;s talk
+								</p>
+								<p className="text-center text-base mb-[20px]">
+									* Let&apos;s talk – Let&apos;s talk – Let&apos;s talk –
+									Let&apos;s talk – Let&apos;s talk – Let&apos;s talk
+								</p>
+								<p className="text-center text-base mb-[20px]">
+									* Let&apos;s talk – Let&apos;s talk – Let&apos;s talk –
+									Let&apos;s talk – Let&apos;s talk – Let&apos;s talk 
+								</p>
+							</Slider>
+						</div>
+					</div>
+
 					<h2 className="text-[3rem] lg:text-[5rem] uppercase leading-[1] mb-[20px] text-primary">
 						Ready to Transform Your{" "}
 						<span className="font-playfair">Space?</span>.
