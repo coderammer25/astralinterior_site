@@ -22,10 +22,10 @@ export function TeamSwitcher({
   }[]
 }) {
 
-  const [activeTeam, setActiveTeam] = React.useState(teams[0])
+  const [activeTeam] = React.useState(teams[0])
 
   return (
-    <SidebarMenu>
+    <SidebarMenu className="shadow-sidebarmenu">
       <SidebarMenuItem>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>

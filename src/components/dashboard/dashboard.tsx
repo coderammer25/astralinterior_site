@@ -1,20 +1,32 @@
-import { AppSidebar } from "./component/app-sidebar"
-import { Separator } from "@/components/ui/separator"
+import { AppSidebar } from "./component/app-sidebar";
+import { Separator } from "@/components/ui/separator";
 import {
   SidebarInset,
   SidebarProvider,
   SidebarTrigger,
-} from "@/components/ui/sidebar"
+} from "@/components/ui/sidebar";
+import { NavUser } from "./component/nav-user";
+
+const user = [
+  {
+    name: "shadcn",
+    email: "m@example.com",
+    avatar: "/avatars/shadcn.jpg",
+  },
+];
 
 export default function Dashboard() {
   return (
     <SidebarProvider>
       <AppSidebar />
       <SidebarInset>
-        <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
+        <header className="flex justify-between h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12 px-7 py-2">
           <div className="flex items-center gap-2 px-4">
             <SidebarTrigger className="-ml-1" />
             <Separator orientation="vertical" className="mr-2 h-4" />
+          </div>
+          <div>
+          <NavUser user={user[0]} />
           </div>
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
@@ -27,5 +39,5 @@ export default function Dashboard() {
         </div>
       </SidebarInset>
     </SidebarProvider>
-  )
+  );
 }

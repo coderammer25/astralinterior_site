@@ -102,3 +102,14 @@ h6 {
     @apply bg-background text-foreground;
   }
 }
+
+.aspect-square{
+background-color: white;
+} 
+
+.shadow-sidebarmenu{
+  border-radius: 40px;
+background: #ffffff;
+box-shadow:  23px 23px 100px #e8e8e8,
+             -23px -23px 100px #ffffff;
+}
