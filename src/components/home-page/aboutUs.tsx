@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 
-
 export const AboutUsComponent = () => {
 	return (
 		<section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
@@ -14,7 +13,7 @@ export const AboutUsComponent = () => {
 					href="/about-us"
 					className="flex items-center justify-center gap-2 uppercase text-[14px] text-[#2c2b28]"
 				>
-					About Us{" "}
+					About Us
 					<span className="bg-primary p-1">
 						<FaArrowRight className="text-white" />
 					</span>

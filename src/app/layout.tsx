@@ -1,13 +1,9 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// RootLayout.js (Server Component)
 import { Nav } from "@/components/common/Nav";
 import Footer from "@/components/common/Footer";
-  import { ToastContainer } from "react-toastify";
+import ClientLayout from "./ClientLayout";
 
-
-export const metadata: Metadata = {
+export const metadata = {
 	title: {
 		default:
 			"Astral Interior and Furniture | Premium Interior Solutions in Bangladesh",
@@ -25,13 +21,13 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
+	
 	return (
 		<html lang="en">
 			<body className="antialiased font-geist text-[#2c2b28] bg-[#f3fbfa] overflow-x-hidden">
 				<Nav />
-				{children}
+				<ClientLayout>{children}</ClientLayout>
 				<Footer />
-				<ToastContainer />
 			</body>
 		</html>
 	);

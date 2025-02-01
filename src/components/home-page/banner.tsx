@@ -19,7 +19,7 @@ const Banner = () => {
 		<section className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
 			<div className="text-center space-y-8 min-h-screen">
 				<div className="w-[700px] mx-auto">
-					<div className="slider-container">
+					<div className="slider-container z-10">
 						<Slider {...settings}>
 							<p className="text-base">
 								* Space Planning - Interior Styling - Lighting Design -
@@ -40,7 +40,7 @@ const Banner = () => {
 				<h1 className="uppercase text-6xl xl:text-[7rem] xl:leading-[0.9] text-primary">
 					Crafting <br /> luxury <span className="font-playfair">spaces</span>
 				</h1>
-				<div className="relative">
+				<div className="relative z-0">
 					<Image
 						src="https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6713b50244f3d6b890df9977_Futuristic%20Capsule%20Chair-p-500.webp"
 						alt="Chair Image"

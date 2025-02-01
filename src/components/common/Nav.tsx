@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { Drawer } from "antd";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { handleScroll } from "@/utils/scroll";
 
 export const Nav = () => {
 	const [open, setOpen] = useState(false);
@@ -14,31 +15,7 @@ export const Nav = () => {
 	const showDrawer = () => {
 		setOpen(true);
 	};
-
-	const handleScroll = () => {
-		const navId = document.getElementById("navId");
-		if (window.scrollY > 0) {
-			navId?.classList.add(
-				"shadow-md",
-				"sticky",
-				"top-0",
-				"left-0",
-				"bg-white/70",
-				"z-50",
-				"backdrop-blur-md"
-			);
-		} else {
-			navId?.classList.remove(
-				"shadow-md",
-				"sticky",
-				"top-0",
-				"left-0",
-				"bg-white/70",
-				"z-50",
-				"backdrop-blur-md"
-			);
-		}
-	};
+	
 
 	// Add scroll event listener
 	if (typeof window !== "undefined") {
@@ -68,8 +45,8 @@ export const Nav = () => {
 								<Link
 									href="/contact-us"
 									className="text-primary inline-flex items-center justify-center h-12 px-1 font-medium tracking-wide transition duration-200 bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700  border-b-2 border-transparent hover:border-primary"
-									aria-label="Sign up"
-									title="Sign up"
+									aria-label="Contact Us"
+									title="Contact Us"
 								>
 									Contact Us
 								</Link>
@@ -115,17 +92,25 @@ export const Nav = () => {
 									ease: [0.25, 0.8, 0.5, 1],
 								}}
 							>
-								<div className="border-b-2 border-gray-300 p-3 py-[80px]">
+								<Link
+									href="/"
+									aria-label="Astral"
+									title="Astral"
+									className="inline-flex items-center"
+								>
+									<Image className="w-[140px] select-none" src={logo} alt="" />
+								</Link>
+								<div className="border-b-2 border-gray-300 p-3 pt-10 pb-[80px]">
 									<nav>
 										<ul className="space-y-7 font-geist text-xl">
 											<li>
 												<Link
-													href="/projects"
-													aria-label="projects"
-													title="projects"
-													className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700 p-4 "
+													href="/services"
+													aria-label="services"
+													title="services"
+													className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700"
 												>
-													Projects
+													Services
 												</Link>
 											</li>
 											<li>
@@ -133,7 +118,7 @@ export const Nav = () => {
 													href="/about-us"
 													aria-label="about us"
 													title="about us"
-													className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700 p-4"
+													className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700"
 												>
 													About
 												</Link>
@@ -143,7 +128,7 @@ export const Nav = () => {
 													href="/blog"
 													aria-label="Blog"
 													title="Blog"
-													className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700 p-4 "
+													className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700"
 												>
 													Blog
 												</Link>
@@ -154,7 +139,7 @@ export const Nav = () => {
 													href="/contact-us"
 													aria-label="Contact us"
 													title="Contact us"
-													className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700 p-4"
+													className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700"
 												>
 													Contact
 												</Link>

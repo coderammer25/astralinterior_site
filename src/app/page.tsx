@@ -22,7 +22,6 @@ export default function HomePage() {
 	return (
 		<>
 			<Banner />
-
 			<div className="slider-container">
 				<Slider {...settings}>
 					<h2 className="uppercase text-center text-8xl xl:text-[14rem] text-[#D6F1ED]">

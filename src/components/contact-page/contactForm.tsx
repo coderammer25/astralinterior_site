@@ -251,6 +251,7 @@ const ContactForm = () => {
 						<textarea
 							name="message"
 							id="message"
+							rows={4}
 							placeholder="Share Your Thoughts"
 							className="border-2 border-[#d0e5e4] rounded-md py-[0.5rem] px-[1rem] transition-all focus:border-[#3cb1a6] focus:outline focus:outline-[#3cb1a6]"
 							onChange={handleChange}
