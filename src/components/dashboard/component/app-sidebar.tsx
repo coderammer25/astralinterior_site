@@ -32,7 +32,7 @@ const data = {
       icon: LucideMessageSquareText as unknown as LucideIcon,
       isActive: true,
       items: [
-        { title: "All Messages", url: "#" },
+        { title: "All Messages", url: "/dashboard/allmessages" },
       ],
     },
     {
