@@ -4,6 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Nav } from "@/components/common/Nav";
 import Footer from "@/components/common/Footer";
+  import { ToastContainer } from "react-toastify";
+
 
 export const metadata: Metadata = {
 	title: {
@@ -29,6 +31,7 @@ export default function RootLayout({
 				<Nav />
 				{children}
 				<Footer />
+				<ToastContainer />
 			</body>
 		</html>
 	);

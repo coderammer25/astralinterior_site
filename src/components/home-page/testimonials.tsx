@@ -8,7 +8,7 @@ const Testimonials = () => {
 	const settings = {
 		arrows: false,
 		autoplay: true,
-		autoplaySpeed: 2000,
+		autoplaySpeed: 1000,
 		dots: true,
 		infinite: true,
 		speed: 500,
