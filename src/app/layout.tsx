@@ -4,7 +4,6 @@ import Footer from "@/components/common/Footer";
 import ClientLayout from "./ClientLayout";
 import type { Metadata } from "next";
 import "./globals.css";
-import { LayoutProvider } from "./LayoutProvider";
 
 export const metadata: Metadata = {
 	title: {
@@ -30,7 +29,6 @@ export default function RootLayout({
 				<Nav />
 				<ClientLayout>{children}</ClientLayout>
 				<Footer />
-				<LayoutProvider>{children}</LayoutProvider>
 			</body>
 		</html>
 	);
