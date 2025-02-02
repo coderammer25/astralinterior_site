@@ -1,10 +1,10 @@
-import AllServices from '@/components/dashboard/AllServices';
+import AddProject from '@/components/dashboard/AddProject';
 import React from 'react';
 
 const page = () => {
     return (
         <div>
-            <AllServices />
+            <AddProject />
         </div>
     );
 };

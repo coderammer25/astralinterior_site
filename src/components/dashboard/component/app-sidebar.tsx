@@ -15,6 +15,7 @@ import { LucideMessageSquareText, LucideIcon } from "lucide-react"
 import { MdOutlineHomeRepairService as MdIcon } from "react-icons/md"
 import { RiBloggerLine as RiIcon } from "react-icons/ri"
 import { GoProject as GoIcon } from "react-icons/go"
+import Link from "next/link"
 
 const data = {
 
@@ -40,8 +41,8 @@ const data = {
       url: "#",
       icon: MdIcon as unknown as LucideIcon,
       items: [
-        { title: "Add Services", url: "#" },
-        { title: "All Services", url: "#" },
+        { title: "All Services", url: "/dashboard/allservice" },
+        { title: "Add Service", url: "/dashboard/addservice" },
       ],
     },
     {
@@ -49,8 +50,8 @@ const data = {
       url: "#",
       icon: RiIcon as unknown as LucideIcon,
       items: [
-        { title: "All Blogs", url: "#" },
-        { title: "Add Blog", url: "#" },
+        { title: "All Blogs", url: "/dashboard/allblogs" },
+        { title: "Add Blog", url: "/dashboard/addblog" },
       ],
     },
     {
@@ -58,8 +59,8 @@ const data = {
       url: "#",
       icon: GoIcon as unknown as LucideIcon,
       items: [
-        { title: "All Projects", url: "#" },
-        { title: "add services", url: "#" },
+        { title: "All Projects", url: "/dashboard/allprojects" },
+        { title: "Add Project", url: "/dashboard/addproject" },
       ],
     },
   ],
@@ -69,7 +70,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
+        <Link href={"/dashboard"}>
         <TeamSwitcher teams={data?.teams} />
+        </Link>
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data?.navMain} />

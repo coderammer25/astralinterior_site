@@ -1,10 +1,10 @@
-import AllServices from '@/components/dashboard/AllServices';
+import AllBlogs from '@/components/dashboard/AllBlog';
 import React from 'react';
 
 const page = () => {
     return (
         <div>
-            <AllServices />
+            <AllBlogs />
         </div>
     );
 };

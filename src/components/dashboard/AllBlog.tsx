@@ -1,11 +1,11 @@
 import React from 'react';
 
-const AddService = () => {
+const AllBlog = () => {
     return (
         <div>
-            add services
+            AllBlogs are here
         </div>
     );
 };
 
-export default AddService;
+export default AllBlog;

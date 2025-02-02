@@ -1,11 +1,11 @@
 import React from 'react';
 
-const AddService = () => {
+const AddProject = () => {
     return (
         <div>
-            add services
+            add project
         </div>
     );
 };
 
-export default AddService;
+export default AddProject;

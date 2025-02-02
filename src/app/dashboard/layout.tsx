@@ -38,7 +38,7 @@ export default function DashboardLayout({ children, showSidebar = true }: Dashbo
        )}
 
         {/* Main content */}
-        <div className="flex flex-1 flex-col gap-4 p-10 bg-gray-50">
+        <div className="flex flex-1 flex-col gap-4 m-12 bg-gray-50">
           <div className="flex-1 rounded-xl bg-muted/50 md:min-h-min bg-white">
             {/* Here, the children (like MessagePage or other content) will be rendered */}
             {children}
