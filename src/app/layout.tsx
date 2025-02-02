@@ -1,12 +1,14 @@
-// RootLayout.js (Server Component)
+
 import { Nav } from "@/components/common/Nav";
 import Footer from "@/components/common/Footer";
 import ClientLayout from "./ClientLayout";
+import type { Metadata } from "next";
+import "./globals.css";
+import { LayoutProvider } from "./LayoutProvider";
 
-export const metadata = {
+export const metadata: Metadata = {
 	title: {
-		default:
-			"Astral Interior and Furniture | Premium Interior Solutions in Bangladesh",
+		default: "Astral Interior and Furniture | Premium Interior Solutions in Bangladesh",
 		template: "%s | Astral Interior and Furniture",
 	},
 	description:
@@ -28,6 +30,7 @@ export default function RootLayout({
 				<Nav />
 				<ClientLayout>{children}</ClientLayout>
 				<Footer />
+				<LayoutProvider>{children}</LayoutProvider>
 			</body>
 		</html>
 	);
