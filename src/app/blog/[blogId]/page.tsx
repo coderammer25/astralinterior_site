@@ -2,22 +2,25 @@ import { featuredPost, recentPosts } from "../../../data";
 import Image from "next/image";
 import { Badge } from "antd";
 
-const BlogDetails = async ({ params }: { params: { blogId: string } }) => {
+const BlogDetails = async ({
+	params,
+}: {
+	params: Promise<{ blogId: string }>;
+}) => {
+	const { blogId } = await params;
+	const allPosts = [featuredPost, ...recentPosts];
 
-  const { blogId } = params;
-  const allPosts = [featuredPost, ...recentPosts];
+	const blog = allPosts.find((post) => post.blogId === Number(blogId));
 
-  const blog = allPosts.find((post) => post.blogId === Number(blogId));
+	if (!blog) {
+		return (
+			<div className="container mx-auto px-4 py-16 text-center">
+				<p className="text-xl">Loading blog details...</p>
+			</div>
+		);
+	}
 
-  if (!blog) {
-    return (
-      <div className="container mx-auto px-4 py-16 text-center">
-        <p className="text-xl">Loading blog details...</p>
-      </div>
-    );
-  }
-
-  return (
+	return (
 		<div className="px-4 py-11 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
 			{/* Blog Header */}
 			<div className="space-y-4">
