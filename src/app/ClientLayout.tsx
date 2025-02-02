@@ -1,6 +1,5 @@
-// ClientLayout.js (Client Component)
-"use client";
 
+"use client";
 import { ToastContainer } from "react-toastify";
 import { FaArrowUp, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
