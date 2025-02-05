@@ -8,9 +8,9 @@ import Link from "next/link";
 
 const ServicesComponent = () => {
 	return (
-		<section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-			<div className="flex items-start gap-4 md:gap-0 justify-between min-h-screen">
-				<div className="w-1/2">
+		<section className="px-4 lg:py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+			<div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 md:gap-0 justify-between min-h-screen">
+				<div className="w-full lg:w-1/2">
 					{services.map((service, idx) => (
 						<div key={service.title}>
 							<IndividualService service={service} number={idx} />
@@ -28,7 +28,7 @@ const ServicesComponent = () => {
 					</Link>
 				</div>
 
-				<div className="sticky top-10 w-1/2 h-full">
+				<div className="sticky top-10 w-full lg:w-1/2 h-full">
 					<Image
 						src={serviceImg}
 						alt="Service Image"

@@ -64,9 +64,9 @@ const ContactForm = () => {
 	};
 
 	return (
-		<div>
+		<>
 			<div className="text-center">
-				<h2 className="uppercase text-[3rem] xl:text-[8rem] leading-[1] mb-[2rem]">
+				<h2 className="uppercase text-[2rem] md:text-[3rem] xl:text-[8rem] leading-[1] mb-[2rem]">
 					Get in <span className="font-playfair text-heading">touch</span>
 				</h2>
 				<p className="text-[1.125rem] lg:w-1/2 mx-auto leading-[1.4]">
@@ -82,38 +82,39 @@ const ContactForm = () => {
 					target="_blank"
 					className="bg-primary p-3 rounded-md border-2 border-primary transition-all duration-500 hover:bg-white hover:text-primary text-white cursor-pointer"
 				>
-					<FaFacebookF className="w-[1.375rem] h-[1.375rem]" />
+					<FaFacebookF className="md:w-[1.375rem] md:h-[1.375rem]" />
 				</Link>
 				<Link
 					href="https://instagram.com"
 					target="_blank"
 					className="bg-primary p-3 rounded-md border-2 border-primary transition-all duration-500 hover:bg-white hover:text-primary text-white cursor-pointer"
 				>
-					<FaInstagram className="w-[1.375rem] h-[1.375rem]" />
+					<FaInstagram className="md:w-[1.375rem] md:h-[1.375rem]" />
 				</Link>
 				<Link
 					href="https://x.com"
 					target="_blank"
 					className="bg-primary p-3 rounded-md border-2 border-primary transition-all duration-500 hover:bg-white hover:text-primary text-white cursor-pointer"
 				>
-					<FaXTwitter className="w-[1.375rem] h-[1.375rem]" />
+					<FaXTwitter className="md:w-[1.375rem] md:h-[1.375rem]" />
 				</Link>
 				<Link
 					href="https://linkedin.com"
 					target="_blank"
 					className="bg-primary p-3 rounded-md border-2 border-primary transition-all duration-500 hover:bg-white hover:text-primary text-white cursor-pointer"
 				>
-					<FaLinkedinIn className="w-[1.375rem] h-[1.375rem]" />
+					<FaLinkedinIn className="md:w-[1.375rem] md:h-[1.375rem]" />
 				</Link>
 				<Link
 					href="https://youtube.com"
 					target="_blank"
 					className="bg-primary p-3 rounded-md border-2 border-primary transition-all duration-500 hover:bg-white hover:text-primary text-white cursor-pointer"
 				>
-					<RiYoutubeLine className="w-[1.475rem] h-[1.475rem]" />
+					<RiYoutubeLine className="md:w-[1.475rem] md:h-[1.475rem]" />
 				</Link>
 			</div>
 
+/
 			<div className="border border-[#d0e5e4] rounded-md my-[3rem] py-[3rem] px-[2rem] lg:w-2/3 mx-auto bg-white shadow-md">
 				<form className="space-y-[1.75rem]" onSubmit={handleSubmit}>
 					<div className="flex flex-col">
@@ -269,7 +270,7 @@ const ContactForm = () => {
 					</div>
 				</form>
 			</div>
-		</div>
+		</>
 	);
 };
 export default ContactForm;

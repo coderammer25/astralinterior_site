@@ -12,95 +12,97 @@ import Transform from "./home-page/transform";
 export default function About() {
 	return (
 		<div>
-			<section className="container mx-auto px-4 py-16 grid lg:grid-cols-2 gap-8 items-center min-h-[100vh]">
+			<section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
 				{/* Left Column - Text Content */}
-				<div className="space-y-6">
-					<nav className="flex items-center gap-2 text-sm">
-						<span>★</span>
-						<Link href="/about-us" className="hover:underline">
-							ABOUT US
+				<div className="flex flex-col lg:flex-row gap-8 items-center">
+					<div className="space-y-6">
+						<nav className="flex items-center gap-2 text-sm">
+							<span>★</span>
+							<Link href="/about-us" className="hover:underline">
+								ABOUT US
+							</Link>
+							<span>—</span>
+							<Link href="/about-us" className="hover:underline">
+								ABOUT US
+							</Link>
+						</nav>
+
+						<h1 className="text-[2rem] md:text-[4rem] leading-tight font-light text-primary">
+							BRINGING
+							<br />
+							IDEAS TO LIFE
+						</h1>
+
+						<p className="text-gray-600 w-full  md:w-1/2">
+							We are a renowned interior design agency dedicated to crafting
+							spaces that inspire and elevate everyday living.
+						</p>
+
+						<Link
+							href="/contact"
+							className="inline-flex items-center gap-2 bg-primary rounded-md text-white px-6 py-3 border border-primary hover:bg-transparent transition-colors duration-500 hover:text-primary"
+						>
+							GET IN TOUCH
+							<BsArrowRight className="w-4 h-4" />
 						</Link>
-						<span>—</span>
-						<Link href="/about-us" className="hover:underline">
-							ABOUT US
-						</Link>
-					</nav>
-
-					<h1 className="text-[4rem] leading-tight font-light text-primary">
-						BRINGING
-						<br />
-						IDEAS TO LIFE
-					</h1>
-
-					<p className="text-gray-600 max-w-md">
-						We are a renowned interior design agency dedicated to crafting
-						spaces that inspire and elevate everyday living.
-					</p>
-
-					<Link
-						href="/contact"
-						className="inline-flex items-center gap-2 bg-primary rounded-md text-white px-6 py-3 border border-primary hover:bg-transparent transition-colors duration-500 hover:text-primary"
-					>
-						GET IN TOUCH
-						<BsArrowRight className="w-4 h-4" />
-					</Link>
-				</div>
-
-				{/* Right Column - Image Grid */}
-				<div className="relative md:-ml-[15px] lg:-ml-[120px] md:h-[600px] w-[456px] h-[500px] md:w-[760px] lg:w-[735px] lg:h-[600px] p-3">
-					{/* Image 1 - Top Right */}
-					<div className="absolute top-0 right-0 h-56 w-56 md:h-60 md:w-60  lg:w-60 lg:h-60 z-0">
-						<Image
-							src={image1}
-							alt="Interior design piece"
-							fill
-							className="object-cover"
-						/>
 					</div>
 
-					{/* Image 2 - Center */}
-					<div className="absolute top-1/2 left-[100px] md:left-[370px] lg:left-[340px] -translate-x-[100px] -translate-y-[250px] md:-translate-y-[200px] lg:-translate-y-[200px]  h-56 w-56 md:h-60 md:w-60 lg:w-60 lg:h-60 z-0">
-						<Image
-							src={image2}
-							alt="Interior design element"
-							fill
-							className="object-cover"
-						/>
-					</div>
+					{/* Right Column - Image Grid */}
+					<div className="hidden lg:inline-block overflow-hidden relative md:-ml-[15px] lg:-ml-[120px] md:h-[600px] w-[456px] h-[500px] md:w-[760px] lg:w-[735px] lg:h-[600px] p-3">
+						{/* Image 1 - Top Right */}
+						<div className="absolute top-0 right-0 h-56 w-56 md:h-60 md:w-60  lg:w-60 lg:h-60 z-0">
+							<Image
+								src={image1}
+								alt="Interior design piece"
+								fill
+								className="object-cover"
+							/>
+						</div>
 
-					{/* Image 3 - Bottom Right */}
-					<div className="absolute bottom-16 md:bottom-16 lg:bottom-24 right-0 h-56 w-56 md:h-60 md:w-60 lg:w-60 lg:h-60 z-0">
-						<Image
-							src={image3}
-							alt="Modern furniture"
-							fill
-							className="object-cover"
-						/>
-					</div>
+						{/* Image 2 - Center */}
+						<div className="absolute top-1/2 left-[100px] md:left-[370px] lg:left-[340px] -translate-x-[100px] -translate-y-[250px] md:-translate-y-[200px] lg:-translate-y-[200px]  h-56 w-56 md:h-60 md:w-60 lg:w-60 lg:h-60 z-0">
+							<Image
+								src={image2}
+								alt="Interior design element"
+								fill
+								className="object-cover"
+							/>
+						</div>
 
-					{/* Image 4 - Center Left */}
-					<div className="absolute top-[100px] md:top-[360px] lg:top-[360px] left-[120px] md:left-[270px] lg:left-[240px] h-56 w-56 md:h-60 md:w-60 lg:w-60 lg:h-60 z-0">
-						<Image
-							alt="mini-interior"
-							src={image4}
-							fill
-							className="object-cover"
-						/>
-					</div>
+						{/* Image 3 - Bottom Right */}
+						<div className="absolute bottom-16 md:bottom-16 lg:bottom-24 right-0 h-56 w-56 md:h-60 md:w-60 lg:w-60 lg:h-60 z-0">
+							<Image
+								src={image3}
+								alt="Modern furniture"
+								fill
+								className="object-cover"
+							/>
+						</div>
 
-					{/* Image 5 - Bottom Left */}
-					<div className="absolute bottom-[40px] md:bottom-[110px] lg:bottom-[110px] left-0 md:left-5 lg:-left-3 h-56 w-56 md:h-60 md:w-60 lg:w-60 lg:h-60 z-0">
-						<Image
-							src={image5}
-							alt="Interior accent"
-							fill
-							className="object-cover"
-						/>
+						{/* Image 4 - Center Left */}
+						<div className="absolute top-[100px] md:top-[360px] lg:top-[360px] left-[120px] md:left-[270px] lg:left-[240px] h-56 w-56 md:h-60 md:w-60 lg:w-60 lg:h-60 z-0">
+							<Image
+								alt="mini-interior"
+								src={image4}
+								fill
+								className="object-cover"
+							/>
+						</div>
+
+						{/* Image 5 - Bottom Left */}
+						<div className="absolute bottom-[40px] md:bottom-[110px] lg:bottom-[110px] left-0 md:left-5 lg:-left-3 h-56 w-56 md:h-60 md:w-60 lg:w-60 lg:h-60 z-0">
+							<Image
+								src={image5}
+								alt="Interior accent"
+								fill
+								className="object-cover"
+							/>
+						</div>
 					</div>
 				</div>
 			</section>
 
-			<section className="mx-auto lg:ml-14 px-4 py-16 md:py-24">
+			<section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
 				<div className="lg:flex md:grid grid-cols-2 md:grid-cols-2 gap-8 md:gap-16 items-center">
 					<div className="relative lg:w-[800px]">
 						<Image
@@ -174,9 +176,9 @@ export default function About() {
 				</div>
 			</div>
 
-			<section className="mx-auto lg:mr-14 px-4 py-16 md:py-24">
-				<div className="lg:flex lg:space-x-[250px] md:grid grid-cols-2 md:grid-cols-2 gap-8 md:gap-16 items-center">
-					<div className="space-y-8 mt-5 lg:ml-[150px]">
+			<section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+				<div className="lg:flex md:grid grid-cols-2 md:grid-cols-2 gap-8 md:gap-16 items-center">
+					<div className="space-y-8 mt-5">
 						<div className="space-y-6 ">
 							<h2 className="text-base md:text-base lg:text-lg font-medium uppercase tracking-wider text-muted-foreground">
 								OUR MISSION
@@ -221,9 +223,9 @@ export default function About() {
 				</div>
 			</section>
 
-			<div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+			<section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
 				<div className="mx-auto mb-10 lg:max-w-xl sm:text-center">
-					<p className="inline-block px-3 py-px mb-4 text-7xl font-semibold tracking-wider uppercase rounded-full bg-teal-accent-400 text-primary">
+					<p className="inline-block px-3 py-px mb-4 text-xl md:text-7xl font-semibold tracking-wider uppercase rounded-full bg-teal-accent-400 text-primary">
 						Discover Our <span className="font-playfair">Team</span>
 					</p>
 				</div>
@@ -361,7 +363,7 @@ export default function About() {
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
 
 			<Transform />
 		</div>

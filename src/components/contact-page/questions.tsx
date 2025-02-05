@@ -58,7 +58,7 @@ const FAQ = () => {
 	return (
 		<div className="">
 			<div className="mb-[4rem]">
-				<h2 className="text-center text-[3rem] xl:text-[5rem] leading-[1] uppercase text-primary">
+				<h2 className="text-center text-[2rem] md:text-[3rem] xl:text-[5rem] leading-[1] uppercase text-primary">
 					Frequently Asked <br /> Questions
 				</h2>
 			</div>

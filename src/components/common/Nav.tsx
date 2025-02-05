@@ -16,11 +16,10 @@ export const Nav = () => {
 		setOpen(true);
 	};
 	
-
 	// Add scroll event listener
-	if (typeof window !== "undefined") {
+	// if (typeof window !== "undefined") {
 		window.addEventListener("scroll", handleScroll);
-	}
+	// }
 
 	const onClose = () => {
 		setOpen(false);
@@ -39,7 +38,7 @@ export const Nav = () => {
 						<Image className="w-[140px] select-none" src={logo} alt="" />
 					</Link>
 
-					<div className="flex lg:space-x-[90px]">
+					<div className="flex items-center gap-4 lg:space-x-[90px]">
 						<ul className="grid justify-end items-center space-x-8">
 							<li>
 								<Link

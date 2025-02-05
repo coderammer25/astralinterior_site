@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -6,58 +6,66 @@ import { FaArrowRight } from "react-icons/fa";
 import Slider from "react-slick";
 
 const Transform = () => {
-		const settings = {
-			arrows: false,
-			infinite: true,
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			autoplay: true,
-			speed: 5000,
-			autoplaySpeed: 2000,
-			cssEase: "linear",
-		};
+	const settings = {
+		arrows: false,
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		autoplay: true,
+		speed: 5000,
+		autoplaySpeed: 2000,
+		cssEase: "linear",
+	};
 
 	return (
 		<section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
 			<div className="flex flex-col xl:flex-row items-center justify-between gap-8">
 				<div className="flex xl:flex-col justify-between gap-4 xl:gap-0 xl:space-y-40">
-					<Image
-						src="https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6713b50f14c39bfea0deaefc_Serene%20Geometric%20and%20Organic%20Composition-p-500.webp"
-						alt="Image 1"
-						width={800}
-						height={800}
-						className="w-[224px] h-[224px]"
-					/>
-					<Image
-						src="https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6713b50be6f594839db8f157_Minimalist%20Interior%20with%20Geometric%20Light-p-500.webp"
-						alt="Image 1"
-						width={800}
-						height={800}
-						className="w-[224px] h-[224px]"
-					/>
+					<div>
+						<Image
+							src="https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6713b50f14c39bfea0deaefc_Serene%20Geometric%20and%20Organic%20Composition-p-500.webp"
+							alt="Image 1"
+							width={800}
+							height={800}
+							className="w-full h-full object-cover"
+						/>
+					</div>
+					<div>
+						<Image
+							src="https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6713b50be6f594839db8f157_Minimalist%20Interior%20with%20Geometric%20Light-p-500.webp"
+							alt="Image 1"
+							width={800}
+							height={800}
+							className="w-full h-full object-cover"
+						/>
+					</div>
 				</div>
 
-				<div className="text-center">
-					<div className="w-[700px] mx-auto">
-						<div className="slider-container">
-							<Slider {...settings}>
-								<p className="text-center text-base mb-[20px]">
+				<div className="w-full lg:w-1/2 mx-auto text-center">
+					<div className="slider-container z-10 overflow-hidden">
+						<Slider {...settings}>
+							<div className="whitespace-nowrap">
+								<p className="text-xs lg:text-base truncate text-center md:text-base mb-[20px]">
 									* Let&apos;s talk – Let&apos;s talk – Let&apos;s talk –
 									Let&apos;s talk – Let&apos;s talk – Let&apos;s talk
 								</p>
-								<p className="text-center text-base mb-[20px]">
+							</div>
+							<div className="whitespace-nowrap">
+								<p className="text-xs lg:text-base truncate text-center md:text-base mb-[20px]">
 									* Let&apos;s talk – Let&apos;s talk – Let&apos;s talk –
 									Let&apos;s talk – Let&apos;s talk – Let&apos;s talk
 								</p>
-								<p className="text-center text-base mb-[20px]">
+							</div>
+							<div className="whitespace-nowrap">
+								<p className="text-xs lg:text-base truncate text-center md:text-base mb-[20px]">
 									* Let&apos;s talk – Let&apos;s talk – Let&apos;s talk –
-									Let&apos;s talk – Let&apos;s talk – Let&apos;s talk 
+									Let&apos;s talk – Let&apos;s talk – Let&apos;s talk
 								</p>
-							</Slider>
-						</div>
+							</div>
+						</Slider>
 					</div>
 
-					<h2 className="text-[3rem] lg:text-[5rem] uppercase leading-[1] mb-[20px] text-primary">
+					<h2 className="text-[3rem] lg:text-[5rem] uppercase leading-[1] mb-[20px] text-primary text-center">
 						Ready to Transform Your{" "}
 						<span className="font-playfair">Space?</span>.
 					</h2>
@@ -79,20 +87,24 @@ const Transform = () => {
 				</div>
 
 				<div className="flex xl:flex-col justify-between gap-4 xl:gap-0 xl:space-y-40 text-right">
-					<Image
-						src="https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6713b512870cc6e108d4e4e8_Sculptural%20Black%20Shell%20in%20Modern%20Room-p-500.webp"
-						alt="Image 1"
-						width={800}
-						height={800}
-						className="w-[224px] h-[224px]"
-					/>
-					<Image
-						src="https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6713b50be6f594839db8f157_Minimalist%20Interior%20with%20Geometric%20Light-p-500.webp"
-						alt="Image 1"
-						width={800}
-						height={800}
-						className="w-[224px] h-[224px]"
-					/>
+					<div>
+						<Image
+							src="https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6713b512870cc6e108d4e4e8_Sculptural%20Black%20Shell%20in%20Modern%20Room-p-500.webp"
+							alt="Image 1"
+							width={800}
+							height={800}
+							className="w-full h-full object-cover"
+						/>
+					</div>
+					<div>
+						<Image
+							src="https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6713b50be6f594839db8f157_Minimalist%20Interior%20with%20Geometric%20Light-p-500.webp"
+							alt="Image 1"
+							width={800}
+							height={800}
+							className="w-full h-full object-cover"
+						/>
+					</div>
 				</div>
 			</div>
 		</section>

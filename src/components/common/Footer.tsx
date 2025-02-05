@@ -19,8 +19,8 @@ export default function Footer() {
 						alt="Astral Logo"
 						className="w-40 font-semibold mb-4"
 					/>
-					<div className="backdrop-blur-sm inline-block">
-						<p className="text-white w-2/3">
+					<div className="inline-block">
+						<p className="text-white lg:w-2/3">
 							Transforming spaces into timeless experiences. At Astral, we blend
 							creativity, functionality, and elegance to craft interiors that
 							inspire. From concept to completion, we design spaces that reflect
@@ -30,7 +30,7 @@ export default function Footer() {
 				</div>
 
 				{/* Main Navigation Grid */}
-				<div className="flex justify-between gap-10 lg:w-1/2">
+				<div className="flex flex-col lg:flex-row justify-between gap-10 lg:w-1/2">
 					{/* Column 5 */}
 					<div className="space-y-4">
 						<h4 className="font-semibold mb-8 uppercase">Navigate</h4>

@@ -6,7 +6,7 @@ export const handleScroll = () => {
 			"sticky",
 			"top-0",
 			"left-0",
-			"bg-white/80",
+			"bg-white",
 			"z-10",
 			"backdrop-blur-md"
 		);
@@ -16,7 +16,7 @@ export const handleScroll = () => {
 			"sticky",
 			"top-0",
 			"left-0",
-			"bg-white/80",
+			"bg-white",
 			"z-10",
 			"backdrop-blur-md"
 		);
