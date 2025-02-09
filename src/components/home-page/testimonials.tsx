@@ -3,6 +3,8 @@
 import { clients } from "@/data";
 import Client from "./client";
 import Slider from "react-slick";
+import AOS from "aos";
+import { useEffect } from "react";
 
 const Testimonials = () => {
 	const settings = {
@@ -48,7 +50,11 @@ const Testimonials = () => {
 			},
 		],
 	};
- 
+
+	useEffect(() => {
+		AOS.init();
+	}, []);
+
 	return (
 		<section>
 			<div className="px-4 pt-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">

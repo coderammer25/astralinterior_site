@@ -150,20 +150,20 @@ export default function About() {
 				</div>
 			</section>
 
-			<div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-white -mt-[50px] ">
+			<div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-white -mt-[50px] px-4">
 				{/* Background text */}
-				<div className="absolute w-full flex justify-center items-center space-x-5 ">
-					<span className="text-9xl leading-none">OUR</span>
-					<span className="text-9xl leading-none">PROCESS</span>
+				<div className="absolute  w-full flex justify-center items-center space-x-5">
+					<span className="text-xl lg:text-9xl leading-none">OUR</span>
+					<span className="text-xl lg:text-9xl leading-none">PROCESS</span>
 				</div>
 
 				{/* Card stack effect */}
-				<div className="relative max-w-2xl h-[280px] w-[450px] ">
+				<div className="relative max-w-2xl h-[280px] w-[450px]">
 					<div className="absolute top-2 left-2 w-full h-full border border-gray-200 transform rotate-2" />
 					<div className="absolute top-1 left-1 w-full h-full border border-gray-200 transform rotate-1" />
 
 					{/* Main card */}
-					<div className="relative bg-white border md:p-12 space-y-3">
+					<div className="relative bg-white border md:p-12 space-y-3 px-2">
 						<h1 className="font-playfair text-4xl font-light">01</h1>
 						<h2 className="text-xl font-semibold">DISCOVERY & CONSULTATION</h2>
 						<p>
@@ -177,8 +177,8 @@ export default function About() {
 			</div>
 
 			<section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-				<div className="lg:flex md:grid grid-cols-2 md:grid-cols-2 gap-8 md:gap-16 items-center">
-					<div className="space-y-8 mt-5">
+				<div className="flex justify-between">
+					<div className="space-y-8 mt-5 w-1/2">
 						<div className="space-y-6 ">
 							<h2 className="text-base md:text-base lg:text-lg font-medium uppercase tracking-wider text-muted-foreground">
 								OUR MISSION
@@ -205,19 +205,19 @@ export default function About() {
 						</div>
 					</div>
 
-					<div className="relative lg:w-[600px]">
+					<div className="relative mt-8 w-1/2 flex">
+						<Image
+							src={image1}
+							alt="mini"
+							className="w-1/3"
+						/>
 						<Image
 							src={image5}
 							alt="Interior design professional"
 							width={1600}
 							height={800}
-							className="w-full object-cover"
+							className="w-2/3 object-cover"
 							priority
-						/>
-						<Image
-							src={image1}
-							alt="mini"
-							className="absolute md:-mt-[420px] md:-ml-[90px] lg:-mt-[570px] w-0 lg:-ml-[130px] md:w-[180px] lg:w-[250px]"
 						/>
 					</div>
 				</div>

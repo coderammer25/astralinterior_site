@@ -21,7 +21,7 @@ const Transform = () => {
 		<section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
 			<div className="flex flex-col xl:flex-row items-center justify-between gap-8">
 				<div className="flex xl:flex-col justify-between gap-4 xl:gap-0 xl:space-y-40">
-					<div>
+					<div data-aos="fade-down" data-aos-duration="1000">
 						<Image
 							src="https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6713b50f14c39bfea0deaefc_Serene%20Geometric%20and%20Organic%20Composition-p-500.webp"
 							alt="Image 1"
@@ -30,7 +30,7 @@ const Transform = () => {
 							className="w-full h-full object-cover"
 						/>
 					</div>
-					<div>
+					<div data-aos="fade-up" data-aos-duration="1000">
 						<Image
 							src="https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6713b50be6f594839db8f157_Minimalist%20Interior%20with%20Geometric%20Light-p-500.webp"
 							alt="Image 1"
@@ -65,12 +65,20 @@ const Transform = () => {
 						</Slider>
 					</div>
 
-					<h2 className="text-[3rem] lg:text-[5rem] uppercase leading-[1] mb-[20px] text-primary text-center">
+					<h2
+						className="text-[3rem] lg:text-[5rem] uppercase leading-[1] mb-[20px] text-primary text-center"
+						data-aos="fade-up"
+						data-aos-duration="600"
+					>
 						Ready to Transform Your{" "}
 						<span className="font-playfair">Space?</span>.
 					</h2>
 
-					<p className="text-[1.125rem] mb-[20px]">
+					<p
+						className="text-[1.125rem] mb-[20px]"
+						data-aos="fade-up"
+						data-aos-duration="800"
+					>
 						Let’s bring your design vision to life! Whether you’re looking for a
 						complete makeover or just a fresh update, our team is here to help.
 					</p>
@@ -78,6 +86,8 @@ const Transform = () => {
 					<Link
 						href="/contact-us"
 						className="flex items-center justify-center gap-2 uppercase text-[14px] text-[#2c2b28] mt-[3rem]"
+						data-aos="fade-up"
+						data-aos-duration="1000"
 					>
 						Get in touch{" "}
 						<span className="bg-primary p-1">
@@ -87,7 +97,7 @@ const Transform = () => {
 				</div>
 
 				<div className="flex xl:flex-col justify-between gap-4 xl:gap-0 xl:space-y-40 text-right">
-					<div>
+					<div data-aos="fade-down" data-aos-duration="1000">
 						<Image
 							src="https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6713b512870cc6e108d4e4e8_Sculptural%20Black%20Shell%20in%20Modern%20Room-p-500.webp"
 							alt="Image 1"
@@ -96,7 +106,7 @@ const Transform = () => {
 							className="w-full h-full object-cover"
 						/>
 					</div>
-					<div>
+					<div data-aos="fade-up" data-aos-duration="1000">
 						<Image
 							src="https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6713b50be6f594839db8f157_Minimalist%20Interior%20with%20Geometric%20Light-p-500.webp"
 							alt="Image 1"

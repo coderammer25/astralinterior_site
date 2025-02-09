@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 import { Drawer } from "antd";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import { handleScroll } from "@/utils/scroll";
 
 export const Nav = () => {
 	const [open, setOpen] = useState(false);
@@ -15,15 +14,41 @@ export const Nav = () => {
 	const showDrawer = () => {
 		setOpen(true);
 	};
-	
+
 	// Add scroll event listener
 	// if (typeof window !== "undefined") {
-		window.addEventListener("scroll", handleScroll);
 	// }
 
 	const onClose = () => {
 		setOpen(false);
 	};
+
+	const handleScroll = () => {
+		const navId = document.getElementById("navId");
+		if (window.scrollY > 0) {
+			navId?.classList.add(
+				"shadow-md",
+				"sticky",
+				"top-0",
+				"left-0",
+				"bg-white/50",
+				"z-10",
+				"backdrop-blur-md"
+			);
+		} else {
+			navId?.classList.remove(
+				"shadow-md",
+				"sticky",
+				"top-0",
+				"left-0",
+				"bg-white/50",
+				"z-10",
+				"backdrop-blur-md"
+			);
+		}
+	};
+
+	window.addEventListener("scroll", handleScroll);
 
 	return (
 		<section id="navId">

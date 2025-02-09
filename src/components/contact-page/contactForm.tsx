@@ -66,17 +66,29 @@ const ContactForm = () => {
 	return (
 		<>
 			<div className="text-center">
-				<h2 className="uppercase text-[2rem] md:text-[3rem] xl:text-[8rem] leading-[1] mb-[2rem]">
+				<h2
+					className="uppercase text-[2rem] md:text-[3rem] xl:text-[8rem] leading-[1] mb-[2rem]"
+					data-aos="fade-down"
+					data-aos-duration="1000"
+				>
 					Get in <span className="font-playfair text-heading">touch</span>
 				</h2>
-				<p className="text-[1.125rem] lg:w-1/2 mx-auto leading-[1.4]">
+				<p
+					className="text-[1.125rem] lg:w-1/2 mx-auto leading-[1.4]"
+					data-aos="fade-down"
+					data-aos-duration="800"
+				>
 					Reach out to discuss your project, ask questions, or schedule a
 					consultation. We’re excited to collaborate and bring your dream
 					interiors to reality.
 				</p>
 			</div>
 
-			<div className="flex items-center justify-center gap-4 mt-[2rem]">
+			<div
+				className="flex items-center justify-center gap-4 mt-[2rem]"
+				data-aos="fade-up"
+				data-aos-duration="800"
+			>
 				<Link
 					href="https://facebook.com"
 					target="_blank"
@@ -114,8 +126,11 @@ const ContactForm = () => {
 				</Link>
 			</div>
 
-/
-			<div className="border border-[#d0e5e4] rounded-md my-[3rem] py-[3rem] px-[2rem] lg:w-2/3 mx-auto bg-white shadow-md">
+			<div
+				className="border border-[#d0e5e4] rounded-md my-[3rem] py-[3rem] px-[2rem] lg:w-2/3 mx-auto bg-white shadow-md"
+				data-aos="fade-up"
+				data-aos-duration="1000"
+			>
 				<form className="space-y-[1.75rem]" onSubmit={handleSubmit}>
 					<div className="flex flex-col">
 						<label

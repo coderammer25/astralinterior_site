@@ -14,11 +14,11 @@ interface ItemProps {
 	children: ReactNode;
 }
 
-const Item = ({ title, children }: ItemProps) => {
+const Item = ({ title, children, ...props }: ItemProps) => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
-		<div className="border-b">
+		<div className="border-b" {...props}>
 			<button
 				type="button"
 				aria-label="Open item"
@@ -57,13 +57,17 @@ const Item = ({ title, children }: ItemProps) => {
 const FAQ = () => {
 	return (
 		<div className="">
-			<div className="mb-[4rem]">
+			<div className="mb-[4rem]" data-aos="fade-up" data-aos-duration="1000">
 				<h2 className="text-center text-[2rem] md:text-[3rem] xl:text-[5rem] leading-[1] uppercase text-primary">
 					Frequently Asked <br /> Questions
 				</h2>
 			</div>
 			<div className="space-y-4 lg:w-3/4 mx-auto">
-				<Item title="How much does office interior design cost in Bangladesh?">
+				<Item
+					title="How much does office interior design cost in Bangladesh?"
+					data-aos="fade-up"
+					data-aos-duration="400"
+				>
 					The cost of office interior design in Bangladesh can vary widely
 					depending on factors such as office size, design complexity,
 					materials, and customization. On average, basic office interior design
@@ -76,7 +80,11 @@ const FAQ = () => {
 					to get a detailed quote from an interior design firm to understand the
 					full cost based on your needs.
 				</Item>
-				<Item title="How much does interior design in Bangladesh cost?">
+				<Item
+					title="How much does interior design in Bangladesh cost?"
+					data-aos="fade-up"
+					data-aos-duration="600"
+				>
 					The cost of interior design in Bangladesh varies depending on the
 					complexity of the project, size of the space, and the designer&apos;s
 					expertise. On average, residential interior design might start from
@@ -86,7 +94,11 @@ const FAQ = () => {
 					affected by the materials used, level of customization, and the
 					designer’s reputation.
 				</Item>
-				<Item title="How much does luxury bedroom interior design cost?">
+				<Item
+					title="How much does luxury bedroom interior design cost?"
+					data-aos="fade-up"
+					data-aos-duration="800"
+				>
 					The cost of luxury bedroom interior design depends on several factors,
 					including the size of the room, the complexity of the design,
 					materials chosen, and the designer&apos;s expertise. On average,
@@ -96,7 +108,11 @@ const FAQ = () => {
 					idea to get an estimate from a designer based on your specific needs
 					and preferences.
 				</Item>
-				<Item title="How much does home interior design cost?">
+				<Item
+					title="How much does home interior design cost?"
+					data-aos="fade-up"
+					data-aos-duration="1000"
+				>
 					The cost of home interior design varies depending on several factors,
 					including the size of the home, the complexity of the design, the
 					quality of materials, and the designer&apos;s expertise. On average,
@@ -106,7 +122,11 @@ const FAQ = () => {
 					best to consult with a designer for a more specific quote based on
 					your needs.
 				</Item>
-				<Item title="How much does room interior design cost?">
+				<Item
+					title="How much does room interior design cost?"
+					data-aos="fade-up"
+					data-aos-duration="1200"
+				>
 					The cost of room interior design varies depending on the size of the
 					room, the complexity of the design, and the materials used. In
 					Bangladesh, room interior design typically ranges from BDT 500 to BDT
@@ -115,15 +135,19 @@ const FAQ = () => {
 					foot or higher. It&apos;s best to consult a designer for a specific
 					estimate based on your preferences and requirements.
 				</Item>
-				<Item title="How much does kitchen interior design cost?">
+				<Item
+					title="How much does kitchen interior design cost?"
+					data-aos="fade-up"
+					data-aos-duration="1400"
+				>
 					The cost of kitchen interior design depends on the size of the
 					kitchen, the complexity of the design, the materials used, and whether
 					you choose custom or pre-made components. On average, kitchen interior
 					design in Bangladesh ranges from BDT 800 to BDT 2,500 per square foot
 					for standard designs, while high-end or luxury kitchens can cost
 					between BDT 3,000 to BDT 5,000 per square foot. For a more precise
-					estimate, it&apos;s recommended to consult with a designer based on your
-					kitchen&apos;s specific requirements.
+					estimate, it&apos;s recommended to consult with a designer based on
+					your kitchen&apos;s specific requirements.
 				</Item>
 			</div>
 		</div>

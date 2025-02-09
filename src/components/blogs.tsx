@@ -21,13 +21,21 @@ const Blogs = () => {
 	return (
 		<>
 			<section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-				<h1 className="text-[3rem] md:text-6xl lg:text-9xl font-serif mb-12 md:mb-16 text-primary">
+				<h1
+					className="text-[3rem] md:text-6xl lg:text-9xl font-serif mb-12 md:mb-16 text-primary"
+					data-aos="fade-right"
+					data-aos-duration="1000"
+				>
 					OUR <span className="font-playfair">BLOG</span>
 				</h1>
 
 				<div className="flex flex-col lg:flex-row justify-between gap-4">
 					{/* Featured Post */}
-					<article className=" lg:w-2/3 mt-20">
+					<article
+						className=" lg:w-2/3 mt-20"
+						data-aos="fade-right"
+						data-aos-duration="1000"
+					>
 						<Link
 							href={`/blog/${featuredPost?.blogId}`}
 							className="group block relative"
@@ -61,7 +69,11 @@ const Blogs = () => {
 					<div className="space-y-8 lg:w-1/3 mt-24 lg:mt-0">
 						<h2 className="text-primary text-[2rem]">Related Blogs</h2>
 						{recentPosts.map((post, index) => (
-							<article key={index}>
+							<article
+								key={index}
+								data-aos="fade-left"
+								data-aos-duration="1000"
+							>
 								<Link
 									href={`/blog/${post?.blogId}`}
 									className="flex gap-4 items-center lg:gap-4 group"

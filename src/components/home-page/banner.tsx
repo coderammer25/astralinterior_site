@@ -15,10 +15,15 @@ const Banner = () => {
 		cssEase: "linear",
 	};
 
+
 	return (
 		<section className="px-4 pt-[4rem] pb-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
 			<div className="text-center space-y-8 min-h-screen">
-				<div className="lg:w-1/2 mx-auto">
+				<div
+					className="lg:w-1/2 mx-auto"
+					data-aos="fade-down"
+					data-aos-duration="1000"
+				>
 					<div className="slider-container z-10 overflow-hidden">
 						<Slider {...settings}>
 							<div className="whitespace-nowrap">
@@ -43,7 +48,11 @@ const Banner = () => {
 					</div>
 				</div>
 
-				<h1 className="uppercase text-6xl xl:text-[7rem] xl:leading-[0.9] text-primary">
+				<h1
+					className="uppercase text-6xl xl:text-[7rem] xl:leading-[0.9] text-primary"
+					data-aos="fade-down"
+					data-aos-duration="800"
+				>
 					Crafting <br /> luxury <span className="font-playfair">spaces</span>
 				</h1>
 				<div className="relative z-0">
@@ -56,8 +65,20 @@ const Banner = () => {
 					/>
 				</div>
 				<div className="relative top-[500px] lg:top-96 flex flex-col gap-4 lg:flex-row lg:gap-0 items-center justify-between">
-					<p className="uppercase text-sm">We are @astral</p>
-					<p className="uppercase text-sm">interior design studio</p>
+					<p
+						className="uppercase text-sm"
+						data-aos="fade-down"
+						data-aos-duration="600"
+					>
+						We are @astral
+					</p>
+					<p
+						className="uppercase text-sm"
+						data-aos="fade-down"
+						data-aos-duration="600"
+					>
+						interior design studio
+					</p>
 				</div>
 			</div>
 		</section>
