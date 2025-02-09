@@ -3,27 +3,12 @@ import { ToastContainer } from "react-toastify";
 import { FaArrowUp, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 import { scrollToTop } from "@/utils/scroll";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import "./globals.css";
-import { useEffect } from "react";
-import AOS from "aos";
 
 export default function ClientLayout({
 	children,
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
-	useEffect(() => {
-		scrollToTop();
-	});
-
-		useEffect(() => {
-			AOS.init();
-			AOS.refresh();
-			AOS.refreshHard();
-		}, []);
-
 	return (
 		<>
 			{children}
