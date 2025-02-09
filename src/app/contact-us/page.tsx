@@ -1,3 +1,4 @@
+
 import ContactForm from "@/components/contact-page/contactForm";
 import Information from "@/components/contact-page/information";
 import FrequentQuestions from "@/components/contact-page/questions";

@@ -15,10 +15,6 @@ export const Nav = () => {
 		setOpen(true);
 	};
 
-	// Add scroll event listener
-	// if (typeof window !== "undefined") {
-	// }
-
 	const onClose = () => {
 		setOpen(false);
 	};
@@ -48,7 +44,9 @@ export const Nav = () => {
 		}
 	};
 
-	window.addEventListener("scroll", handleScroll);
+	if (typeof window !== "undefined") {
+		window.addEventListener("scroll", handleScroll);
+	}
 
 	return (
 		<section id="navId">
