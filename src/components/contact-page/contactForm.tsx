@@ -1,5 +1,7 @@
 "use client";
 
+import { CREATE_MESSAGE } from "@/graphql/mutations/mutation";
+import { useMutation } from "@apollo/client";
 import Link from "next/link";
 import { useState } from "react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
@@ -13,12 +15,13 @@ const initialFormData = {
 	phone: "",
 	location: "",
 	projectType: "",
-	customize: "",
+	customize: false,
 	message: "",
 };
 
 const ContactForm = () => {
 	const [formData, setFormData] = useState(initialFormData);
+	const [createMessage] = useMutation(CREATE_MESSAGE);
 
 	const notify = (type: string, message: string) =>
 		toast(message, {
@@ -45,21 +48,49 @@ const ContactForm = () => {
 		}));
 	};
 
-	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 
 		if (
 			!formData.name ||
 			!formData.email ||
 			!formData.phone ||
+			!formData.location ||
 			!formData.message
 		) {
-			notify("error", "name, email, phone and message can't be empty");
+			notify(
+				"error",
+				"name, email, phone, location and message can't be empty"
+			);
 			return;
 		}
 
-		console.log(formData);
-		notify("success", "Message sent successfully");
+		// console.log(formData);
+		try {
+			// Send the mutation request
+			await createMessage({
+				variables: {
+					createMessageDto: {
+						userName: formData.name,
+						email: formData.email,
+						phone: formData.phone,
+						location: formData.location,
+						projectType: formData.projectType,
+						customizeFurniture: formData.customize,
+						content: formData.message,
+					},
+				},
+			});
+
+			notify("success", "Message sent successfully");
+
+			// Reset form data
+			setFormData(initialFormData);
+		} catch (error) {
+			console.error(error);
+			notify("error", "Failed to send message");
+		}
+
 		setFormData(initialFormData);
 	};
 
@@ -238,8 +269,8 @@ const ContactForm = () => {
 								type="radio"
 								id="yes"
 								name="customize"
-								value="YES"
-								checked={formData.customize === "YES"}
+								value="true"
+								checked={formData.customize === true}
 								onChange={handleChange}
 							/>
 							  <label htmlFor="yes">YES</label>
@@ -247,13 +278,13 @@ const ContactForm = () => {
 						<div>
 							<input
 								type="radio"
-								id="nO"
+								id="no"
 								name="customize"
-								value="NO"
-								checked={formData.customize === "NO"}
+								value="false"
+								checked={formData.customize === false}
 								onChange={handleChange}
 							/>
-							  <label htmlFor="nO">NO</label>
+							  <label htmlFor="no">NO</label>
 						</div>
 					</div>
 
