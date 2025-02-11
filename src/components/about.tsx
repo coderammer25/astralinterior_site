@@ -11,11 +11,11 @@ import { FaArrowRight } from "react-icons/fa";
 import Transform from "./home-page/transform";
 export default function About() {
 	return (
-		<div>
+		<>
 			<section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
 				{/* Left Column - Text Content */}
-				<div className="flex flex-col lg:flex-row gap-8 items-center">
-					<div className="space-y-6">
+				<div className="flex items-center justify-between">
+					<div className="space-y-6 w-full xl:w-1/2">
 						<nav className="flex items-center gap-2 text-sm">
 							<span>★</span>
 							<Link href="/about-us" className="hover:underline">
@@ -48,63 +48,23 @@ export default function About() {
 					</div>
 
 					{/* Right Column - Image Grid */}
-					<div className="hidden lg:inline-block overflow-hidden relative md:-ml-[15px] lg:-ml-[120px] md:h-[600px] w-[456px] h-[500px] md:w-[760px] lg:w-[735px] lg:h-[600px] p-3">
-						{/* Image 1 - Top Right */}
-						<div className="absolute top-0 right-0 h-56 w-56 md:h-60 md:w-60  lg:w-60 lg:h-60 z-0">
-							<Image
-								src={image1}
-								alt="Interior design piece"
-								fill
-								className="object-cover"
-							/>
+					<div className="hidden xl:flex items-center justify-between gap-4 w-full xl:w-1/2">
+						<div className="flex flex-col gap-4 w-1/2">
+							<Image src={image1} alt="" width={800} height={800} className="w-48 h-48"/>
+							<Image src={image2} alt="" width={800} height={800} className="w-48 h-48"/>
 						</div>
-
-						{/* Image 2 - Center */}
-						<div className="absolute top-1/2 left-[100px] md:left-[370px] lg:left-[340px] -translate-x-[100px] -translate-y-[250px] md:-translate-y-[200px] lg:-translate-y-[200px]  h-56 w-56 md:h-60 md:w-60 lg:w-60 lg:h-60 z-0">
-							<Image
-								src={image2}
-								alt="Interior design element"
-								fill
-								className="object-cover"
-							/>
+						<div className="flex flex-col gap-4 w-1/2">
+							<Image src={image3} alt="" width={800} height={800} className="w-48 h-48"/>
+							<Image src={image1} alt="" width={800} height={800} className="w-48 h-48"/>
 						</div>
-
-						{/* Image 3 - Bottom Right */}
-						<div className="absolute bottom-16 md:bottom-16 lg:bottom-24 right-0 h-56 w-56 md:h-60 md:w-60 lg:w-60 lg:h-60 z-0">
-							<Image
-								src={image3}
-								alt="Modern furniture"
-								fill
-								className="object-cover"
-							/>
-						</div>
-
-						{/* Image 4 - Center Left */}
-						<div className="absolute top-[100px] md:top-[360px] lg:top-[360px] left-[120px] md:left-[270px] lg:left-[240px] h-56 w-56 md:h-60 md:w-60 lg:w-60 lg:h-60 z-0">
-							<Image
-								alt="mini-interior"
-								src={image4}
-								fill
-								className="object-cover"
-							/>
-						</div>
-
-						{/* Image 5 - Bottom Left */}
-						<div className="absolute bottom-[40px] md:bottom-[110px] lg:bottom-[110px] left-0 md:left-5 lg:-left-3 h-56 w-56 md:h-60 md:w-60 lg:w-60 lg:h-60 z-0">
-							<Image
-								src={image5}
-								alt="Interior accent"
-								fill
-								className="object-cover"
-							/>
-						</div>
+						
 					</div>
 				</div>
 			</section>
 
 			<section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
 				<div className="lg:flex md:grid grid-cols-2 md:grid-cols-2 gap-8 md:gap-16 items-center">
-					<div className="relative lg:w-[800px]">
+					<div className="relative w-full xl:w-1/2">
 						<Image
 							src={image6}
 							alt="Interior design professional"
@@ -116,33 +76,36 @@ export default function About() {
 						<Image
 							src={image4}
 							alt="mini"
-							className="absolute md:-mt-[310px] md:ml-[270px] lg:-mt-[490px] w-0 lg:ml-[550px] md:w-[130px] lg:w-[200px]"
+							className="hidden xl:block absolute top-1/2 -translate-y-1/2 -right-20 h-40 w-40"
 						/>
 					</div>
 
-					<div className="space-y-8 mt-5 lg:ml-[150px]">
+					<div className="space-y-8 mt-5 lg:ml-[150px] w-full xl:w-1/2">
 						<div className="space-y-6">
 							<h2 className="text-sm uppercase tracking-wider text-muted-foreground">
 								WHO WE ARE
 							</h2>
 
 							<p className=" lg:text-[24px] leading-relaxed ">
-								Our team of experienced designers <br /> collaborates closely
-								with each client, <br /> ensuring that every project reflects{" "}
-								<br /> their unique style and vision. From initial <br />{" "}
-								concept to final installation, we manage <br /> every aspect of
-								the design journey, bringing a seamless and enjoyable
-								experience.
+								Our team of experienced designers collaborates closely with each
+								client, ensuring that every project reflects their unique style
+								and vision. From initial concept to final installation, we
+								manage every aspect of the design journey, bringing a seamless
+								and enjoyable experience.
 							</p>
 						</div>
 
 						<div className="grid grid-cols-2 gap-8 pt-8">
 							<div className="space-y-2">
-								<p className="md:text-5xl lg:text-7xl font-serif">+10</p>
+								<p className="md:text-5xl lg:text-7xl font-serif font-bold">
+									+10
+								</p>
 								<p className="text-sm">Years of experience</p>
 							</div>
 							<div className="space-y-2">
-								<p className=" md:text-5xl lg:text-7xl font-serif">+90</p>
+								<p className=" md:text-5xl lg:text-7xl font-serif font-bold">
+									+90
+								</p>
 								<p className="text-sm">Successful projects</p>
 							</div>
 						</div>
@@ -177,19 +140,18 @@ export default function About() {
 			</div>
 
 			<section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-				<div className="flex justify-between">
-					<div className="space-y-8 mt-5 w-1/2">
+				<div className="flex flex-col-reverse lg:flex-row justify-between items-center">
+					<div className="space-y-8 mt-5 text-center xl:text-left w-full xl:w-1/2">
 						<div className="space-y-6 ">
 							<h2 className="text-base md:text-base lg:text-lg font-medium uppercase tracking-wider text-muted-foreground">
 								OUR MISSION
 							</h2>
 
 							<p className=" md:text-xl lg:text-[25px] leading-relaxed ">
-								Our mission is to create spaces that <br /> inspire, uplift, and
-								enrich the lives of <br /> those who experience them. We believe{" "}
-								<br /> that great design goes beyond aesthetics <br /> it’s
-								about creating functional, personalized <br />
-								environments that reflect our clients&apos; unique <br />{" "}
+								Our mission is to create spaces that inspire, uplift, and enrich
+								the lives of those who experience them. We believe that great
+								design goes beyond aesthetics it’s about creating functional,
+								personalized environments that reflect our clients&apos; unique
 								lifestyles and aspirations.
 							</p>
 						</div>
@@ -205,18 +167,18 @@ export default function About() {
 						</div>
 					</div>
 
-					<div className="relative mt-8 w-1/2 flex">
+					<div className="hidden xl:flex mt-8 lg:w-1/2 flex-col gap-4 lg:gap-0 relative">
 						<Image
 							src={image1}
 							alt="mini"
-							className="w-1/3"
+							className="xl:absolute top-1/2 -translate-y-1/2 left-32 h-32 w-32"
 						/>
 						<Image
 							src={image5}
 							alt="Interior design professional"
 							width={1600}
 							height={800}
-							className="w-2/3 object-cover"
+							className="xl:w-2/3 object-cover ml-auto"
 							priority
 						/>
 					</div>
@@ -366,6 +328,6 @@ export default function About() {
 			</section>
 
 			<Transform />
-		</div>
+		</>
 	);
 }
