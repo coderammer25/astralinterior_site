@@ -167,3 +167,27 @@ export const recentPosts = [
 			blog_img_04,
 	},
 ];
+
+
+export const menuItems = [
+	{
+		id: 1,
+		path: 'services',
+		name: 'Services'
+	},
+	{
+		id: 2,
+		path: 'about-us',
+		name: 'About'
+	},
+	{
+		id: 3,
+		path: 'blog',
+		name: 'Blog'
+	},
+	{
+		id: 4,
+		path: 'contact-us',
+		name: 'Contact'
+	},
+]

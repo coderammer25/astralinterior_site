@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BsArrowRight } from "react-icons/bs";
 import image1 from "../../public/chair-about.webp";
 import image2 from "../../public/chair-2-about.webp";
 import image3 from "../../public/scul-chair-about.webp";
@@ -16,7 +15,11 @@ export default function About() {
 				{/* Left Column - Text Content */}
 				<div className="flex items-center justify-between">
 					<div className="space-y-6 w-full xl:w-1/2">
-						<nav className="flex items-center gap-2 text-sm">
+						<nav
+							className="flex items-center gap-2 text-sm"
+							data-aos="fade-right"
+							data-aos-duration="600"
+						>
 							<span>★</span>
 							<Link href="/about-us" className="hover:underline">
 								ABOUT US
@@ -27,37 +30,82 @@ export default function About() {
 							</Link>
 						</nav>
 
-						<h1 className="text-[2rem] md:text-[4rem] leading-tight font-light text-primary">
+						<h1
+							className="text-[2rem] md:text-[4rem] leading-tight font-light text-primary"
+							data-aos="fade-right"
+							data-aos-duration="800"
+						>
 							BRINGING
 							<br />
 							IDEAS TO LIFE
 						</h1>
 
-						<p className="text-gray-600 w-full  md:w-1/2">
+						<p
+							className="text-gray-600 w-full  md:w-1/2"
+							data-aos="fade-right"
+							data-aos-duration="1000"
+						>
 							We are a renowned interior design agency dedicated to crafting
 							spaces that inspire and elevate everyday living.
 						</p>
 
-						<Link
-							href="/contact"
-							className="inline-flex items-center gap-2 bg-primary rounded-md text-white px-6 py-3 border border-primary hover:bg-transparent transition-colors duration-500 hover:text-primary"
-						>
-							GET IN TOUCH
-							<BsArrowRight className="w-4 h-4" />
-						</Link>
+						<div className="flex">
+							<Link
+								href="/contact-us"
+								className="flex items-center justify-center gap-2 uppercase text-[14px] text-[#2c2b28] "
+								data-aos="fade-right"
+								data-aos-duration="1200"
+							>
+								GET IN TOUCH
+								<span className="bg-primary p-1">
+									<FaArrowRight className="text-white" />
+								</span>
+							</Link>
+						</div>
 					</div>
 
 					{/* Right Column - Image Grid */}
 					<div className="hidden xl:flex items-center justify-between gap-4 w-full xl:w-1/2">
 						<div className="flex flex-col gap-4 w-1/2">
-							<Image src={image1} alt="" width={800} height={800} className="w-48 h-48"/>
-							<Image src={image2} alt="" width={800} height={800} className="w-48 h-48"/>
+							<Image
+								src={image1}
+								alt=""
+								width={800}
+								height={800}
+								className="w-48 h-48"
+								data-aos="fade-down"
+								data-aos-duration="1000"
+							/>
+							<Image
+								src={image2}
+								alt=""
+								width={800}
+								height={800}
+								className="w-48 h-48"
+								data-aos="fade-up"
+								data-aos-duration="1000"
+							/>
 						</div>
 						<div className="flex flex-col gap-4 w-1/2">
-							<Image src={image3} alt="" width={800} height={800} className="w-48 h-48"/>
-							<Image src={image1} alt="" width={800} height={800} className="w-48 h-48"/>
+							<Image
+								src={image3}
+								alt=""
+								width={800}
+								height={800}
+								className="w-48 h-48"
+								data-aos="fade-down"
+								data-aos-duration="1000"
+							/>
+							<Image
+								src={image1}
+								alt=""
+								width={800}
+								height={800}
+								className="w-48 h-48"
+								data-aos="fade-up"
+								data-aos-duration="1000"
+							/>
 						</div>
-						
 					</div>
 				</div>
 			</section>
@@ -72,21 +120,33 @@ export default function About() {
 							height={800}
 							className="w-full object-cover"
 							priority
+							data-aos="fade-right"
+							data-aos-duration="1000"
 						/>
 						<Image
 							src={image4}
 							alt="mini"
 							className="hidden xl:block absolute top-1/2 -translate-y-1/2 -right-20 h-40 w-40"
+							data-aos="fade-left"
+							data-aos-duration="1000"
 						/>
 					</div>
 
 					<div className="space-y-8 mt-5 lg:ml-[150px] w-full xl:w-1/2">
 						<div className="space-y-6">
-							<h2 className="text-sm uppercase tracking-wider text-muted-foreground">
+							<h2
+								className="text-sm uppercase tracking-wider text-muted-foreground"
+								data-aos="fade-left"
+								data-aos-duration="600"
+							>
 								WHO WE ARE
 							</h2>
 
-							<p className=" lg:text-[24px] leading-relaxed ">
+							<p
+								className=" lg:text-[24px] leading-relaxed"
+								data-aos="fade-left"
+								data-aos-duration="800"
+							>
 								Our team of experienced designers collaborates closely with each
 								client, ensuring that every project reflects their unique style
 								and vision. From initial concept to final installation, we
@@ -96,13 +156,21 @@ export default function About() {
 						</div>
 
 						<div className="grid grid-cols-2 gap-8 pt-8">
-							<div className="space-y-2">
+							<div
+								className="space-y-2"
+								data-aos="fade-up"
+								data-aos-duration="1000"
+							>
 								<p className="md:text-5xl lg:text-7xl font-serif font-bold">
 									+10
 								</p>
 								<p className="text-sm">Years of experience</p>
 							</div>
-							<div className="space-y-2">
+							<div
+								className="space-y-2"
+								data-aos="fade-up"
+								data-aos-duration="1000"
+							>
 								<p className=" md:text-5xl lg:text-7xl font-serif font-bold">
 									+90
 								</p>
@@ -143,11 +211,19 @@ export default function About() {
 				<div className="flex flex-col-reverse lg:flex-row justify-between items-center">
 					<div className="space-y-8 mt-5 text-center xl:text-left w-full xl:w-1/2">
 						<div className="space-y-6 ">
-							<h2 className="text-base md:text-base lg:text-lg font-medium uppercase tracking-wider text-muted-foreground">
+							<h2
+								className="text-base md:text-base lg:text-lg font-medium uppercase tracking-wider text-muted-foreground"
+								data-aos="fade-right"
+								data-aos-duration="600"
+							>
 								OUR MISSION
 							</h2>
 
-							<p className=" md:text-xl lg:text-[25px] leading-relaxed ">
+							<p
+								className=" md:text-xl lg:text-[25px] leading-relaxed"
+								data-aos="fade-right"
+								data-aos-duration="800"
+							>
 								Our mission is to create spaces that inspire, uplift, and enrich
 								the lives of those who experience them. We believe that great
 								design goes beyond aesthetics it’s about creating functional,
@@ -156,13 +232,17 @@ export default function About() {
 							</p>
 						</div>
 
-						<div className="gap-8 pt-8">
+						<div className="flex">
 							<Link
-								href="/contact"
-								className="inline-flex text-lg items-center gap-3 hover:text-primary px-6 py-3 bg-primary hover:bg-transparent border border-primary text-white transition-colors duration-500 rounded-md"
+								href="/contact-us"
+								className="flex items-center justify-center gap-2 uppercase text-[14px] text-[#2c2b28] "
+								data-aos="fade-right"
+								data-aos-duration="1200"
 							>
 								GET IN TOUCH
-								<FaArrowRight className="w-4 h-4 " />
+								<span className="bg-primary p-1">
+									<FaArrowRight className="text-white" />
+								</span>
 							</Link>
 						</div>
 					</div>
@@ -171,7 +251,9 @@ export default function About() {
 						<Image
 							src={image1}
 							alt="mini"
-							className="xl:absolute top-1/2 -translate-y-1/2 left-32 h-32 w-32"
+							className="xl:absolute top-1/2 -translate-y-1/2 left-32 h-32 w-32 z-10"
+							data-aos="fade-right"
+							data-aos-duration="1000"
 						/>
 						<Image
 							src={image5}
@@ -180,6 +262,8 @@ export default function About() {
 							height={800}
 							className="xl:w-2/3 object-cover ml-auto"
 							priority
+							data-aos="fade-left"
+							data-aos-duration="1000"
 						/>
 					</div>
 				</div>
@@ -187,12 +271,16 @@ export default function About() {
 
 			<section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
 				<div className="mx-auto mb-10 lg:max-w-xl sm:text-center">
-					<p className="inline-block px-3 py-px mb-4 text-xl md:text-7xl font-semibold tracking-wider uppercase rounded-full bg-teal-accent-400 text-primary">
+					<p
+						className="inline-block px-3 py-px mb-4 text-xl md:text-7xl font-semibold tracking-wider uppercase rounded-full bg-teal-accent-400 text-primary"
+						data-aos="fade-down"
+						data-aos-duration="1000"
+					>
 						Discover Our <span className="font-playfair">Team</span>
 					</p>
 				</div>
 				<div className="grid gap-10 mx-auto sm:grid-cols-2 lg:grid-cols-4 lg:max-w-screen-lg">
-					<div>
+					<div data-aos="zoom-in-down" data-aos-duration="1000">
 						<div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
 							<Image
 								height={750}
@@ -225,7 +313,8 @@ export default function About() {
 							</div>
 						</div>
 					</div>
-					<div>
+
+					<div data-aos="zoom-in-down" data-aos-duration="1000">
 						<div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
 							<Image
 								width={1260}
@@ -258,7 +347,8 @@ export default function About() {
 							</div>
 						</div>
 					</div>
-					<div>
+
+					<div data-aos="zoom-in-down" data-aos-duration="1000">
 						<div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
 							<Image
 								height={750}
@@ -291,7 +381,8 @@ export default function About() {
 							</div>
 						</div>
 					</div>
-					<div>
+
+					<div data-aos="zoom-in-down" data-aos-duration="1000">
 						<div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
 							<Image
 								height={750}

@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { Drawer } from "antd";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { menuItems } from "@/data";
 
 export const Nav = () => {
 	const [open, setOpen] = useState(false);
@@ -125,47 +126,19 @@ export const Nav = () => {
 								<div className="border-b-2 border-gray-300 p-3 pt-10 pb-[80px]">
 									<nav>
 										<ul className="space-y-7 font-geist text-xl">
-											<li>
-												<Link
-													href="/services"
-													aria-label="services"
-													title="services"
-													className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700"
-												>
-													Services
-												</Link>
-											</li>
-											<li>
-												<Link
-													href="/about-us"
-													aria-label="about us"
-													title="about us"
-													className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700"
-												>
-													About
-												</Link>
-											</li>
-											<li>
-												<Link
-													href="/blog"
-													aria-label="Blog"
-													title="Blog"
-													className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700"
-												>
-													Blog
-												</Link>
-											</li>
-
-											<li>
-												<Link
-													href="/contact-us"
-													aria-label="Contact us"
-													title="Contact us"
-													className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700"
-												>
-													Contact
-												</Link>
-											</li>
+											{menuItems.map((item) => (
+												<li key={item.id}>
+													<Link
+														href={`/${item.path}`}
+														aria-label={`${item.path}`}
+														title={`${item.name}`}
+														className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700 capitalize"
+														onClick={() => setOpen(false)}
+													>
+														{item.name}
+													</Link>
+												</li>
+											))}
 										</ul>
 									</nav>
 								</div>
