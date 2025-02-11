@@ -1,54 +1,72 @@
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+"use client";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Form, Input, Button } from "antd";
 
-export default function LoginForm({
-  className,
-  ...props
-}: React.ComponentPropsWithoutRef<"div">) {
-  return (
-    <div className={cn("flex justify-center", className)} {...props}>
-      <Card>
-        <CardHeader className="text-center">
-          <CardTitle className="text-xl">Welcome back</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <form>
-            <div className="grid gap-6">
-              
-              <div className="grid gap-6">
-                <div className="grid gap-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    placeholder="m@example.com"
-                    required
-                  />
-                </div>
-                <div className="grid gap-2">
-                  <div className="flex items-center">
-                    <Label htmlFor="password">Password</Label>
-                    
-                  </div>
-                  <Input id="password" type="password" required />
-                </div>
-                <Button type="submit" className="w-full">
-                  Login
-                </Button>
-              </div>
-            </div>
-          </form>
-        </CardContent>
-      </Card>
-    
-    </div>
-  )
-}
+import logo from "../../public/astral-logo.png";
+import Link from "next/link";
+import Image from "next/image";
+import { useState } from "react";
+
+const AdminLogin = () => {
+	const [passwordVisible, setPasswordVisible] = useState(false);
+	const [formData, setFormData] = useState({ email: "", password: "" });
+
+	const handleLogin = (values: { email: string; password: string }) => {
+		// Set form data into useState
+		setFormData(values);
+		console.log("Form Data:", values);
+	};
+
+	return (
+		<div>
+			<Form
+				className="bg-white px-[90px] py-10 rounded-2xl"
+				layout="vertical"
+				onFinish={handleLogin}
+			>
+				<Form.Item
+					label="Email"
+					name="email"
+					rules={[
+						{ required: true, message: "Please enter your email!" },
+						{ type: "email", message: "Please enter a valid email!" },
+					]}
+				>
+					<Input placeholder="Enter your email" />
+				</Form.Item>
+
+				<Form.Item
+					label="Password"
+					name="password"
+					rules={[{ required: true, message: "Please enter your password!" }]}
+				>
+					<Input.Password
+						placeholder="Enter your password"
+						iconRender={(visible) => (visible ? <FaEyeSlash /> : <FaEye />)}
+						suffix={
+							<Button
+								type="text"
+								icon={passwordVisible ? <FaEyeSlash /> : <FaEye />}
+								onClick={() => setPasswordVisible(!passwordVisible)}
+								style={{ border: "none", boxShadow: "none" }}
+							/>
+						}
+						type={passwordVisible ? "text" : "password"}
+					/>
+				</Form.Item>
+
+				<Form.Item>
+					<Button
+						type="primary"
+						htmlType="submit"
+						className="w-full bg-black"
+					>
+						Sign In
+					</Button>
+				</Form.Item>
+			</Form>
+		</div>
+	);
+};
+
+export default AdminLogin;
