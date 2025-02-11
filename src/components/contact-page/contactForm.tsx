@@ -65,7 +65,6 @@ const ContactForm = () => {
 			return;
 		}
 
-		// console.log(formData);
 		try {
 			// Send the mutation request
 			await createMessage({

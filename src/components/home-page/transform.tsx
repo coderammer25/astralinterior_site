@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 import Slider from "react-slick";
+import transform_01 from "../../../public/01_transform_img.jpg";
 
 const Transform = () => {
 	const settings = {
@@ -21,22 +22,26 @@ const Transform = () => {
 		<section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
 			<div className="flex flex-col xl:flex-row items-center justify-between gap-8">
 				<div className="flex xl:flex-col justify-between gap-4 xl:gap-0 xl:space-y-40">
-					<div data-aos="fade-down" data-aos-duration="1000">
+					<div>
 						<Image
-							src="https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6713b50f14c39bfea0deaefc_Serene%20Geometric%20and%20Organic%20Composition-p-500.webp"
+							src={transform_01}
 							alt="Image 1"
 							width={800}
 							height={800}
 							className="w-full h-full object-cover"
+							data-aos="fade-down"
+							data-aos-duration="1000"
 						/>
 					</div>
-					<div data-aos="fade-up" data-aos-duration="1000">
+					<div>
 						<Image
-							src="https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6713b50be6f594839db8f157_Minimalist%20Interior%20with%20Geometric%20Light-p-500.webp"
+							src={transform_01}
 							alt="Image 1"
 							width={800}
 							height={800}
 							className="w-full h-full object-cover"
+							data-aos="fade-up"
+							data-aos-duration="1000"
 						/>
 					</div>
 				</div>
@@ -97,22 +102,26 @@ const Transform = () => {
 				</div>
 
 				<div className="flex xl:flex-col justify-between gap-4 xl:gap-0 xl:space-y-40 text-right">
-					<div data-aos="fade-down" data-aos-duration="1000">
+					<div>
 						<Image
-							src="https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6713b512870cc6e108d4e4e8_Sculptural%20Black%20Shell%20in%20Modern%20Room-p-500.webp"
+							src={transform_01}
 							alt="Image 1"
 							width={800}
 							height={800}
 							className="w-full h-full object-cover"
+							data-aos="fade-down"
+							data-aos-duration="1000"
 						/>
 					</div>
-					<div data-aos="fade-up" data-aos-duration="1000">
+					<div>
 						<Image
-							src="https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6713b50be6f594839db8f157_Minimalist%20Interior%20with%20Geometric%20Light-p-500.webp"
+							src={transform_01}
 							alt="Image 1"
 							width={800}
 							height={800}
 							className="w-full h-full object-cover"
+							data-aos="fade-up"
+							data-aos-duration="1000"
 						/>
 					</div>
 				</div>

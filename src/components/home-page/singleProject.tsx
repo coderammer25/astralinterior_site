@@ -1,12 +1,12 @@
 import AOS from "aos";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { useEffect } from "react";
 
 type SingleProjectProps = {
 	project: {
 		project_title: string;
 		project_category: string;
-		project_img: string;
+		project_img: StaticImageData;
 	};
 	project_number: number;
 };

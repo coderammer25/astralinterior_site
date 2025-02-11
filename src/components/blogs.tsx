@@ -10,6 +10,7 @@ interface featuredPost {
 	readingTime: number;
 	image: string;
 }
+
 interface recentPosts {
 	blogId: number;
 	category: string;
