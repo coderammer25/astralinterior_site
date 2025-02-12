@@ -8,12 +8,14 @@ type ServiceProp = {
 
 const IndividualService = ({ service, number }: ServiceProp) => {
 	return (
-		<div className="min-h-screen flex items-center justify-center">
+		<div className="flex items-end justify-center h-full">
 			<div>
 				<h2 className="text-xl md:text-[3rem] uppercase mb-[10px] leading-[1.1] text-primary">
 					{number + 1}. {service.title}
 				</h2>
-				<p className="text-sm md:text-[1.125em] leading-[1.4] md:w-3/4 pt-[1em]">{service.description}</p>
+				<p className="text-sm md:text-[1.125em] leading-[1.4] md:w-3/4 pt-[1em]">
+					{service.description}
+				</p>
 			</div>
 		</div>
 	);
