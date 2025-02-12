@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BsArrowRight } from "react-icons/bs";
 import image1 from "../../public/chair-about.webp";
 import image2 from "../../public/chair-2-about.webp";
 import image3 from "../../public/scul-chair-about.webp";
@@ -11,98 +10,109 @@ import { FaArrowRight } from "react-icons/fa";
 import Transform from "./home-page/transform";
 export default function About() {
 	return (
-		<div>
-			<section className="container mx-auto px-4 py-16 grid lg:grid-cols-2 gap-8 items-center min-h-[100vh]">
+		<>
+			<section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
 				{/* Left Column - Text Content */}
-				<div className="space-y-6">
-					<nav className="flex items-center gap-2 text-sm">
-						<span>★</span>
-						<Link href="/about-us" className="hover:underline">
-							ABOUT US
-						</Link>
-						<span>—</span>
-						<Link href="/about-us" className="hover:underline">
-							ABOUT US
-						</Link>
-					</nav>
+				<div className="flex items-center justify-between">
+					<div className="space-y-6 w-full xl:w-1/2">
+						<nav
+							className="flex items-center gap-2 text-sm"
+							data-aos="fade-right"
+							data-aos-duration="600"
+						>
+							<span>★</span>
+							<Link href="/about-us" className="hover:underline">
+								ABOUT US
+							</Link>
+							<span>—</span>
+							<Link href="/about-us" className="hover:underline">
+								ABOUT US
+							</Link>
+						</nav>
 
-					<h1 className="text-[4rem] leading-tight font-light text-primary">
-						BRINGING
-						<br />
-						IDEAS TO LIFE
-					</h1>
+						<h1
+							className="text-[2rem] md:text-[4rem] leading-tight font-light text-primary"
+							data-aos="fade-right"
+							data-aos-duration="800"
+						>
+							BRINGING
+							<br />
+							IDEAS TO LIFE
+						</h1>
 
-					<p className="text-gray-600 max-w-md">
-						We are a renowned interior design agency dedicated to crafting
-						spaces that inspire and elevate everyday living.
-					</p>
+						<p
+							className="text-gray-600 w-full  md:w-1/2"
+							data-aos="fade-right"
+							data-aos-duration="1000"
+						>
+							We are a renowned interior design agency dedicated to crafting
+							spaces that inspire and elevate everyday living.
+						</p>
 
-					<Link
-						href="/contact"
-						className="inline-flex items-center gap-2 bg-primary rounded-md text-white px-6 py-3 border border-primary hover:bg-transparent transition-colors duration-500 hover:text-primary"
-					>
-						GET IN TOUCH
-						<BsArrowRight className="w-4 h-4" />
-					</Link>
-				</div>
-
-				{/* Right Column - Image Grid */}
-				<div className="relative md:-ml-[15px] lg:-ml-[120px] md:h-[600px] w-[456px] h-[500px] md:w-[760px] lg:w-[735px] lg:h-[600px] p-3">
-					{/* Image 1 - Top Right */}
-					<div className="absolute top-0 right-0 h-56 w-56 md:h-60 md:w-60  lg:w-60 lg:h-60 z-0">
-						<Image
-							src={image1}
-							alt="Interior design piece"
-							fill
-							className="object-cover"
-						/>
+						<div className="flex">
+							<Link
+								href="/contact-us"
+								className="flex items-center justify-center gap-2 uppercase text-[14px] text-[#2c2b28] "
+								data-aos="fade-right"
+								data-aos-duration="1200"
+							>
+								GET IN TOUCH
+								<span className="bg-primary p-1">
+									<FaArrowRight className="text-white" />
+								</span>
+							</Link>
+						</div>
 					</div>
 
-					{/* Image 2 - Center */}
-					<div className="absolute top-1/2 left-[100px] md:left-[370px] lg:left-[340px] -translate-x-[100px] -translate-y-[250px] md:-translate-y-[200px] lg:-translate-y-[200px]  h-56 w-56 md:h-60 md:w-60 lg:w-60 lg:h-60 z-0">
-						<Image
-							src={image2}
-							alt="Interior design element"
-							fill
-							className="object-cover"
-						/>
-					</div>
-
-					{/* Image 3 - Bottom Right */}
-					<div className="absolute bottom-16 md:bottom-16 lg:bottom-24 right-0 h-56 w-56 md:h-60 md:w-60 lg:w-60 lg:h-60 z-0">
-						<Image
-							src={image3}
-							alt="Modern furniture"
-							fill
-							className="object-cover"
-						/>
-					</div>
-
-					{/* Image 4 - Center Left */}
-					<div className="absolute top-[100px] md:top-[360px] lg:top-[360px] left-[120px] md:left-[270px] lg:left-[240px] h-56 w-56 md:h-60 md:w-60 lg:w-60 lg:h-60 z-0">
-						<Image
-							alt="mini-interior"
-							src={image4}
-							fill
-							className="object-cover"
-						/>
-					</div>
-
-					{/* Image 5 - Bottom Left */}
-					<div className="absolute bottom-[40px] md:bottom-[110px] lg:bottom-[110px] left-0 md:left-5 lg:-left-3 h-56 w-56 md:h-60 md:w-60 lg:w-60 lg:h-60 z-0">
-						<Image
-							src={image5}
-							alt="Interior accent"
-							fill
-							className="object-cover"
-						/>
+					{/* Right Column - Image Grid */}
+					<div className="hidden xl:flex items-center justify-between gap-4 w-full xl:w-1/2">
+						<div className="flex flex-col gap-4 w-1/2">
+							<Image
+								src={image1}
+								alt=""
+								width={800}
+								height={800}
+								className="w-48 h-48"
+								data-aos="fade-down"
+								data-aos-duration="1000"
+							/>
+							<Image
+								src={image2}
+								alt=""
+								width={800}
+								height={800}
+								className="w-48 h-48"
+								data-aos="fade-up"
+								data-aos-duration="1000"
+							/>
+						</div>
+						<div className="flex flex-col gap-4 w-1/2">
+							<Image
+								src={image3}
+								alt=""
+								width={800}
+								height={800}
+								className="w-48 h-48"
+								data-aos="fade-down"
+								data-aos-duration="1000"
+							/>
+							<Image
+								src={image1}
+								alt=""
+								width={800}
+								height={800}
+								className="w-48 h-48"
+								data-aos="fade-up"
+								data-aos-duration="1000"
+							/>
+						</div>
 					</div>
 				</div>
 			</section>
 
-			<section className="mx-auto lg:ml-14 px-4 py-16 md:py-24">
+			<section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
 				<div className="lg:flex md:grid grid-cols-2 md:grid-cols-2 gap-8 md:gap-16 items-center">
-					<div className="relative lg:w-[800px]">
+					<div className="relative w-full xl:w-1/2">
 						<Image
 							src={image6}
 							alt="Interior design professional"
@@ -110,37 +120,60 @@ export default function About() {
 							height={800}
 							className="w-full object-cover"
 							priority
+							data-aos="fade-right"
+							data-aos-duration="1000"
 						/>
 						<Image
 							src={image4}
 							alt="mini"
-							className="absolute md:-mt-[310px] md:ml-[270px] lg:-mt-[490px] w-0 lg:ml-[550px] md:w-[130px] lg:w-[200px]"
+							className="hidden xl:block absolute top-1/2 -translate-y-1/2 -right-20 h-40 w-40"
+							data-aos="fade-left"
+							data-aos-duration="1000"
 						/>
 					</div>
 
-					<div className="space-y-8 mt-5 lg:ml-[150px]">
+					<div className="space-y-8 mt-5 lg:ml-[150px] w-full xl:w-1/2">
 						<div className="space-y-6">
-							<h2 className="text-sm uppercase tracking-wider text-muted-foreground">
+							<h2
+								className="text-sm uppercase tracking-wider text-muted-foreground"
+								data-aos="fade-left"
+								data-aos-duration="600"
+							>
 								WHO WE ARE
 							</h2>
 
-							<p className=" lg:text-[24px] leading-relaxed ">
-								Our team of experienced designers <br /> collaborates closely
-								with each client, <br /> ensuring that every project reflects{" "}
-								<br /> their unique style and vision. From initial <br />{" "}
-								concept to final installation, we manage <br /> every aspect of
-								the design journey, bringing a seamless and enjoyable
-								experience.
+							<p
+								className=" lg:text-[24px] leading-relaxed"
+								data-aos="fade-left"
+								data-aos-duration="800"
+							>
+								Our team of experienced designers collaborates closely with each
+								client, ensuring that every project reflects their unique style
+								and vision. From initial concept to final installation, we
+								manage every aspect of the design journey, bringing a seamless
+								and enjoyable experience.
 							</p>
 						</div>
 
 						<div className="grid grid-cols-2 gap-8 pt-8">
-							<div className="space-y-2">
-								<p className="md:text-5xl lg:text-7xl font-serif">+10</p>
+							<div
+								className="space-y-2"
+								data-aos="fade-up"
+								data-aos-duration="1000"
+							>
+								<p className="md:text-5xl lg:text-7xl font-serif font-bold">
+									+10
+								</p>
 								<p className="text-sm">Years of experience</p>
 							</div>
-							<div className="space-y-2">
-								<p className=" md:text-5xl lg:text-7xl font-serif">+90</p>
+							<div
+								className="space-y-2"
+								data-aos="fade-up"
+								data-aos-duration="1000"
+							>
+								<p className=" md:text-5xl lg:text-7xl font-serif font-bold">
+									+90
+								</p>
 								<p className="text-sm">Successful projects</p>
 							</div>
 						</div>
@@ -148,20 +181,20 @@ export default function About() {
 				</div>
 			</section>
 
-			<div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-white -mt-[50px] ">
+			<div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-white -mt-[50px] px-4">
 				{/* Background text */}
-				<div className="absolute w-full flex justify-center items-center space-x-5 ">
-					<span className="text-9xl leading-none">OUR</span>
-					<span className="text-9xl leading-none">PROCESS</span>
+				<div className="absolute  w-full flex justify-center items-center space-x-5">
+					<span className="text-xl lg:text-9xl leading-none">OUR</span>
+					<span className="text-xl lg:text-9xl leading-none">PROCESS</span>
 				</div>
 
 				{/* Card stack effect */}
-				<div className="relative max-w-2xl h-[280px] w-[450px] ">
+				<div className="relative max-w-2xl h-[280px] w-[450px]">
 					<div className="absolute top-2 left-2 w-full h-full border border-gray-200 transform rotate-2" />
 					<div className="absolute top-1 left-1 w-full h-full border border-gray-200 transform rotate-1" />
 
 					{/* Main card */}
-					<div className="relative bg-white border md:p-12 space-y-3">
+					<div className="relative bg-white border md:p-12 space-y-3 px-2">
 						<h1 className="font-playfair text-4xl font-light">01</h1>
 						<h2 className="text-xl font-semibold">DISCOVERY & CONSULTATION</h2>
 						<p>
@@ -174,61 +207,80 @@ export default function About() {
 				</div>
 			</div>
 
-			<section className="mx-auto lg:mr-14 px-4 py-16 md:py-24">
-				<div className="lg:flex lg:space-x-[250px] md:grid grid-cols-2 md:grid-cols-2 gap-8 md:gap-16 items-center">
-					<div className="space-y-8 mt-5 lg:ml-[150px]">
+			<section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+				<div className="flex flex-col-reverse lg:flex-row justify-between items-center">
+					<div className="space-y-8 mt-5 text-center xl:text-left w-full xl:w-1/2">
 						<div className="space-y-6 ">
-							<h2 className="text-base md:text-base lg:text-lg font-medium uppercase tracking-wider text-muted-foreground">
+							<h2
+								className="text-base md:text-base lg:text-lg font-medium uppercase tracking-wider text-muted-foreground"
+								data-aos="fade-right"
+								data-aos-duration="600"
+							>
 								OUR MISSION
 							</h2>
 
-							<p className=" md:text-xl lg:text-[25px] leading-relaxed ">
-								Our mission is to create spaces that <br /> inspire, uplift, and
-								enrich the lives of <br /> those who experience them. We believe{" "}
-								<br /> that great design goes beyond aesthetics <br /> it’s
-								about creating functional, personalized <br />
-								environments that reflect our clients&apos; unique <br />{" "}
+							<p
+								className=" md:text-xl lg:text-[25px] leading-relaxed"
+								data-aos="fade-right"
+								data-aos-duration="800"
+							>
+								Our mission is to create spaces that inspire, uplift, and enrich
+								the lives of those who experience them. We believe that great
+								design goes beyond aesthetics it’s about creating functional,
+								personalized environments that reflect our clients&apos; unique
 								lifestyles and aspirations.
 							</p>
 						</div>
 
-						<div className="gap-8 pt-8">
+						<div className="flex">
 							<Link
-								href="/contact"
-								className="inline-flex text-lg items-center gap-3 hover:text-primary px-6 py-3 bg-primary hover:bg-transparent border border-primary text-white transition-colors duration-500 rounded-md"
+								href="/contact-us"
+								className="flex items-center justify-center gap-2 uppercase text-[14px] text-[#2c2b28] "
+								data-aos="fade-right"
+								data-aos-duration="1200"
 							>
 								GET IN TOUCH
-								<FaArrowRight className="w-4 h-4 " />
+								<span className="bg-primary p-1">
+									<FaArrowRight className="text-white" />
+								</span>
 							</Link>
 						</div>
 					</div>
 
-					<div className="relative lg:w-[600px]">
+					<div className="hidden xl:flex mt-8 lg:w-1/2 flex-col gap-4 lg:gap-0 relative">
+						<Image
+							src={image1}
+							alt="mini"
+							className="xl:absolute top-1/2 -translate-y-1/2 left-32 h-32 w-32 z-10"
+							data-aos="fade-right"
+							data-aos-duration="1000"
+						/>
 						<Image
 							src={image5}
 							alt="Interior design professional"
 							width={1600}
 							height={800}
-							className="w-full object-cover"
+							className="xl:w-2/3 object-cover ml-auto"
 							priority
-						/>
-						<Image
-							src={image1}
-							alt="mini"
-							className="absolute md:-mt-[420px] md:-ml-[90px] lg:-mt-[570px] w-0 lg:-ml-[130px] md:w-[180px] lg:w-[250px]"
+							data-aos="fade-left"
+							data-aos-duration="1000"
 						/>
 					</div>
 				</div>
 			</section>
 
-			<div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+			<section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
 				<div className="mx-auto mb-10 lg:max-w-xl sm:text-center">
-					<p className="inline-block px-3 py-px mb-4 text-7xl font-semibold tracking-wider uppercase rounded-full bg-teal-accent-400 text-primary">
+					<p
+						className="inline-block px-3 py-px mb-4 text-xl md:text-7xl font-semibold tracking-wider uppercase rounded-full bg-teal-accent-400 text-primary"
+						data-aos="fade-down"
+						data-aos-duration="1000"
+					>
 						Discover Our <span className="font-playfair">Team</span>
 					</p>
 				</div>
 				<div className="grid gap-10 mx-auto sm:grid-cols-2 lg:grid-cols-4 lg:max-w-screen-lg">
-					<div>
+					<div data-aos="zoom-in-down" data-aos-duration="1000">
 						<div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
 							<Image
 								height={750}
@@ -261,7 +313,8 @@ export default function About() {
 							</div>
 						</div>
 					</div>
-					<div>
+
+					<div data-aos="zoom-in-down" data-aos-duration="1000">
 						<div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
 							<Image
 								width={1260}
@@ -294,7 +347,8 @@ export default function About() {
 							</div>
 						</div>
 					</div>
-					<div>
+
+					<div data-aos="zoom-in-down" data-aos-duration="1000">
 						<div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
 							<Image
 								height={750}
@@ -327,7 +381,8 @@ export default function About() {
 							</div>
 						</div>
 					</div>
-					<div>
+
+					<div data-aos="zoom-in-down" data-aos-duration="1000">
 						<div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
 							<Image
 								height={750}
@@ -361,9 +416,9 @@ export default function About() {
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
 
 			<Transform />
-		</div>
+		</>
 	);
 }

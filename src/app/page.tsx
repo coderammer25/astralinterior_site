@@ -22,17 +22,23 @@ export default function HomePage() {
 	return (
 		<>
 			<Banner />
-			<div className="slider-container">
+			<div className="slider-container overflow-hidden">
 				<Slider {...settings}>
-					<h2 className="uppercase text-center text-8xl xl:text-[14rem] text-[#D6F1ED]">
-						We are <span className="font-playfair">astral</span>
-					</h2>
-					<h2 className="uppercase text-center text-8xl xl:text-[14rem] text-[#D6F1ED]">
-						We are <span className="font-playfair">astral</span>
-					</h2>
-					<h2 className="uppercase text-center text-8xl xl:text-[14rem] text-[#D6F1ED]">
-						We are <span className="font-playfair">astral</span>
-					</h2>
+					<div className="whitespace-nowrap">
+						<h2 className="text-4xl uppercase text-center md:text-8xl xl:text-[10rem] text-[#D6F1ED] truncate">
+							We are <span className="font-playfair">astral</span>
+						</h2>
+					</div>
+					<div className="whitespace-nowrap">
+						<h2 className="text-4xl  uppercase text-center md:text-8xl xl:text-[10rem] text-[#D6F1ED] truncate">
+							We are <span className="font-playfair">astral</span>
+						</h2>
+					</div>
+					<div className="whitespace-nowrap">
+						<h2 className="text-4xl uppercase text-center md:text-8xl xl:text-[10rem] text-[#D6F1ED] truncate">
+							We are <span className="font-playfair">astral</span>
+						</h2>
+					</div>
 				</Slider>
 			</div>
 			<AboutUsComponent />

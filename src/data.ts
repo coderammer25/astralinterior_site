@@ -1,3 +1,12 @@
+import project_01 from "../public/01_project.jpg";
+import project_02 from "../public/02_project.jpg";
+import project_03 from "../public/03_project.jpg";
+import project_04 from "../public/04_project.jpg";
+import blog_img_01 from '../public/01_blog_img.webp'
+import blog_img_02 from '../public/02_blog_img.webp'
+import blog_img_03 from '../public/03_blog_img.webp'
+import blog_img_04 from '../public/04_blog_img.webp'
+
 export const services = [
 	{
 		title: "Space Planning",
@@ -29,26 +38,22 @@ export const projects = [
 	{
 		project_title: "slate",
 		project_category: "furniture selection",
-		project_img:
-			"https://cdn.prod.website-files.com/6713afdf3556af8f35af46fb/67300c1d421c8024ffc31f05_project-04-p-1600.png",
+		project_img: project_01
 	},
 	{
 		project_title: "luxe",
 		project_category: "lighting design",
-		project_img:
-			"https://cdn.prod.website-files.com/6713afdf3556af8f35af46fb/672e903bc263a4580cfb642f_project-01-p-1600.webp",
+		project_img: project_02
 	},
 	{
 		project_title: "aura",
 		project_category: "project management",
-		project_img:
-			"https://cdn.prod.website-files.com/6713afdf3556af8f35af46fb/672e8ff174dbeffde1055fcb_project-02-p-1600.webp",
+		project_img: project_03
 	},
 	{
 		project_title: "edge",
 		project_category: "space planning",
-		project_img:
-			"https://cdn.prod.website-files.com/6713afdf3556af8f35af46fb/67300b943acfe023dc94ac8c_project-03-p-1600.webp",
+		project_img: project_04
 	},
 ];
 
@@ -127,34 +132,62 @@ export const clients = [
 	},
 ];
 
- export const featuredPost = {
+export const featuredPost = {
 	blogId: 1,
 	category: "Design",
 	title: "UNDERSTANDING WARM VS. COOL TONES",
 	readingTime: 7,
-	image: "https://cdn.prod.website-files.com/6713afdf3556af8f35af46fb/673277d8ebd30f26d58d440a_Modern%20Minimalist%20Interior%20Living%20Space.jpeg",
-  }
+	image:
+		blog_img_01,
+};
 
-  export const recentPosts = [
+export const recentPosts = [
 	{
-	  blogId: 1,
-	  category: "Trends",
-	  title: "BENEFITS OF NATURAL ELEMENTS IN DESIGN",
-	  readingTime: 9,
-	  image: "https://cdn.prod.website-files.com/6713afdf3556af8f35af46fb/67327a8e786157ed4dff7a6d_Modern%20Minimalist%20Office%20Space-p-2000.jpeg",
+		blogId: 1,
+		category: "Trends",
+		title: "BENEFITS OF NATURAL ELEMENTS IN DESIGN",
+		readingTime: 9,
+		image:
+			blog_img_02,
 	},
 	{
 		blogId: 2,
-	  category: "Tips",
-	  title: "HOW TO MAKE SMALL SPACES FEEL LARGER",
-	  readingTime: 7,
-	  image: "https://cdn.prod.website-files.com/6713afdf3556af8f35af46fb/6732782eaa93607254513206_Stylish%20Modern%20Room%20with%20Elegant%20Desk%20Setup-p-2000.jpeg",
+		category: "Tips",
+		title: "HOW TO MAKE SMALL SPACES FEEL LARGER",
+		readingTime: 7,
+		image:
+			blog_img_03,
 	},
 	{
 		blogId: 3,
-	  category: "Design",
-	  title: "THE ESSENTIALS OF GOOD LIGHTING DESIGN",
-	  readingTime: 7,
-	  image: "https://cdn.prod.website-files.com/6713afdf3556af8f35af46fb/6732799323dd4996fe20a58d_Serene%20Rustic%20Sunlit%20Interior-p-2000.jpeg",
+		category: "Design",
+		title: "THE ESSENTIALS OF GOOD LIGHTING DESIGN",
+		readingTime: 7,
+		image:
+			blog_img_04,
 	},
-  ]
+];
+
+
+export const menuItems = [
+	{
+		id: 1,
+		path: 'services',
+		name: 'Services'
+	},
+	{
+		id: 2,
+		path: 'about-us',
+		name: 'About'
+	},
+	{
+		id: 3,
+		path: 'blog',
+		name: 'Blog'
+	},
+	{
+		id: 4,
+		path: 'contact-us',
+		name: 'Contact'
+	},
+]

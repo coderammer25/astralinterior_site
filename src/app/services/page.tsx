@@ -7,9 +7,9 @@ export const metadata: Metadata = {
 
 const ServicesPage = () => {
 	return (
-	<div>
+	<>
     <Services />
-	</div>
+	</>
 	)
 };
 

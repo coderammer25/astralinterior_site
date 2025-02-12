@@ -1,5 +1,7 @@
 "use client";
 
+import { CREATE_MESSAGE } from "@/graphql/mutations/mutation";
+import { useMutation } from "@apollo/client";
 import Link from "next/link";
 import { useState } from "react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
@@ -13,12 +15,13 @@ const initialFormData = {
 	phone: "",
 	location: "",
 	projectType: "",
-	customize: "",
+	customize: false,
 	message: "",
 };
 
 const ContactForm = () => {
 	const [formData, setFormData] = useState(initialFormData);
+	const [createMessage] = useMutation(CREATE_MESSAGE);
 
 	const notify = (type: string, message: string) =>
 		toast(message, {
@@ -45,76 +48,119 @@ const ContactForm = () => {
 		}));
 	};
 
-	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 
 		if (
 			!formData.name ||
 			!formData.email ||
 			!formData.phone ||
+			!formData.location ||
 			!formData.message
 		) {
-			notify("error", "name, email, phone and message can't be empty");
+			notify(
+				"error",
+				"name, email, phone, location and message can't be empty"
+			);
 			return;
 		}
 
-		console.log(formData);
-		notify("success", "Message sent successfully");
+		try {
+			// Send the mutation request
+			await createMessage({
+				variables: {
+					createMessageDto: {
+						userName: formData.name,
+						email: formData.email,
+						phone: formData.phone,
+						location: formData.location,
+						projectType: formData.projectType,
+						customizeFurniture: formData.customize,
+						content: formData.message,
+					},
+				},
+			});
+
+			notify("success", "Message sent successfully");
+
+			// Reset form data
+			setFormData(initialFormData);
+		} catch (error) {
+			console.error(error);
+			notify("error", "Failed to send message");
+		}
+
 		setFormData(initialFormData);
 	};
 
 	return (
-		<div>
+		<>
 			<div className="text-center">
-				<h2 className="uppercase text-[3rem] xl:text-[8rem] leading-[1] mb-[2rem]">
+				<h2
+					className="uppercase text-[2rem] md:text-[3rem] xl:text-[8rem] leading-[1] mb-[2rem]"
+					data-aos="fade-down"
+					data-aos-duration="1000"
+				>
 					Get in <span className="font-playfair text-heading">touch</span>
 				</h2>
-				<p className="text-[1.125rem] lg:w-1/2 mx-auto leading-[1.4]">
+				<p
+					className="text-[1.125rem] lg:w-1/2 mx-auto leading-[1.4]"
+					data-aos="fade-down"
+					data-aos-duration="800"
+				>
 					Reach out to discuss your project, ask questions, or schedule a
 					consultation. We’re excited to collaborate and bring your dream
 					interiors to reality.
 				</p>
 			</div>
 
-			<div className="flex items-center justify-center gap-4 mt-[2rem]">
+			<div
+				className="flex items-center justify-center gap-4 mt-[2rem]"
+				data-aos="fade-up"
+				data-aos-duration="800"
+			>
 				<Link
 					href="https://facebook.com"
 					target="_blank"
 					className="bg-primary p-3 rounded-md border-2 border-primary transition-all duration-500 hover:bg-white hover:text-primary text-white cursor-pointer"
 				>
-					<FaFacebookF className="w-[1.375rem] h-[1.375rem]" />
+					<FaFacebookF className="md:w-[1.375rem] md:h-[1.375rem]" />
 				</Link>
 				<Link
 					href="https://instagram.com"
 					target="_blank"
 					className="bg-primary p-3 rounded-md border-2 border-primary transition-all duration-500 hover:bg-white hover:text-primary text-white cursor-pointer"
 				>
-					<FaInstagram className="w-[1.375rem] h-[1.375rem]" />
+					<FaInstagram className="md:w-[1.375rem] md:h-[1.375rem]" />
 				</Link>
 				<Link
 					href="https://x.com"
 					target="_blank"
 					className="bg-primary p-3 rounded-md border-2 border-primary transition-all duration-500 hover:bg-white hover:text-primary text-white cursor-pointer"
 				>
-					<FaXTwitter className="w-[1.375rem] h-[1.375rem]" />
+					<FaXTwitter className="md:w-[1.375rem] md:h-[1.375rem]" />
 				</Link>
 				<Link
 					href="https://linkedin.com"
 					target="_blank"
 					className="bg-primary p-3 rounded-md border-2 border-primary transition-all duration-500 hover:bg-white hover:text-primary text-white cursor-pointer"
 				>
-					<FaLinkedinIn className="w-[1.375rem] h-[1.375rem]" />
+					<FaLinkedinIn className="md:w-[1.375rem] md:h-[1.375rem]" />
 				</Link>
 				<Link
 					href="https://youtube.com"
 					target="_blank"
 					className="bg-primary p-3 rounded-md border-2 border-primary transition-all duration-500 hover:bg-white hover:text-primary text-white cursor-pointer"
 				>
-					<RiYoutubeLine className="w-[1.475rem] h-[1.475rem]" />
+					<RiYoutubeLine className="md:w-[1.475rem] md:h-[1.475rem]" />
 				</Link>
 			</div>
 
-			<div className="border border-[#d0e5e4] rounded-md my-[3rem] py-[3rem] px-[2rem] lg:w-2/3 mx-auto bg-white shadow-md">
+			<div
+				className="border border-[#d0e5e4] rounded-md my-[3rem] py-[3rem] px-[2rem] lg:w-2/3 mx-auto bg-white shadow-md"
+				data-aos="fade-up"
+				data-aos-duration="1000"
+			>
 				<form className="space-y-[1.75rem]" onSubmit={handleSubmit}>
 					<div className="flex flex-col">
 						<label
@@ -222,8 +268,8 @@ const ContactForm = () => {
 								type="radio"
 								id="yes"
 								name="customize"
-								value="YES"
-								checked={formData.customize === "YES"}
+								value="true"
+								checked={formData.customize === true}
 								onChange={handleChange}
 							/>
 							  <label htmlFor="yes">YES</label>
@@ -231,13 +277,13 @@ const ContactForm = () => {
 						<div>
 							<input
 								type="radio"
-								id="nO"
+								id="no"
 								name="customize"
-								value="NO"
-								checked={formData.customize === "NO"}
+								value="false"
+								checked={formData.customize === false}
 								onChange={handleChange}
 							/>
-							  <label htmlFor="nO">NO</label>
+							  <label htmlFor="no">NO</label>
 						</div>
 					</div>
 
@@ -269,7 +315,7 @@ const ContactForm = () => {
 					</div>
 				</form>
 			</div>
-		</div>
+		</>
 	);
 };
 export default ContactForm;

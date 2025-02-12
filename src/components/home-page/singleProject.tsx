@@ -1,17 +1,27 @@
-import Image from "next/image";
+import AOS from "aos";
+import Image, { StaticImageData } from "next/image";
+import { useEffect } from "react";
 
 type SingleProjectProps = {
 	project: {
 		project_title: string;
 		project_category: string;
-    project_img: string
+		project_img: StaticImageData;
 	};
 	project_number: number;
 };
 
 const SingleProject = ({ project, project_number }: SingleProjectProps) => {
+	useEffect(() => {
+		AOS.init();
+	}, []);
+
 	return (
-		<div className="relative">
+		<div
+			className="relative"
+			data-aos="fade-up"
+			// data-aos-duration="1000"
+		>
 			<Image
 				src={project.project_img}
 				alt="Project Image 1"
