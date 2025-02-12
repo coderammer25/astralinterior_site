@@ -2,7 +2,6 @@ import Image from "next/image";
 
 import serviceImg from "../../../public/mini-interior-about.webp";
 import serviceImg_01 from '../../../public/01_services.webp'
-import serviceImg_02 from '../../../public/02_services.webp'
 import serviceImg_03 from '../../../public/03_services.webp'
 import { services } from "@/data";
 import IndividualService from "./individualService";
@@ -15,16 +14,13 @@ const ServicesComponent = () => {
 			<div className="flex flex-col lg:flex-row items-start lg:items-start gap-4 md:gap-0 justify-between">
 				<div className="w-full lg:w-1/2 space-y-10 lg:space-y-0 mt-10 lg:mt-0">
 					{services.map((service, idx) => (
-						<div
-							key={service.title}
-							className="lg:h-[800px]"
-						>
+						<div key={service.title} className="lg:h-[800px]">
 							<IndividualService service={service} number={idx} />
 						</div>
 					))}
 				</div>
 
-				<div className="hidden lg:block lg:w-1/2">
+				<div className="hidden lg:block lg:w-1/2 h-full">
 					<Image
 						src={serviceImg}
 						alt="Service Image"
@@ -46,7 +42,7 @@ const ServicesComponent = () => {
 						data-aos-duration="500"
 					/>
 					<Image
-						src={serviceImg_02}
+						src={serviceImg}
 						alt="Service Image"
 						width={800}
 						height={800}

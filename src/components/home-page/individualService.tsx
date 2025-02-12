@@ -8,7 +8,7 @@ type ServiceProp = {
 
 const IndividualService = ({ service, number }: ServiceProp) => {
 	return (
-		<div className="flex items-center justify-center">
+		<div className="flex items-end justify-center h-full">
 			<div>
 				<h2 className="text-xl md:text-[3rem] uppercase mb-[10px] leading-[1.1] text-primary">
 					{number + 1}. {service.title}
