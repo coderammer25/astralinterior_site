@@ -1,8 +1,6 @@
 "use client";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Form, Input, Button } from "antd";
-
-import logo from "../../public/astral-logo.png";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";

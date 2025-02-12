@@ -1,10 +1,13 @@
-
-
+import Image from "next/image";
+import notfound from "../../public/notfound.svg"
 const Notfound = () => {
     return (
-        <div>
-            <h1>404 - Not Found</h1>
-            <p>The page you&apos;re looking for doesn&apos;t exist.</p>
+        <div className="flex justify-center pt-[70px] pb-[200px]">
+           <Image
+           src={notfound}
+           alt="Not Found"
+           className="w-1/2"
+            ></Image>
         </div>
     );
 };
