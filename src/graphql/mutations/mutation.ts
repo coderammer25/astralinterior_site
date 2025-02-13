@@ -14,3 +14,11 @@ export const CREATE_MESSAGE = gql`
 		}
 	}
 `;
+
+export const DELETE_MESSAGE = gql`
+	mutation DeleteMessage($id: String!) {
+		deleteMessage(id: $id){
+		userName
+		}
+	}
+`;

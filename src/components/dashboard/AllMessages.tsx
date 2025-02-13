@@ -1,8 +1,12 @@
-"use client"
+"use client";
 import { useState } from "react";
-import { Table , Modal } from "antd";
+import { Table, Modal, Skeleton, Alert } from "antd";
 import type { TableProps } from "antd";
-import { format } from "date-fns";
+// import { format } from "date-fns";
+import { useMutation, useQuery } from "@apollo/client";
+import { GET_ALL_MESSAGES } from "@/graphql/queries/query";
+import { MdDelete } from "react-icons/md";
+import { DELETE_MESSAGE } from "@/graphql/mutations/mutation";
 
 interface MessageType {
 	_id: string;
@@ -19,45 +23,34 @@ const AllMessages = () => {
 	const [modalVisible, setModalVisible] = useState(false);
 	const [modalContent, setModalContent] = useState<string | null>(null);
 
-	// const { loading, data, error } = useQuery(GET_ALL_MESSAGES);
+	const { data, error, loading, refetch } = useQuery(GET_ALL_MESSAGES);
 
-	// const [deleteMessage] = useMutation(DELETE_MESSAGE, {
-	// 	refetchQueries: [{ query: GET_ALL_MESSAGES }],
-	// });
-
-	// if (loading) return <Skeleton />;
-
-	// if (error)
-	// 	return (
-	// 		<div className="w-1/3 ml-auto">
-	// 			<Alert message="Error" type="error" showIcon closable />
-	// 		</div>
-	// 	);
-
-	// const messages =
-	// 	data?.getAllMessages?.map((message: MessageType) => ({
-	// 		key: message._id,
-	// 		...message,
-	// 	})) || [];
+	const [deleteMessage] = useMutation(DELETE_MESSAGE, {
+		refetchQueries: [{ query: GET_ALL_MESSAGES }],
+		awaitRefetchQueries: true, // Ensures refetch completes before continuing
+		onError: (err) => console.error("Mutation Error:", err), // Handle errors gracefully
+	});
 
 	const handlePageChange = (page: number, pageSize: number) => {
 		setPagination({ current: page, pageSize: pageSize });
 	};
 
-	// const onDeleteMessage = async (id: string) => {
-	// 	try {
-	// 		await deleteMessage({ variables: { id } });
-	// 		toast.success("Message deleted successfully");
-	// 	} catch (error) {
-	// 		Notify("error", "Failed to delete the message");
-	// 		console.error("Error deleting message:", error);
-	// 	}
-	// };
+const onDeleteMessage = async (id: string) => {
+	try {
+		await deleteMessage({ variables: { id } });
+		await refetch(); // Highlighted: Explicitly refetch messages after deletion
+		console.log("Message deleted successfully");
+	} catch (error) {
+		console.error("Error deleting message:", error);
+	}
+};
 
 	const onContentClick = (content: string) => {
 		setModalContent(content);
 		setModalVisible(true);
 	};
+
+	let errorMessage;
 
 	const columns: TableProps<MessageType>["columns"] = [
 		{
@@ -75,16 +68,21 @@ const AllMessages = () => {
 			key: "userName",
 			render: (text) => <a>{text}</a>,
 		},
-		{
-			title: "Date",
-			dataIndex: "createdAt",
-			key: "createdAt",
-			render: (text) => <a>{format(new Date(text), "yyyy-MM-dd")}</a>,
-		},
+		// {
+		// 	title: "Date",
+		// 	dataIndex: "createdAt",
+		// 	key: "createdAt",
+		// 	render: (text) => <a>{format(new Date(text), "yyyy-MM-dd")}</a>,
+		// },
 		{
 			title: "Email",
 			dataIndex: "email",
 			key: "email",
+		},
+		{
+			title: "Phone",
+			dataIndex: "phone",
+			key: "phone",
 		},
 		{
 			title: "Content",
@@ -117,14 +115,9 @@ const AllMessages = () => {
 			},
 		},
 		{
-			title: "Plan",
-			dataIndex: "plan",
-			key: "plan",
-		},
-		{
-			title: "Phone",
-			dataIndex: "phone",
-			key: "phone",
+			title: "ProjectType",
+			dataIndex: "projectType",
+			key: "projectType",
 		},
 		{
 			title: "Location",
@@ -134,39 +127,63 @@ const AllMessages = () => {
 		{
 			title: "Action",
 			key: "action",
-			// render: (_text, record) => (
-			// 	<MdDelete
-			// 		className="text-xl text-center text-red-500 cursor-pointer"
-			// 		// onClick={() => onDeleteMessage(record._id)}
-			// 	/>
-			// ),
+			render: (_text, record) => (
+				<MdDelete
+					className="text-xl text-center text-red-500 cursor-pointer"
+					onClick={() => onDeleteMessage(record._id)}
+				/>
+			),
 		},
 	];
 
+	console.log(data?.getAllMessages);
+
+	if (loading) {
+		return <Skeleton />;
+	}
+
+	const messages =
+		data?.getAllMessages?.map((message: MessageType) => ({
+			key: message._id,
+			...message,
+		})) || [];
+
+	if (error) {
+		return (errorMessage = (
+			<Alert
+				message="Error"
+				description={error.message}
+				type="error"
+				showIcon
+			/>
+		));
+	}
+
 	return (
 		<>
+			{error && errorMessage}
 			<div>
-				<p className="mb-5 text-lg font-semibold text-red-400">
+				<p className="mb-5 text-lg font-semibold text-primaryHover">
 					<span className="font-bold">Total messages: </span>
-					{/* {data?.getAllMessages?.length} */}
+					{data?.getAllMessages?.length}
 				</p>
 				<Table
 					className="table w-full"
 					columns={columns}
-					// dataSource={messages}
+					dataSource={messages}
 					rowKey="key"
 					pagination={{
 						current: pagination.current,
 						pageSize: pagination.pageSize,
 						onChange: handlePageChange,
-						// total: messages.length,
+						total: messages.length,
 					}}
 				/>
 			</div>
 
 			<Modal
 				title="Full Content"
-				visible={modalVisible}
+				open={modalVisible}
 				footer={null}
 				onCancel={() => setModalVisible(false)}
 			>
@@ -176,4 +193,4 @@ const AllMessages = () => {
 	);
 };
 
-export default AllMessages
+export default AllMessages;

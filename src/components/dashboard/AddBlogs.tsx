@@ -10,6 +10,7 @@ const AddBlogs = () => {
 		setFormData(values);
 		console.log("Form Data:", values);
 	};
+	console.log(formData);
 
 	return (
 		<div>
@@ -44,7 +45,7 @@ const AddBlogs = () => {
 						htmlType="submit"
 						className="w-full bg-black"
 					>
-						Sign In
+						Add Blog
 					</Button>
 				</Form.Item>
 			</Form>

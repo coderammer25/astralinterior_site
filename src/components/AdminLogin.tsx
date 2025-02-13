@@ -13,6 +13,8 @@ const AdminLogin = () => {
 		console.log("Form Data:", values);
 	};
 
+	console.log(formData);
+
 	return (
 		<div>
 			<Form

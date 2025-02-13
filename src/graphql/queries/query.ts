@@ -8,6 +8,10 @@ export const GET_ALL_MESSAGES = gql`
 			content
 			userName
 			email
+			phone
+			location
+			projectType
+			customizeFurniture
 		}
 	}
 `;

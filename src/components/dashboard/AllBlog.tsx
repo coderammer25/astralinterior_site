@@ -146,7 +146,7 @@ const AllBlog = () => {
 	return (
 		<>
 			<div>
-				<p className="mb-5 text-lg font-semibold text-red-400">
+				<p className="mb-5 text-lg font-semibold text-primaryHover">
 					<span className="font-bold">Total Blogs: </span>
 					{/* {data?.getAllMessages?.length} */}
 				</p>
@@ -166,7 +166,7 @@ const AllBlog = () => {
 
 			<Modal
 				title="Full Content"
-				visible={modalVisible}
+				open={modalVisible}
 				footer={null}
 				onCancel={() => setModalVisible(false)}
 			>
