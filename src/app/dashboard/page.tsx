@@ -3,6 +3,8 @@ import Image from "next/image";
 import DashboardLayout from "./layout";  // Import the layout
 import welcome from "../../../public/welcome.svg";
 const DashboardPage = () => {
+  
+
   return (
     <DashboardLayout showSidebar={false}> {/* This will show sidebar and header */}
      <div className="flex justify-center">

@@ -15,3 +15,20 @@ export const GET_ALL_MESSAGES = gql`
 		}
 	}
 `;
+
+export const GET_LOGIN = gql`
+	query Login($email: String!, $password: String!) {
+		login(email: $email, password: $password) {
+			token
+			user {
+				_id
+				email
+				password
+				userName
+				mobile
+				role
+				profilePicture
+			}
+		}
+	}
+`;
