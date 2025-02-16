@@ -15,10 +15,10 @@ type User = {
 	profilePicture: string;
 };
 
-interface ContextType {
+type ContextType = {
 	user: User | null;
 	token: string | null;
-	login: (userData: User, token: string) => void;
+	userLogin: (userData: User, token: string) => void;
 	logout: () => void;
 }
 
@@ -38,7 +38,7 @@ export const AuthProvider = ({ children }: ChildrenType) => {
 		}
 	}, []);
 
-	const login = (userData: User, token: string) => {
+	const userLogin = (userData: User, token: string) => {
 		setUser(userData);
 		setToken(token);
 		Cookies.set("token", token, { expires: 7 }); // Store token for 7 days
@@ -52,8 +52,15 @@ export const AuthProvider = ({ children }: ChildrenType) => {
 		Cookies.remove("user");
 	};
 
+  const contextValue: ContextType = {
+    user,
+    token,
+    userLogin,
+    logout
+  }
+
 	return (
-		<AuthContext.Provider value={{ user, login, logout, token }}>
+		<AuthContext.Provider value={contextValue}>
 			{children}
 		</AuthContext.Provider>
 	);

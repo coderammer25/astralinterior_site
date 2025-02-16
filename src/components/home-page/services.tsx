@@ -27,16 +27,13 @@ const ServicesComponent = () => {
 						width={800}
 						height={800}
 						className="sticky top-24 w-full h-full mb-4"
-						data-aos="fade-up"
-						data-aos-offset="980"
-						data-aos-duration="500"
 					/>
 					<Image
 						src={serviceImg_01}
 						alt="Service Image"
 						width={800}
 						height={800}
-						className="sticky top-24 w-full h-full mb-4"
+						className="sticky top-24 w-full h-full mb-4 z-1"
 						data-aos="fade-up"
 						data-aos-offset="980"
 						data-aos-duration="500"
@@ -46,7 +43,7 @@ const ServicesComponent = () => {
 						alt="Service Image"
 						width={800}
 						height={800}
-						className="sticky top-24 w-full h-full mb-4"
+						className="sticky top-24 w-full h-full mb-4 z-1"
 						data-aos="fade-up"
 						data-aos-offset="980"
 						data-aos-duration="500"
@@ -56,7 +53,7 @@ const ServicesComponent = () => {
 						alt="Service Image"
 						width={800}
 						height={800}
-						className="sticky top-24 w-full h-full mb-4"
+						className="sticky top-24 w-full h-full mb-4 z-1"
 						data-aos="fade-up"
 						data-aos-offset="980"
 						data-aos-duration="500"

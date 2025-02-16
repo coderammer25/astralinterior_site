@@ -35,12 +35,21 @@ export function LoginForm({
 	const router = useRouter();
 
 	const { email, password } = adminInformation;
-	const { login } = useAuth();
+	const contextValue = useAuth();
 
-	const { data, refetch, loading, error } = useQuery(GET_LOGIN, {
+	const { refetch, loading, error } = useQuery(GET_LOGIN, {
 		variables: { email, password },
-		skip: true, // Prevent auto-fetching
+		skip: true,
 	});
+
+	if (error) {
+		toast.error(error.message);
+		return;
+	}
+
+	if (loading) {
+		return <p>Loading...</p>;
+	}
 
 	const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
 		setAdminInformation({
@@ -69,14 +78,20 @@ export function LoginForm({
 		}
 
 		try {
-			const { data } = await refetch({ email, password }); // Manually trigger query
+			const { data } = await refetch({ email, password });
+
 			if (data?.login) {
-				login(data.login.user, data.login.token);
-				alert("Login Successful!");
+				contextValue?.userLogin(data.login.user, data.login.token);
+				toast.success("Login Successful");
 				router.push("/dashboard"); // Redirect to dashboard
 			}
 		} catch (err) {
-			console.error("Login failed:", err);
+			if (err instanceof Error) {
+				return toast.error(err.message);
+			}
+			return toast.error("Login Failed", {
+				closeButton: true
+			});
 		}
 	}
 

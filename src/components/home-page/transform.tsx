@@ -29,8 +29,6 @@ const Transform = () => {
 							width={800}
 							height={800}
 							className="w-full h-full object-cover"
-							data-aos="fade-down"
-							data-aos-duration="1000"
 						/>
 					</div>
 					<div>
@@ -40,8 +38,6 @@ const Transform = () => {
 							width={800}
 							height={800}
 							className="w-full h-full object-cover"
-							data-aos="fade-up"
-							data-aos-duration="1000"
 						/>
 					</div>
 				</div>
@@ -72,8 +68,6 @@ const Transform = () => {
 
 					<h2
 						className="text-[3rem] lg:text-[5rem] uppercase leading-[1] mb-[20px] text-primary text-center"
-						data-aos="fade-up"
-						data-aos-duration="600"
 					>
 						Ready to Transform Your{" "}
 						<span className="font-playfair">Space?</span>.
@@ -81,8 +75,6 @@ const Transform = () => {
 
 					<p
 						className="text-[1.125rem] mb-[20px]"
-						data-aos="fade-up"
-						data-aos-duration="800"
 					>
 						Let’s bring your design vision to life! Whether you’re looking for a
 						complete makeover or just a fresh update, our team is here to help.
@@ -91,8 +83,6 @@ const Transform = () => {
 					<Link
 						href="/contact-us"
 						className="flex items-center justify-center gap-2 uppercase text-[14px] text-[#2c2b28] mt-[3rem]"
-						data-aos="fade-up"
-						data-aos-duration="1000"
 					>
 						Get in touch{" "}
 						<span className="bg-primary p-1">
@@ -109,8 +99,6 @@ const Transform = () => {
 							width={800}
 							height={800}
 							className="w-full h-full object-cover"
-							data-aos="fade-down"
-							data-aos-duration="1000"
 						/>
 					</div>
 					<div>
@@ -120,8 +108,6 @@ const Transform = () => {
 							width={800}
 							height={800}
 							className="w-full h-full object-cover"
-							data-aos="fade-up"
-							data-aos-duration="1000"
 						/>
 					</div>
 				</div>
