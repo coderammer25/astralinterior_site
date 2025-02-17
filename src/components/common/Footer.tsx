@@ -10,7 +10,7 @@ export default function Footer() {
 	//bg-[#0a3d3b]
 
 	return (
-		<footer className="bg-[#b3b1ab] text-black py-12">
+		<footer className="bg-gradient-to-r from-amber-50 via-orange-50 to-yellow-50 text-black py-12">
 			{/* Logo and Tagline */}
 			<div className="flex flex-col gap-16 lg:gap-0 lg:flex-row justify-between mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl px-4 md:px-24 lg:px-8">
 				<div className="lg:w-1/2">
