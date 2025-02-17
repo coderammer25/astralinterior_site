@@ -1,6 +1,6 @@
-"use client"
+"use client";
 import { useState } from "react";
-import { Table , Modal } from "antd";
+import { Table, Modal } from "antd";
 import type { TableProps } from "antd";
 import { format } from "date-fns";
 
@@ -146,7 +146,7 @@ const AllServices = () => {
 	return (
 		<>
 			<div>
-				<p className="mb-5 text-lg font-semibold text-red-400">
+				<p className="mb-5 text-lg font-semibold text-primaryHover">
 					<span className="font-bold">Total Services: </span>
 					{/* {data?.getAllMessages?.length} */}
 				</p>
@@ -166,7 +166,7 @@ const AllServices = () => {
 
 			<Modal
 				title="Full Content"
-				visible={modalVisible}
+				open={modalVisible}
 				footer={null}
 				onCancel={() => setModalVisible(false)}
 			>
@@ -176,4 +176,4 @@ const AllServices = () => {
 	);
 };
 
-export default AllServices
+export default AllServices;

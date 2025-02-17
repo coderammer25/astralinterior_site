@@ -11,6 +11,8 @@ const AddProject = () => {
 		console.log("Form Data:", values);
 	};
 
+	console.log(formData);
+
 	return (
 		<div>
 			<Form
@@ -44,7 +46,7 @@ const AddProject = () => {
 						htmlType="submit"
 						className="w-full bg-black"
 					>
-						Sign In
+						Add Project
 					</Button>
 				</Form.Item>
 			</Form>

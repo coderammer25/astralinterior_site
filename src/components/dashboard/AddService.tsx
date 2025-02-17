@@ -11,6 +11,8 @@ const AddService = () => {
 		console.log("Form Data:", values);
 	};
 
+	console.log(formData);
+
 	return (
 		<div>
 			<Form
@@ -44,7 +46,7 @@ const AddService = () => {
 						htmlType="submit"
 						className="w-full bg-black"
 					>
-						Sign In
+						Add Service
 					</Button>
 				</Form.Item>
 			</Form>

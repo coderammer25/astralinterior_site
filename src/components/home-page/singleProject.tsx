@@ -19,8 +19,7 @@ const SingleProject = ({ project, project_number }: SingleProjectProps) => {
 	return (
 		<div
 			className="relative"
-			data-aos="fade-up"
-			// data-aos-duration="1000"
+			data-aos="fade-down"
 		>
 			<Image
 				src={project.project_img}

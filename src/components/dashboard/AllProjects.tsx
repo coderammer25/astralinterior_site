@@ -145,8 +145,7 @@ const AllProjects = () => {
 		<>
 			<div>
 				<p className="mb-5 text-lg font-semibold text-red-400">
-					<span className="font-bold">Total 
-                        Projects: </span>
+					<span className="font-bold">Total Projects: </span>
 					{/* {data?.getAllMessages?.length} */}
 				</p>
 				<Table
@@ -165,7 +164,7 @@ const AllProjects = () => {
 
 			<Modal
 				title="Full Content"
-				visible={modalVisible}
+				open={modalVisible}
 				footer={null}
 				onCancel={() => setModalVisible(false)}
 			>
