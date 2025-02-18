@@ -1,12 +1,9 @@
-
-
-const Notfound = () => {
-    return (
-        <div>
-            <h1>404 - Not Found</h1>
-            <p>The page you&apos;re looking for doesn&apos;t exist.</p>
-        </div>
-    );
+import Image from "next/image";
+import notfound from "../../public/notfound.svg";
+export default function Notfound ()  {
+	return (
+		<div className="flex justify-center pt-[70px] pb-[200px]">
+			<Image src={notfound} alt="Not Found" className="w-1/2"></Image>
+		</div>
+	);
 };
-
-export default Notfound;

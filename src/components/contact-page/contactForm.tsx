@@ -15,7 +15,7 @@ const initialFormData = {
 	phone: "",
 	location: "",
 	projectType: "",
-	customize: false,
+	customize: "",
 	message: "",
 };
 
@@ -25,7 +25,7 @@ const ContactForm = () => {
 
 	const notify = (type: string, message: string) =>
 		toast(message, {
-			position: "top-center",
+			position: "top-right",
 			autoClose: 2000,
 			type: type === "error" ? "error" : "success",
 			closeButton: false,
@@ -268,8 +268,8 @@ const ContactForm = () => {
 								type="radio"
 								id="yes"
 								name="customize"
-								value="true"
-								checked={formData.customize === true}
+								value="yes"
+								checked={formData.customize === "yes"}
 								onChange={handleChange}
 							/>
 							  <label htmlFor="yes">YES</label>
@@ -279,8 +279,8 @@ const ContactForm = () => {
 								type="radio"
 								id="no"
 								name="customize"
-								value="false"
-								checked={formData.customize === false}
+								value="no"
+								checked={formData.customize === "no"}
 								onChange={handleChange}
 							/>
 							  <label htmlFor="no">NO</label>
