@@ -36,7 +36,6 @@ export function LoginForm({
 	const { email, password } = adminInformation;
 
 	const route = useRouter();
-
 	const dispatch = useDispatch();
 
 	const { data, error } = useQuery(GET_LOGIN, {

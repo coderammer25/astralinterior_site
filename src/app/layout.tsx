@@ -8,13 +8,13 @@ import { scrollToTop } from "@/utils/scroll";
 import { ToastContainer } from "react-toastify";
 import { ApolloProvider } from "@apollo/client";
 import client from "@/lib/apolloClient"; // Import your Apollo Client setup file
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import AOS from "aos";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./globals.css";
-import { AppStore, store } from "@/lib/store";
 import { Provider } from "react-redux";
+import { store } from "@/lib/store";
 
  
 
@@ -26,23 +26,17 @@ export default function RootLayout({
 
 	useEffect(() => {
 		scrollToTop();
-	});
+	}, []);
 
 	useEffect(() => {
 		AOS.init();
 	}, []);
 
-		const storeRef = useRef<AppStore>(undefined);
-		if (!storeRef.current) {
-			// Create the store instance the first time this renders
-			storeRef.current = store();
-		}
-
 	return (
 		<html lang="en">
 			<body className="antialiased font-geist text-[#2c2b28] bg-[#f3fbfa] overflow-x-hidden">
 				<ApolloProvider client={client}>
-					<Provider store={storeRef.current}>
+					<Provider store={store}>
 						<Nav />
 						{children}
 						<Footer />
