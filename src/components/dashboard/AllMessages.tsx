@@ -39,7 +39,6 @@ const onDeleteMessage = async (id: string) => {
 	try {
 		await deleteMessage({ variables: { id } });
 		await refetch(); // Highlighted: Explicitly refetch messages after deletion
-		console.log("Message deleted successfully");
 	} catch (error) {
 		console.error("Error deleting message:", error);
 	}
@@ -136,7 +135,6 @@ const onDeleteMessage = async (id: string) => {
 		},
 	];
 
-	console.log(data?.getAllMessages);
 
 	if (loading) {
 		return <Skeleton />;
