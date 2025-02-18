@@ -8,6 +8,7 @@ import { FiYoutube } from "react-icons/fi";
 import logo from "../../../public/astral-logo.png";
 export default function Footer() {
 	//bg-[#0a3d3b]
+	const currentYear = new Date().getFullYear();
 
 	return (
 		<footer className="bg-[#b3b1ab] text-black py-12">
@@ -51,7 +52,9 @@ export default function Footer() {
 					</div>
 
 					<div className="space-y-4">
-						<h4 className="font-semibold mb-8 uppercase text-xl text-[#135a58]">Information</h4>
+						<h4 className="font-semibold mb-8 uppercase text-xl text-[#135a58]">
+							Information
+						</h4>
 						<Link href="#" className="block hover:underline">
 							Terms & Conditions
 						</Link>
@@ -61,7 +64,9 @@ export default function Footer() {
 					</div>
 
 					<div className="space-y-4">
-						<h4 className="font-semibold mb-8 uppercase text-xl text-[#135a58]">Help & Support</h4>
+						<h4 className="font-semibold mb-8 uppercase text-xl text-[#135a58]">
+							Help & Support
+						</h4>
 						<Link href="/contact-us" className="block hover:underline">
 							SUPPORT
 						</Link>
@@ -71,16 +76,17 @@ export default function Footer() {
 
 			{/* Bottom Bar */}
 			<div className="mt-10 flex flex-col gap-10 lg:flex-row md:space-x-3 justify-between lg:items-center text-sm border-t border-gray-700 pt-10 lg:mt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl px-4 md:px-24 lg:px-8">
-				<div className="flex flex-col lg:flex-row lg:items-center gap-4">
+				<div className="flex flex-col lg:flex-row lg:items-center gap-2">
 					<span className="text-black uppercase">
-						All Rights Reserved
+						{currentYear}
 						<Link
 							href="https://www.linkedin.com/company/astral-interior-furniture-bd"
 							target="_blank"
 							className="text-white ml-2 inline-block hover:underline uppercase"
 						>
-							@Astral Interior
+							@Astral Interior.{" "}
 						</Link>
+						{" "} All Rights Reserved
 					</span>
 					<span className="text-black">
 						DEVELOPED BY

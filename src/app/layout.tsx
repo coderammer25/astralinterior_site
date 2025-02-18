@@ -15,11 +15,14 @@ import "slick-carousel/slick/slick-theme.css";
 import "./globals.css";
 import { AuthProvider } from "@/provider/AuthProvider";
 
+ 
+
 export default function RootLayout({
 	children,
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
+
 	useEffect(() => {
 		scrollToTop();
 	});
@@ -27,7 +30,6 @@ export default function RootLayout({
 	useEffect(() => {
 		AOS.init();
 		AOS.refresh();
-		AOS.refreshHard();
 	}, []);
 
 	return (
