@@ -8,6 +8,26 @@ export const GET_ALL_MESSAGES = gql`
 			content
 			userName
 			email
+			phone
+			location
+			projectType
+			customizeFurniture
+		}
+	}
+`;
+
+export const GET_LOGIN = gql`
+	query Login($email: String!, $password: String!) {
+		login(email: $email, password: $password) {
+			token
+			user {
+				_id
+				email
+				userName
+				mobile
+				role
+				profilePicture
+			}
 		}
 	}
 `;
