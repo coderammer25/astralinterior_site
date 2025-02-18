@@ -10,9 +10,10 @@ import Image from "next/image";
 import logo from "./../../public/astral-logo.png";
 import { type ChangeEvent, type FormEvent, useState } from "react";
 import { toast } from "react-toastify";
-import { useAuth } from "@/hooks/useAuth";
-import { GET_LOGIN } from "@/graphql/queries/query";
 import { useQuery } from "@apollo/client";
+import { GET_LOGIN } from "@/graphql/queries/query";
+import { useDispatch } from "react-redux";
+import { login } from "@/features/auth/authSlice";
 import { useRouter } from "next/navigation";
 
 type LoginFormProps = {
@@ -32,24 +33,16 @@ export function LoginForm({
 	const [adminInformation, setAdminInformation] = useState({
 		...INITIAL_FORM_STATE,
 	});
-	const router = useRouter();
-
 	const { email, password } = adminInformation;
-	const contextValue = useAuth();
 
-	const { refetch, loading, error } = useQuery(GET_LOGIN, {
+	const route = useRouter();
+
+	const dispatch = useDispatch();
+
+	const { data, error } = useQuery(GET_LOGIN, {
 		variables: { email, password },
-		skip: true,
+		skip: !email || !password,
 	});
-
-	if (error) {
-		toast.error(error.message);
-		return;
-	}
-
-	if (loading) {
-		return <p>Loading...</p>;
-	}
 
 	const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
 		setAdminInformation({
@@ -77,21 +70,13 @@ export function LoginForm({
 			return;
 		}
 
-		try {
-			const { data } = await refetch({ email, password });
-
-			if (data?.login) {
-				contextValue?.userLogin(data.login.user, data.login.token);
-				toast.success("Login Successful");
-				router.push("/dashboard"); // Redirect to dashboard
-			}
-		} catch (err) {
-			if (err instanceof Error) {
-				return toast.error(err.message);
-			}
-			return toast.error("Login Failed", {
-				closeButton: true
-			});
+		if (data) {
+			const { token, user } = data.login;
+			dispatch(login({ token, user }));
+			toast.success("Login successful", { autoClose: 1000 });
+			route.push("/dashboard");
+		} else {
+			console.log(error?.message);
 		}
 	}
 

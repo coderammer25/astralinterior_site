@@ -2,7 +2,7 @@
 
 import { ChevronsUpDown } from "lucide-react";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import {
 	DropdownMenu,
 	DropdownMenuContent,
@@ -17,11 +17,21 @@ import {
 	SidebarMenuItem,
 	useSidebar,
 } from "@/components/ui/sidebar";
-import { useAuth } from "@/hooks/useAuth";
+import { useAppDispatch, useAppSelector } from "@/lib/hooks";
+import { AvatarImage } from "@radix-ui/react-avatar";
+import { logout } from "@/features/auth/authSlice";
+import { useRouter } from "next/navigation";
 
 export function NavUser() {
 	const { isMobile } = useSidebar();
-	const contextValue = useAuth();
+	const state = useAppSelector((state) => state.auth.user);
+	const dispatch = useAppDispatch();
+	const route = useRouter();
+
+	function handleLogOut() {
+		dispatch(logout());
+		route.push("/login");
+	}
 
 	return (
 		<SidebarMenu>
@@ -34,18 +44,16 @@ export function NavUser() {
 						>
 							<Avatar className="h-8 w-8 rounded-lg">
 								<AvatarImage
-									src={contextValue?.user?.profilePicture}
-									alt={contextValue?.user?.userName}
+									src={state?.profilePicture}
+									alt={state?.userName}
 								/>
 								<AvatarFallback className="rounded-lg">CN</AvatarFallback>
 							</Avatar>
 							<div className="grid flex-1 text-left text-sm leading-tight">
-								<span className="truncate font-semibold">
-									{contextValue?.user?.userName}
+								<span className="truncate font-semibold capitalize">
+									{state?.userName}
 								</span>
-								<span className="truncate text-xs">
-									{contextValue?.user?.email}
-								</span>
+								<span className="truncate text-xs">{state?.email}</span>
 							</div>
 							<ChevronsUpDown className="ml-auto size-4" />
 						</SidebarMenuButton>
@@ -60,25 +68,26 @@ export function NavUser() {
 							<div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm">
 								<Avatar className="h-8 w-8 rounded-lg">
 									<AvatarImage
-										src={contextValue?.user?.profilePicture}
-										alt={contextValue?.user?.userName}
+										src={state?.profilePicture}
+										alt={state?.userName}
 									/>
 									<AvatarFallback className="rounded-lg">CN</AvatarFallback>
 								</Avatar>
 								<div className="grid flex-1 text-left text-sm leading-tight">
 									<span className="truncate font-semibold">
-										{contextValue?.user?.userName}
+										{state?.userName}
 									</span>
-									<span className="truncate text-xs">
-										{contextValue?.user?.email}
-									</span>
+									<span className="truncate text-xs">{state?.email}</span>
 								</div>
 							</div>
 						</DropdownMenuLabel>
 
 						<DropdownMenuSeparator />
 						<DropdownMenuItem className="bg-white">
-							<button className="inline-flex items-center px-4 py-2 bg-red-600 transition ease-in-out delay-75 hover:bg-red-700 text-white text-sm font-medium rounded-md hover:-translate-y-1 hover:scale-110">
+							<button
+								onClick={handleLogOut}
+								className="inline-flex items-center px-4 py-2 bg-red-600 transition ease-in-out delay-75 hover:bg-red-700 text-white text-sm font-medium rounded-md hover:-translate-y-1 hover:scale-110"
+							>
 								<svg
 									stroke="currentColor"
 									viewBox="0 0 24 24"

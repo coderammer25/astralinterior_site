@@ -3,15 +3,20 @@
 import Image from "next/image";
 import DashboardLayout from "./layout"; // Import the layout
 import welcome from "../../../public/welcome.svg";
+import { useAppSelector } from "@/lib/hooks";
 import { useRouter } from "next/navigation";
-import { useAuth } from "@/hooks/useAuth";
+import { useEffect } from "react";
 const DashboardPage = () => {
-	const contextValue = useAuth(); // Get user data from context
-	const router = useRouter();
-  
-	if (!contextValue?.token) {
-    router.push("/login");
-  }
+	const state = useAppSelector((state) => state.auth.accessToken);
+	const route = useRouter();
+
+	useEffect(() => {
+		if (!state) {
+			route.push("/login");
+		}
+	}, [state, route]);
+
+	if (!state) return null;
 
 	return (
 		<DashboardLayout showSidebar={false}>

@@ -15,11 +15,13 @@ export default function Footer() {
 			{/* Logo and Tagline */}
 			<div className="flex flex-col gap-16 lg:gap-0 lg:flex-row justify-between mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl px-4 md:px-24 lg:px-8">
 				<div className="lg:w-1/2">
-					<Image
-						src={logo}
-						alt="Astral Logo"
-						className="w-40 font-semibold mb-4"
-					/>
+					<Link href="/">
+						<Image
+							src={logo}
+							alt="Astral Logo"
+							className="w-40 font-semibold mb-4"
+						/>
+					</Link>
 					<div className="inline-block">
 						<p className="text-black lg:w-2/3">
 							Transforming spaces into timeless experiences. At Astral, we blend
@@ -85,8 +87,8 @@ export default function Footer() {
 							className="text-white ml-2 inline-block hover:underline uppercase"
 						>
 							@Astral Interior.{" "}
-						</Link>
-						{" "} All Rights Reserved
+						</Link>{" "}
+						All Rights Reserved
 					</span>
 					<span className="text-black">
 						DEVELOPED BY
