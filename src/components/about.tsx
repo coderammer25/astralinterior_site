@@ -65,8 +65,8 @@ export default function About() {
 					</div>
 
 					{/* Right Column - Image Grid */}
-					<div className="hidden xl:flex items-center justify-between gap-4 w-full xl:w-1/2">
-						<div className="flex flex-col gap-4 w-1/2">
+					<div className="hidden xl:flex items-center justify-end gap-4 w-full xl:w-1/2">
+						<div className="flex flex-col items-end gap-4">
 							<Image
 								src={image1}
 								alt=""
@@ -86,7 +86,7 @@ export default function About() {
 								data-aos-duration="1000"
 							/>
 						</div>
-						<div className="flex flex-col gap-4 w-1/2">
+						<div className="flex flex-col gap-4  items-end">
 							<Image
 								src={image3}
 								alt=""

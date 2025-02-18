@@ -7,20 +7,23 @@ import { FaFacebook, FaLinkedinIn } from "react-icons/fa";
 import { FiYoutube } from "react-icons/fi";
 import logo from "../../../public/astral-logo.png";
 export default function Footer() {
-	//
+	//bg-[#0a3d3b]
+	const currentYear = new Date().getFullYear();
 
 	return (
-		<footer className="bg-[#0a3d3b] text-white py-12">
+		<footer className="bg-[#b3b1ab] text-black py-12">
 			{/* Logo and Tagline */}
 			<div className="flex flex-col gap-16 lg:gap-0 lg:flex-row justify-between mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl px-4 md:px-24 lg:px-8">
 				<div className="lg:w-1/2">
-					<Image
-						src={logo}
-						alt="Astral Logo"
-						className="w-40 font-semibold mb-4"
-					/>
+					<Link href="/">
+						<Image
+							src={logo}
+							alt="Astral Logo"
+							className="w-40 font-semibold mb-4"
+						/>
+					</Link>
 					<div className="inline-block">
-						<p className="text-white lg:w-2/3">
+						<p className="text-black lg:w-2/3">
 							Transforming spaces into timeless experiences. At Astral, we blend
 							creativity, functionality, and elegance to craft interiors that
 							inspire. From concept to completion, we design spaces that reflect
@@ -33,7 +36,9 @@ export default function Footer() {
 				<div className="flex flex-col lg:flex-row justify-between gap-10 lg:w-1/2">
 					{/* Column 5 */}
 					<div className="space-y-4">
-						<h4 className="font-semibold mb-8 uppercase">Navigate</h4>
+						<h4 className="font-semibold mb-8 uppercase text-xl text-[#135a58]">
+							Navigate
+						</h4>
 						<Link href="/about-us" className="block hover:underline">
 							ABOUT US
 						</Link>
@@ -49,7 +54,9 @@ export default function Footer() {
 					</div>
 
 					<div className="space-y-4">
-						<h4 className="font-semibold mb-8 uppercase">Information</h4>
+						<h4 className="font-semibold mb-8 uppercase text-xl text-[#135a58]">
+							Information
+						</h4>
 						<Link href="#" className="block hover:underline">
 							Terms & Conditions
 						</Link>
@@ -59,7 +66,9 @@ export default function Footer() {
 					</div>
 
 					<div className="space-y-4">
-						<h4 className="font-semibold mb-8 uppercase">Help & Support</h4>
+						<h4 className="font-semibold mb-8 uppercase text-xl text-[#135a58]">
+							Help & Support
+						</h4>
 						<Link href="/contact-us" className="block hover:underline">
 							SUPPORT
 						</Link>
@@ -69,18 +78,19 @@ export default function Footer() {
 
 			{/* Bottom Bar */}
 			<div className="mt-10 flex flex-col gap-10 lg:flex-row md:space-x-3 justify-between lg:items-center text-sm border-t border-gray-700 pt-10 lg:mt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl px-4 md:px-24 lg:px-8">
-				<div className="flex flex-col lg:flex-row lg:items-center gap-4">
-					<span className="text-gray-400 uppercase">
-						All Rights Reserved
+				<div className="flex flex-col lg:flex-row lg:items-center gap-2">
+					<span className="text-black uppercase">
+						{currentYear}
 						<Link
 							href="https://www.linkedin.com/company/astral-interior-furniture-bd"
 							target="_blank"
 							className="text-white ml-2 inline-block hover:underline uppercase"
 						>
-							@Astral Interior
-						</Link>
+							@Astral Interior.{" "}
+						</Link>{" "}
+						All Rights Reserved
 					</span>
-					<span className="text-gray-400">
+					<span className="text-black">
 						DEVELOPED BY
 						<Link
 							href="https://coderammer.com"

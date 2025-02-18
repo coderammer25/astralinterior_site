@@ -120,6 +120,7 @@ export const Nav = () => {
 									aria-label="Astral"
 									title="Astral"
 									className="inline-flex items-center"
+									onClick={() => setOpen(false)}
 								>
 									<Image className="w-[140px] select-none" src={logo} alt="" />
 								</Link>
