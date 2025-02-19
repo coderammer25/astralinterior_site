@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
+import { TextAnimate } from "../magicui/text-animate";
 
 export const AboutUsComponent = () => {
 
@@ -11,8 +12,29 @@ export const AboutUsComponent = () => {
 					data-aos="fade-up"
 					data-aos-duration="800"
 				>
-					where design meets lifestyle in perfect{" "}
-					<span className="font-playfair">harmony</span>.
+					 <TextAnimate duration={800} animation="blurInDown" by="character" delay={3}>
+    				{"where design meets"}
+  					</TextAnimate>
+					
+				</h2>
+				<h2
+					className="text-5xl lg:text-[5rem] uppercase leading-[1] mb-[2rem] text-primary"
+					data-aos="fade-up"
+					data-aos-duration="800"
+				>
+					 <TextAnimate duration={500} animation="blurInUp" by="character" delay={4}>
+    				{"lifestyle in perfect"}
+  					</TextAnimate>
+					
+				</h2>
+				<h2
+					className="text-5xl lg:text-[5rem] uppercase leading-[1] mb-[2rem] text-primary font-playfair"
+					data-aos="fade-up"
+					data-aos-duration="800"
+				>
+					 <TextAnimate duration={500} animation="scaleUp" by="character" delay={5}>
+    				{"harmony"}
+  					</TextAnimate>
 				</h2>
 				<Link
 					href="/about-us"
