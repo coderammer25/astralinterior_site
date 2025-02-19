@@ -1,6 +1,4 @@
-import AOS from "aos";
 import Image, { StaticImageData } from "next/image";
-import { useEffect } from "react";
 
 type SingleProjectProps = {
 	project: {
@@ -12,9 +10,6 @@ type SingleProjectProps = {
 };
 
 const SingleProject = ({ project, project_number }: SingleProjectProps) => {
-	useEffect(() => {
-		AOS.init();
-	}, []);
 
 	return (
 		<div

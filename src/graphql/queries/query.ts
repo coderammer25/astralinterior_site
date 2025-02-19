@@ -23,7 +23,6 @@ export const GET_LOGIN = gql`
 			user {
 				_id
 				email
-				password
 				userName
 				mobile
 				role

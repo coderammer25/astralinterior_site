@@ -1,3 +1,5 @@
+"use client"
+
 import { AppSidebar } from "@/components/dashboard/component/app-sidebar";
 import { NavUser } from "@/components/dashboard/component/nav-user"; // User info component
 import {
@@ -5,8 +7,10 @@ import {
 	SidebarTrigger,
 	SidebarInset,
 } from "@/components/ui/sidebar"; // Sidebar provider context
+import { useAppSelector } from "@/lib/hooks";
 import { Separator } from "@radix-ui/react-separator"; // Radix separator component
-import { ReactNode } from "react";
+import { useRouter } from "next/navigation";
+import { ReactNode, useEffect } from "react";
 
 interface DashboardLayoutProps {
 	children: ReactNode;
@@ -17,6 +21,18 @@ export default function DashboardLayout({
 	children,
 	showSidebar = true,
 }: DashboardLayoutProps) {
+
+		const state = useAppSelector((state) => state.auth.accessToken);
+		const route = useRouter();
+
+		useEffect(() => {
+			if (!state) {
+				route.push("/login");
+			}
+		}, [state, route]);
+
+		if (!state) return null;
+
 	return (
 		<SidebarProvider>
 			{/* Conditionally render the Sidebar based on the showSidebar prop */}

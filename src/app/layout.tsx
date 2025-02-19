@@ -13,28 +13,30 @@ import AOS from "aos";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./globals.css";
-import { AuthProvider } from "@/provider/AuthProvider";
+import { Provider } from "react-redux";
+import { store } from "@/lib/store";
+
+ 
 
 export default function RootLayout({
 	children,
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
+
 	useEffect(() => {
 		scrollToTop();
-	});
+	}, []);
 
 	useEffect(() => {
 		AOS.init();
-		AOS.refresh();
-		AOS.refreshHard();
 	}, []);
 
 	return (
 		<html lang="en">
 			<body className="antialiased font-geist text-[#2c2b28] bg-[#f3fbfa] overflow-x-hidden">
 				<ApolloProvider client={client}>
-					<AuthProvider>
+					<Provider store={store}>
 						<Nav />
 						{children}
 						<Footer />
@@ -54,7 +56,7 @@ export default function RootLayout({
 							<FaArrowUp />
 						</button>
 						<ToastContainer />
-					</AuthProvider>
+					</Provider>
 				</ApolloProvider>
 			</body>
 		</html>
