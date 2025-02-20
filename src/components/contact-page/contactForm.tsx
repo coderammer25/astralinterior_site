@@ -120,35 +120,35 @@ const ContactForm = () => {
 				data-aos-duration="800"
 			>
 				<Link
-					href="https://facebook.com"
+					href="https://www.facebook.com/astralinteriorfurniture"
 					target="_blank"
 					className="bg-primary p-3 rounded-md border-2 border-primary transition-all duration-500 hover:bg-white hover:text-primary text-white cursor-pointer"
 				>
 					<FaFacebookF className="md:w-[1.375rem] md:h-[1.375rem]" />
 				</Link>
 				<Link
-					href="https://instagram.com"
+					href="https://www.instagram.com/astralinterior"
 					target="_blank"
 					className="bg-primary p-3 rounded-md border-2 border-primary transition-all duration-500 hover:bg-white hover:text-primary text-white cursor-pointer"
 				>
 					<FaInstagram className="md:w-[1.375rem] md:h-[1.375rem]" />
 				</Link>
 				<Link
-					href="https://x.com"
+					href="https://x.com/astralinteriors"
 					target="_blank"
 					className="bg-primary p-3 rounded-md border-2 border-primary transition-all duration-500 hover:bg-white hover:text-primary text-white cursor-pointer"
 				>
 					<FaXTwitter className="md:w-[1.375rem] md:h-[1.375rem]" />
 				</Link>
 				<Link
-					href="https://linkedin.com"
+					href="https://www.linkedin.com/company/astral-interior-furniture-bd"
 					target="_blank"
 					className="bg-primary p-3 rounded-md border-2 border-primary transition-all duration-500 hover:bg-white hover:text-primary text-white cursor-pointer"
 				>
 					<FaLinkedinIn className="md:w-[1.375rem] md:h-[1.375rem]" />
 				</Link>
 				<Link
-					href="https://youtube.com"
+					href="https://www.youtube.com/@AstralInteriorFurniture"
 					target="_blank"
 					className="bg-primary p-3 rounded-md border-2 border-primary transition-all duration-500 hover:bg-white hover:text-primary text-white cursor-pointer"
 				>
