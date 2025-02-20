@@ -16,17 +16,14 @@ import "./globals.css";
 import { Provider } from "react-redux";
 import { store } from "@/lib/store";
 
- 
-
 export default function RootLayout({
 	children,
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
-
 	useEffect(() => {
 		scrollToTop();
-	}, []);
+	});
 
 	useEffect(() => {
 		AOS.init();
