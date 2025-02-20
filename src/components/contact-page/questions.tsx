@@ -1,10 +1,3 @@
-// const FrequentQuestions = () => {
-// 	return <div className="py-[8rem]">
-//     <h2></h2>
-//   </div>;
-// };
-// export default FrequentQuestions;
-
 "use client";
 
 import { useState, ReactNode } from "react";
