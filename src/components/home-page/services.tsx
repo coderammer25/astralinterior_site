@@ -11,7 +11,7 @@ import Link from "next/link";
 const ServicesComponent = () => {
 	return (
 		<section className="px-4 lg:py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 relative">
-			<div className="flex flex-col lg:flex-row items-start lg:items-start gap-4 md:gap-0 justify-between">
+			<div className="flex flex-col lg:flex-row items-start lg:items-start gap-4 md:gap-0 justify-between md:mb-8">
 				<div className="w-full lg:w-1/2 space-y-10 lg:space-y-0 mt-10 lg:mt-0">
 					{services.map((service, idx) => (
 						<div key={service.title} className="lg:h-[800px]">

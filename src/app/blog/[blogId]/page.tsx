@@ -31,14 +31,16 @@ const BlogDetails = async ({
 		<div className="px-4 py-11 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
 			{/* Blog Header */}
 			<div className="space-y-4">
-				<div className="flex items-center space-x-2 text-muted-foreground">
-					<h2>category</h2>
-					<Badge className="px-3 py-2 rounded-3xl bg-gray-200 text-black">
+				<div className="flex items-center space-x-2 text-muted-foreground text-wrap">
+					<h2 className="text-xs md:text-sm">category</h2>
+					<Badge className="text-xs md:text-sm px-3 py-2 rounded-3xl bg-gray-200 text-black">
 						{blog.category}
 					</Badge>
-					<p>Reading Time: {blog.readingTime} min</p>
+					<p className="text-xs md:text-sm">
+						Reading Time: {blog.readingTime} min
+					</p>
 				</div>
-				<h1 className="text-[3rem] lg:text-8xl py-4 ">{blog.title}</h1>
+				<h1 className="md:text-3xl xl:text-6xl py-4">{blog.title}</h1>
 			</div>
 
 			{/* Blog Image */}

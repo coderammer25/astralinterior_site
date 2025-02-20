@@ -11,12 +11,12 @@ import Transform from "./home-page/transform";
 export default function About() {
 	return (
 		<>
-			<section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+			<section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 ">
 				{/* Left Column - Text Content */}
 				<div className="flex items-center justify-between">
-					<div className="space-y-6 w-full xl:w-1/2">
+					<div className="space-y-6 w-full xl:w-1/2 ">
 						<nav
-							className="flex items-center gap-2 text-sm"
+							className="flex items-center gap-2 text-sm "
 							data-aos="fade-right"
 							data-aos-duration="600"
 						>
@@ -41,7 +41,7 @@ export default function About() {
 						</h1>
 
 						<p
-							className="text-gray-600 w-full  md:w-1/2"
+							className="text-gray-600 w-full md:w-1/2 "
 							data-aos="fade-right"
 							data-aos-duration="1000"
 						>
@@ -110,7 +110,7 @@ export default function About() {
 				</div>
 			</section>
 
-			<section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+			<section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 ">
 				<div className="lg:flex md:grid grid-cols-2 md:grid-cols-2 gap-8 md:gap-16 items-center">
 					<div className="relative w-full xl:w-1/2">
 						<Image
@@ -207,7 +207,7 @@ export default function About() {
 				</div>
 			</div>
 
-			<section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+			<section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 ">
 				<div className="flex flex-col-reverse lg:flex-row justify-between items-center">
 					<div className="space-y-8 mt-5 text-center xl:text-left w-full xl:w-1/2">
 						<div className="space-y-6 ">
@@ -232,18 +232,18 @@ export default function About() {
 							</p>
 						</div>
 
-						<div className="flex">
+						<div className="flex gap-2 justify-center xl:justify-start">
 							<Link
 								href="/contact-us"
-								className="flex items-center justify-center gap-2 uppercase text-[14px] text-[#2c2b28] "
+								className="flex items-center justify-center uppercase text-[14px] text-[#2c2b28] "
 								data-aos="fade-right"
 								data-aos-duration="1200"
 							>
 								GET IN TOUCH
-								<span className="bg-primary p-1">
-									<FaArrowRight className="text-white" />
-								</span>
 							</Link>
+							<span className="bg-primary p-1">
+								<FaArrowRight className="text-white" />
+							</span>
 						</div>
 					</div>
 
