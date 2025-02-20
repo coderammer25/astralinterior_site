@@ -9,7 +9,7 @@ import Transform from "@/components/home-page/transform";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Astra Interior & Furniture - Elegant & Modern Designs",
+	title: "Astral Interior & Furniture - Elegant & Modern Designs",
 	description:
 		"Discover premium interior design and furniture solutions with Astra Interior & Furniture. Transform your space with our elegant and modern designs.",
 };

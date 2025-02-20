@@ -4,9 +4,9 @@ import FrequentQuestions from "@/components/contact-page/questions";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Contact Astra Interior & Furniture - Get in Touch",
+	title: "Contact Astral Interior & Furniture - Get in Touch",
 	description:
-		"Have questions? Contact Astra Interior & Furniture for expert interior design solutions, custom furniture, and project consultations.",
+		"Have questions? Contact Astral Interior & Furniture for expert interior design solutions, custom furniture, and project consultations.",
 };
 
 const ContactPage = () => {
