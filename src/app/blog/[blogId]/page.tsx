@@ -1,6 +1,13 @@
 import { featuredPost, recentPosts } from "../../../data";
 import Image from "next/image";
 import { Badge } from "antd";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Astra Interior Blog - Latest Trends & Design Tips",
+	description:
+		"Stay updated with the latest interior design trends, furniture inspirations, and expert tips on Astra Interior & Furniture's official blog.",
+};
 
 const BlogDetails = async ({
 	params,
