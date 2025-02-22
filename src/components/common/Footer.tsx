@@ -7,7 +7,6 @@ import { FaFacebook, FaLinkedinIn } from "react-icons/fa";
 import { FiYoutube } from "react-icons/fi";
 import logo from "../../../public/astral-logo.png";
 export default function Footer() {
-	//bg-[#0a3d3b]
 	const currentYear = new Date().getFullYear();
 
 	return (
@@ -36,7 +35,7 @@ export default function Footer() {
 				<div className="flex flex-col lg:flex-row justify-between gap-10 lg:w-1/2">
 					{/* Column 5 */}
 					<div className="space-y-4">
-						<h4 className="font-semibold mb-8 uppercase text-xl text-[#135a58]">
+						<h4 className="font-semibold mb-8 uppercase text-xl text-white">
 							Navigate
 						</h4>
 						<Link href="/about-us" className="block hover:underline">
@@ -54,7 +53,7 @@ export default function Footer() {
 					</div>
 
 					<div className="space-y-4">
-						<h4 className="font-semibold mb-8 uppercase text-xl text-[#135a58]">
+						<h4 className="font-semibold mb-8 uppercase text-xl text-white">
 							Information
 						</h4>
 						<Link href="#" className="block hover:underline">
@@ -66,7 +65,7 @@ export default function Footer() {
 					</div>
 
 					<div className="space-y-4">
-						<h4 className="font-semibold mb-8 uppercase text-xl text-[#135a58]">
+						<h4 className="font-semibold mb-8 uppercase text-xl text-white">
 							Help & Support
 						</h4>
 						<Link href="/contact-us" className="block hover:underline">
@@ -77,7 +76,7 @@ export default function Footer() {
 			</div>
 
 			{/* Bottom Bar */}
-			<div className="mt-10 flex flex-col gap-10 lg:flex-row md:space-x-3 justify-between lg:items-center text-sm border-t border-gray-700 pt-10 lg:mt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl px-4 md:px-24 lg:px-8">
+			<div className="mt-10 flex flex-col gap-10 lg:flex-row md:space-x-3 justify-between lg:items-center text-sm border-t border-white pt-10 lg:mt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl px-4 md:px-24 lg:px-8">
 				<div className="flex flex-col lg:flex-row lg:items-center gap-2">
 					<span className="text-black uppercase">
 						{currentYear}
