@@ -91,7 +91,7 @@ const Banner = () => {
       alt="Chair Image"
       width={800}
       height={800}
-      className="w-[22rem] h-[28rem] mx-auto absolute top-10 left-1/3 -translate-x-1/2 z-10 -rotate-12 "
+      className="xl:w-[18rem] xl:h-[22rem] mx-auto absolute top-10 left-1/3 -translate-x-1/2 z-10 -rotate-12 "
     />
   </motion.div>
 
@@ -106,7 +106,7 @@ const Banner = () => {
       alt="Chair Image"
       width={800}
       height={800}
-      className="w-[22rem] h-[28rem] mx-auto absolute -top-1 left-1/2 -translate-x-1/2 z-50"
+      className="xl:w-[18rem] xl:h-[24rem] mx-auto absolute -top-1 left-1/2 -translate-x-1/2 z-50"
     />
   </motion.div>
 
@@ -122,7 +122,7 @@ const Banner = () => {
       alt="Chair Image"
       width={800}
       height={800}
-      className="w-[22rem] h-[28rem] mx-auto absolute top-[35px] left-2/3 -translate-x-[170px] rotate-12 z-10"
+      className="xl:w-[18rem] xl:h-[22rem] mx-auto absolute top-[35px] left-2/3 -translate-x-[170px] rotate-12 z-10"
     />
   </motion.div>
 
