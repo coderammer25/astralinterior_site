@@ -100,11 +100,25 @@ const Banner = () => {
               alt="Chair Image"
               width={800}
               height={800}
-              className="xl:w-[18rem] xl:h-[22rem] mx-auto absolute top-10 left-1/3 -translate-x-1/2 z-10 -rotate-12 "
+              className="xl:w-[18rem] xl:h-[22rem] mx-auto absolute top-36 left-1/3 -translate-x-[230px] z-10 -rotate-[40deg] "
             />
           </motion.div>
 
-          {/* Second Image */}
+          <motion.div
+            initial={{ opacity: 0, x: -400 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.3, ease: [0.42, 0, 0.58, 1] }}
+          >
+            <Image
+              src="https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6713b50a819d1d5e02a89879_Modern%20Sculptural%20Chair%20Design.webp"
+              alt="Chair Image"
+              width={800}
+              height={800}
+              className="xl:w-[18rem] xl:h-[22rem] mx-auto absolute top-10 left-1/3 -translate-x-1/2 z-10 -rotate-[15deg] "
+            />
+          </motion.div>
+
+          {/* 3 main */}
           <motion.div
             initial={{ opacity: 0, y: -50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -115,11 +129,27 @@ const Banner = () => {
               alt="Chair Image"
               width={800}
               height={800}
-              className="xl:w-[18rem] xl:h-[24rem] mx-auto absolute -top-1 left-1/2 -translate-x-1/2 z-50"
+              className="xl:w-[18rem] xl:h-[24rem] mx-auto absolute -top-2 left-1/2 -translate-x-1/2 z-50"
             />
           </motion.div>
 
-          {/* Third Image */}
+          {/* 4 */}
+          <motion.div
+            initial={{ opacity: 0, x: 400 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.3, ease: [0.42, 0, 0.58, 1] }} 
+          >
+            <Image
+              src="https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6713b512870cc6e108d4e4e8_Sculptural%20Black%20Shell%20in%20Modern%20Room-p-500.webp"
+              alt="Chair Image"
+              width={800}
+              height={800}
+              className="xl:w-[18rem] xl:h-[23rem] mx-auto absolute top-[130px] left-2/3 -translate-x-[40px] rotate-[38deg] z-10"
+            />
+          </motion.div>
+
+          {/* 5 */}
+
           <motion.div
             initial={{ opacity: 0, x: 400 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -130,12 +160,15 @@ const Banner = () => {
               alt="Chair Image"
               width={800}
               height={800}
-              className="xl:w-[18rem] xl:h-[22rem] mx-auto absolute top-[35px] left-2/3 -translate-x-[170px] rotate-12 z-10"
+              className="xl:w-[18rem] xl:h-[22rem] mx-auto absolute top-[35px] left-2/3 -translate-x-[150px] rotate-12 z-10"
             />
           </motion.div>
+
+          {/* close */}
+          
         </motion.div>
 
-        <div className="relative top-[500px] lg:top-96 flex flex-col gap-4 lg:flex-row lg:gap-0 items-center justify-between">
+        <div className="relative top-[500px] lg:top-[550px] flex flex-col gap-4 lg:flex-row lg:gap-0 items-center justify-between">
           <p
             className="uppercase text-sm"
             data-aos="fade-down"
