@@ -89,7 +89,7 @@ const Banner = () => {
           }}
           className="relative z-0"
         >
-          {/* First Image */}
+          {/* left - 2 */}
           <motion.div
             initial={{ opacity: 0, x: -400 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -100,12 +100,13 @@ const Banner = () => {
               alt="Chair Image"
               width={800}
               height={800}
-              className="xl:w-[18rem] xl:h-[22rem] mx-auto absolute top-36 left-1/3 -translate-x-[230px] z-10 -rotate-[40deg] "
+              className=" hidden md:block lg:block md:w-[14rem] xl:w-[18rem] xl:h-[22rem] mx-auto absolute top-36 left-1/3 -translate-x-[230px] z-10 -rotate-[40deg] "
             />
           </motion.div>
 
+          {/* left - 1 */}
           <motion.div
-            initial={{ opacity: 0, x: -400 }}
+            initial={{ opacity: 0, x: -300 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.42, 0, 0.58, 1] }}
           >
@@ -114,11 +115,12 @@ const Banner = () => {
               alt="Chair Image"
               width={800}
               height={800}
-              className="xl:w-[18rem] xl:h-[22rem] mx-auto absolute top-10 left-1/3 -translate-x-1/2 z-10 -rotate-[15deg] "
+              className="  w-[10rem] md:w-[16rem] xl:w-[18rem] xl:h-[22rem] mx-auto absolute top-5 md:top-10 lg:top-10 left-1/3 -translate-x-1/2 z-10 -rotate-[15deg] "
             />
           </motion.div>
 
-          {/* 3 main */}
+          {/* main - middle */}
+
           <motion.div
             initial={{ opacity: 0, y: -50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -129,11 +131,12 @@ const Banner = () => {
               alt="Chair Image"
               width={800}
               height={800}
-              className="xl:w-[18rem] xl:h-[24rem] mx-auto absolute -top-2 left-1/2 -translate-x-1/2 z-50"
+              className=" w-[9rem] md:w-[15rem] xl:w-[18rem] xl:h-[24rem] mx-auto absolute -top-2 left-1/2 -translate-x-1/2 z-50"
             />
           </motion.div>
 
-          {/* 4 */}
+          {/* right - 2 */}
+          
           <motion.div
             initial={{ opacity: 0, x: 400 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -144,11 +147,11 @@ const Banner = () => {
               alt="Chair Image"
               width={800}
               height={800}
-              className="xl:w-[18rem] xl:h-[23rem] mx-auto absolute top-[130px] left-2/3 -translate-x-[40px] rotate-[38deg] z-10"
+              className=" hidden md:block lg:block w-[13rem] md:w-[18rem]  md:h-[18rem] xl:w-[18rem] xl:h-[23rem] mx-auto absolute md:top-[120px] xl:top-[130px] left-2/3 -translate-x-[30px] rotate-[38deg] z-10"
             />
           </motion.div>
 
-          {/* 5 */}
+          {/* right 1 */}
 
           <motion.div
             initial={{ opacity: 0, x: 400 }}
@@ -160,7 +163,7 @@ const Banner = () => {
               alt="Chair Image"
               width={800}
               height={800}
-              className="xl:w-[18rem] xl:h-[22rem] mx-auto absolute top-[35px] left-2/3 -translate-x-[150px] rotate-12 z-10"
+              className=" w-[10rem] h-[13rem] md:w-[16rem] md:h-[20rem] xl:w-[18rem] xl:h-[22rem] mx-auto absolute top-[15px] md:top-[30px] xl:top-[35px] left-2/3 -translate-x-[80px] md:-translate-x-[120px] xl:-translate-x-[150px] rotate-12 z-10"
             />
           </motion.div>
 
@@ -168,7 +171,7 @@ const Banner = () => {
           
         </motion.div>
 
-        <div className="relative top-[500px] lg:top-[550px] flex flex-col gap-4 lg:flex-row lg:gap-0 items-center justify-between">
+        <div className="relative top-[400px] md:top-[500px] lg:top-[550px] flex flex-col gap-4 lg:flex-row lg:gap-0 items-center justify-between">
           <p
             className="uppercase text-sm"
             data-aos="fade-down"
