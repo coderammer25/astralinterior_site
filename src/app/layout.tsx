@@ -21,9 +21,9 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
-	// useEffect(() => {
-	// 	scrollToTop();
-	// });
+	useEffect(() => {
+		scrollToTop();
+	});
 
 	useEffect(() => {
 		AOS.init();
