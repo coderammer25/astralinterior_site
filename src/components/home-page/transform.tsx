@@ -4,7 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 import Slider from "react-slick";
-import transform_01 from "../../../public/01_transform_img.jpg";
+import transform_01 from "../../../public/Office/office_1.jpg"
+import transform_02 from "../../../public/Office/office_2.jpg"
+import transform_03 from "../../../public/Office/office_3.jpg"
+import transform_04 from "../../../public/Office/office_4.jpg"
 
 const Transform = () => {
 	const settings = {
@@ -28,16 +31,16 @@ const Transform = () => {
 							alt="Image 1"
 							width={800}
 							height={800}
-							className="w-full h-full object-cover"
+							className="w-[330px] h-full object-cover"
 						/>
 					</div>
 					<div>
 						<Image
-							src={transform_01}
+							src={transform_02}
 							alt="Image 1"
 							width={800}
 							height={800}
-							className="w-full h-full object-cover"
+							className="w-[300px] h-full object-cover"
 						/>
 					</div>
 				</div>
@@ -94,20 +97,20 @@ const Transform = () => {
 				<div className="flex xl:flex-col justify-between gap-4 xl:gap-0 xl:space-y-40 text-right">
 					<div>
 						<Image
-							src={transform_01}
+							src={transform_03}
 							alt="Image 1"
 							width={800}
 							height={800}
-							className="w-full h-full object-cover"
+							className="w-[300px] h-full object-cover"
 						/>
 					</div>
 					<div>
 						<Image
-							src={transform_01}
+							src={transform_04}
 							alt="Image 1"
 							width={800}
 							height={800}
-							className="w-full h-full object-cover"
+							className="w-[300px] h-full object-cover"
 						/>
 					</div>
 				</div>

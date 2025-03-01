@@ -1,7 +1,12 @@
-import project_01 from "../public/01_project.jpg";
-import project_02 from "../public/02_project.jpg";
-import project_03 from "../public/03_project.jpg";
-import project_04 from "../public/04_project.jpg";
+import project_01 from "../public/exterior/exterior_1.jpg";
+import project_02 from "../public/Interior/interior_1.jpg";
+import project_03 from "../public/Office/office_1.jpg";
+import project_04 from "../public/hospital/hospital_1.jpg";
+import project_05 from "../public/showroom/showroom_1.jpg";
+import project_06 from "../public/bar and restaurant/bar_1.jpg";
+import project_07 from "../public/bar and restaurant/resturent_1.jpg";
+import project_08 from "../public/furniture/furniture_1.jpg";
+
 import blog_img_01 from '../public/01_blog_img.webp'
 import blog_img_02 from '../public/02_blog_img.webp'
 import blog_img_03 from '../public/03_blog_img.webp'
@@ -54,25 +59,47 @@ export const services = [
 
 export const projects = [
 	{
-		project_title: "slate",
+		project_title: "Exterior",
 		project_category: "furniture selection",
 		project_img: project_01
 	},
 	{
-		project_title: "luxe",
+		project_title: "Interior",
 		project_category: "lighting design",
 		project_img: project_02
 	},
 	{
-		project_title: "aura",
+		project_title: "Office",
 		project_category: "project management",
 		project_img: project_03
 	},
 	{
-		project_title: "edge",
+		project_title: "Hospital",
 		project_category: "space planning",
 		project_img: project_04
 	},
+	{
+		project_title: "Showroom",
+		project_category: "furniture selection",
+		project_img: project_05
+	},
+	{
+		project_title: "Bar",
+		project_category: "lighting design",
+		project_img: project_06
+	},
+	{
+		project_title: "Resturent",
+		project_category: "project management",
+		project_img: project_07
+	},
+	{
+		project_title: "Furniture",
+		project_category: "project management",
+		project_img: project_08
+	},
+
+
 ];
 
 export const clients = [
