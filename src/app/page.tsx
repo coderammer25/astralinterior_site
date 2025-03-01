@@ -5,7 +5,7 @@ import Projects from "@/components/home-page/projects";
 import ServicesComponent from "@/components/home-page/services";
 import Testimonials from "@/components/home-page/testimonials";
 import Transform from "@/components/home-page/transform";
-
+import { clients } from "@/data";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -22,7 +22,12 @@ export default function HomePage() {
 			<AboutUsComponent />
 			<ServicesComponent />
 			<Projects />
-			<Testimonials />
+			<Testimonials autoplay testimonials={clients.map(client => ({
+				quote: client.client_thoughts,
+				name: client.client_name,
+				designation: client.client_position,
+				src: client.client_img,
+			}))} />
 			<Transform />
 		</>
 	);
