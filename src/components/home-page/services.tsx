@@ -1,9 +1,5 @@
 import Image from "next/image";
-
-import serviceImg from "../../../public/mini-interior-about.webp";
-import serviceImg_01 from '../../../public/01_services.webp'
-import serviceImg_03 from '../../../public/03_services.webp'
-import { services } from "@/data";
+import { services } from "../../data"; // Import dynamic service data
 import IndividualService from "./individualService";
 import { FaArrowRight } from "react-icons/fa";
 import Link from "next/link";
@@ -12,6 +8,7 @@ const ServicesComponent = () => {
 	return (
 		<section className="px-4 lg:py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 relative">
 			<div className="flex flex-col lg:flex-row items-start lg:items-start gap-4 md:gap-4 justify-between md:mb-8">
+				{/* Left Side - Services List */}
 				<div className="w-full lg:w-1/2 space-y-10 lg:space-y-0 mt-10 lg:mt-0 p-10 md:p-[68px] md:pr-0 bg-black/5 h-full">
 					{services.map((service, idx) => (
 						<div key={service.title} className="lg:h-[800px]">
@@ -20,41 +17,23 @@ const ServicesComponent = () => {
 					))}
 				</div>
 
+				{/* Right Side - Dynamic Image Display */}
 				<div className="hidden lg:block lg:w-1/2 h-full">
-					<Image
-						src={serviceImg}
-						alt="Service Image"
-						width={800}
-						height={800}
-						className="sticky top-24 w-full h-full mb-4"
-					/>
-					<Image
-						src={serviceImg_01}
-						alt="Service Image"
-						width={800}
-						height={800}
-						className="sticky top-24 w-full h-full mb-4 z-1"
-						data-aos="fade-up"
-					/>
-					<Image
-						src={serviceImg}
-						alt="Service Image"
-						width={800}
-						height={800}
-						className="sticky top-24 w-full h-full mb-4 z-1"
-						data-aos="fade-up"
-					/>
-					<Image
-						src={serviceImg_03}
-						alt="Service Image"
-						width={800}
-						height={800}
-						className="sticky top-24 w-full h-full mb-4 z-1"
-						data-aos="fade-up"
-					/>
+					{services.map((service, idx) => (
+						<Image
+							key={idx}
+							src={service.img}
+							alt={service.title}
+							width={800}
+							height={800}
+							className="sticky top-24 w-full h-full mb-4"
+							data-aos="fade-up"
+						/>
+					))}
 				</div>
 			</div>
 
+			{/* "All Services" Button */}
 			<Link
 				href="/services"
 				className="flex items-center gap-2 uppercase text-[14px] text-[#2c2b28] mt-4 lg:-mt-4"
@@ -67,6 +46,5 @@ const ServicesComponent = () => {
 		</section>
 	);
 };
+
 export default ServicesComponent;
-
-
