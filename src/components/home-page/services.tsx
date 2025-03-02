@@ -24,9 +24,9 @@ const ServicesComponent = () => {
 							key={idx}
 							src={service.img}
 							alt={service.title}
-							width={800}
-							height={800}
-							className="sticky top-24 w-full h-full mb-4"
+							width={1000}
+							height={1000}
+							className="sticky top-24 w-[800px] h-[821px] mb-4 object-center object-cover"
 							data-aos="fade-up"
 						/>
 					))}

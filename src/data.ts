@@ -7,6 +7,12 @@ import project_06 from "../public/bar and restaurant/bar_1.jpg";
 import project_07 from "../public/bar and restaurant/resturent_1.jpg";
 import project_08 from "../public/furniture/furniture_1.jpg";
 
+import transform_01 from "../public/Office/office_1.jpg"
+import transform_02 from "../public/Office/office_2.jpg"
+import transform_03 from "../public/Office/office_3.jpg"
+import transform_04 from "../public/Office/office_4.jpg"
+
+
 import blog_img_01 from '../public/01_blog_img.webp'
 import blog_img_02 from '../public/02_blog_img.webp'
 import blog_img_03 from '../public/03_blog_img.webp'
@@ -16,22 +22,22 @@ export const services = [
 	{
 	  "title": "Exterior",
 	  "description": "We create comprehensive layout designs that optimize the functionality and flow of outdoor spaces. Our goal is to ensure every area serves its intended purpose efficiently while enhancing aesthetics and usability.",
-	  "img": "https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6713b50f14c39bfea0deaefc_Serene%20Geometric%20and%20Organic%20Composition-p-800.webp"
+	  "img": transform_01
 	},
 	{
 	  "title": "Interior",
 	  "description": "Our interior design services bring character, harmony, and sophistication to your space. We thoughtfully curate décor, colors, and accessories to create a balanced atmosphere that reflects your unique style and personality.",
-	  "img": "https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6713b50be6f594839db8f157_Minimalist%20Interior%20with%20Geometric%20Light-p-800.webp"
+	  "img": transform_02
 	},
 	{
 	  "title": "Office",
 	  "description": "Lighting plays a crucial role in shaping the ambiance of a workspace. Our lighting design solutions are tailored to enhance productivity and comfort by incorporating the perfect balance of illumination based on your work environment and aesthetic preferences.",
-	  "img": "https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6713b512870cc6e108d4e4e8_Sculptural%20Black%20Shell%20in%20Modern%20Room-p-500.webp"
+	  "img": transform_03
 	},
 	{
 	  "title": "Hospitality",
 	  "description": "We offer bespoke furniture design services, allowing you to integrate unique, custom-crafted pieces into your space. Whether you need a statement centerpiece or functional furnishings tailored to specific dimensions, we create solutions that blend aesthetics with practicality.",
-	  "img": "https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6713b50f14c39bfea0deaefc_Serene%20Geometric%20and%20Organic%20Composition-p-800.webp"
+	  "img": transform_04
 	}
   ];
   
