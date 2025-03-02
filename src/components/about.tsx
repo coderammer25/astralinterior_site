@@ -1,8 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+
+import transform_01 from "../../public/Office/office_1.jpg"
+import transform_02 from "../../public/Office/office_2.jpg"
+import transform_03 from "../../public/Office/office_3.jpg"
+import transform_04 from "../../public/Office/office_4.jpg"
+
 import image1 from "../../public/chair-about.webp";
-import image2 from "../../public/chair-2-about.webp";
-import image3 from "../../public/scul-chair-about.webp";
 import image4 from "../../public/mini-interior-about.webp";
 import image5 from "../../public/organic-about.webp";
 import image6 from "../../public/women-about.webp";
@@ -68,7 +72,7 @@ export default function About() {
 					<div className="hidden xl:flex items-center justify-end gap-4 w-full xl:w-1/2">
 						<div className="flex flex-col items-end gap-4">
 							<Image
-								src={image1}
+								src={transform_01}
 								alt=""
 								width={800}
 								height={800}
@@ -77,7 +81,7 @@ export default function About() {
 								data-aos-duration="1000"
 							/>
 							<Image
-								src={image2}
+								src={transform_02}
 								alt=""
 								width={800}
 								height={800}
@@ -88,7 +92,7 @@ export default function About() {
 						</div>
 						<div className="flex flex-col gap-4  items-end">
 							<Image
-								src={image3}
+								src={transform_03}
 								alt=""
 								width={800}
 								height={800}
@@ -97,7 +101,7 @@ export default function About() {
 								data-aos-duration="1000"
 							/>
 							<Image
-								src={image1}
+								src={transform_04}
 								alt=""
 								width={800}
 								height={800}
@@ -251,7 +255,7 @@ export default function About() {
 						<Image
 							src={image1}
 							alt="mini"
-							className="xl:absolute top-1/2 -translate-y-1/2 left-32 h-32 w-32 z-10"
+							className="xl:absolute top-1/2 -translate-y-1/2 left-32 h-34 w-32 z-10"
 							data-aos="fade-right"
 							data-aos-duration="1000"
 						/>
@@ -279,6 +283,7 @@ export default function About() {
 						Discover Our <span className="font-playfair">Team</span>
 					</p>
 				</div>
+
 				<div className="grid gap-10 mx-auto sm:grid-cols-2 lg:grid-cols-4 lg:max-w-screen-lg">
 					<div data-aos="zoom-in-down" data-aos-duration="1000">
 						<div className="relative pb-56 mb-4 rounded shadow lg:pb-64">

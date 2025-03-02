@@ -58,18 +58,7 @@ const BlogDetails = async ({
 			{/* Blog Content */}
 			<div className="prose">
 				<p className="lg:text-xl">
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident
-					doloribus voluptas, necessitatibus assumenda impedit quis illo
-					corrupti exercitationem quod veritatis amet eveniet praesentium rerum
-					sed adipisci illum, dignissimos quae quidem nemo tempore facilis iste
-					fugiat mollitia. Error, esse, voluptatum, inventore non quae similique
-					fugiat molestiae nihil natus nesciunt officiis vitae quia eveniet
-					facilis veniam nam. Atque sed, animi quisquam, magnam consequatur
-					exercitationem laudantium, optio corrupti ipsum recusandae maxime!
-					Excepturi, earum laboriosam quaerat molestiae cumque dignissimos ipsa
-					qui quidem repudiandae repellendus a ipsum placeat fugit. Officiis ad
-					nesciunt autem quam doloribus temporibus voluptate doloremque
-					asperiores repudiandae nisi minus beatae, architecto atque!
+					{blog.description}
 				</p>
 			</div>
 		</div>

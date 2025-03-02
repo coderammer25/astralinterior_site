@@ -31,7 +31,7 @@ const Transform = () => {
 							alt="Image 1"
 							width={800}
 							height={800}
-							className="w-[330px] h-full object-cover"
+							className="w-[300px] h-full object-cover"
 						/>
 					</div>
 					<div>
@@ -40,7 +40,7 @@ const Transform = () => {
 							alt="Image 1"
 							width={800}
 							height={800}
-							className="w-[300px] h-full object-cover"
+							className="w-[270px] h-full object-cover"
 						/>
 					</div>
 				</div>
@@ -101,7 +101,7 @@ const Transform = () => {
 							alt="Image 1"
 							width={800}
 							height={800}
-							className="w-[300px] h-full object-cover"
+							className="w-[270px] h-full object-cover "
 						/>
 					</div>
 					<div>
@@ -110,7 +110,7 @@ const Transform = () => {
 							alt="Image 1"
 							width={800}
 							height={800}
-							className="w-[300px] h-full object-cover"
+							className="w-[270px] h-full object-cover"
 						/>
 					</div>
 				</div>

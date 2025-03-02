@@ -164,39 +164,44 @@ export const clients = [
 export const featuredPost = {
 	blogId: 1,
 	category: "Design",
-	title: "UNDERSTANDING WARM VS. COOL TONES",
+	title: "Understanding Warm vs. Cool Tones",
 	readingTime: 7,
-	image:
-		blog_img_01,
-};
+	image: blog_img_01,
+	description:
+	  "Choosing between warm and cool tones can transform the mood of any space. Learn how different color temperatures impact design aesthetics and how to use them effectively in your home or workspace.",
+  };
+  
 
 export const recentPosts = [
 	{
-		blogId: 1,
-		category: "Trends",
-		title: "BENEFITS OF NATURAL ELEMENTS IN DESIGN",
-		readingTime: 9,
-		image:
-			blog_img_02,
+	  blogId: 1,
+	  category: "Trends",
+	  title: "Benefits of Natural Elements in Design",
+	  readingTime: 9,
+	  image: blog_img_02,
+	  description:
+		"Incorporating natural elements such as wood, stone, and plants can enhance both aesthetics and well-being. Discover how organic textures and earthy tones can create a harmonious environment.",
 	},
 	{
-		blogId: 2,
-		category: "Tips",
-		title: "HOW TO MAKE SMALL SPACES FEEL LARGER",
-		readingTime: 7,
-		image:
-			blog_img_03,
+	  blogId: 2,
+	  category: "Tips",
+	  title: "How to Make Small Spaces Feel Larger",
+	  readingTime: 7,
+	  image: blog_img_03,
+	  description:
+		"Maximizing space is all about smart design choices. From strategic furniture placement to lighting tricks, learn how to make compact areas feel spacious and inviting.",
 	},
 	{
-		blogId: 3,
-		category: "Design",
-		title: "THE ESSENTIALS OF GOOD LIGHTING DESIGN",
-		readingTime: 7,
-		image:
-			blog_img_04,
+	  blogId: 3,
+	  category: "Design",
+	  title: "The Essentials of Good Lighting Design",
+	  readingTime: 7,
+	  image: blog_img_04,
+	  description:
+		"Lighting can make or break a room’s ambiance. Understand the fundamentals of task, ambient, and accent lighting to create a well-balanced and stylish interior.",
 	},
-];
-
+  ];
+  
 
 export const menuItems = [
 	{
