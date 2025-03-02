@@ -51,51 +51,50 @@ const Testimonials = ({
   }
 
   return (
-    <div className="max-w-sm md:max-w-4xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-20">
+    <div className="max-w-sm md:max-w-4xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-20 -z-50 ">
       <div className="relative grid grid-cols-1 md:grid-cols-2 gap-20">
         <div>
           <div className="relative h-80 w-full">
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
                 <motion.div
-                  key={testimonial.src}
-                  initial={{
-                    opacity: 0,
-                    scale: 0.9,
-                    z: -100,
-                    rotate: rotateY,
-                  }}
-                  animate={{
-                    opacity: isActive(index) ? 1 : 0.7,
-                    scale: isActive(index) ? 1 : 0.95,
-                    z: isActive(index) ? 0 : -100,
-                    rotate: isActive(index) ? 0 : rotateY,
-                    zIndex: isActive(index)
-                      ? 999
-                      : testimonials.length + 2 - index,
-                    y: isActive(index) ? [0, -80, 0] : 0,
-                  }}
-                  exit={{
-                    opacity: 0,
-                    scale: 0.9,
-                    z: 100,
-                    rotate: rotateY,
-                  }}
-                  transition={{
-                    duration: 0.8,
-                    ease: "easeInOut",
-                  }}
-                  className="absolute inset-0 origin-bottom"
-                >
-                  <Image
-                    src={testimonial.src}
-                    alt={testimonial.name}
-                    width={500}
-                    height={500}
-                    draggable={false}
-                    className="h-full w-full rounded-3xl object-cover object-center"
-                  />
-                </motion.div>
+                key={testimonial.src}
+                initial={{
+                  opacity: 0,
+                  scale: 0.9,
+                  z: 100,
+                  rotate: rotateY,
+                }}
+                animate={{
+                  opacity: isActive(index) ? 1 : 0.7,
+                  scale: isActive(index) ? 1 : 0.95,
+                  z: isActive(index) ? 0 : 100,
+                  rotate: isActive(index) ? 0 : rotateY,
+                  zIndex: isActive(index) ? 1 : -1,  // Fix: Set z-index to 1 for active, -1 for others
+                  y: isActive(index) ? [0, -80, 0] : 0,
+                }}
+                exit={{
+                  opacity: 0,
+                  scale: 0.9,
+                  z: 100,
+                  rotate: rotateY,
+                }}
+                transition={{
+                  duration: 0.8,
+                  ease: "easeInOut",
+                }}
+                className="absolute inset-0 origin-bottom"
+              >
+                <Image
+                  src={testimonial.src}
+                  alt={testimonial.name}
+                  width={500}
+                  height={500}
+                  draggable={false}
+                  className="h-full w-full rounded-3xl object-cover object-center"
+                />
+              </motion.div>
+              
               ))}
             </AnimatePresence>
           </div>
