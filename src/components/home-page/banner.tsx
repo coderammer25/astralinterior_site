@@ -154,7 +154,7 @@ const Banner = () => {
           {/* right 1 */}
 
           <motion.div
-            initial={{ opacity: 0, x: 300 }}
+            initial={{ opacity: 0, x: 10 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.42, 0, 0.58, 1] }} 
           >
