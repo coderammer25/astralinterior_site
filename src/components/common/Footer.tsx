@@ -10,7 +10,7 @@ export default function Footer() {
 	const currentYear = new Date().getFullYear();
 
 	return (
-		<footer className="bg-[#b3b1ab] text-black py-12">
+		<footer className="bg-[#072120] text-white py-12">
 			{/* Logo and Tagline */}
 			<div className="flex flex-col gap-16 lg:gap-0 lg:flex-row justify-between mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl px-4 md:px-24 lg:px-8">
 				<div className="lg:w-1/2">
@@ -22,7 +22,7 @@ export default function Footer() {
 						/>
 					</Link>
 					<div className="inline-block">
-						<p className="text-black lg:w-2/3">
+						<p className="text-white lg:w-2/3">
 							Transforming spaces into timeless experiences. At Astral, we blend
 							creativity, functionality, and elegance to craft interiors that
 							inspire. From concept to completion, we design spaces that reflect
@@ -78,7 +78,7 @@ export default function Footer() {
 			{/* Bottom Bar */}
 			<div className="mt-10 flex flex-col gap-10 lg:flex-row md:space-x-3 justify-between lg:items-center text-sm border-t border-white pt-10 lg:mt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl px-4 md:px-24 lg:px-8">
 				<div className="flex flex-col lg:flex-row lg:items-center gap-2">
-					<span className="text-black uppercase">
+					<span className="text-white uppercase">
 						{currentYear}
 						<Link
 							href="https://www.linkedin.com/company/astral-interior-furniture-bd"
@@ -89,7 +89,7 @@ export default function Footer() {
 						</Link>{" "}
 						All Rights Reserved
 					</span>
-					<span className="text-black">
+					<span className="text-white">
 						DEVELOPED BY
 						<Link
 							href="https://coderammer.com"
