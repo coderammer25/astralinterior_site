@@ -4,8 +4,11 @@ import Image from "next/image";
 import Slider from "react-slick";
 import { motion } from "framer-motion";
 import { TextAnimate } from "../magicui/text-animate";
+import { useEffect, useState } from "react";
 
 const Banner = () => {
+  const [xValue, setXValue] = useState(0)
+
   const settings = {
     arrows: false,
     infinite: true,
@@ -16,6 +19,22 @@ const Banner = () => {
     autoplaySpeed: 2000,
     cssEase: "linear",
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        setXValue(10); // sm
+      } else if (window.innerWidth < 1440) {
+        setXValue(10); // md
+      } else {
+        setXValue(30); // lg
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <section className="px-4 pt-[4rem] pb-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
@@ -105,8 +124,9 @@ const Banner = () => {
           </motion.div>
 
           {/* left - 1 */}
+
           <motion.div
-            initial={{ opacity: 0, x: -300 }}
+            initial={{ opacity: 0, x: xValue }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.42, 0, 0.58, 1] }}
           >
@@ -120,18 +140,18 @@ const Banner = () => {
           </motion.div>
 
           {/* main - middle */}
-
+         
           <motion.div
             initial={{ opacity: 0, y: -50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.0, ease: [0.42, 0, 0.58, 1] }} 
+            transition={{ duration: 0.15, delay: 0.0, ease: [0.42, 0, 0.58, 1] }} 
           >
             <Image
               src="https://cdn.prod.website-files.com/6713afdf3556af8f35af46f9/6713b50244f3d6b890df9977_Futuristic%20Capsule%20Chair-p-500.webp"
               alt="Chair Image"
               width={800}
               height={800}
-              className=" w-[9rem] md:w-[15rem] xl:w-[18rem] xl:h-[24rem] mx-auto absolute -top-2 left-1/2 -translate-x-1/2 z-50"
+              className=" w-[9rem] md:w-[15rem] xl:w-[18rem] xl:h-[24rem] mx-auto absolute -top-2 left-1/2 -translate-x-1/2 z-[100]"
             />
           </motion.div>
 
@@ -154,7 +174,7 @@ const Banner = () => {
           {/* right 1 */}
 
           <motion.div
-            initial={{ opacity: 0, x: 10 }}
+            initial={{ opacity: 0, x: xValue }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.42, 0, 0.58, 1] }} 
           >
