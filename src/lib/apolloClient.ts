@@ -4,7 +4,7 @@ const client = new ApolloClient({
 	ssrMode: typeof window === "undefined", // Ensures SSR compatibility
 	link: new HttpLink({
 		// access env dynamically
-		uri: process.env.NEXT_GRAPHQL_API_ENDPOINT,
+		uri: "http://192.168.0.108:7000/graphql",
 		credentials: "same-origin",
 	}),
 	cache: new InMemoryCache(),
