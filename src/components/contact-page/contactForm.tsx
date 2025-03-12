@@ -101,7 +101,7 @@ const ContactForm = () => {
 					data-aos="fade-down"
 					data-aos-duration="1000"
 				>
-					Get in <span className="font-playfair text-heading">touch</span>
+					Contact With <span className="font-playfair text-heading">us</span>
 				</h2>
 				<p
 					className="text-[1.125rem] lg:w-1/2 mx-auto leading-[1.4]"

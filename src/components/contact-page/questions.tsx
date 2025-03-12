@@ -54,7 +54,7 @@ interface FAQProps {
 const FAQ = ({ faqs }: FAQProps) => {
 	return (
 		<div>
-			<div className="mb-[4rem]" data-aos="fade-up" data-aos-duration="1000">
+			<div className="my-[4rem]" data-aos="fade-up" data-aos-duration="1000">
 				<h2 className="text-center text-[2rem] md:text-[3rem] xl:text-[5rem] leading-[1] uppercase text-primary">
 					Frequently Asked <br /> Questions
 				</h2>
