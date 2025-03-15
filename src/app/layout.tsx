@@ -4,7 +4,6 @@ import { Nav } from "@/components/common/Nav";
 import Footer from "@/components/common/Footer";
 import Link from "next/link";
 import { FaArrowUp, FaWhatsapp } from "react-icons/fa";
-import { scrollToTop } from "@/utils/scroll";
 import { ToastContainer } from "react-toastify";
 import { ApolloProvider } from "@apollo/client";
 import client from "@/lib/apolloClient"; // Import your Apollo Client setup file
@@ -21,6 +20,13 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
+	const scrollToTop = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+	};
+
 	useEffect(() => {
 		scrollToTop();
 	});
@@ -37,18 +43,19 @@ export default function RootLayout({
 						<Nav />
 						{children}
 						<Footer />
-						<span className="fixed top-48 right-2 bg-green-500 text-white rounded-full p-2 text-2xl cursor-pointer transition-all duration-300">
+						<span>
 							<Link
 								href="https://wa.me/8801722080196"
 								target="_blank"
 								rel="noopener noreferrer"
+								className="fixed top-48 -right-1 bg-green-500 hover:pr-8 text-white p-2 text-2xl cursor-pointer transition-all duration-300 rounded-l-md"
 							>
 								<FaWhatsapp />
 							</Link>
 						</span>
 						<button
 							onClick={scrollToTop}
-							className="fixed transition-all right-2 bg-[#135a58] text-white p-3 rounded-full shadow-lg z-20 animate-bounce bottom-16"
+							className="fixed transition-all right-2 bg-[#135a58] text-white p-3 rounded-full shadow-lg z-20 bottom-16"
 						>
 							<FaArrowUp />
 						</button>
