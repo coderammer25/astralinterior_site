@@ -1,6 +1,7 @@
 import { AboutUsComponent } from "@/components/home-page/aboutUs";
 import AutoSlider from "@/components/home-page/auto-slider";
 import Banner from "@/components/home-page/banner";
+import GetInTouch from "@/components/home-page/get-in-touch";
 import Projects from "@/components/home-page/projects";
 import ServicesComponent from "@/components/home-page/services";
 import Testimonials from "@/components/home-page/testimonials";
@@ -20,6 +21,7 @@ export default function HomePage() {
 			<Banner />
 			<AutoSlider />
 			<AboutUsComponent />
+			<GetInTouch/>
 			<ServicesComponent />
 			<Projects />
 			<Testimonials autoplay testimonials={clients.map(client => ({
