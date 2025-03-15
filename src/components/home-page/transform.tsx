@@ -4,10 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 import Slider from "react-slick";
-import transform_01 from "../../../public/Office/office_1.jpg"
-import transform_02 from "../../../public/Office/office_2.jpg"
-import transform_03 from "../../../public/Office/office_3.jpg"
-import transform_04 from "../../../public/Office/office_4.jpg"
+import transform_01 from "../../../public/Office/office_1.jpg";
+import transform_02 from "../../../public/Office/office_2.jpg";
+import transform_03 from "../../../public/Office/office_3.jpg";
+import transform_04 from "../../../public/Office/office_4.jpg";
 
 const Transform = () => {
 	const settings = {
@@ -69,16 +69,12 @@ const Transform = () => {
 						</Slider>
 					</div>
 
-					<h2
-						className="text-[3rem] lg:text-[5rem] uppercase leading-[1] mb-[20px] text-primary text-center"
-					>
-						Ready to Transform Your{" "}
-						<span className="font-playfair">Space?</span>.
+					<h2 className="text-[2rem] md:text-[3rem] lg:text-[5rem] uppercase leading-[1] mb-[20px] text-primary text-center">
+						Ready to Transform Your
+						<span className="font-playfair"> Space?</span>.
 					</h2>
 
-					<p
-						className="text-[1.125rem] mb-[20px]"
-					>
+					<p className="text-[1.125rem] mb-[20px]">
 						Let’s bring your design vision to life! Whether you’re looking for a
 						complete makeover or just a fresh update, our team is here to help.
 					</p>

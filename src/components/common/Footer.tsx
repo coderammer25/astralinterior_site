@@ -32,7 +32,7 @@ export default function Footer() {
 						</div>
 					</div>
 
-					<div className="flex-col md:flex gap-32 mt-10">
+					<div className="flex flex-col md:flex-row gap-12 md:gap-32 mt-10">
 						<div className="space-y-4">
 							<h4 className="font-semibold mb-8 uppercase text-xl text-white">
 								Navigate
@@ -51,7 +51,7 @@ export default function Footer() {
 							</Link>
 						</div>
 
-						<div className="mt-10 space-y-4">
+						<div className="space-y-4">
 							<h4 className="font-semibold mb-8 uppercase text-xl text-white">
 								Information
 							</h4>
@@ -70,7 +70,7 @@ export default function Footer() {
 					<div className="space-y-4 w-full">
 						<iframe
 							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.0345790250817!2d90.39161247592749!3d23.746146288938526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c79c84cc9929%3A0xbbf986544f8c515!2sASTRAL%20INTERIOR!5e0!3m2!1sen!2sbd!4v1741768385670!5m2!1sen!2sbd"
-							className="h-full w-full border-0"
+							className="h-full w-full border-0 rounded-md"
 							allowFullScreen={true}
 							loading="lazy"
 							referrerPolicy="no-referrer-when-downgrade"

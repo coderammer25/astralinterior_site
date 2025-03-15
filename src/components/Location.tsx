@@ -23,7 +23,7 @@ export default function Location() {
 
 			{/* Contact Cards */}
 			<div
-				className="grid md:grid-cols-3 gap-8 mb-16"
+				className="grid lg:grid-cols-3 gap-8 mb-16"
 				data-aos="fade-up"
 				data-aos-delay="200"
 			>
@@ -69,15 +69,15 @@ export default function Location() {
 			</div>
 
 			{/* Map and Additional Info */}
-			<div className="grid lg:grid-cols-5 gap-8 items-start">
+			<div className="flex flex-col lg:flex-row justify-between gap-8 items-start">
 				{/* Map Section - 3 columns */}
 				<div
-					className="lg:col-span-3 relative h-[500px] rounded-lg overflow-hidden shadow-lg"
+					className="w-full lg:w-2/3 relative h-[500px] rounded-lg overflow-hidden shadow-lg"
 					data-aos="fade-right"
 				>
 					<iframe
 						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.0345790250817!2d90.39161247592749!3d23.746146288938526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c79c84cc9929%3A0xbbf986544f8c515!2sASTRAL%20INTERIOR!5e0!3m2!1sen!2sbd!4v1741768385670!5m2!1sen!2sbd"
-						className="absolute inset-0 w-full h-full border-0"
+						className="absolute inset-0 w-full h-full border-2 border-[#072120] rounded-lg"
 						allowFullScreen={true}
 						loading="lazy"
 						referrerPolicy="no-referrer-when-downgrade"
@@ -87,7 +87,7 @@ export default function Location() {
 
 				{/* Additional Info Section - 2 columns */}
 				<div
-					className="lg:col-span-2 bg-white p-8 rounded-lg shadow-lg"
+					className="w-full lg:w-1/3 bg-white p-8 rounded-lg shadow-lg"
 					data-aos="fade-left"
 				>
 					<div className="space-y-8">
@@ -107,34 +107,34 @@ export default function Location() {
 
 						<div>
 							<h3 className="text-2xl font-semibold mb-6">Connect With Us</h3>
-							<div className="flex gap-4">
+							<div className="flex justify-between sm:gap-8 sm:justify-center">
 								<Link
 									href="https://www.facebook.com/astralinteriorfurniture"
 									target="_blank"
 									className="bg-primary p-3 rounded-md border-2 border-primary transition-all duration-500 hover:bg-white hover:text-primary text-white"
 								>
-									<FaFacebookF className="w-5 h-5" />
+									<FaFacebookF className="md:w-5 md:h-5" />
 								</Link>
 								<Link
 									href="https://www.instagram.com/astralinterior"
 									target="_blank"
 									className="bg-primary p-3 rounded-md border-2 border-primary transition-all duration-500 hover:bg-white hover:text-primary text-white"
 								>
-									<BsInstagram className="w-5 h-5" />
+									<BsInstagram className="md:w-5 md:h-5" />
 								</Link>
 								<Link
 									href="https://www.linkedin.com/company/astral-interior-furniture-bd"
 									target="_blank"
 									className="bg-primary p-3 rounded-md border-2 border-primary transition-all duration-500 hover:bg-white hover:text-primary text-white"
 								>
-									<FaLinkedinIn className="w-5 h-5" />
+									<FaLinkedinIn  className="md:w-5 md:h-5" />
 								</Link>
 								<Link
 									href="https://www.youtube.com/@AstralInteriorFurniture"
 									target="_blank"
 									className="bg-primary p-3 rounded-md border-2 border-primary transition-all duration-500 hover:bg-white hover:text-primary text-white"
 								>
-									<RiYoutubeLine className="w-5 h-5" />
+									<RiYoutubeLine  className="md:w-5 md:h-5" />
 								</Link>
 							</div>
 						</div>

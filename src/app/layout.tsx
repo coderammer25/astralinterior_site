@@ -27,9 +27,9 @@ export default function RootLayout({
 		});
 	};
 
-	useEffect(() => {
-		scrollToTop();
-	});
+	// useEffect(() => {
+	// 	scrollToTop();
+	// });
 
 	useEffect(() => {
 		AOS.init();
@@ -48,7 +48,7 @@ export default function RootLayout({
 								href="https://wa.me/8801722080196"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="fixed top-48 -right-1 bg-green-500 hover:pr-8 text-white p-2 text-2xl cursor-pointer transition-all duration-300 rounded-l-md"
+								className="fixed top-48 right-0 lg:-right-1 bg-green-500 hover:pr-8 text-white p-2 text-2xl cursor-pointer transition-all duration-300 rounded-l-md z-10"
 							>
 								<FaWhatsapp />
 							</Link>

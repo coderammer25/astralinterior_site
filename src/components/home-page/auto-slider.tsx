@@ -14,7 +14,7 @@ const AutoSlider = () => {
 	};
 
 	return (
-		<div className="slider-container overflow-hidden">
+		<div className="slider-container overflow-x-hidden">
 			<Slider {...settings}>
 				<div className="whitespace-nowrap">
 					<h2 className="text-4xl uppercase text-center md:text-8xl xl:text-[10rem] text-[#D6F1ED] truncate">

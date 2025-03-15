@@ -69,7 +69,7 @@ const Banner = () => {
         </div>
 
         <h1
-          className="uppercase text-6xl xl:text-[7rem] xl:leading-[0.9] text-primary "
+          className="uppercase text-2xl md:text-6xl xl:text-[7rem] xl:leading-[0.9] text-primary "
           data-aos="fade-down"
           data-aos-duration="800"
           data-aos-once="true"
@@ -84,7 +84,7 @@ const Banner = () => {
           </TextAnimate>
         </h1>
         <h1
-          className="uppercase text-6xl xl:text-[7rem] xl:leading-[0.9] text-primary font-playfair"
+          className="uppercase text-2xl md:text-6xl xl:text-[7rem] xl:leading-[0.9] text-primary font-playfair"
           data-aos="fade-down"
           data-aos-duration="800"
           data-aos-once="true"
