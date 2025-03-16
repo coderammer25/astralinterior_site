@@ -114,3 +114,37 @@ background: #ffffff;
 box-shadow:  23px 23px 100px #e8e8e8,
              -23px -23px 100px #ffffff;
 }
+
+/* Override antd Select styles */
+.ant-select .ant-select-selector {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.ant-select-multiple .ant-select-selection-item {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 8px !important;
+}
+
+/* Remove default antd focus styles */
+.ant-select-focused .ant-select-selector,
+.ant-select-selector:focus,
+.ant-select-selector:active,
+.ant-select:hover .ant-select-selector {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}

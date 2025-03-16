@@ -37,7 +37,7 @@ const Banner = () => {
   }, []);
 
   return (
-		<section className="px-4 pt-[4rem] pb-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+		<section className="px-4 pt-[4rem] pb-[4rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
 			<div className="text-center space-y-8 min-h-screen">
 				<div className="mb-32">
 					<div

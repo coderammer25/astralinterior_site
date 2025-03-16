@@ -12,6 +12,7 @@ import image5 from "../../public/organic-about.webp";
 import image6 from "../../public/women-about.webp";
 import { FaArrowRight } from "react-icons/fa";
 import Transform from "./home-page/transform";
+import { NumberTicker } from "./magicui/number-ticker";
 export default function About() {
 	return (
 		<>
@@ -166,7 +167,11 @@ export default function About() {
 								data-aos-duration="1000"
 							>
 								<p className="md:text-5xl lg:text-7xl font-serif font-bold">
-									+10
+									+
+									<NumberTicker
+										value={10}
+										className="whitespace-pre-wrap tracking-tighter"
+									/>
 								</p>
 								<p className="text-sm">Years of experience</p>
 							</div>
@@ -176,7 +181,11 @@ export default function About() {
 								data-aos-duration="1000"
 							>
 								<p className=" md:text-5xl lg:text-7xl font-serif font-bold">
-									+90
+									+
+									<NumberTicker
+										value={90}
+										className="whitespace-pre-wrap tracking-tighter"
+									/>
 								</p>
 								<p className="text-sm">Successful projects</p>
 							</div>

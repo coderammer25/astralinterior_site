@@ -3,13 +3,73 @@
 import { Select, SelectProps } from "antd";
 import { TextAnimate } from "../magicui/text-animate";
 
-export default function GetInTouch() {
-	const options: SelectProps["options"] = [];
+type DropdownOption = {
+	label: string;
+	value: string;
+};
 
-	for (let i = 10; i < 36; i++) {
-		options.push({
-			value: i.toString(36) + i,
-			label: i.toString(36) + i,
+const furnitureList: DropdownOption[] = [
+	{
+		label: "Chair",
+		value: "chair",
+	},
+	{
+		label: "Bed",
+		value: "bed",
+	},
+	{
+		label: "Table",
+		value: "table",
+	},
+	{
+		label: "Cabinet",
+		value: "cabinet",
+	},
+	{
+		label: "Study Desk",
+		value: "study desk",
+	},
+	{
+		label: "Dressing unit",
+		value: "dressing Unit",
+	},
+];
+
+const projectTypeList: DropdownOption[] = [
+	{
+		value: "residential",
+		label: "Residential",
+	},
+	{
+		value: "commercial",
+    label: "Commercial",
+	},
+	{
+		value: "hospitality",
+    label: "Hospitality",
+	},
+	{
+    value: "retail",
+    label: "Retail",
+  },
+];
+
+
+export default function GetInTouch() {
+	const furnitureOptions: SelectProps["options"] = [];
+	const projectOptions: SelectProps["options"] = [];
+
+	for (let i = 0; i < furnitureList.length; i++) {
+		furnitureOptions.push({
+			value: furnitureList[i].value,
+			label: furnitureList[i].label,
+		});
+	}
+
+	for (let i = 0; i < projectTypeList.length; i++) {
+		projectOptions.push({
+			value: projectTypeList[i].value,
+			label: projectTypeList[i].label,
 		});
 	}
 
@@ -124,64 +184,34 @@ export default function GetInTouch() {
 								htmlFor="projectType"
 								className="font-bold text-[14px] leading-[20px] mb-[10px]"
 							>
-								Select Project
+								Select Project Type
 							</label>
-							<select
-								name="projectType"
+							<Select
 								id="projectType"
-								className="border-2 border-[#d0e5e4] rounded-md py-[0.5rem] px-[1rem] transition-all focus:border-[#3cb1a6] focus:outline focus:outline-[#3cb1a6] w-full"
-							>
-								<option value="">Select Project Type</option>
-								<option value="residential">Residential</option>
-								<option value="commercial">Commercial</option>
-								<option value="hospitality">Hospitality</option>
-								<option value="retail">Retail</option>
-							</select>
+								onChange={handleChange}
+								mode="tags"
+								placeholder="Select ProjectType"
+								style={{ width: "100%" }}
+								options={projectOptions}
+								className="border-2 border-[#d0e5e4] rounded-md py-[0.4rem] px-[1rem] transition-all focus:border-[#3cb1a6] focus:outline focus:outline-[#3cb1a6] w-full text-lg"
+							/>
 						</div>
 
-						{/* <div className="flex flex-col">
-							<label
-								htmlFor="customize"
-								className="font-bold text-[14px] leading-[20px] mb-[10px]"
-							>
-								Customize Your Furniture
-							</label>
-							<div>
-								<input
-									type="radio"
-									id="yes"
-									name="customize"
-									value="yes"
-									// checked={formData.customize === "yes"}
-								/>
-								  <label htmlFor="yes">YES</label>
-							</div>
-							<div>
-								<input
-									type="radio"
-									id="no"
-									name="customize"
-									value="no"
-									// checked={formData.customize === "no"}
-								/>
-								  <label htmlFor="no">NO</label>
-							</div>
-						</div> */}
 						<div className="flex flex-col">
 							<label
-								htmlFor="projectType"
+								htmlFor="furniture"
 								className="font-bold text-[14px] leading-[20px] mb-[10px]"
 							>
 								Customize Your Furniture
 							</label>
 							<Select
+								id="furniture"
 								mode="multiple"
-								placeholder="Please select"
-								defaultValue={["a10", "c12"]}
 								onChange={handleChange}
+								placeholder="Select Furniture"
 								style={{ width: "100%" }}
-								options={options}
-								className="border-2 border-[#d0e5e4] rounded-md py-[0.5rem] px-[1rem] transition-all focus:border-[#3cb1a6] focus:outline focus:outline-[#3cb1a6] w-full"
+								options={furnitureOptions}
+								className="border-2 border-[#d0e5e4] rounded-md py-[0.4rem] px-[1rem] transition-all focus:border-[#3cb1a6] focus:outline focus:outline-[#3cb1a6] w-full text-lg"
 							/>
 						</div>
 
