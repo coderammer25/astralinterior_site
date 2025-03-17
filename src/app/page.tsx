@@ -2,9 +2,10 @@ import { AboutUsComponent } from "@/components/home-page/aboutUs";
 import AutoSlider from "@/components/home-page/auto-slider";
 import Banner from "@/components/home-page/banner";
 import GetInTouch from "@/components/home-page/get-in-touch";
-import Projects from "@/components/home-page/projects";
+// import Projects from "@/components/home-page/projects";
 import ServicesComponent from "@/components/home-page/services";
 import Testimonials from "@/components/home-page/testimonials";
+import { TimelineDemo } from "@/components/home-page/TimelineDemo";
 import Transform from "@/components/home-page/transform";
 import { clients } from "@/data";
 import type { Metadata } from "next";
@@ -21,15 +22,19 @@ export default function HomePage() {
 			<Banner />
 			<AutoSlider />
 			<AboutUsComponent />
-			<GetInTouch/>
+			<GetInTouch />
+			<TimelineDemo />
 			<ServicesComponent />
-			<Projects />
-			<Testimonials autoplay testimonials={clients.map(client => ({
-				quote: client.client_thoughts,
-				name: client.client_name,
-				designation: client.client_position,
-				src: client.client_img,
-			}))} />
+			{/* <Projects /> */}
+			<Testimonials
+				autoplay
+				testimonials={clients.map((client) => ({
+					quote: client.client_thoughts,
+					name: client.client_name,
+					designation: client.client_position,
+					src: client.client_img,
+				}))}
+			/>
 			<Transform />
 		</>
 	);
