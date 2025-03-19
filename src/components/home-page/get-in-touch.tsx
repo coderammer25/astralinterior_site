@@ -127,7 +127,7 @@ export default function GetInTouch() {
 								name="name"
 								id="name"
 								placeholder="John Doe"
-								className="border-2 border-[#d0e5e4] rounded-md py-[0.5rem] px-[1rem] transition-all focus:border-[#3cb1a6] focus:outline focus:outline-[#3cb1a6]"
+								className="border-2 border-[#d0e5e4] rounded-md py-[0.5rem] px-[1rem] transition-all focus:border-[#3cb1a6] focus:outline focus:outline-[#3cb1a6] text-sm"
 							/>
 						</div>
 
@@ -143,7 +143,7 @@ export default function GetInTouch() {
 								name="email"
 								id="email"
 								placeholder="admin@gmail.com"
-								className="border-2 border-[#d0e5e4] rounded-md py-[0.5rem] px-[1rem] transition-all focus:border-[#3cb1a6] focus:outline focus:outline-[#3cb1a6]"
+								className="border-2 border-[#d0e5e4] rounded-md py-[0.5rem] px-[1rem] transition-all focus:border-[#3cb1a6] focus:outline focus:outline-[#3cb1a6] text-sm"
 							/>
 						</div>
 
@@ -159,7 +159,7 @@ export default function GetInTouch() {
 								name="phone"
 								id="phone"
 								placeholder="+8801778899444"
-								className="border-2 border-[#d0e5e4] rounded-md py-[0.5rem] px-[1rem] transition-all focus:border-[#3cb1a6] focus:outline focus:outline-[#3cb1a6]"
+								className="border-2 border-[#d0e5e4] rounded-md py-[0.5rem] px-[1rem] transition-all focus:border-[#3cb1a6] focus:outline focus:outline-[#3cb1a6] text-sm"
 							/>
 						</div>
 
@@ -175,7 +175,7 @@ export default function GetInTouch() {
 								name="location"
 								id="location"
 								placeholder="Your Site Location"
-								className="border-2 border-[#d0e5e4] rounded-md py-[0.5rem] px-[1rem] transition-all focus:border-[#3cb1a6] focus:outline focus:outline-[#3cb1a6]"
+								className="border-2 border-[#d0e5e4] rounded-md py-[0.5rem] px-[1rem] transition-all focus:border-[#3cb1a6] focus:outline focus:outline-[#3cb1a6] text-sm"
 							/>
 						</div>
 
@@ -186,25 +186,16 @@ export default function GetInTouch() {
 							>
 								Select Project Type
 							</label>
-							{/* <Select
-								id="projectType"
-								onChange={handleChange}
-								mode="tags"
-								placeholder="Select ProjectType"
-								style={{ width: "100%" }}
-								options={projectOptions}
-								
-							/> */}
 							<Select
 								id="projectType"
 								onChange={handleChange}
 								style={{ width: "100%" }}
 								placeholder="Select ProjectType"
 								options={projectTypeList}
-								className="border-2 border-[#d0e5e4] rounded-md py-[0.4rem] px-[1rem] transition-all focus:border-[#3cb1a6] focus:outline focus:outline-[#3cb1a6] w-full text-lg"
+								className="border-2 border-[#d0e5e4] rounded-md py-[1.24rem] px-[1rem] transition-all focus:border-[#3cb1a6] focus:outline focus:outline-[#3cb1a6] w-full"
 							/>
 						</div>
-
+ 
 						<div className="flex flex-col">
 							<label
 								htmlFor="furniture"
@@ -219,7 +210,7 @@ export default function GetInTouch() {
 								placeholder="Select Furniture"
 								style={{ width: "100%" }}
 								options={furnitureOptions}
-								className="border-2 border-[#d0e5e4] rounded-md py-[0.4rem] px-[1rem] transition-all focus:border-[#3cb1a6] focus:outline focus:outline-[#3cb1a6] w-full text-lg"
+								className="border-2 border-[#d0e5e4] rounded-md py-[0.3rem] px-[1rem] transition-all focus:border-[#3cb1a6] focus:outline focus:outline-[#3cb1a6] w-full"
 							/>
 						</div>
 
@@ -235,9 +226,7 @@ export default function GetInTouch() {
 								id="message"
 								rows={4}
 								placeholder="Share Your Thoughts"
-								className="border-2 border-[#d0e5e4] rounded-md py-[0.5rem] px-[1rem] transition-all focus:border-[#3cb1a6] focus:outline focus:outline-[#3cb1a6]"
-
-								// value={formData.message}
+								className="border-2 border-[#d0e5e4] rounded-md py-[0.5rem] px-[1rem] transition-all focus:border-[#3cb1a6] focus:outline focus:outline-[#3cb1a6] text-sm"
 							></textarea>
 						</div>
 

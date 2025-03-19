@@ -65,16 +65,6 @@ export default function HomePage() {
 			<GetInTouch />
 			<TimelineDemo />
 			<ServicesComponent />
-			{/* <Projects /> */}
-			{/* <Testimonials
-				autoplay
-				testimonials={clients.map((client) => ({
-					quote: client.client_thoughts,
-					name: client.client_name,
-					designation: client.client_position,
-					src: client.client_img,
-				}))}
-			/> */}
 			<InfiniteMovingCards items={testimonials} />
 			<Transform />
 		</>
