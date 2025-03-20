@@ -1,5 +1,5 @@
 import { AboutUsComponent } from "@/components/home-page/aboutUs";
-import AutoSlider from "@/components/home-page/auto-slider";
+// import AutoSlider from "@/components/home-page/auto-slider";
 import Banner from "@/components/home-page/banner";
 import GetInTouch from "@/components/home-page/get-in-touch";
 // import Projects from "@/components/home-page/projects";
@@ -60,7 +60,7 @@ export default function HomePage() {
 	return (
 		<>
 			<Banner />
-			<AutoSlider />
+			{/* <AutoSlider /> */}
 			<AboutUsComponent />
 			<GetInTouch />
 			<TimelineDemo />

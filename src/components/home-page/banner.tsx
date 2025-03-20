@@ -7,36 +7,36 @@ import { TextAnimate } from "../magicui/text-animate";
 import { useEffect, useState } from "react";
 
 const Banner = () => {
-  const [xValue, setXValue] = useState(0)
+	const [xValue, setXValue] = useState(0);
 
-  const settings = {
-    arrows: false,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 5000,
-    autoplaySpeed: 2000,
-    cssEase: "linear",
-  };
+	const settings = {
+		arrows: false,
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		autoplay: true,
+		speed: 5000,
+		autoplaySpeed: 2000,
+		cssEase: "linear",
+	};
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 640) {
-        setXValue(10); // sm
-      } else if (window.innerWidth < 1440) {
-        setXValue(10); // md
-      } else {
-        setXValue(30); // lg
-      }
-    };
+	useEffect(() => {
+		const handleResize = () => {
+			if (window.innerWidth < 640) {
+				setXValue(10); // sm
+			} else if (window.innerWidth < 1440) {
+				setXValue(10); // md
+			} else {
+				setXValue(30); // lg
+			}
+		};
 
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+		handleResize();
+		window.addEventListener("resize", handleResize);
+		return () => window.removeEventListener("resize", handleResize);
+	}, []);
 
-  return (
+	return (
 		<section className="px-4 pt-[4rem] pb-[4rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
 			<div className="text-center space-y-8 min-h-screen">
 				<div className="mb-32">
