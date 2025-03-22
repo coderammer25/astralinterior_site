@@ -60,7 +60,6 @@ export default function HomePage() {
 	return (
 		<>
 			<Banner />
-			{/* <AutoSlider /> */}
 			<AboutUsComponent />
 			<GetInTouch />
 			<TimelineDemo />

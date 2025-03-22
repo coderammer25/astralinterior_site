@@ -60,7 +60,7 @@ export const Timeline = () => {
 				</p>
 			</div>
 
-			<div className="relative px-4 pt-[4rem] pb-[4rem] mx-auto sm:max-w-xl md:px-24 lg:px-8 min-h-screen">
+			<div ref={ref} className="relative px-4 pt-[4rem] pb-[4rem] mx-auto sm:max-w-xl md:px-24 lg:px-8 min-h-screen">
 				<ProjectOne />
 				<ProjectTwo />
 				<ProjectThree />
