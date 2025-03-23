@@ -42,18 +42,17 @@ const projectTypeList: DropdownOption[] = [
 	},
 	{
 		value: "commercial",
-    label: "Commercial",
+		label: "Commercial",
 	},
 	{
 		value: "hospitality",
-    label: "Hospitality",
+		label: "Hospitality",
 	},
 	{
-    value: "retail",
-    label: "Retail",
-  },
+		value: "retail",
+		label: "Retail",
+	},
 ];
-
 
 export default function GetInTouch() {
 	const furnitureOptions: SelectProps["options"] = [];
@@ -93,21 +92,20 @@ export default function GetInTouch() {
 					{"let's create your dream space"}
 				</TextAnimate>
 			</h2>
-			<div className="flex justify-between items-start gap-8">
+			<div className="flex flex-col md:flex-row justify-between items-start gap-8">
 				{/* Map */}
-				<div
-					className="w-full lg:w-1/2 relative h-[940px] rounded-lg overflow-hidden shadow-lg"
-					data-aos="fade-right"
-				>
+
+				<div className="w-full md:w-1/2 h-full overflow-hidden shadow-lg">
 					<iframe
 						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.0345790250817!2d90.39161247592749!3d23.746146288938526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c79c84cc9929%3A0xbbf986544f8c515!2sASTRAL%20INTERIOR!5e0!3m2!1sen!2sbd!4v1741768385670!5m2!1sen!2sbd"
-						className="absolute inset-0 w-full h-full border-2 border-[#072120] rounded-lg"
+						className="w-full md:h-[900px] border-2 border-[#072120] rounded-lg"
 						allowFullScreen={true}
 						loading="lazy"
 						referrerPolicy="no-referrer-when-downgrade"
-						aria-label="Location map of Astral Interior showroom"
+						aria-label="Location map of Astral Interior office"
 					></iframe>
 				</div>
+
 				{/* Form */}
 				<div
 					className="border border-[#d0e5e4] rounded-md py-[3rem] px-[2rem] mx-auto bg-white shadow-md w-full lg:w-1/2 "
@@ -195,7 +193,7 @@ export default function GetInTouch() {
 								className="border-2 border-[#d0e5e4] rounded-md py-[1.24rem] px-[1rem] transition-all focus:border-[#3cb1a6] focus:outline focus:outline-[#3cb1a6] w-full"
 							/>
 						</div>
- 
+
 						<div className="flex flex-col">
 							<label
 								htmlFor="furniture"

@@ -16,18 +16,32 @@ const ProjectTwo = () => {
 		}
 	}, [isInView]);
 
+
+		const cardVariants = {
+			visible: {
+				translateX: window.innerWidth < 768 ? "-6%" : "-50%", // Move in from left on mobile
+				opacity: 1,
+			},
+			hidden: {
+				translateX: window.innerWidth < 768 ? "-100%" : "100%", // Start fully off-screen on mobile
+				opacity: 0,
+			},
+		};
+
+		// {
+		// 			visible: { translateX: "-50%", opacity: 1 },
+		// 			hidden: { translateX: "100%", opacity: 0 },
+		// 		}
+
 	return (
 		<div ref={ref}>
 			<motion.div
-				variants={{
-					visible: { translateX: "-50%", opacity: 1 },
-					hidden: { translateX: "100%", opacity: 0 },
-				}}
+				variants={cardVariants}
 				initial="hidden"
 				animate={contentControls}
 				transition={{ duration: 1.2, ease: "easeIn" }}
 			>
-				<div className="flex flex-row-reverse justify-start pt-10 md:pt-40 md:gap-10">
+				<div className="flex md:flex-row-reverse justify-start pt-10 md:pt-40 md:gap-10">
 					<div className="sticky z-40 items-center top-40 max-w-xs lg:max-w-sm">
 						<div className="h-10 absolute left-3 md:-left-4 w-10 rounded-full bg-white flex items-center justify-center">
 							<div className="h-4 w-4 rounded-full bg-neutral-200 border border-neutral-300 p-2" />
@@ -36,7 +50,7 @@ const ProjectTwo = () => {
 
 					<div className="relative pl-20 pr-4 md:pl-4">
 						<div>
-							<p className="text-sm md:text-[1em] leading-[1.4] mb-8 text-right mt-3">
+							<p className="text-sm md:text-[1em] leading-[1.4] mb-8 md:text-right mt-3">
 								Office
 							</p>
 							<div className="flex flex-col gap-8">

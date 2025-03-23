@@ -1,14 +1,10 @@
 import { AboutUsComponent } from "@/components/home-page/aboutUs";
-// import AutoSlider from "@/components/home-page/auto-slider";
 import Banner from "@/components/home-page/banner";
 import GetInTouch from "@/components/home-page/get-in-touch";
-// import Projects from "@/components/home-page/projects";
 import ServicesComponent from "@/components/home-page/services";
-// import Testimonials from "@/components/home-page/testimonials";
 import { TimelineDemo } from "@/components/home-page/TimelineDemo";
-import Transform from "@/components/home-page/transform";
+// import Transform from "@/components/home-page/transform";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
-// import { clients } from "@/data";
 import type { Metadata } from "next";
 
 type Testimonial = {
@@ -65,7 +61,7 @@ export default function HomePage() {
 			<TimelineDemo />
 			<ServicesComponent />
 			<InfiniteMovingCards items={testimonials} />
-			<Transform />
+			{/* <Transform /> */}
 		</>
 	);
 }

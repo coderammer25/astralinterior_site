@@ -14,13 +14,22 @@ const ProjectOne = () => {
 			contentControls.start("visible");
 		}
 	}, [isInView]);
+
+		const cardVariants = {
+			visible: {
+				translateX: window.innerWidth < 768 ? "-6%" : "50%", // Move in from left on mobile
+				opacity: 1,
+			},
+			hidden: {
+				translateX: window.innerWidth < 768 ? "-100%" : "-50%", // Start fully off-screen on mobile
+				opacity: 0,
+			},
+		};
+
 	return (
 		<div ref={ref}>
 			<motion.div
-				variants={{
-					visible: { translateX: "50%", opacity: 1 },
-					hidden: { translateX: "-50%", opacity: 0 },
-				}}
+				variants={cardVariants}
 				initial="hidden"
 				animate={contentControls}
 				transition={{ duration: 1.2, ease: "easeIn" }}
