@@ -3,7 +3,6 @@ import Banner from "@/components/home-page/banner";
 import GetInTouch from "@/components/home-page/get-in-touch";
 import ServicesComponent from "@/components/home-page/services";
 import { TimelineDemo } from "@/components/home-page/TimelineDemo";
-// import Transform from "@/components/home-page/transform";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import type { Metadata } from "next";
 
@@ -61,7 +60,6 @@ export default function HomePage() {
 			<TimelineDemo />
 			<ServicesComponent />
 			<InfiniteMovingCards items={testimonials} />
-			{/* <Transform /> */}
 		</>
 	);
 }

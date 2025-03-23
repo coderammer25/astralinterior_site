@@ -1,8 +1,7 @@
 import Image from "next/image";
 import { services } from "../../data"; // Import dynamic service data
 import IndividualService from "./individualService";
-import { FaArrowRight } from "react-icons/fa";
-import Link from "next/link";
+import { CustomButton } from "../ui/customButton";
 
 const ServicesComponent = () => {
 	return (
@@ -34,15 +33,7 @@ const ServicesComponent = () => {
 			</div>
 
 			{/* "All Services" Button */}
-			<Link
-				href="/services"
-				className="flex items-center gap-2 uppercase text-[14px] text-[#2c2b28] mt-4 lg:-mt-4"
-			>
-				All services{" "}
-				<span className="bg-primary p-1">
-					<FaArrowRight className="text-white"/>
-				</span>
-			</Link>
+			<CustomButton link="/services">All Services</CustomButton>
 		</section>
 	);
 };

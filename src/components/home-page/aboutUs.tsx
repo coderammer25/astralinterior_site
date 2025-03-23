@@ -1,6 +1,6 @@
-import Link from "next/link";
-import { FaArrowRight } from "react-icons/fa";
 import { TextAnimate } from "../magicui/text-animate";
+import { CustomButton } from "../ui/customButton";
+
 
 export const AboutUsComponent = () => {
 	return (
@@ -48,17 +48,7 @@ export const AboutUsComponent = () => {
 						{"harmony"}
 					</TextAnimate>
 				</h2>
-				<Link
-					href="/about-us"
-					className="flex items-center justify-center gap-2 uppercase text-[14px] text-[#2c2b28]"
-					data-aos="fade-up"
-					data-aos-duration="1000"
-				>
-					About Us
-					<span className="bg-primary p-1">
-						<FaArrowRight className="text-white" />
-					</span>
-				</Link>
+				<CustomButton link="/about-us">About Us</CustomButton>
 			</div>
 		</section>
 	);

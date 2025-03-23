@@ -1,13 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { FaArrowRight } from "react-icons/fa";
 import Slider from "react-slick";
 import transform_01 from "../../../public/Office/office_1.jpg";
 import transform_02 from "../../../public/Office/office_2.jpg";
 import transform_03 from "../../../public/Office/office_3.jpg";
 import transform_04 from "../../../public/Office/office_4.jpg";
+import { CustomButton } from "../ui/customButton";
 
 const Transform = () => {
 	const settings = {
@@ -79,15 +78,7 @@ const Transform = () => {
 						complete makeover or just a fresh update, our team is here to help.
 					</p>
 
-					<Link
-						href="/contact-us"
-						className="flex items-center justify-center gap-2 uppercase text-[14px] text-[#2c2b28] mt-[3rem]"
-					>
-						Get in touch{" "}
-						<span className="bg-primary p-1">
-							<FaArrowRight className="text-white" />
-						</span>
-					</Link>
+					<CustomButton link="/contact-us">Get in touch</CustomButton>
 				</div>
 
 				<div className="flex xl:flex-col justify-between gap-4 xl:gap-0 xl:space-y-40 text-right">

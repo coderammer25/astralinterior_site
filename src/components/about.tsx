@@ -1,18 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import transform_01 from "../../public/Office/office_1.jpg"
-import transform_02 from "../../public/Office/office_2.jpg"
-import transform_03 from "../../public/Office/office_3.jpg"
-import transform_04 from "../../public/Office/office_4.jpg"
+import transform_01 from "../../public/Office/office_1.jpg";
+import transform_02 from "../../public/Office/office_2.jpg";
+import transform_03 from "../../public/Office/office_3.jpg";
+import transform_04 from "../../public/Office/office_4.jpg";
 
 import image1 from "../../public/chair-about.webp";
 import image4 from "../../public/mini-interior-about.webp";
 import image5 from "../../public/organic-about.webp";
 import image6 from "../../public/women-about.webp";
-import { FaArrowRight } from "react-icons/fa";
 import Transform from "./home-page/transform";
 import { NumberTicker } from "./magicui/number-ticker";
+import { CustomButton } from "./ui/customButton";
 export default function About() {
 	return (
 		<>
@@ -20,21 +20,6 @@ export default function About() {
 				{/* Left Column - Text Content */}
 				<div className="flex items-center justify-between">
 					<div className="space-y-6 w-full xl:w-1/2 ">
-						<nav
-							className="flex items-center gap-2 text-sm "
-							data-aos="fade-right"
-							data-aos-duration="600"
-						>
-							<span>★</span>
-							<Link href="/about-us" className="hover:underline">
-								ABOUT US
-							</Link>
-							<span>—</span>
-							<Link href="/about-us" className="hover:underline">
-								ABOUT US
-							</Link>
-						</nav>
-
 						<h1
 							className="text-[2rem] md:text-[4rem] leading-tight font-light text-primary"
 							data-aos="fade-right"
@@ -53,20 +38,7 @@ export default function About() {
 							We are a renowned interior design agency dedicated to crafting
 							spaces that inspire and elevate everyday living.
 						</p>
-
-						<div className="flex">
-							<Link
-								href="/contact-us"
-								className="flex items-center justify-center gap-2 uppercase text-[14px] text-[#2c2b28] "
-								data-aos="fade-right"
-								data-aos-duration="1200"
-							>
-								GET IN TOUCH
-								<span className="bg-primary p-1">
-									<FaArrowRight className="text-white" />
-								</span>
-							</Link>
-						</div>
+						<CustomButton link="/contact-us">GET IN TOUCH</CustomButton>
 					</div>
 
 					{/* Right Column - Image Grid */}
@@ -245,19 +217,7 @@ export default function About() {
 							</p>
 						</div>
 
-						<div className="flex gap-2 justify-center xl:justify-start">
-							<Link
-								href="/contact-us"
-								className="flex items-center justify-center uppercase text-[14px] text-[#2c2b28] "
-								data-aos="fade-right"
-								data-aos-duration="1200"
-							>
-								GET IN TOUCH
-							</Link>
-							<span className="bg-primary p-1">
-								<FaArrowRight className="text-white" />
-							</span>
-						</div>
+						<CustomButton link="/contact-us">GET IN TOUCH</CustomButton>
 					</div>
 
 					<div className="hidden xl:flex mt-8 lg:w-1/2 flex-col gap-4 lg:gap-0 relative">
