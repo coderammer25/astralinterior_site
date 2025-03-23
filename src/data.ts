@@ -20,12 +20,12 @@ import blog_img_04 from '../public/04_blog_img.webp'
 
 export const services = [
 	{
-	  "title": "Exterior",
+	  "title": "Interior",
 	  "description": "We create comprehensive layout designs that optimize the functionality and flow of outdoor spaces. Our goal is to ensure every area serves its intended purpose efficiently while enhancing aesthetics and usability.",
 	  "img": transform_01
 	},
 	{
-	  "title": "Interior",
+	  "title": "Exterior",
 	  "description": "Our interior design services bring character, harmony, and sophistication to your space. We thoughtfully curate décor, colors, and accessories to create a balanced atmosphere that reflects your unique style and personality.",
 	  "img": transform_02
 	},

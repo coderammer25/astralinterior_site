@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 /* eslint-disable react-hooks/exhaustive-deps */
 import Image from "next/image";
@@ -8,8 +8,7 @@ import { useEffect, useRef, useState } from "react";
 
 const ProjectOne = () => {
 	const ref = useRef<HTMLDivElement>(null);
-			  const [screenWidth, setScreenWidth] = useState(0);
-
+	const [screenWidth, setScreenWidth] = useState(0);
 
 	const isInView = useInView(ref, { once: true });
 	const contentControls = useAnimation();
@@ -20,21 +19,19 @@ const ProjectOne = () => {
 		}
 	}, [isInView]);
 
-	
-		useEffect(() => {
-			setScreenWidth(window.innerWidth);
-		}, []);
-
-		const cardVariants = {
-			visible: {
-				translateX: screenWidth < 768 ? "0%" : "50%", // Move in from left on mobile
-				opacity: 1,
-			},
-			hidden: {
-				translateX: screenWidth < 768 ? "-100%" : "-50%", // Start fully off-screen on mobile
-				opacity: 0,
-			},
-		};
+	useEffect(() => {
+		setScreenWidth(window.innerWidth);
+	}, []);
+	const cardVariants = {
+		visible: {
+			translateX: screenWidth < 768 ? "0%" : "50%", // Move in from right on mobile
+			opacity: 1,
+		},
+		hidden: {
+			translateX: screenWidth < 768 ? "100%" : "-100%", // Start fully off-screen on mobile
+			opacity: 0,
+		},
+	};
 
 	return (
 		<div ref={ref}>
