@@ -1,11 +1,14 @@
+"use client"
+/* eslint-disable react-hooks/exhaustive-deps */
 import Image from "next/image";
 import project_03 from "../../../../public/Office/office 1.png";
 
 import { motion, useAnimation, useInView } from "motion/react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const ProjectTwo = () => {
 	const ref = useRef<HTMLDivElement>(null);
+	const [screenWidth, setScreenWidth] = useState(0);
 
 	const isInView = useInView(ref, { once: true });
 	const contentControls = useAnimation();
@@ -16,22 +19,25 @@ const ProjectTwo = () => {
 		}
 	}, [isInView]);
 
+	useEffect(() => {
+		setScreenWidth(window.innerWidth);
+	}, []);
 
-		const cardVariants = {
-			visible: {
-				translateX: window.innerWidth < 768 ? "0%" : "-50%", // Move in from left on mobile
-				opacity: 1,
-			},
-			hidden: {
-				translateX: window.innerWidth < 768 ? "-100%" : "100%", // Start fully off-screen on mobile
-				opacity: 0,
-			},
-		};
+	const cardVariants = {
+		visible: {
+			translateX: screenWidth < 768 ? "0%" : "-50%", // Move in from left on mobile
+			opacity: 1,
+		},
+		hidden: {
+			translateX: screenWidth < 768 ? "-100%" : "100%", // Start fully off-screen on mobile
+			opacity: 0,
+		},
+	};
 
-		// {
-		// 			visible: { translateX: "-50%", opacity: 1 },
-		// 			hidden: { translateX: "100%", opacity: 0 },
-		// 		}
+	// {
+	// 			visible: { translateX: "-50%", opacity: 1 },
+	// 			hidden: { translateX: "100%", opacity: 0 },
+	// 		}
 
 	return (
 		<div ref={ref}>

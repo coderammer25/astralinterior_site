@@ -1,31 +1,41 @@
+"use client"
+
 import Image from "next/image";
 import project_02 from "../../../../public/Interior/interior_1.jpg";
 import { motion, useAnimation, useInView } from "motion/react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const ProjectOne = () => {
 	const ref = useRef<HTMLDivElement>(null);
+		  const [screenWidth, setScreenWidth] = useState(0);
+
 
 	const isInView = useInView(ref, { once: true });
 	const contentControls = useAnimation();
 
-	const cardVariants = {
-		visible: {
-			translateX: window.innerWidth < 768 ? "0%" : "50%", // Move in from left on mobile
-			opacity: 1,
-		},
-		hidden: {
-			translateX: window.innerWidth < 768 ? "-100%" : "-50%", // Start fully off-screen on mobile
-			opacity: 0,
-		},
-	};
+
+		useEffect(() => {
+			setScreenWidth(window.innerWidth);
+		}, []);
 
 
 	useEffect(() => {
 		if (isInView) {
 			contentControls.start("visible");
 		}
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [isInView]);
+
+		const cardVariants = {
+			visible: {
+				translateX: screenWidth < 768 ? "0%" : "50%", // Move in from left on mobile
+				opacity: 1,
+			},
+			hidden: {
+				translateX: screenWidth < 768 ? "-100%" : "-50%", // Start fully off-screen on mobile
+				opacity: 0,
+			},
+		};
 
 	return (
 		<div ref={ref}>

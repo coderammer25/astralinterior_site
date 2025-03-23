@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 		"Discover premium interior design and furniture solutions with Astra Interior & Furniture. Transform your space with our elegant and modern designs.",
 };
 
-export const testimonials: Testimonial[] = [
+const testimonials: Testimonial[] = [
 	{
 		quote:
 			"The attention to detail and creativity in our home renovation was exceptional. They transformed our space beyond our expectations.",

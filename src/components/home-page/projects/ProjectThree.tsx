@@ -1,10 +1,15 @@
+"use client"
+
+/* eslint-disable react-hooks/exhaustive-deps */
 import Image from "next/image";
 import project_05 from "../../../../public/showroom/showroom_1.jpg";
 import { motion, useAnimation, useInView } from "motion/react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const ProjectOne = () => {
 	const ref = useRef<HTMLDivElement>(null);
+			  const [screenWidth, setScreenWidth] = useState(0);
+
 
 	const isInView = useInView(ref, { once: true });
 	const contentControls = useAnimation();
@@ -15,13 +20,18 @@ const ProjectOne = () => {
 		}
 	}, [isInView]);
 
+	
+		useEffect(() => {
+			setScreenWidth(window.innerWidth);
+		}, []);
+
 		const cardVariants = {
 			visible: {
-				translateX: window.innerWidth < 768 ? "0%" : "50%", // Move in from left on mobile
+				translateX: screenWidth < 768 ? "0%" : "50%", // Move in from left on mobile
 				opacity: 1,
 			},
 			hidden: {
-				translateX: window.innerWidth < 768 ? "-100%" : "-50%", // Start fully off-screen on mobile
+				translateX: screenWidth < 768 ? "-100%" : "-50%", // Start fully off-screen on mobile
 				opacity: 0,
 			},
 		};
