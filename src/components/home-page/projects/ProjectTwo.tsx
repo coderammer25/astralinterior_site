@@ -19,7 +19,7 @@ const ProjectTwo = () => {
 
 		const cardVariants = {
 			visible: {
-				translateX: window.innerWidth < 768 ? "-6%" : "-50%", // Move in from left on mobile
+				translateX: window.innerWidth < 768 ? "0%" : "-50%", // Move in from left on mobile
 				opacity: 1,
 			},
 			hidden: {
