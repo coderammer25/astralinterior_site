@@ -1,24 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import Slider from "react-slick";
 import { motion } from "framer-motion";
 import { TextAnimate } from "../magicui/text-animate";
 import { useEffect, useState } from "react";
 
 const Banner = () => {
 	const [xValue, setXValue] = useState(0);
-
-	const settings = {
-		arrows: false,
-		infinite: true,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		autoplay: true,
-		speed: 5000,
-		autoplaySpeed: 2000,
-		cssEase: "linear",
-	};
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -40,34 +28,6 @@ const Banner = () => {
 		<section className="px-4 pt-[4rem] pb-[4rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
 			<div className="text-center space-y-8 min-h-screen">
 				<div className="mb-32">
-					<div
-						className="lg:w-1/2 mx-auto"
-						data-aos="fade-down"
-						data-aos-duration="1000"
-					>
-						<div className="slider-container z-10 overflow-hidden">
-							<Slider {...settings}>
-								<div className="whitespace-nowrap">
-									<p className="text-xs lg:text-base truncate">
-										* Space Planning - Interior Styling - Lighting Design -
-										Furniture Sourcing
-									</p>
-								</div>
-								<div className="whitespace-nowrap">
-									<p className="text-xs lg:text-base truncate">
-										* Space Planning - Interior Styling - Lighting Design -
-										Furniture Sourcing
-									</p>
-								</div>
-								<div className="whitespace-nowrap">
-									<p className="text-xs lg:text-base truncate">
-										* Space Planning - Interior Styling - Lighting Design -
-										Furniture Sourcing
-									</p>
-								</div>
-							</Slider>
-						</div>
-					</div>
 
 					<div className="mt-10">
 						<h1

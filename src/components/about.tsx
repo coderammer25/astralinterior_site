@@ -357,7 +357,7 @@ export default function About() {
 					</div>
 
 					<div data-aos="zoom-in-down" data-aos-duration="1000">
-						<div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
+						<div className="relative pb-56 mb-4 rounded  shadow lg:pb-64">
 							<Image
 								height={750}
 								width={1260}
