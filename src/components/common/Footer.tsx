@@ -43,9 +43,9 @@ export default function Footer() {
 							<Link href="/services" className="block hover:underline">
 								SERVICES
 							</Link>
-							<Link href="/blog" className="block hover:underline">
+							{/* <Link href="/blog" className="block hover:underline">
 								BLOG
-							</Link>
+							</Link> */}
 							<Link href="/contact-us" className="block hover:underline">
 								SHOP
 							</Link>

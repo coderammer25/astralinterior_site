@@ -1,5 +1,6 @@
+import { services_faq } from "@/data";
+import FAQ from "./contact-page/questions";
 import ServicesComponent from "./home-page/services";
-import Transform from "./home-page/transform";
 
 const Services = () => {
 	return (
@@ -15,7 +16,9 @@ const Services = () => {
 				</h1>
 			</div>
 			<ServicesComponent />
-			<Transform />
+			<section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+				<FAQ faqs={services_faq} />
+			</section>
 		</>
 	);
 };

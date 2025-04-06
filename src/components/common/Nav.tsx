@@ -8,6 +8,7 @@ import { Drawer } from "antd";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { menuItems } from "@/data";
+import { CustomButton } from "../ui/customButton";
 
 export const Nav = () => {
 	const [open, setOpen] = useState(false);
@@ -59,20 +60,27 @@ export const Nav = () => {
 						title="Astral"
 						className="inline-flex items-center"
 					>
-						<Image className="w-[140px] select-none" src={logo} alt="" />
+						<Image
+							className="w-[80px] md:w-[140px] select-none"
+							src={logo}
+							alt=""
+						/>
 					</Link>
 
 					<div className="flex items-center gap-4 lg:space-x-[90px]">
-						<ul className="grid justify-end items-center space-x-8">
+						<ul className="grid grid-cols-2 justify-end items-center md:space-x-8">
 							<li>
 								<Link
 									href="/contact-us"
-									className="text-primary inline-flex items-center justify-center h-12 px-1 font-medium tracking-wide transition duration-200 bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700  border-b-2 border-transparent hover:border-primary"
+									className="text-primary inline-flex items-center justify-center h-12 px-1 font-medium tracking-wide transition duration-200 bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700  border-b-2 border-transparent hover:border-primary text-[10px] md:text-base"
 									aria-label="Contact Us"
 									title="Contact Us"
 								>
 									Contact Us
 								</Link>
+							</li>
+							<li>
+								<CustomButton link="tel:+8801703706613">Call Now</CustomButton>
 							</li>
 						</ul>
 
@@ -82,7 +90,7 @@ export const Nav = () => {
 							className="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-deep-purple-50 focus:bg-deep-purple-50"
 							onClick={() => showDrawer()}
 						>
-							<svg className="w-5 text-gray-600" viewBox="0 0 24 24">
+							<svg className="w-4 md:w-5 text-gray-600" viewBox="0 0 24 24">
 								<path
 									fill="currentColor"
 									d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z"

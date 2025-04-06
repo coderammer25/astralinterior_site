@@ -10,9 +10,10 @@ import image1 from "../../public/chair-about.webp";
 import image4 from "../../public/mini-interior-about.webp";
 import image5 from "../../public/organic-about.webp";
 import image6 from "../../public/women-about.webp";
-import Transform from "./home-page/transform";
 import { NumberTicker } from "./magicui/number-ticker";
 import { CustomButton } from "./ui/customButton";
+import FAQ from "./contact-page/questions";
+import { about_faq } from "@/data";
 export default function About() {
 	return (
 		<>
@@ -392,7 +393,9 @@ export default function About() {
 				</div>
 			</section>
 
-			<Transform />
+			<section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+				<FAQ faqs={about_faq} />
+			</section>
 		</>
 	);
 }
