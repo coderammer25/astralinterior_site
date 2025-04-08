@@ -1,5 +1,6 @@
 "use client";
 
+import '@ant-design/v5-patch-for-react-19';
 import { Nav } from "@/components/common/Nav";
 import Footer from "@/components/common/Footer";
 import Link from "next/link";

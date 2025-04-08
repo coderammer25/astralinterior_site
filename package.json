@@ -5,11 +5,11 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-        "start": "NODE_ENV=production node server.js",
-
+    "start": "NODE_ENV=production node server.js",
     "lint": "next lint"
   },
   "dependencies": {
+    "@ant-design/v5-patch-for-react-19": "^1.0.3",
     "@apollo/client": "^3.12.11",
     "@heroui/button": "^2.2.16",
     "@heroui/system": "^2.4.12",

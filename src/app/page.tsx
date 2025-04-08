@@ -1,11 +1,12 @@
 import { AboutUsComponent } from "@/components/home-page/aboutUs";
 import Banner from "@/components/home-page/banner";
-import GetInTouch from "@/components/home-page/get-in-touch";
+// import GetInTouch from "@/components/home-page/get-in-touch";
 import ServicesComponent from "@/components/home-page/services";
 import { TimelineDemo } from "@/components/home-page/TimelineDemo";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import type { Metadata } from "next";
 import VideoGallery from "./video-gallery/page";
+import Popup from "@/components/popup/popup";
 
 type Testimonial = {
 	quote: string;
@@ -58,10 +59,11 @@ export default function HomePage() {
 			<Banner />
 			<VideoGallery />
 			<AboutUsComponent />
-			<GetInTouch />
+			{/* <GetInTouch /> */}
 			<TimelineDemo />
 			<ServicesComponent />
 			<InfiniteMovingCards items={testimonials} />
+			<Popup/>
 		</>
 	);
 }
