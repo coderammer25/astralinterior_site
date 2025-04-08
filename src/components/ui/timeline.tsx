@@ -34,7 +34,7 @@ export const Timeline = () => {
 
 	return (
 		<div
-			className="px-4 pt-[4rem] pb-[4rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 min-h-screen"
+			className="px-4 pt-[4rem] pb-[4rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 min-h-screen overflow-hidden"
 			ref={containerRef}
 		>
 			<div className="max-w-7xl mx-auto pt-20 px-4 md:px-8 lg:px-10">

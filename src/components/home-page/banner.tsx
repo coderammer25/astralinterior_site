@@ -25,10 +25,9 @@ const Banner = () => {
 	}, []);
 
 	return (
-		<section className="px-4 pt-[4rem] pb-[4rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+		<section className="px-4 pt-[4rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
 			<div className="text-center space-y-8 min-h-screen">
 				<div className="mb-32">
-
 					<div className="mt-10">
 						<h1
 							className="uppercase text-2xl md:text-6xl xl:text-[7rem] xl:leading-[0.9] text-primary "
@@ -69,6 +68,7 @@ const Banner = () => {
 						duration: 1,
 						ease: [0.42, 0, 0.58, 1],
 					}}
+					exit={{ opacity: 0, y: -400 }}
 					className="relative z-0"
 				>
 					{/* left - 2 */}
@@ -82,7 +82,7 @@ const Banner = () => {
 							alt="Chair Image"
 							width={800}
 							height={800}
-							className=" hidden md:block lg:block md:w-[14rem] xl:w-[18rem] xl:h-[22rem] mx-auto absolute top-36 left-1/3 -translate-x-[230px] z-10 -rotate-[40deg] "
+							className="hidden md:block lg:block md:w-[10rem] xl:w-[18rem] xl:h-[22rem] mx-auto absolute top-36 left-1/3 -translate-x-[200px] z-10 -rotate-[40deg] "
 						/>
 					</motion.div>
 
@@ -98,7 +98,7 @@ const Banner = () => {
 							alt="Chair Image"
 							width={800}
 							height={800}
-							className="  w-[10rem] md:w-[16rem] xl:w-[18rem] xl:h-[22rem] mx-auto absolute top-5 md:top-10 lg:top-10 left-1/3 -translate-x-1/2 z-10 -rotate-[15deg] "
+							className="w-[5rem] md:w-[12rem] xl:w-[18rem] xl:h-[22rem] mx-auto absolute top-5 md:top-10 lg:top-10 left-1/3 -translate-x-1/2 z-10 -rotate-[15deg] "
 						/>
 					</motion.div>
 
@@ -118,7 +118,7 @@ const Banner = () => {
 							alt="Chair Image"
 							width={800}
 							height={800}
-							className=" w-[9rem] md:w-[15rem] xl:w-[18rem] xl:h-[24rem] mx-auto absolute -top-2 left-1/2 -translate-x-1/2 z-[100]"
+							className="w-[5rem] md:w-[12rem] xl:w-[18rem] xl:h-[24rem] mx-auto absolute -top-2 left-1/2 -translate-x-1/2 z-[100]"
 						/>
 					</motion.div>
 
@@ -134,7 +134,7 @@ const Banner = () => {
 							alt="Chair Image"
 							width={800}
 							height={800}
-							className=" hidden md:block lg:block w-[13rem] md:w-[18rem]  md:h-[18rem] xl:w-[18rem] xl:h-[23rem] mx-auto absolute md:top-[120px] xl:top-[130px] left-2/3 -translate-x-[30px] rotate-[38deg] z-10"
+							className="hidden md:block lg:block w-[13rem] md:w-[10rem]  md:h-[16rem] xl:w-[18rem] xl:h-[23rem] mx-auto absolute md:top-[100px] xl:top-[130px] left-2/3 -translate-x-[30px] rotate-[38deg] z-10"
 						/>
 					</motion.div>
 
@@ -150,7 +150,7 @@ const Banner = () => {
 							alt="Chair Image"
 							width={800}
 							height={800}
-							className=" w-[10rem] h-[13rem] md:w-[16rem] md:h-[20rem] xl:w-[18rem] xl:h-[22rem] mx-auto absolute top-[15px] md:top-[30px] xl:top-[35px] left-2/3 -translate-x-[80px] md:-translate-x-[120px] xl:-translate-x-[150px] rotate-12 z-10"
+							className="w-[5rem] h-[13rem] md:w-[12rem] md:h-[16rem] xl:w-[18rem] xl:h-[22rem] mx-auto absolute top-[15px] md:top-[30px] xl:top-[35px] left-2/3 -translate-x-[80px] md:-translate-x-[120px] xl:-translate-x-[150px] rotate-12 z-10"
 						/>
 					</motion.div>
 

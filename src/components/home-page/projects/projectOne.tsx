@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import project_02 from "../../../../public/Interior/interior_1.jpg";
@@ -7,35 +7,32 @@ import { useEffect, useRef, useState } from "react";
 
 const ProjectOne = () => {
 	const ref = useRef<HTMLDivElement>(null);
-		  const [screenWidth, setScreenWidth] = useState(0);
-
+	const [screenWidth, setScreenWidth] = useState(0);
 
 	const isInView = useInView(ref, { once: true });
 	const contentControls = useAnimation();
 
-
-		useEffect(() => {
-			setScreenWidth(window.innerWidth);
-		}, []);
-
+	useEffect(() => {
+		setScreenWidth(window.innerWidth);
+	}, []);
 
 	useEffect(() => {
 		if (isInView) {
 			contentControls.start("visible");
 		}
-	// eslint-disable-next-line react-hooks/exhaustive-deps
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [isInView]);
 
-		const cardVariants = {
-			visible: {
-				translateX: screenWidth < 768 ? "0%" : "50%", // Move in from right on mobile
-				opacity: 1,
-			},
-			hidden: {
-				translateX: screenWidth < 768 ? "100%" : "-100%", // Start fully off-screen on mobile
-				opacity: 0,
-			},
-		};
+	const cardVariants = {
+		visible: {
+			translateX: screenWidth < 768 ? "0%" : "50%", // Move in from right on mobile
+			opacity: 1,
+		},
+		hidden: {
+			translateX: screenWidth < 768 ? "100%" : "-100%", // Start fully off-screen on mobile
+			opacity: 0,
+		},
+	};
 
 	return (
 		<div ref={ref}>
@@ -82,20 +79,20 @@ const ProjectOne = () => {
 };
 export default ProjectOne;
 
-						{
-							/* <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-neutral-500 text-center w-full mx-auto border">
+{
+	/* <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-neutral-500 text-center w-full mx-auto border">
 									{item.title}
 								</h3> */
-						}
+}
 
-												{
-													/* <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-[#072120]">
+{
+	/* <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-[#072120]">
 									{item.title}
 								</h3> */
-												}
+}
 
-																				{
-																					/* <Image
+{
+	/* <Image
 									src="https://assets.aceternity.com/templates/startup-3.webp"
 									alt="startup template"
 									width={500}
@@ -109,4 +106,4 @@ export default ProjectOne;
 									height={500}
 									className="rounded-lg object-cover h-20 md:h-44 lg:h-60 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
 								/> */
-																				}
+}

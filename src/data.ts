@@ -351,3 +351,83 @@ export const contact_faq = [
 			"If your project has urgent timelines, please mention it during your initial inquiry. We'll do our best to accommodate your needs and discuss a suitable timeline during the consultation.",
 	},
 ];
+
+export const videos = [
+	{
+		_id: "vid_001",
+		title: "Modern Living Room Reveal",
+		description:
+			"A walkthrough of a sleek, contemporary living space designed for comfort and style.",
+		url: "https://youtu.be/P0nqLDYui7I?si=IR3XJqIOhR-IWpzA",
+	},
+	{
+		_id: "vid_002",
+		title: "Cozy Bedroom Transformation",
+		description:
+			"See how we turned a simple bedroom into a warm, inviting retreat.",
+		url: "https://youtu.be/VS9PA8S8sYo?si=JZeynIMzkWkNrFMC",
+	},
+	{
+		_id: "vid_003",
+		title: "Luxury Kitchen Design Tour",
+		description:
+			"Explore a state-of-the-art kitchen blending functionality with elegance.",
+		url: "https://youtu.be/DuCAtO0274I?si=-7Hn6lGMWYakVkqR",
+	},
+	{
+		_id: "vid_004",
+		title: "Minimalist Office Space",
+		description:
+			"A look at a clean, modern office designed for productivity and peace.",
+		url: "https://youtu.be/f7MX45Hnm4I?si=mUndmRlicjd6fa9N",
+	},
+	{
+		_id: "vid_005",
+		title: "Outdoor Patio Makeover",
+		description:
+			"Discover how we transformed an outdoor area into a stylish relaxation zone.",
+		url: "https://youtu.be/Ke52rYwXdNw?si=_rA2Oqp2x3vYEQhr",
+	},
+	{
+		_id: "vid_006",
+		title: "Elegant Dining Room Design",
+		description:
+			"A showcase of a sophisticated dining area perfect for gatherings.",
+		url: "https://youtu.be/6LOFAwfkNYk?si=GJ3ozLFfICj1RdwK",
+	},
+	{
+		_id: "vid_007",
+		title: "Small Space Solutions",
+		description:
+			"Creative design ideas for maximizing style in compact interiors.",
+		url: "https://youtu.be/GfzFEpnzo18?si=ffg772_BMhP5220h",
+	},
+	{
+		_id: "vid_008",
+		title: "Bold Bathroom Renovation",
+		description:
+			"A stunning bathroom redesign with unique fixtures and finishes.",
+		url: "https://youtu.be/H20jM_kkxbU?si=bidJFd1ogC7-nSjI",
+	},
+	{
+		_id: "vid_009",
+		title: "Timeless Home Office Setup",
+		description:
+			"A functional yet beautiful home office crafted for modern work life.",
+		url: "https://youtu.be/AYJ6njLYzWE?si=w50nW5G0pIOH-ipP",
+	},
+	{
+		_id: "vid_010",
+		title: "Open-Plan Living Concept",
+		description:
+			"An airy, open-plan design that seamlessly connects living spaces.",
+		url: "https://youtu.be/N_OnLJKMbhg?si=Li8nO3HECA715zeE",
+	},
+	{
+		_id: "vid_011",
+		title: "Rustic Interior Charm",
+		description:
+			"A cozy, rustic interior blending natural elements with modern touches.",
+		url: "https://youtu.be/k4LOPaFZgfE?si=L4o5A8rWdST_yl4Y",
+	},
+];

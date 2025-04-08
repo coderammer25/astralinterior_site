@@ -1,4 +1,4 @@
-import { featuredPost, recentPosts } from "../../../data";
+import { featuredPost, recentPosts } from "../../data";
 import Image from "next/image";
 import { Badge } from "antd";
 import { Metadata } from "next";

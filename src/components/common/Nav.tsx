@@ -68,7 +68,7 @@ export const Nav = () => {
 					</Link>
 
 					<div className="flex items-center gap-4 lg:space-x-[90px]">
-						<ul className="grid grid-cols-2 justify-end items-center md:space-x-8">
+						<ul className="flex gap-2 justify-end items-center md:space-x-8">
 							<li>
 								<Link
 									href="/contact-us"
