@@ -2,6 +2,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import Image from "next/image";
 import project_03 from "../../../../public/Office/office 1.png";
+import project_04 from "../../../../public/Office/office_01.jpg";
 
 import { motion, useAnimation, useInView } from "motion/react";
 import { useEffect, useRef, useState } from "react";
@@ -68,7 +69,7 @@ const ProjectTwo = () => {
 									className="rounded-lg object-cover h-20 md:h-44 lg:h-60 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
 								/>
 								<Image
-									src="https://assets.aceternity.com/templates/startup-2.webp"
+									src={project_04}
 									alt="startup template"
 									width={500}
 									height={500}

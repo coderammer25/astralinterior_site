@@ -1,12 +1,15 @@
 "use client";
 
-import { services } from "../../data"; // Import dynamic service data
+import { services } from "../../data";
 import IndividualService from "./individualService";
 import { CustomButton } from "../ui/customButton";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { TextAnimate } from "../magicui/text-animate";
 import { StickyImage } from "../ui/stickyImage";
+import serviceImage01 from "../../../public/services/services_01.jpg";
+import serviceImage02 from "../../../public/services/service_02.jpg";
+import serviceImage03 from "../../../public/services/service_03.jpg";
 
 const ServicesComponent = () => {
 	const { ref: titleRef, inView: titleInView } = useInView({
@@ -51,22 +54,22 @@ const ServicesComponent = () => {
 				{/* Right Side - Dynamic Image Display */}
 				<div className="hidden lg:block lg:w-1/2 h-full">
 					<StickyImage
-						imageLink="https://images.unsplash.com/photo-1556702571-3e11dd2b1a92?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+						imageLink={serviceImage01.src}
 						title="Interior"
 						style="top-[6rem]"
 					/>
 					<StickyImage
 						imageLink="https://images.unsplash.com/photo-1606744837616-56c9a5c6a6eb?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-						title="Interior"
+						title="Exterior"
 						style="top-[9rem]"
 					/>
 					<StickyImage
-						imageLink="https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-						title="Interior"
+						imageLink={serviceImage02.src}
+						title="Office"
 						style="top-[12rem]"
 					/>
 					<StickyImage
-						imageLink="https://plus.unsplash.com/premium_photo-1681113076872-c74b8926e70c?q=80&w=1961&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+						imageLink={serviceImage03.src}
 						title="Interior"
 					/>
 				</div>

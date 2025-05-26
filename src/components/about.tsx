@@ -8,8 +8,8 @@ import transform_04 from "../../public/Office/office_4.jpg";
 
 import image1 from "../../public/chair-about.webp";
 import image4 from "../../public/mini-interior-about.webp";
-import image5 from "../../public/organic-about.webp";
-import image6 from "../../public/women-about.webp";
+import image5 from "../../public/mission_01.jpg";
+import image6 from "../../public/who_we_are.jpg";
 import { NumberTicker } from "./magicui/number-ticker";
 import { CustomButton } from "./ui/customButton";
 import FAQ from "./contact-page/questions";
