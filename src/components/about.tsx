@@ -1,5 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import {
+	FaComments,
+	FaDraftingCompass,
+	FaPalette,
+	FaHammer,
+	FaRegHandshake,
+} from "react-icons/fa";
 
 import transform_01 from "../../public/Office/office_1.jpg";
 import transform_02 from "../../public/Office/office_2.jpg";
@@ -14,6 +21,7 @@ import { NumberTicker } from "./magicui/number-ticker";
 import { CustomButton } from "./ui/customButton";
 import FAQ from "./contact-page/questions";
 import { about_faq } from "@/data";
+import { Card, CardStack } from "./about-us/cardStack";
 export default function About() {
 	return (
 		<>
@@ -169,27 +177,14 @@ export default function About() {
 
 			<div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-white -mt-[50px] px-4">
 				{/* Background text */}
-				<div className="absolute  w-full flex justify-center items-center space-x-5">
-					<span className="text-xl lg:text-9xl leading-none">OUR</span>
-					<span className="text-xl lg:text-9xl leading-none">PROCESS</span>
+				<div className="absolute w-full flex justify-center items-center space-x-5">
+					<span className="text-6xl lg:text-9xl leading-none">OUR</span>
+					<span className="text-6xl lg:text-9xl leading-none">PROCESS</span>
 				</div>
 
 				{/* Card stack effect */}
 				<div className="relative max-w-2xl h-[280px] w-[450px]">
-					<div className="absolute top-2 left-2 w-full h-full border border-gray-200 transform rotate-2" />
-					<div className="absolute top-1 left-1 w-full h-full border border-gray-200 transform rotate-1" />
-
-					{/* Main card */}
-					<div className="relative bg-white border md:p-12 space-y-3 px-2">
-						<h1 className="font-playfair text-4xl font-light">01</h1>
-						<h2 className="text-xl font-semibold">DISCOVERY & CONSULTATION</h2>
-						<p>
-							In our first meeting, we get to know your vision, lifestyle, and
-							design preferences. This consultation allows us to understand your
-							goals, budget, and project timeline, setting the foundation for a
-							design that truly reflects you.
-						</p>
-					</div>
+					<CardStack items={workProcessCards} />
 				</div>
 			</div>
 
@@ -399,3 +394,79 @@ export default function About() {
 		</>
 	);
 }
+
+const workProcessCards: Card[] = [
+	{
+		id: 1,
+		name: "Step 1",
+		designation: "Consultation",
+		content: (
+			<div className="space-y-2">
+				<FaComments className="text-2xl text-blue-600 dark:text-blue-400" />
+				<h3 className="text-lg font-semibold">Consultation</h3>
+				<p className="text-sm">
+					We listen to your needs and ideas to understand your space and vision.
+				</p>
+			</div>
+		),
+	},
+	{
+		id: 2,
+		name: "Step 2",
+		designation: "Planning",
+		content: (
+			<div className="space-y-2">
+				<FaDraftingCompass className="text-2xl text-purple-600 dark:text-purple-400" />
+				<h3 className="text-lg font-semibold">Planning</h3>
+				<p className="text-sm">
+					We develop a tailored layout, budget, and schedule for your project.
+				</p>
+			</div>
+		),
+	},
+	{
+		id: 3,
+		name: "Step 3",
+		designation: "Design",
+		content: (
+			<div className="space-y-2">
+				<FaPalette className="text-2xl text-pink-600 dark:text-pink-400" />
+				<h3 className="text-lg font-semibold">Design</h3>
+				<p className="text-sm">
+					We present stunning interior concepts and mood boards to match your
+					style.
+				</p>
+			</div>
+		),
+	},
+	{
+		id: 4,
+		name: "Step 4",
+		designation: "Execution",
+		content: (
+			<div className="space-y-2">
+				<FaHammer className="text-2xl text-green-600 dark:text-green-400" />
+				<h3 className="text-lg font-semibold">Execution</h3>
+				<p className="text-sm">
+					Our team brings the design to life with skilled craftsmanship and
+					precision.
+				</p>
+			</div>
+		),
+	},
+	{
+		id: 5,
+		name: "Step 5",
+		designation: "Handover",
+		content: (
+			<div className="space-y-2">
+				<FaRegHandshake className="text-2xl text-yellow-600 dark:text-yellow-400" />
+				<h3 className="text-lg font-semibold">Handover</h3>
+				<p className="text-sm">
+					Final walkthrough and delivery of a beautifully transformed interior
+					space.
+				</p>
+			</div>
+		),
+	},
+];
