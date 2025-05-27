@@ -1,12 +1,12 @@
 import { AboutUsComponent } from "@/components/home-page/aboutUs";
-import Banner from "@/components/home-page/banner";
-// import GetInTouch from "@/components/home-page/get-in-touch";
 import ServicesComponent from "@/components/home-page/services";
 import { TimelineDemo } from "@/components/home-page/TimelineDemo";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import type { Metadata } from "next";
 import VideoGallery from "./video-gallery/page";
 import Popup from "@/components/popup/popup";
+import { NewBanner } from "@/components/home-page/newBanner";
+import { products } from "@/data/products";
 
 type Testimonial = {
 	quote: string;
@@ -56,7 +56,7 @@ const testimonials: Testimonial[] = [
 export default function HomePage() {
 	return (
 		<>
-			<Banner />
+			<NewBanner products={products}/>
 			<VideoGallery />
 			<AboutUsComponent />
 			{/* <GetInTouch /> */}
