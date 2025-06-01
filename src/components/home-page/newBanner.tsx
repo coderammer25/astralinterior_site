@@ -7,7 +7,7 @@ import {
 	useSpring,
 	MotionValue,
 } from "motion/react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 export const NewBanner = ({
 	products,
@@ -15,7 +15,7 @@ export const NewBanner = ({
 	products: {
 		title: string;
 		link: string;
-		thumbnail: string;
+		thumbnail: StaticImageData;
 	}[];
 }) => {
 	const firstRow = products.slice(0, 5);
@@ -121,7 +121,7 @@ export const ProductCard = ({
 	product: {
 		title: string;
 		link: string;
-		thumbnail: string;
+		thumbnail: StaticImageData;
 	};
 	translate: MotionValue<number>;
 }) => {
@@ -138,7 +138,7 @@ export const ProductCard = ({
 		>
 			<a href={product.link} className="block group-hover/product:shadow-2xl ">
 				<Image
-					src={`/banner/${product.thumbnail}`}
+					src={product.thumbnail}
 					height="600"
 					width="600"
 					className="object-cover object-left-top absolute h-full w-full inset-0"

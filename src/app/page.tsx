@@ -61,7 +61,6 @@ export default function HomePage() {
 			<NewBanner products={products} />
 			<VideoGallery />
 			<AboutUsComponent />
-			{/* <GetInTouch /> */}
 			<TimelineDemo />
 			<ServicesComponent />
 			<LogoSection items={logos_part_1} heading={true}/>
