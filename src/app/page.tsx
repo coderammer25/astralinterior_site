@@ -8,7 +8,7 @@ import Popup from "@/components/popup/popup";
 import { NewBanner } from "@/components/home-page/newBanner";
 import { products } from "@/data/products";
 import { LogoSection } from "@/components/logoSection";
-import { logos } from "@/data/logos";
+import { logos_part_1, logos_part_2 } from "@/data/logos";
 
 type Testimonial = {
 	quote: string;
@@ -58,15 +58,16 @@ const testimonials: Testimonial[] = [
 export default function HomePage() {
 	return (
 		<>
-			<NewBanner products={products}/>
+			<NewBanner products={products} />
 			<VideoGallery />
 			<AboutUsComponent />
 			{/* <GetInTouch /> */}
 			<TimelineDemo />
 			<ServicesComponent />
-			<LogoSection items={logos}/>
+			<LogoSection items={logos_part_1} heading={true}/>
+			<LogoSection items={logos_part_2} direction="right" />
 			<InfiniteMovingCards items={testimonials} />
-			<Popup/>
+			<Popup />
 		</>
 	);
 }

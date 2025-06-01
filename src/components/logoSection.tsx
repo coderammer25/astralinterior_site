@@ -12,6 +12,7 @@ export const LogoSection = ({
 	direction = "left",
 	speed = "fast",
 	pauseOnHover = true,
+	heading = false,
 	className,
 }: {
 	items: {
@@ -23,6 +24,7 @@ export const LogoSection = ({
 	speed?: "fast" | "normal" | "slow";
 	pauseOnHover?: boolean;
 	className?: string;
+	heading?: boolean;
 }) => {
 	const containerRef = React.useRef<HTMLDivElement>(null);
 	const scrollerRef = React.useRef<HTMLUListElement>(null);
@@ -85,26 +87,28 @@ export const LogoSection = ({
 		<div
 			ref={containerRef}
 			className={cn(
-				"scroller relative z-20 overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)] py-[8rem]",
+				"scroller relative z-20 overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)] py-[2rem]",
 				className
 			)}
 		>
-			<motion.h2
-				ref={titleRef}
-				className="uppercase text-xl md:text-[3rem] leading-[1.1] lg:w-2/3 text-primary font-playfair text-center mx-auto mb-8"
-				initial={{ opacity: 0, y: 30 }}
-				animate={titleInView ? { opacity: 1, y: 0 } : {}}
-				transition={{ duration: 0.3 }}
-			>
-				<TextAnimate
-					duration={300}
-					animation="scaleUp"
-					by="character"
-					delay={5}
+			{heading && (
+				<motion.h2
+					ref={titleRef}
+					className="uppercase text-xl md:text-[3rem] leading-[1.1] lg:w-2/3 text-primary font-playfair text-center mx-auto mb-8"
+					initial={{ opacity: 0, y: 30 }}
+					animate={titleInView ? { opacity: 1, y: 0 } : {}}
+					transition={{ duration: 0.3 }}
 				>
-					{"Our Featured Clients"}
-				</TextAnimate>
-			</motion.h2>
+					<TextAnimate
+						duration={300}
+						animation="scaleUp"
+						by="character"
+						delay={5}
+					>
+						{"Our Featured Clients"}
+					</TextAnimate>
+				</motion.h2>
+			)}
 			<ul
 				ref={scrollerRef}
 				className={cn(
@@ -122,6 +126,7 @@ export const LogoSection = ({
 							src={item.src}
 							alt={item.title}
 							className="object-contain w-full h-full"
+							title={item.title}
 						/>
 					</li>
 				))}
