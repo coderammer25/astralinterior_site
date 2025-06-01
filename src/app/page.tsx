@@ -7,6 +7,8 @@ import VideoGallery from "./video-gallery/page";
 import Popup from "@/components/popup/popup";
 import { NewBanner } from "@/components/home-page/newBanner";
 import { products } from "@/data/products";
+import { LogoSection } from "@/components/logoSection";
+import { logos } from "@/data/logos";
 
 type Testimonial = {
 	quote: string;
@@ -62,6 +64,7 @@ export default function HomePage() {
 			{/* <GetInTouch /> */}
 			<TimelineDemo />
 			<ServicesComponent />
+			<LogoSection items={logos}/>
 			<InfiniteMovingCards items={testimonials} />
 			<Popup/>
 		</>
