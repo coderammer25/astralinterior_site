@@ -12,7 +12,7 @@ import { CustomButton } from "../ui/customButton";
 
 export const Nav = () => {
 	const [open, setOpen] = useState(false);
-	const drawerContentRef = useRef(null);
+	const drawerContentRef = useRef<HTMLDivElement>(null);
 
 	const showDrawer = () => {
 		setOpen(true);
@@ -23,14 +23,12 @@ export const Nav = () => {
 	};
 
 	useEffect(() => {
-		function handleClickOutside(e: MouseEvent) {
-			if (
-				drawerContentRef.current &&
-				!drawerContentRef.current.contains(e.target as Node)
-			) {
+		const handleClickOutside = (e: MouseEvent) => {
+			const drawerEl = drawerContentRef.current;
+			if (drawerEl && !drawerEl.contains(e.target as Node)) {
 				setOpen(false);
 			}
-		}
+		};
 
 		if (open) {
 			document.addEventListener("mousedown", handleClickOutside);
@@ -81,7 +79,7 @@ export const Nav = () => {
 						<Image
 							className="w-[80px] md:w-[140px] select-none"
 							src={logo}
-							alt=""
+							alt="Astral Logo"
 						/>
 					</Link>
 
@@ -131,63 +129,60 @@ export const Nav = () => {
 							open={open}
 							mask={false}
 						>
-							{/* ref added here */}
-							<div ref={drawerContentRef}>
-								<motion.div
-									className="p-10 -ml-10"
-									initial={{ x: "100%" }}
-									animate={{ x: "6%" }}
-									exit={{ x: "100%" }}
-									transition={{
-										duration: 0.5,
-										ease: [0.25, 0.8, 0.5, 1],
-									}}
+							<motion.div
+								ref={drawerContentRef}
+								className="p-10 -ml-10"
+								initial={{ x: "100%" }}
+								animate={{ x: "6%" }}
+								exit={{ x: "100%" }}
+								transition={{
+									duration: 0.5,
+									ease: [0.25, 0.8, 0.5, 1],
+								}}
+							>
+								<Link
+									href="/"
+									className="inline-flex items-center"
+									onClick={() => setOpen(false)}
 								>
-									<Link
-										href="/"
-										className="inline-flex items-center"
-										onClick={() => setOpen(false)}
-									>
-										<Image
-											className="w-[140px] select-none"
-											src={logo}
-											alt=""
-										/>
-									</Link>
+									<Image
+										className="w-[140px] select-none"
+										src={logo}
+										alt="Astral Logo"
+									/>
+								</Link>
 
-									<div className="border-b-2 border-gray-300 p-3 pt-10 pb-[80px]">
-										<nav>
-											<ul className="space-y-7 text-xl">
-												{menuItems.map((item) => (
-													<li key={item.id}>
-														<Link
-															href={`/${item.path}`}
-															className="hover:text-green-700 capitalize"
-															onClick={() => setOpen(false)}
-														>
-															{item.name}
-														</Link>
-													</li>
-												))}
-											</ul>
-										</nav>
-									</div>
+								<div className="border-b-2 border-gray-300 p-3 pt-10 pb-[80px]">
+									<nav>
+										<ul className="space-y-7 text-xl">
+											{menuItems.map((item) => (
+												<li key={item.id}>
+													<Link
+														href={`/${item.path}`}
+														className="hover:text-green-700 capitalize"
+														onClick={() => setOpen(false)}
+													>
+														{item.name}
+													</Link>
+												</li>
+											))}
+										</ul>
+									</nav>
+								</div>
 
-									<div className="space-y-3 mt-10">
-										<h1 className="text-3xl font-bold">
-											Schedule Your Design Consultation Today!
-										</h1>
-										<p className="flex text-base">
-											<FaPhoneAlt className="mt-1 mr-2" /> Call: +880
-											1703-706613
-										</p>
-										<p className="flex text-base">
-											<MdEmail className="mt-1 mr-2" /> Email:
-											astralinterior2@gmail.com
-										</p>
-									</div>
-								</motion.div>
-							</div>
+								<div className="space-y-3 mt-10">
+									<h1 className="text-3xl font-bold">
+										Schedule Your Design Consultation Today!
+									</h1>
+									<p className="flex text-base">
+										<FaPhoneAlt className="mt-1 mr-2" /> Call: +880 1703-706613
+									</p>
+									<p className="flex text-base">
+										<MdEmail className="mt-1 mr-2" /> Email:
+										astralinterior2@gmail.com
+									</p>
+								</div>
+							</motion.div>
 						</Drawer>
 					</div>
 				</div>

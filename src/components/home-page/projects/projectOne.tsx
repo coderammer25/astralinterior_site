@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import project_02 from "../../../../public/Interior/interior_1.jpg";
-import project_01 from "../../../../public/Interior/interior_2.jpg"
+import project_01 from "../../../../public/Interior/interior_2.jpg";
 import { motion, useAnimation, useInView } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
@@ -45,8 +45,8 @@ const ProjectOne = () => {
 			>
 				<div className="flex justify-start pt-10 md:pt-40 md:gap-10">
 					<div className="sticky z-40 items-center top-40 max-w-xs lg:max-w-sm">
-						<div className="h-10 absolute left-3 md:-left-4 w-10 rounded-full bg-white flex items-center justify-center">
-							<div className="h-4 w-4 rounded-full bg-neutral-200 border border-neutral-300 p-2" />
+						<div className="h-10 absolute -left-[2px] md:-left-5 w-10 rounded-full bg-white flex items-center justify-center">
+							<div className="h-4 w-4 rounded-full bg-neutral-200 border border-neutral-300 p-2 ml-[2px]" />
 						</div>
 					</div>
 

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 /* eslint-disable react-hooks/exhaustive-deps */
 import Image from "next/image";
 import project_03 from "../../../../public/Office/office 1.png";
@@ -50,8 +50,8 @@ const ProjectTwo = () => {
 			>
 				<div className="flex md:flex-row-reverse justify-start pt-10 md:pt-40 md:gap-10">
 					<div className="sticky z-40 items-center top-40 max-w-xs lg:max-w-sm">
-						<div className="h-10 absolute left-3 md:-left-4 w-10 rounded-full bg-white flex items-center justify-center">
-							<div className="h-4 w-4 rounded-full bg-neutral-200 border border-neutral-300 p-2" />
+						<div className="h-10 absolute -left-[2px] md:-left-5 w-10 rounded-full bg-white flex items-center justify-center">
+							<div className="h-4 w-4 rounded-full bg-neutral-200 border border-neutral-300 p-2 md:ml-[2px]" />
 						</div>
 					</div>
 
