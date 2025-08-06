@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import "aos/dist/aos.css";
+
 import {
 	FaComments,
 	FaDraftingCompass,
@@ -60,7 +62,7 @@ export default function About() {
 								height={800}
 								className="w-48 h-48"
 								data-aos="fade-down"
-								data-aos-duration="1000"
+								data-aos-duration="3000"
 							/>
 							<Image
 								src={transform_02}
@@ -69,7 +71,7 @@ export default function About() {
 								height={800}
 								className="w-48 h-48"
 								data-aos="fade-up"
-								data-aos-duration="1000"
+								data-aos-duration="3000"
 							/>
 						</div>
 						<div className="flex flex-col gap-4  items-end">
@@ -80,7 +82,7 @@ export default function About() {
 								height={800}
 								className="w-48 h-48"
 								data-aos="fade-down"
-								data-aos-duration="1000"
+								data-aos-duration="3000"
 							/>
 							<Image
 								src={transform_04}
@@ -89,7 +91,7 @@ export default function About() {
 								height={800}
 								className="w-48 h-48"
 								data-aos="fade-up"
-								data-aos-duration="1000"
+								data-aos-duration="3000"
 							/>
 						</div>
 					</div>
