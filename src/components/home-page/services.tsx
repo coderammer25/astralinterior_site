@@ -28,10 +28,10 @@ const ServicesComponent = () => {
 					transition={{ duration: 0.3 }}
 				>
 					<TextAnimate
-						duration={300}
-						animation="scaleUp"
+						duration={100}
+						// animation="scaleUp"
 						by="character"
-						delay={5}
+						delay={1}
 					>
 						{"our services"}
 					</TextAnimate>
