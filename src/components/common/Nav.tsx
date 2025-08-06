@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import logo from "../../../public/astral-logo.png";
 import { motion } from "framer-motion";
 import { Drawer } from "antd";
@@ -12,6 +12,7 @@ import { CustomButton } from "../ui/customButton";
 
 export const Nav = () => {
 	const [open, setOpen] = useState(false);
+	const drawerContentRef = useRef(null);
 
 	const showDrawer = () => {
 		setOpen(true);
@@ -21,45 +22,62 @@ export const Nav = () => {
 		setOpen(false);
 	};
 
-	const handleScroll = () => {
-		const navId = document.getElementById("navId");
-		if (window.scrollY > 0) {
-			navId?.classList.add(
-				"shadow-md",
-				"sticky",
-				"top-0",
-				"left-0",
-				"bg-white/50",
-				"z-10",
-				"backdrop-blur-md"
-			);
-		} else {
-			navId?.classList.remove(
-				"shadow-md",
-				"sticky",
-				"top-0",
-				"left-0",
-				"bg-white/50",
-				"z-10",
-				"backdrop-blur-md"
-			);
+	useEffect(() => {
+		function handleClickOutside(e: MouseEvent) {
+			if (
+				drawerContentRef.current &&
+				!drawerContentRef.current.contains(e.target as Node)
+			) {
+				setOpen(false);
+			}
 		}
-	};
 
-	if (typeof window !== "undefined") {
-		window.addEventListener("scroll", handleScroll);
-	}
+		if (open) {
+			document.addEventListener("mousedown", handleClickOutside);
+		}
+
+		return () => {
+			document.removeEventListener("mousedown", handleClickOutside);
+		};
+	}, [open]);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const navId = document.getElementById("navId");
+			if (window.scrollY > 0) {
+				navId?.classList.add(
+					"shadow-md",
+					"sticky",
+					"top-0",
+					"left-0",
+					"bg-white/50",
+					"z-10",
+					"backdrop-blur-md"
+				);
+			} else {
+				navId?.classList.remove(
+					"shadow-md",
+					"sticky",
+					"top-0",
+					"left-0",
+					"bg-white/50",
+					"z-10",
+					"backdrop-blur-md"
+				);
+			}
+		};
+
+		if (typeof window !== "undefined") {
+			window.addEventListener("scroll", handleScroll);
+		}
+	}, []);
 
 	return (
 		<section id="navId" className="z-50">
 			<div className="px-4 py-3 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
 				<div className="relative flex items-center justify-between">
-					<Link
-						href="/"
-						aria-label="Astral"
-						title="Astral"
-						className="inline-flex items-center"
-					>
+					{/* logo */}
+					<Link href="/" className="inline-flex items-center">
 						<Image
 							className="w-[80px] md:w-[140px] select-none"
 							src={logo}
@@ -67,14 +85,13 @@ export const Nav = () => {
 						/>
 					</Link>
 
+					{/* nav & drawer */}
 					<div className="flex items-center gap-4 lg:space-x-[90px]">
-						<ul className="flex gap-2 justify-end items-center md:space-x-8">
+						<ul className="flex gap-2 items-center md:space-x-8">
 							<li>
 								<Link
 									href="/contact-us"
-									className="text-primary inline-flex items-center justify-center h-12 px-1 font-medium tracking-wide transition duration-200 bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700  border-b-2 border-transparent hover:border-primary text-[10px] md:text-base"
-									aria-label="Contact Us"
-									title="Contact Us"
+									className="text-primary text-[10px] md:text-base border-b-2 border-transparent hover:border-primary"
 								>
 									Contact Us
 								</Link>
@@ -84,11 +101,11 @@ export const Nav = () => {
 							</li>
 						</ul>
 
+						{/* toggle button */}
 						<button
 							aria-label="Open Menu"
-							title="Open Menu"
-							className="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-deep-purple-50 focus:bg-deep-purple-50"
-							onClick={() => showDrawer()}
+							onClick={showDrawer}
+							className="p-2 -mr-1 hover:bg-gray-100"
 						>
 							<svg className="w-4 md:w-5 text-gray-600" viewBox="0 0 24 24">
 								<path
@@ -105,67 +122,72 @@ export const Nav = () => {
 								/>
 							</svg>
 						</button>
+
+						{/* drawer */}
 						<Drawer
 							placement="right"
 							closable={true}
 							onClose={onClose}
 							open={open}
 							mask={false}
-							className=""
 						>
-							<motion.div
-								className="p-10 -ml-10"
-								initial={{ x: "100%" }}
-								animate={{ x: "6%" }}
-								exit={{ x: "100%" }}
-								transition={{
-									duration: 0.5,
-									ease: [0.25, 0.8, 0.5, 1],
-								}}
-							>
-								<Link
-									href="/"
-									aria-label="Astral"
-									title="Astral"
-									className="inline-flex items-center"
-									onClick={() => setOpen(false)}
+							{/* ref added here */}
+							<div ref={drawerContentRef}>
+								<motion.div
+									className="p-10 -ml-10"
+									initial={{ x: "100%" }}
+									animate={{ x: "6%" }}
+									exit={{ x: "100%" }}
+									transition={{
+										duration: 0.5,
+										ease: [0.25, 0.8, 0.5, 1],
+									}}
 								>
-									<Image className="w-[140px] select-none" src={logo} alt="" />
-								</Link>
-								<div className="border-b-2 border-gray-300 p-3 pt-10 pb-[80px]">
-									<nav>
-										<ul className="space-y-7 font-geist text-xl">
-											{menuItems.map((item) => (
-												<li key={item.id}>
-													<Link
-														href={`/${item.path}`}
-														aria-label={`${item.path}`}
-														title={`${item.name}`}
-														className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-700 capitalize"
-														onClick={() => setOpen(false)}
-													>
-														{item.name}
-													</Link>
-												</li>
-											))}
-										</ul>
-									</nav>
-								</div>
+									<Link
+										href="/"
+										className="inline-flex items-center"
+										onClick={() => setOpen(false)}
+									>
+										<Image
+											className="w-[140px] select-none"
+											src={logo}
+											alt=""
+										/>
+									</Link>
 
-								<div className="space-y-3">
-									<h1 className="text-3xl font-bold font-playfair mt-10 mb-4">
-										Schedule Your Design Consultation Today!
-									</h1>
-									<p className="inline-flex font-geist text-base ">
-										<FaPhoneAlt className="mt-1 mr-2" /> Call: +880 1703-706613
-									</p>
+									<div className="border-b-2 border-gray-300 p-3 pt-10 pb-[80px]">
+										<nav>
+											<ul className="space-y-7 text-xl">
+												{menuItems.map((item) => (
+													<li key={item.id}>
+														<Link
+															href={`/${item.path}`}
+															className="hover:text-green-700 capitalize"
+															onClick={() => setOpen(false)}
+														>
+															{item.name}
+														</Link>
+													</li>
+												))}
+											</ul>
+										</nav>
+									</div>
 
-									<p className="inline-flex font-geist text-base">
-										<MdEmail className="mt-1 mr-2" /> Email:
-										astralinterior2@gmail.com
-									</p>
-								</div>
-							</motion.div>
+									<div className="space-y-3 mt-10">
+										<h1 className="text-3xl font-bold">
+											Schedule Your Design Consultation Today!
+										</h1>
+										<p className="flex text-base">
+											<FaPhoneAlt className="mt-1 mr-2" /> Call: +880
+											1703-706613
+										</p>
+										<p className="flex text-base">
+											<MdEmail className="mt-1 mr-2" /> Email:
+											astralinterior2@gmail.com
+										</p>
+									</div>
+								</motion.div>
+							</div>
 						</Drawer>
 					</div>
 				</div>
