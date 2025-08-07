@@ -137,12 +137,12 @@ export const ProductCard = ({
 			className="group/product h-96 w-[30rem] relative shrink-0"
 		>
 			{/* <a href={product.link} className="block group-hover/product:shadow-2xl "> */}
-			<div >
+			<div>
 				<Image
 					src={product.thumbnail}
 					height="600"
 					width="600"
-					className="object-cover object-left-top absolute h-full w-full inset-0"
+					className="object-cover object-left-top absolute h-full w-full inset-0 cursor-pointer"
 					alt={product.title}
 				/>
 			</div>

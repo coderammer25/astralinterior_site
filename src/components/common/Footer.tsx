@@ -47,7 +47,7 @@ export default function Footer() {
 								BLOG
 							</Link> */}
 							<Link href="/contact-us" className="block hover:underline">
-								SHOP
+								Contact Us
 							</Link>
 						</div>
 
