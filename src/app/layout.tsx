@@ -1,13 +1,13 @@
 "use client";
 
-import '@ant-design/v5-patch-for-react-19';
+import "@ant-design/v5-patch-for-react-19";
+import dynamic from "next/dynamic";
 import { Nav } from "@/components/common/Nav";
-import Footer from "@/components/common/Footer";
 import Link from "next/link";
 import { FaArrowUp, FaWhatsapp } from "react-icons/fa";
 import { ToastContainer } from "react-toastify";
 import { ApolloProvider } from "@apollo/client";
-import client from "@/lib/apolloClient"; // Import your Apollo Client setup file
+import client from "@/lib/apolloClient";
 import { useEffect } from "react";
 import AOS from "aos";
 import "slick-carousel/slick/slick.css";
@@ -15,6 +15,11 @@ import "slick-carousel/slick/slick-theme.css";
 import "./globals.css";
 import { Provider } from "react-redux";
 import { store } from "@/lib/store";
+
+// ✅ Dynamically import Footer with SSR disabled
+const Footer = dynamic(() => import("@/components/common/Footer"), {
+	ssr: false,
+});
 
 export default function RootLayout({
 	children,
@@ -28,10 +33,6 @@ export default function RootLayout({
 		});
 	};
 
-	// useEffect(() => {
-	// 	scrollToTop();
-	// });
-
 	useEffect(() => {
 		AOS.init();
 	}, []);
@@ -43,14 +44,13 @@ export default function RootLayout({
 					<Provider store={store}>
 						<Nav />
 						{children}
-						<Footer />
+						<Footer /> {/* ✅ Now safely rendered client-side only */}
 						<span>
 							<Link
 								href="https://wa.me/8801722080196"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="fixed top-48 right-0 lg:-right-1 bg-[#135A58] hover:pr-8 text-white p-2 text-2xl cursor-pointer transition-all duration-300 rounded-l-md z-10" 
-								// change whatsapp icon color
+								className="fixed top-48 right-0 lg:-right-1 bg-[#135A58] hover:pr-8 text-white p-2 text-2xl cursor-pointer transition-all duration-300 rounded-l-md z-10"
 							>
 								<FaWhatsapp />
 							</Link>

@@ -33,15 +33,19 @@ export default function Footer() {
 					</div>
 
 					<div className="flex flex-col md:flex-row gap-12 md:gap-32 mt-10">
+						{/* navigate links  */}
 						<div className="space-y-4">
 							<h4 className="font-semibold mb-8 uppercase text-xl text-white">
 								Navigate
 							</h4>
-							<Link href="/about-us" className="block hover:underline">
-								ABOUT US
+							<Link href="/" className="block hover:underline">
+								HOME
 							</Link>
 							<Link href="/services" className="block hover:underline">
 								SERVICES
+							</Link>
+							<Link href="/about-us" className="block hover:underline">
+								ABOUT US
 							</Link>
 							{/* <Link href="/blog" className="block hover:underline">
 								BLOG
@@ -50,8 +54,8 @@ export default function Footer() {
 								Contact Us
 							</Link>
 						</div>
-
-						<div className="space-y-4">
+						{/* Information links */}
+						{/* <div className="space-y-4">
 							<h4 className="font-semibold mb-8 uppercase text-xl text-white">
 								Information
 							</h4>
@@ -61,7 +65,7 @@ export default function Footer() {
 							<Link href="#" className="block hover:underline">
 								Privacy Policy
 							</Link>
-						</div>
+						</div> */}
 					</div>
 				</div>
 

@@ -239,8 +239,8 @@ export default function About() {
 					</div>
 				</div>
 			</section>
-
-			<section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+			{/* Discover Our Team */}
+			{/* <section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
 				<div className="mx-auto mb-10 lg:max-w-xl sm:text-center">
 					<p
 						className="inline-block px-3 py-px mb-4 text-xl md:text-7xl font-semibold tracking-wider uppercase rounded-full bg-teal-accent-400 text-primary"
@@ -320,7 +320,7 @@ export default function About() {
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> */}
 
 			<section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
 				<FAQ faqs={about_faq} />

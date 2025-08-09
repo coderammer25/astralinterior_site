@@ -1,13 +1,12 @@
 "use client";
 
-import { CREATE_MESSAGE } from "@/graphql/mutations/mutation";
-import { useMutation } from "@apollo/client";
-import Link from "next/link";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
+import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { RiYoutubeLine } from "react-icons/ri";
-import { toast } from "react-toastify";
 
 const initialFormData = {
 	name: "",
@@ -21,7 +20,7 @@ const initialFormData = {
 
 const ContactForm = () => {
 	const [formData, setFormData] = useState(initialFormData);
-	const [createMessage] = useMutation(CREATE_MESSAGE);
+	const [isSending, setIsSending] = useState(false);
 
 	const notify = (type: string, message: string) =>
 		toast(message, {
@@ -60,41 +59,90 @@ const ContactForm = () => {
 		) {
 			notify(
 				"error",
-				"name, email, phone, location and message can't be empty"
+				"Name, email, phone, location and message can't be empty"
 			);
 			return;
 		}
 
+		setIsSending(true);
+
+		// Compose the styled HTML message with your provided design
+		const htmlMessage = `
+      <div style="font-family: Arial, sans-serif; padding: 16px; background-color: #f9f9f9; border-radius: 8px; border: 1px solid #e0e0e0;">
+        <h2 style="color: #333; font-size: 20px; margin-bottom: 12px;">📩 New Contact Message</h2>
+        <table style="width: 100%; font-size: 15px; color: #444;">
+          <tr>
+            <td style="padding: 6px 0;"><strong>Name:</strong></td>
+            <td style="padding: 6px 0; text-transform: capitalize;">${formData.name.trim()}</td>
+          </tr>
+          <tr>
+            <td style="padding: 6px 0;"><strong>Email:</strong></td>
+            <td style="padding: 6px 0;">${formData.email}</td>
+          </tr>
+          <tr>
+            <td style="padding: 6px 0;"><strong>Phone:</strong></td>
+            <td style="padding: 6px 0;">${formData.phone}</td>
+          </tr>
+          <tr>
+            <td style="padding: 6px 0;"><strong>Location:</strong></td>
+            <td style="padding: 6px 0;">${formData.location}</td>
+          </tr>
+          <tr>
+            <td style="padding: 6px 0;"><strong>Project Type:</strong></td>
+            <td style="padding: 6px 0; color:#9A9BED; text-transform: capitalize; font-weight: bold;">${
+							formData.projectType || "N/A"
+						}</td>
+          </tr>
+          <tr>
+            <td style="padding: 6px 0;"><strong>Customize Furniture:</strong></td>
+            <td style="padding: 6px 0;">${formData.customize || "N/A"}</td>
+          </tr>
+          <tr>
+            <td style="padding: 6px 0; vertical-align: top;"><strong>Message:</strong></td>
+            <td style="padding: 6px 0; white-space: pre-line;">${
+							formData.message
+						}</td>
+          </tr>
+        </table>
+      </div>
+    `;
+
+		const templateParams = {
+			from_name: formData.name.trim(),
+			from_email: formData.email,
+			phone: formData.phone,
+			location: formData.location,
+			project_type: formData.projectType,
+			customize_furniture: formData.customize,
+			message: htmlMessage, // Here we send the full HTML message
+			to_name: "Astral Interior Furniture",
+		};
+
 		try {
-			// Send the mutation request
-			await createMessage({
-				variables: {
-					createMessageDto: {
-						userName: formData.name,
-						email: formData.email,
-						phone: formData.phone,
-						location: formData.location,
-						projectType: formData.projectType,
-						customizeFurniture: formData.customize,
-						content: formData.message,
-					},
-				},
-			});
+			const response = await emailjs.send(
+				"service_x56l1dr", // Replace with your actual service ID
+				"template_wkjkepm", // Replace with your actual template ID
+				templateParams,
+				"RigJPoeEWBSkEMcIt" // Replace with your actual public key
+			);
 
-			notify("success", "Message sent successfully");
-
-			// Reset form data
-			setFormData(initialFormData);
+			if (response.status === 200) {
+				notify("success", "Message sent successfully");
+				setFormData(initialFormData);
+			} else {
+				notify("error", "Something went wrong. Please try again.");
+			}
 		} catch (error) {
-			console.error(error);
+			console.error("EmailJS Error:", error);
 			notify("error", "Failed to send message");
+		} finally {
+			setIsSending(false);
 		}
-
-		setFormData(initialFormData);
 	};
 
 	return (
 		<>
+			{/* Social links & header remain the same */}
 			<div className="text-center">
 				<h2
 					className="uppercase text-[2rem] md:text-[3rem] xl:text-[8rem] leading-[1] mb-[2rem]"
@@ -119,6 +167,7 @@ const ContactForm = () => {
 				data-aos="fade-up"
 				data-aos-duration="800"
 			>
+				{/* Social icons links */}
 				<Link
 					href="https://www.facebook.com/astralinteriorfurniture"
 					target="_blank"
@@ -156,12 +205,14 @@ const ContactForm = () => {
 				</Link>
 			</div>
 
+			{/* Form */}
 			<div
 				className="border border-[#d0e5e4] rounded-md my-[3rem] py-[3rem] px-[2rem] lg:w-2/3 mx-auto bg-white shadow-md"
 				data-aos="fade-up"
 				data-aos-duration="1000"
 			>
 				<form className="space-y-[1.75rem]" onSubmit={handleSubmit}>
+					{/* Name */}
 					<div className="flex flex-col">
 						<label
 							htmlFor="name"
@@ -177,9 +228,12 @@ const ContactForm = () => {
 							className="border-2 border-[#d0e5e4] rounded-md py-[0.5rem] px-[1rem] transition-all focus:border-[#3cb1a6] focus:outline focus:outline-[#3cb1a6]"
 							onChange={handleChange}
 							value={formData.name}
+							required
+							disabled={isSending}
 						/>
 					</div>
 
+					{/* Email */}
 					<div className="flex flex-col">
 						<label
 							htmlFor="email"
@@ -195,9 +249,12 @@ const ContactForm = () => {
 							className="border-2 border-[#d0e5e4] rounded-md py-[0.5rem] px-[1rem] transition-all focus:border-[#3cb1a6] focus:outline focus:outline-[#3cb1a6]"
 							onChange={handleChange}
 							value={formData.email}
+							required
+							disabled={isSending}
 						/>
 					</div>
 
+					{/* Phone */}
 					<div className="flex flex-col">
 						<label
 							htmlFor="phone"
@@ -213,9 +270,12 @@ const ContactForm = () => {
 							className="border-2 border-[#d0e5e4] rounded-md py-[0.5rem] px-[1rem] transition-all focus:border-[#3cb1a6] focus:outline focus:outline-[#3cb1a6]"
 							onChange={handleChange}
 							value={formData.phone}
+							required
+							disabled={isSending}
 						/>
 					</div>
 
+					{/* Location */}
 					<div className="flex flex-col">
 						<label
 							htmlFor="location"
@@ -231,9 +291,12 @@ const ContactForm = () => {
 							className="border-2 border-[#d0e5e4] rounded-md py-[0.5rem] px-[1rem] transition-all focus:border-[#3cb1a6] focus:outline focus:outline-[#3cb1a6]"
 							onChange={handleChange}
 							value={formData.location}
+							required
+							disabled={isSending}
 						/>
 					</div>
 
+					{/* Project Type */}
 					<div className="flex flex-col">
 						<label
 							htmlFor="projectType"
@@ -247,6 +310,7 @@ const ContactForm = () => {
 							className="border-2 border-[#d0e5e4] rounded-md py-[0.5rem] px-[1rem] transition-all focus:border-[#3cb1a6] focus:outline focus:outline-[#3cb1a6] w-full"
 							onChange={handleChange}
 							value={formData.projectType}
+							disabled={isSending}
 						>
 							<option value="">Select Project Type</option>
 							<option value="residential">Residential</option>
@@ -256,6 +320,7 @@ const ContactForm = () => {
 						</select>
 					</div>
 
+					{/* Customize Furniture */}
 					<div className="flex flex-col">
 						<label
 							htmlFor="customize"
@@ -271,6 +336,7 @@ const ContactForm = () => {
 								value="yes"
 								checked={formData.customize === "yes"}
 								onChange={handleChange}
+								disabled={isSending}
 							/>
 							  <label htmlFor="yes">YES</label>
 						</div>
@@ -282,11 +348,13 @@ const ContactForm = () => {
 								value="no"
 								checked={formData.customize === "no"}
 								onChange={handleChange}
+								disabled={isSending}
 							/>
 							  <label htmlFor="no">NO</label>
 						</div>
 					</div>
 
+					{/* Message */}
 					<div className="flex flex-col">
 						<label
 							htmlFor="message"
@@ -302,6 +370,8 @@ const ContactForm = () => {
 							className="border-2 border-[#d0e5e4] rounded-md py-[0.5rem] px-[1rem] transition-all focus:border-[#3cb1a6] focus:outline focus:outline-[#3cb1a6]"
 							onChange={handleChange}
 							value={formData.message}
+							required
+							disabled={isSending}
 						></textarea>
 					</div>
 
@@ -309,8 +379,9 @@ const ContactForm = () => {
 						<button
 							type="submit"
 							className="w-full bg-primary text-white border-2 rounded-md border-primary py-[0.75rem] px-[2rem] transition-all duration-500 hover:bg-white hover:text-primary"
+							disabled={isSending}
 						>
-							Send Message
+							{isSending ? "Sending..." : "Send Message"}
 						</button>
 					</div>
 				</form>
@@ -318,4 +389,5 @@ const ContactForm = () => {
 		</>
 	);
 };
+
 export default ContactForm;
