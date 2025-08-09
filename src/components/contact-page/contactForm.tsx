@@ -120,10 +120,10 @@ const ContactForm = () => {
 
 		try {
 			const response = await emailjs.send(
-				"service_x56l1dr", // Replace with your actual service ID
-				"template_wkjkepm", // Replace with your actual template ID
+				"service_1fxw7pq", // Replace with your actual service ID
+				"template_9ad1e94", // Replace with your actual template ID
 				templateParams,
-				"RigJPoeEWBSkEMcIt" // Replace with your actual public key
+				"AhMP29TWXxEpx5CRW" // Replace with your actual public key
 			);
 
 			if (response.status === 200) {
