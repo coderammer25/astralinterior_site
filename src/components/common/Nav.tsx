@@ -71,7 +71,7 @@ export const Nav = () => {
 	}, []);
 
 	return (
-		<section id="navId" className="z-50">
+		<section id="navId" className="z-50 ">
 			<div className="px-4 py-3 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
 				<div className="relative flex items-center justify-between">
 					{/* logo */}
@@ -82,7 +82,21 @@ export const Nav = () => {
 							alt="Astral Logo"
 						/>
 					</Link>
-
+					{/* for big screens */}
+					<nav className="hidden lg:block">
+						<ul className=" text-xl flex items-center justify-center gap-5">
+							{menuItems.map((item) => (
+								<li key={item.id}>
+									<Link
+										href={`/${item.path}`}
+										className="hover:text-green-700 capitalize"
+									>
+										{item.name}
+									</Link>
+								</li>
+							))}
+						</ul>
+					</nav>
 					{/* nav & drawer */}
 					<div className="flex items-center gap-4 lg:space-x-[90px]">
 						<ul className="flex gap-2 items-center md:space-x-8">
@@ -99,11 +113,11 @@ export const Nav = () => {
 							</li>
 						</ul>
 
-						{/* toggle button */}
+						{/* for small devices*/}
 						<button
 							aria-label="Open Menu"
 							onClick={showDrawer}
-							className="p-2 -mr-1 hover:bg-gray-100"
+							className="p-2 -mr-1 hover:bg-gray-100 md:hidden"
 						>
 							<svg className="w-4 md:w-5 text-gray-600" viewBox="0 0 24 24">
 								<path

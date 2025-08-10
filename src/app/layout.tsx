@@ -43,6 +43,7 @@ export default function RootLayout({
 				<ApolloProvider client={client}>
 					<Provider store={store}>
 						<Nav />
+						{/* <NewNav /> */}
 						{children}
 						<Footer /> {/* ✅ Now safely rendered client-side only */}
 						<span>

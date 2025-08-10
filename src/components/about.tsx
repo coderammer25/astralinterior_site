@@ -152,7 +152,7 @@ export default function About() {
 									+
 									<NumberTicker
 										value={10}
-										className="whitespace-pre-wrap tracking-tighter"
+										className="whitespace-pre-wrap tracking-tighter text-5xl md:text-7xl"
 									/>
 								</p>
 								<p className="text-sm">Years of experience</p>
@@ -166,7 +166,7 @@ export default function About() {
 									+
 									<NumberTicker
 										value={90}
-										className="whitespace-pre-wrap tracking-tighter"
+										className="whitespace-pre-wrap tracking-tighter text-5xl md:text-7xl"
 									/>
 								</p>
 								<p className="text-sm">Successful projects</p>
@@ -178,9 +178,9 @@ export default function About() {
 
 			<div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-white -mt-[50px] px-4">
 				{/* Background text */}
-				<div className="absolute w-full flex justify-center items-center space-x-5">
-					<span className="text-6xl lg:text-9xl leading-none">OUR</span>
-					<span className="text-6xl lg:text-9xl leading-none">PROCESS</span>
+				<div className="absolute w-full flex justify-center items-center space-x-52">
+					<span className="text-[55px] lg:text-9xl leading-none ">OUR</span>
+					<span className="text-[55px] lg:text-9xl leading-none ">PROCESS</span>
 				</div>
 
 				{/* Card stack effect */}

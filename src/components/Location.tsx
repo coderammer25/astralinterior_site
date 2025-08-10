@@ -1,4 +1,8 @@
-import { MdOutlineEmail, MdLocalPhone, MdOutlineLocationOn } from "react-icons/md";
+import {
+	MdOutlineEmail,
+	MdLocalPhone,
+	MdOutlineLocationOn,
+} from "react-icons/md";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { RiYoutubeLine } from "react-icons/ri";
 import { BsInstagram } from "react-icons/bs";
@@ -23,49 +27,58 @@ export default function Location() {
 
 			{/* Contact Cards */}
 			<div
-				className="grid lg:grid-cols-3 gap-8 mb-16"
+				className="grid lg:grid-cols-3 gap-8 mb-16 items-stretch"
 				data-aos="fade-up"
 				data-aos-delay="200"
 			>
-				<div className="bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
-					<div className="flex justify-center mb-6">
-						<MdOutlineEmail className="w-12 h-12 text-primary" />
+				<a
+					href="mailto:astralinterior2@gmail.com"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<div className="bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
+						<div className="flex justify-center mb-6">
+							<MdOutlineEmail className="w-12 h-12 text-[#0a6f68]" />
+						</div>
+						<h3 className="text-xl font-semibold mb-4">Email Us</h3>
+						<p className="text-gray-600 mb-4">
+							Get in touch with us through email
+						</p>
+						<p className="text-[#0a6f68] hover:underline">
+							astralinterior2@gmail.com
+						</p>
 					</div>
-					<h3 className="text-xl font-semibold mb-4">Email Us</h3>
-					<p className="text-gray-600 mb-4">
-						Get in touch with us through email
-					</p>
-					<a
-						href="mailto:astralinterior2@gmail.com"
-						className="text-primary hover:underline"
-					>
-						astralinterior2@gmail.com
-					</a>
-				</div>
+				</a>
+				{/* repeat the same for other cards */}
+				<a href="tel:+8801703706613" target="_blank" rel="noopener noreferrer">
+					<div className="bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
+						<div className="flex justify-center mb-6">
+							<MdLocalPhone className="w-12 h-12 text-[#0a6f68]" />
+						</div>
+						<h3 className="text-xl font-semibold mb-4">Call Us</h3>
+						<p className="text-gray-600 mb-4">
+							Speak to our customer support team
+						</p>
+						<p className="text-[#0a6f68] hover:underline">+880 1703-706613</p>
+					</div>
+				</a>
 
-				<div className="bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
-					<div className="flex justify-center mb-6">
-						<MdLocalPhone className="w-12 h-12 text-primary" />
+				<a
+					href="https://www.google.com/search?q=astral+interior&oq=astral+interior&gs_lcrp=EgZjaHJvbWUqCggAEAAY4wIYgAQyCggAEAAY4wIYgAQyDQgBEC4YrwEYxwEYgAQyCAgCEAAYFhgeMggIAxAAGBYYHjIICAQQABgWGB4yBggFEEUYPDIGCAYQRRg8MgYIBxBFGDzSAQg0NTIwajBqN6gCALACAA&sourceid=chrome&ie=UTF-8"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<div className="bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
+						<div className="flex justify-center mb-6">
+							<MdOutlineLocationOn className="w-12 h-12 text-[#0a6f68]" />
+						</div>
+						<h3 className="text-xl font-semibold mb-4">Visit Us</h3>
+						<p className="text-gray-600 mb-4">Our showroom is open for you</p>
+						<p className="text-[#0a6f68]">
+							28 Navana Zohura Square F#D-11, Mymensingh Road, BanglaMotor
+						</p>
 					</div>
-					<h3 className="text-xl font-semibold mb-4">Call Us</h3>
-					<p className="text-gray-600 mb-4">
-						Speak to our customer support team
-					</p>
-					<a href="tel:+8801703706613" className="text-primary hover:underline">
-						+880 1703-706613
-					</a>
-				</div>
-
-				<div className="bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
-					<div className="flex justify-center mb-6">
-						<MdOutlineLocationOn className="w-12 h-12 text-primary" />
-					</div>
-					<h3 className="text-xl font-semibold mb-4">Visit Us</h3>
-					<p className="text-gray-600 mb-4">Our showroom is open for you</p>
-					<p className="text-primary">
-						28 Navana Zohura Square F#D-11, Mymensingh Road, BanglaMotor
-					</p>
-				</div>
+				</a>
 			</div>
 
 			{/* Map and Additional Info */}
@@ -111,30 +124,30 @@ export default function Location() {
 								<Link
 									href="https://www.facebook.com/astralinteriorfurniture"
 									target="_blank"
-									className="bg-primary p-3 rounded-md border-2 border-primary transition-all duration-500 hover:bg-white hover:text-primary text-white"
+									className="bg-[#0a6f68] p-3 rounded-md border-2 border-[#0a6f68] transition-all duration-500 hover:bg-white hover:text-[#0a6f68] text-white"
 								>
 									<FaFacebookF className="md:w-5 md:h-5" />
 								</Link>
 								<Link
 									href="https://www.instagram.com/astralinterior"
 									target="_blank"
-									className="bg-primary p-3 rounded-md border-2 border-primary transition-all duration-500 hover:bg-white hover:text-primary text-white"
+									className="bg-[#0a6f68] p-3 rounded-md border-2 border-[#0a6f68] transition-all duration-500 hover:bg-white hover:text-[#0a6f68] text-white"
 								>
 									<BsInstagram className="md:w-5 md:h-5" />
 								</Link>
 								<Link
 									href="https://www.linkedin.com/company/astral-interior-furniture-bd"
 									target="_blank"
-									className="bg-primary p-3 rounded-md border-2 border-primary transition-all duration-500 hover:bg-white hover:text-primary text-white"
+									className="bg-[#0a6f68] p-3 rounded-md border-2 border-[#0a6f68] transition-all duration-500 hover:bg-white hover:text-[#0a6f68] text-white"
 								>
-									<FaLinkedinIn  className="md:w-5 md:h-5" />
+									<FaLinkedinIn className="md:w-5 md:h-5" />
 								</Link>
 								<Link
 									href="https://www.youtube.com/@AstralInteriorFurniture"
 									target="_blank"
-									className="bg-primary p-3 rounded-md border-2 border-primary transition-all duration-500 hover:bg-white hover:text-primary text-white"
+									className="bg-[#0a6f68] p-3 rounded-md border-2 border-[#0a6f68] transition-all duration-500 hover:bg-white hover:text-[#0a6f68] text-white"
 								>
-									<RiYoutubeLine  className="md:w-5 md:h-5" />
+									<RiYoutubeLine className="md:w-5 md:h-5" />
 								</Link>
 							</div>
 						</div>

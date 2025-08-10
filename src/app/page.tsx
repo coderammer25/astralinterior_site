@@ -4,11 +4,11 @@ import { TimelineDemo } from "@/components/home-page/TimelineDemo";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import type { Metadata } from "next";
 import VideoGallery from "./video-gallery/page";
-import Popup from "@/components/popup/popup";
 import { NewBanner } from "@/components/home-page/newBanner";
 import { products } from "@/data/products";
 import { LogoSection } from "@/components/logoSection";
 import { logos_part_1, logos_part_2 } from "@/data/logos";
+// import Popup from "@/components/popup/popup";
 
 type Testimonial = {
 	quote: string;
@@ -59,14 +59,14 @@ export default function HomePage() {
 	return (
 		<>
 			<NewBanner products={products} />
-			<VideoGallery />
+			{/* <VideoGallery /> */}
+			<ServicesComponent />
+			<LogoSection items={logos_part_1} heading={true} />
+			<LogoSection items={logos_part_2} direction="right" />
 			<AboutUsComponent />
 			<TimelineDemo />
-			<ServicesComponent />
-			<LogoSection items={logos_part_1} heading={true}/>
-			<LogoSection items={logos_part_2} direction="right" />
 			<InfiniteMovingCards items={testimonials} />
-			<Popup />
+			{/* <Popup /> */}
 		</>
 	);
 }

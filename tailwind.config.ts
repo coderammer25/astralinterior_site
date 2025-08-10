@@ -1,15 +1,15 @@
-import {heroui} from '@heroui/theme';
+import { heroui } from "@heroui/theme";
 import type { Config } from "tailwindcss";
-	import tailwindcssAnimate from "tailwindcss-animate";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
 	darkMode: ["class"],
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@heroui/theme/dist/components/(button|ripple|spinner).js"
-  ],
+	content: [
+		"./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+		"./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+		"./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+		"./node_modules/@heroui/theme/dist/components/(button|ripple|spinner).js",
+	],
 	theme: {
 		extend: {
 			fontFamily: {
@@ -27,7 +27,8 @@ export default {
 				},
 			},
 			animation: {
-				scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+				scroll:
+					"scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
 			},
 			colors: {
 				primary: {
@@ -92,5 +93,5 @@ export default {
 			},
 		},
 	},
-  plugins: [tailwindcssAnimate,heroui()],
+	plugins: [tailwindcssAnimate, heroui()],
 } satisfies Config;

@@ -171,35 +171,35 @@ const ContactForm = () => {
 				<Link
 					href="https://www.facebook.com/astralinteriorfurniture"
 					target="_blank"
-					className="bg-primary p-3 rounded-md border-2 border-primary transition-all duration-500 hover:bg-white hover:text-primary text-white cursor-pointer"
+					className="bg-[#0a6f68] p-3 rounded-md border-2 border-[#0a6f68] transition-all duration-500 hover:bg-white hover:text-[#0a6f68] text-white cursor-pointer"
 				>
 					<FaFacebookF className="md:w-[1.375rem] md:h-[1.375rem]" />
 				</Link>
 				<Link
 					href="https://www.instagram.com/astralinterior"
 					target="_blank"
-					className="bg-primary p-3 rounded-md border-2 border-primary transition-all duration-500 hover:bg-white hover:text-primary text-white cursor-pointer"
+					className="bg-[#0a6f68] p-3 rounded-md border-2 border-[#0a6f68] transition-all duration-500 hover:bg-white hover:text-[#0a6f68] text-white cursor-pointer"
 				>
 					<FaInstagram className="md:w-[1.375rem] md:h-[1.375rem]" />
 				</Link>
 				<Link
 					href="https://x.com/astralinteriors"
 					target="_blank"
-					className="bg-primary p-3 rounded-md border-2 border-primary transition-all duration-500 hover:bg-white hover:text-primary text-white cursor-pointer"
+					className="bg-[#0a6f68] p-3 rounded-md border-2 border-[#0a6f68] transition-all duration-500 hover:bg-white hover:text-[#0a6f68] text-white cursor-pointer"
 				>
 					<FaXTwitter className="md:w-[1.375rem] md:h-[1.375rem]" />
 				</Link>
 				<Link
 					href="https://www.linkedin.com/company/astral-interior-furniture-bd"
 					target="_blank"
-					className="bg-primary p-3 rounded-md border-2 border-primary transition-all duration-500 hover:bg-white hover:text-primary text-white cursor-pointer"
+					className="bg-[#0a6f68] p-3 rounded-md border-2 border-[#0a6f68] transition-all duration-500 hover:bg-white hover:text-[#0a6f68] text-white cursor-pointer"
 				>
 					<FaLinkedinIn className="md:w-[1.375rem] md:h-[1.375rem]" />
 				</Link>
 				<Link
 					href="https://www.youtube.com/@AstralInteriorFurniture"
 					target="_blank"
-					className="bg-primary p-3 rounded-md border-2 border-primary transition-all duration-500 hover:bg-white hover:text-primary text-white cursor-pointer"
+					className="bg-[#0a6f68] p-3 rounded-md border-2 border-[#0a6f68] transition-all duration-500 hover:bg-white hover:text-[#0a6f68] text-white cursor-pointer"
 				>
 					<RiYoutubeLine className="md:w-[1.475rem] md:h-[1.475rem]" />
 				</Link>
@@ -360,7 +360,7 @@ const ContactForm = () => {
 							htmlFor="message"
 							className="font-bold text-[14px] leading-[20px] mb-[10px]"
 						>
-							Message
+							Message(Optional)
 						</label>
 						<textarea
 							name="message"
@@ -370,7 +370,6 @@ const ContactForm = () => {
 							className="border-2 border-[#d0e5e4] rounded-md py-[0.5rem] px-[1rem] transition-all focus:border-[#3cb1a6] focus:outline focus:outline-[#3cb1a6]"
 							onChange={handleChange}
 							value={formData.message}
-							required
 							disabled={isSending}
 						></textarea>
 					</div>
@@ -378,7 +377,7 @@ const ContactForm = () => {
 					<div className="mt-[3rem]">
 						<button
 							type="submit"
-							className="w-full bg-primary text-white border-2 rounded-md border-primary py-[0.75rem] px-[2rem] transition-all duration-500 hover:bg-white hover:text-primary"
+							className="w-full bg-[#0a6f68] text-white border-2 rounded-md border-[#0a6f68] py-[0.75rem] px-[2rem] transition-all duration-500 hover:bg-white hover:text-[#0a6f68]"
 							disabled={isSending}
 						>
 							{isSending ? "Sending..." : "Send Message"}

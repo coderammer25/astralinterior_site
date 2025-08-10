@@ -156,6 +156,11 @@ export const recentPosts = [
 
 export const menuItems = [
 	{
+		id: 0,
+		path: "./",
+		name: "Home",
+	},
+	{
 		id: 1,
 		path: "services",
 		name: "Services",
