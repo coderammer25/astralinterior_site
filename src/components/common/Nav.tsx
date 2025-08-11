@@ -103,7 +103,7 @@ export const Nav = () => {
 							<li>
 								<Link
 									href="/contact-us"
-									className="text-primary text-[10px] md:text-base border-b-2 border-transparent hover:border-primary"
+									className="text-primary text-[10px] md:text-base border-b-2 border-transparent hover:border-primary  "
 								>
 									Contact Us
 								</Link>

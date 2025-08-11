@@ -15,7 +15,10 @@ import "slick-carousel/slick/slick-theme.css";
 import "./globals.css";
 import { Provider } from "react-redux";
 import { store } from "@/lib/store";
+import { ScrollTrigger, SplitText } from "gsap/all";
+import gsap from "gsap";
 
+gsap.registerPlugin(ScrollTrigger, SplitText);
 // ✅ Dynamically import Footer with SSR disabled
 const Footer = dynamic(() => import("@/components/common/Footer"), {
 	ssr: false,

@@ -50,14 +50,14 @@ const ProjectOne = () => {
 			>
 				<div className="flex justify-start pt-10 md:pt-40 md:gap-10">
 					{/* Sticky dot section */}
-					<div className="sticky z-40 items-center top-40 max-w-xs lg:max-w-sm">
+					<div className="sticky md:hidden z-40 items-center top-40 max-w-xs lg:max-w-sm">
 						<div className="h-10 absolute -left-[2px] md:-left-5 w-10 rounded-full bg-white flex items-center justify-center">
 							<div className="h-4 w-4 rounded-full bg-neutral-200 border border-neutral-300 p-2 ml-[2px]" />
 						</div>
 					</div>
 
 					{/* Videos column, only first 2 */}
-					<div className="relative pl-20 pr-4 md:pl-4 w-full max-w-md">
+					<div className="relative pl-20 pr-4 md:pl-4 w-full max-w-md ml-5">
 						<p className="text-sm md:text-[1em] leading-[1.4] mb-8 mt-3">
 							Interior Videos
 						</p>
