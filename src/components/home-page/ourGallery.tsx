@@ -5,17 +5,25 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import img1 from "../../assets/asset 1.jpeg";
 import img2 from "../../assets/asset 2.jpeg";
-import img3 from "../../assets/asset 3.jpeg";
-import img4 from "../../assets/asset 4.jpeg";
-import img5 from "../../assets/asset 5.jpeg";
-import img6 from "../../assets/asset 6.jpeg";
+import img3 from "../../assets/asset 25.jpeg";
+import img4 from "../../assets/asset 5.jpeg";
+import img5 from "../../assets/office.jpg";
+import img6 from "../../assets/asset 10.jpeg";
 import { TextAnimate } from "../magicui/text-animate";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const galleryImages = [img1, img2, img3, img4, img5, img6];
+// ✅ Now each image has its own title
+const galleryImages = [
+	{ src: img1, title: "Luxury Bedroom" },
+	{ src: img2, title: "Modern Living Room" },
+	{ src: img3, title: "Beautiful Dining room" },
+	{ src: img4, title: "Minimalist Kitchen" },
+	{ src: img5, title: "Cozy Workspace" },
+	{ src: img6, title: "Welcoming Space" },
+];
 
 const OurGallery: React.FC = () => {
 	const galleryRef = useRef<HTMLDivElement | null>(null);
@@ -77,21 +85,22 @@ const OurGallery: React.FC = () => {
 					ref={galleryRef}
 					className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
 				>
-					{galleryImages.map((img, index) => (
+					{galleryImages.map((item, index) => (
 						<div
 							key={index}
 							className="gallery-card relative h-64 rounded-xl overflow-hidden shadow-lg group"
 						>
 							<Image
-								src={img}
-								alt={`Gallery Image ${index + 1}`}
+								src={item.src}
+								alt={item.title}
 								fill
 								className="object-cover transition-transform duration-500 group-hover:scale-110"
 								loading="lazy"
 							/>
-							<div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
-								<p className="text-white font-semibold text-lg">
-									Gallery Image {index + 1}
+							{/* Hover Overlay */}
+							<div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+								<p className="absolute bottom-3 left-3 text-white font-medium text-sm opacity-0 group-hover:opacity-100 transform translate-y-3 group-hover:translate-y-0 transition-all duration-500 ease-out">
+									{item.title}
 								</p>
 							</div>
 						</div>
