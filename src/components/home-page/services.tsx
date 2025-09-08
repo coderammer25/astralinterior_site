@@ -8,8 +8,9 @@ import { useInView } from "react-intersection-observer";
 import { TextAnimate } from "../magicui/text-animate";
 import { StickyImage } from "../ui/stickyImage";
 import serviceImage01 from "../../../public/services/services_01.jpg";
-import serviceImage02 from "../../../public/services/service_02.jpg";
-import serviceImage03 from "../../../public/services/service_03.jpg";
+import serviceImage02 from "../../../public/services/services_02.jpg";
+import serviceImage03 from "../../../public/services/services_03.jpg";
+import serviceImage04 from "../../../public/services/services_04.jpg";
 
 const ServicesComponent = () => {
 	const { ref: titleRef, inView: titleInView } = useInView({
@@ -56,22 +57,19 @@ const ServicesComponent = () => {
 					<StickyImage
 						imageLink={serviceImage01.src}
 						title="Interior"
-						style="top-[6rem]"
+						style="top-[6rem] "
 					/>
 					<StickyImage
-						imageLink="https://images.unsplash.com/photo-1606744837616-56c9a5c6a6eb?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+						imageLink={serviceImage02.src}
 						title="Exterior"
 						style="top-[9rem]"
 					/>
 					<StickyImage
-						imageLink={serviceImage02.src}
+						imageLink={serviceImage03.src}
 						title="Office"
 						style="top-[12rem]"
 					/>
-					<StickyImage
-						imageLink={serviceImage03.src}
-						title="Interior"
-					/>
+					<StickyImage imageLink={serviceImage04.src} title="Interior" />
 				</div>
 			</div>
 			<CustomButton link="/services">All Services</CustomButton>
