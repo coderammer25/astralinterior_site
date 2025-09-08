@@ -1,16 +1,22 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-"use client"
-import { FaArrowRight } from "react-icons/fa";
-import Link from "next/link";
+"use client";
 import { projects } from "@/data";
-import SingleProject from "./singleProject";
-import { TextAnimate } from "../magicui/text-animate";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
+import { TextAnimate } from "../magicui/text-animate";
+import SingleProject from "./singleProject";
 
 const Projects = () => {
-	const { ref: titleRef, inView: titleInView } = useInView({ triggerOnce: true, threshold: 0.1 });
-	const { ref: linkRef, inView: linkInView } = useInView({ triggerOnce: true, threshold: 0.1 });
+	const { ref: titleRef, inView: titleInView } = useInView({
+		triggerOnce: true,
+		threshold: 0.1,
+	});
+	const { ref: linkRef, inView: linkInView } = useInView({
+		triggerOnce: true,
+		threshold: 0.1,
+	});
 
 	return (
 		<section className="px-4 py-[8rem] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
@@ -22,10 +28,20 @@ const Projects = () => {
 					animate={titleInView ? { opacity: 1, y: 0 } : {}}
 					transition={{ duration: 0.3 }}
 				>
-					<TextAnimate duration={300} animation="scaleUp" by="character" delay={5}>
+					<TextAnimate
+						duration={300}
+						animation="scaleUp"
+						by="character"
+						delay={5}
+					>
 						{"SELECTED"}
 					</TextAnimate>
-					<TextAnimate duration={300} animation="scaleUp" by="character" delay={5}>
+					<TextAnimate
+						duration={300}
+						animation="scaleUp"
+						by="character"
+						delay={5}
+					>
 						{"projects"}
 					</TextAnimate>
 				</motion.h2>
@@ -41,7 +57,7 @@ const Projects = () => {
 						className="flex items-center gap-2 uppercase text-[14px] text-[#2c2b28]"
 					>
 						All projects{" "}
-						<span className="bg-primary p-1">
+						<span className="bg-[#135A58] p-1">
 							<FaArrowRight className="text-white" />
 						</span>
 					</Link>
@@ -50,7 +66,10 @@ const Projects = () => {
 
 			<div className="mt-[4rem]">
 				{projects.map((project, idx) => {
-					const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
+					const { ref, inView } = useInView({
+						triggerOnce: true,
+						threshold: 0.1,
+					});
 
 					return (
 						<motion.div

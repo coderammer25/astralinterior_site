@@ -1,8 +1,8 @@
 "use client";
 
 import { Button, Modal } from "antd";
+import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import PopupForm from "../popupForm/popupForm";
 
 const Popup = () => {
@@ -73,7 +73,7 @@ const Popup = () => {
 						onCancel={handleCancel}
 						footer={[
 							<Button
-								className="bg-primary"
+								className="bg-[#135A58]"
 								key="submit"
 								type="primary"
 								onClick={handleOk}

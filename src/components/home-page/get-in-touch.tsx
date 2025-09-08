@@ -231,7 +231,7 @@ export default function GetInTouch() {
 						<div className="mt-[3rem]">
 							<button
 								type="submit"
-								className="w-full bg-primary text-white border-2 rounded-md border-primary py-[0.75rem] px-[2rem] transition-all duration-500 hover:bg-white hover:text-primary"
+								className="w-full bg-[#135A58] text-white border-2 rounded-md border-primary py-[0.75rem] px-[2rem] transition-all duration-500 hover:bg-white hover:text-primary"
 							>
 								Send Message
 							</button>

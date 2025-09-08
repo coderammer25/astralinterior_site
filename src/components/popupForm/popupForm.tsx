@@ -33,13 +33,15 @@ const PopupForm = () => {
 		} else {
 			console.log(popupMessage);
 			setError(false);
-      setPopupMessage({ ...INITIAL_STATE });
+			setPopupMessage({ ...INITIAL_STATE });
 		}
 	}
 
 	return (
 		<div>
-      <h2 className="text-center uppercase mb-4 text-xl font-medium font-geist">send us message</h2>
+			<h2 className="text-center uppercase mb-4 text-xl font-medium font-geist">
+				send us message
+			</h2>
 			<form onSubmit={handleFormSubmit} className="w-full flex flex-col gap-2">
 				<input
 					type="tel"
@@ -75,7 +77,7 @@ const PopupForm = () => {
 				></textarea>
 				<button
 					type="submit"
-					className="bg-primary text-white py-2 rounded-md uppercase text-[10px] md:text-[14px]"
+					className="bg-[#135A58] text-white py-2 rounded-md uppercase text-[10px] md:text-[14px]"
 				>
 					SEND MESSAGE
 				</button>
