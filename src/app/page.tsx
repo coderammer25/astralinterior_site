@@ -8,6 +8,7 @@ import { NewBanner } from "@/components/home-page/newBanner";
 import { products } from "@/data/products";
 import { LogoSection } from "@/components/logoSection";
 import { logos_part_1, logos_part_2 } from "@/data/logos";
+import OurGallery from "@/components/home-page/ourGallery";
 
 // import Popup from "@/components/popup/popup";
 
@@ -62,6 +63,7 @@ export default function HomePage() {
 			<NewBanner products={products} />
 			{/* <VideoGallery /> */}
 			<ServicesComponent />
+			<OurGallery />
 			<LogoSection items={logos_part_1} heading={true} />
 			<LogoSection items={logos_part_2} direction="right" />
 			<AboutUsComponent />
