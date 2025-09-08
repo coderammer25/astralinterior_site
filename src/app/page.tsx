@@ -65,7 +65,7 @@ export default function HomePage() {
 			<LogoSection items={logos_part_1} heading={true} />
 			<LogoSection items={logos_part_2} direction="right" />
 			<AboutUsComponent />
-			<TimelineDemo />
+			{/* <TimelineDemo /> */}
 			<InfiniteMovingCards items={testimonials} />
 			{/* <Popup /> */}
 		</>

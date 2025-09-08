@@ -9,18 +9,83 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { menuItems } from "@/data";
 import { CustomButton } from "../ui/customButton";
+import { useMediaQuery } from "react-responsive";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { usePathname } from "next/navigation";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export const Nav = () => {
 	const [open, setOpen] = useState(false);
 	const drawerContentRef = useRef<HTMLDivElement>(null);
+	const isMobile = useMediaQuery({ maxWidth: 768 });
+	const logoRef = useRef<HTMLAnchorElement>(null);
+	const pathname = usePathname();
 
-	const showDrawer = () => {
-		setOpen(true);
-	};
+	// GSAP animation setup on home page & desktop only
+	useGSAP(() => {
+		if (pathname === "/" && !isMobile && logoRef.current) {
+			gsap.set(logoRef.current, {
+				x: 530,
+				y: 300,
+				scale: 2.5,
+				visibility: "visible",
+			});
 
-	const onClose = () => {
-		setOpen(false);
-	};
+			const animation = gsap.to(logoRef.current, {
+				x: 0,
+				y: 0,
+				scale: 1,
+				ease: "power2.out",
+				scrollTrigger: {
+					trigger: "#navId",
+					start: "top top",
+					end: "+=400",
+					scrub: 1.5,
+				},
+			});
+
+			return () => {
+				ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+				animation.kill();
+				if (logoRef.current) {
+					gsap.set(logoRef.current, {
+						x: 0,
+						y: 0,
+						scale: 1,
+						visibility: "visible",
+					});
+				}
+			};
+		} else if (logoRef.current) {
+			gsap.set(logoRef.current, {
+				x: 0,
+				y: 0,
+				scale: 1,
+				visibility: "visible",
+			});
+		}
+	}, [pathname, isMobile]);
+
+	// Ensure ScrollTrigger is killed and logo reset when navigating away from home
+	useEffect(() => {
+		if (pathname !== "/") {
+			ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+			if (logoRef.current) {
+				gsap.set(logoRef.current, {
+					x: 0,
+					y: 0,
+					scale: 1,
+					visibility: "visible",
+				});
+			}
+		}
+	}, [pathname]);
+
+	const showDrawer = () => setOpen(true);
+	const onClose = () => setOpen(false);
 
 	useEffect(() => {
 		const handleClickOutside = (e: MouseEvent) => {
@@ -29,14 +94,8 @@ export const Nav = () => {
 				setOpen(false);
 			}
 		};
-
-		if (open) {
-			document.addEventListener("mousedown", handleClickOutside);
-		}
-
-		return () => {
-			document.removeEventListener("mousedown", handleClickOutside);
-		};
+		if (open) document.addEventListener("mousedown", handleClickOutside);
+		return () => document.removeEventListener("mousedown", handleClickOutside);
 	}, [open]);
 
 	useEffect(() => {
@@ -64,27 +123,32 @@ export const Nav = () => {
 				);
 			}
 		};
-
-		if (typeof window !== "undefined") {
-			window.addEventListener("scroll", handleScroll);
-		}
+		window.addEventListener("scroll", handleScroll);
+		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
 
 	return (
-		<section id="navId" className="z-50 ">
+		<section id="navId" className="z-50">
 			<div className="px-4 py-3 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
 				<div className="relative flex items-center justify-between">
 					{/* logo */}
-					<Link href="/" className="inline-flex items-center">
+					<Link
+						ref={logoRef}
+						href="/"
+						className="inline-flex items-center"
+						id={isMobile ? undefined : "logo"}
+					>
 						<Image
 							className="w-[80px] md:w-[140px] select-none"
 							src={logo}
 							alt="Astral Logo"
+							priority
 						/>
 					</Link>
+
 					{/* for big screens */}
-					<nav className="hidden lg:block">
-						<ul className=" text-xl flex items-center justify-center gap-5">
+					<nav className="hidden md:block">
+						<ul className="text-xl flex items-center justify-center gap-5 mr-5">
 							{menuItems.map((item) => (
 								<li key={item.id}>
 									<Link
@@ -97,8 +161,9 @@ export const Nav = () => {
 							))}
 						</ul>
 					</nav>
+
 					{/* nav & drawer */}
-					<div className="flex items-center gap-4 lg:space-x-[90px]">
+					<div className="flex items-center gap-4 lg:space-x-[90px] ">
 						<ul className="flex gap-2 items-center md:space-x-8">
 							<li>
 								<Link
@@ -113,7 +178,7 @@ export const Nav = () => {
 							</li>
 						</ul>
 
-						{/* for small devices*/}
+						{/* for small devices */}
 						<button
 							aria-label="Open Menu"
 							onClick={showDrawer}
