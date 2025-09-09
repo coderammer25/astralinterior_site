@@ -177,15 +177,22 @@ export default function About() {
 			</section>
 
 			<div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-white -mt-[50px] px-4">
-				{/* Background text */}
-				<div className="absolute w-full flex justify-center items-center space-x-52">
-					<span className="text-[55px] lg:text-9xl leading-none ">OUR</span>
-					<span className="text-[55px] lg:text-9xl leading-none ">PROCESS</span>
-				</div>
+				{/* Wrapper for text + cards */}
+				<div className="absolute w-full flex flex-col lg:flex-row items-center justify-center">
+					{/* OUR */}
+					<span className="text-[40px] md:text-[55px] lg:text-9xl leading-none mb-6 lg:mb-0 lg:mr-8">
+						OUR
+					</span>
 
-				{/* Card stack effect */}
-				<div className="relative max-w-2xl h-[280px] w-[450px]">
-					<CardStack items={workProcessCards} />
+					{/* Card Stack */}
+					<div className="relative w-[320px] h-[240px] md:w-[400px] md:h-[260px] lg:w-[450px] lg:h-[280px] my-6 lg:my-0">
+						<CardStack items={workProcessCards} />
+					</div>
+
+					{/* PROCESS */}
+					<span className="text-[40px] md:text-[55px] lg:text-9xl leading-none mt-2 lg:mt-0 lg:ml-6">
+						PROCESS
+					</span>
 				</div>
 			</div>
 
