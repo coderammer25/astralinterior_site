@@ -21,8 +21,8 @@ export const products = [
 		thumbnail: modernLiving,
 	},
 	{
-		title: "Minimalist Bedroom Design",
-		link: "/projects/minimalist-bedroom",
+		title: "Sophisticated Dining Experience",
+		link: "/projects/sophisticated-dining",
 		thumbnail: minimalist,
 	},
 	{
@@ -31,8 +31,8 @@ export const products = [
 		thumbnail: luxury,
 	},
 	{
-		title: "Cozy Boho Studio Apartment",
-		link: "/projects/boho-studio",
+		title: "Sleek Modern Kitchen",
+		link: "/projects/sleek-modern-kitchen",
 		thumbnail: cozy,
 	},
 	{
@@ -46,23 +46,23 @@ export const products = [
 		thumbnail: dining,
 	},
 	{
-		title: "Chic Bathroom Remodel",
-		link: "/projects/chic-bathroom",
+		title: "Contemporary Living Room Vibes",
+		link: "/projects/contemporary-living",
 		thumbnail: remodel,
 	},
 	{
-		title: "Rustic Farmhouse Kitchen",
-		link: "/projects/farmhouse-kitchen",
+		title: "Luxe Master Bedroom Retreat",
+		link: "/projects/luxe-master-bedroom",
 		thumbnail: farmhouse,
 	},
 	{
-		title: "Industrial Loft Vibe",
-		link: "/projects/industrial-loft",
+		title: "Cozy Scandinavian Bedroom",
+		link: "/projects/cozy-scandinavian-bedroom",
 		thumbnail: industrial,
 	},
 	{
-		title: "Tropical Balcony Retreat",
-		link: "/projects/tropical-balcony",
+		title: "Vintage-Inspired Bedroom Charm",
+		link: "/projects/vintage-inspired-bedroom",
 		thumbnail: balcony,
 	},
 	{
@@ -71,8 +71,8 @@ export const products = [
 		thumbnail: family,
 	},
 	{
-		title: "Contemporary Hallway Design",
-		link: "/projects/contemporary-hallway",
+		title: "Industrial Exposed Dining Loft",
+		link: "/projects/industrial-exposed-dining-loft",
 		thumbnail: hallway,
 	},
 	{
@@ -81,13 +81,13 @@ export const products = [
 		thumbnail: office,
 	},
 	{
-		title: "Kids Playroom Concept",
-		link: "/projects/kids-playroom",
+		title: "Coastal Breeze Bedroom Retreat",
+		link: "/projects/coastal-breeze-bedroom",
 		thumbnail: playroom,
 	},
 	{
-		title: "Luxury Walk-in Closet",
-		link: "/projects/walk-in-closet",
+		title: "Cozy Workspace Corner",
+		link: "/projects/cozy-workspace-corner",
 		thumbnail: walkInCloset,
 	},
 ];

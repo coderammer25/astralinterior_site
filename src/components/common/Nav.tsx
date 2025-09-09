@@ -30,7 +30,7 @@ export const Nav = () => {
 			gsap.set(logoRef.current, {
 				x: 530,
 				y: 300,
-				scale: 2.5,
+				scale: 2.2,
 				visibility: "visible",
 			});
 
