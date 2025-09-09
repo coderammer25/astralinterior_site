@@ -99,6 +99,7 @@ export const Timeline = () => {
 			}
 		});
 		return () => unsubscribe();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	// Project Two fill animation
@@ -115,6 +116,7 @@ export const Timeline = () => {
 			}
 		});
 		return () => unsubscribe();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	// Project Three fill animation
@@ -131,6 +133,7 @@ export const Timeline = () => {
 			}
 		});
 		return () => unsubscribe();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	return (
@@ -157,8 +160,8 @@ export const Timeline = () => {
 					</TextAnimate>
 				</motion.h2>
 				<p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm mx-auto text-center">
-					We've been working on interior and exterior for the past 9 years.
-					Here's some of our best projects.
+					We&apos;ve been working on interior and exterior for the past 9 years.
+					Here&apos;s some of our best projects.
 				</p>
 			</div>
 

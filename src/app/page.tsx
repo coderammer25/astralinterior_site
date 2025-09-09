@@ -1,6 +1,6 @@
 import { AboutUsComponent } from "@/components/home-page/aboutUs";
 import ServicesComponent from "@/components/home-page/services";
-import { TimelineDemo } from "@/components/home-page/TimelineDemo";
+// import { TimelineDemo } from "@/components/home-page/TimelineDemo";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import type { Metadata } from "next";
 // import VideoGallery from "./video-gallery/page";
