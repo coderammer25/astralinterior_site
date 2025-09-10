@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -10,7 +11,6 @@ import { MdEmail } from "react-icons/md";
 import { menuItems } from "@/data";
 import { CustomButton } from "../ui/customButton";
 import { useMediaQuery } from "react-responsive";
-import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { usePathname } from "next/navigation";
@@ -20,21 +20,19 @@ gsap.registerPlugin(ScrollTrigger);
 export const Nav = () => {
 	const [open, setOpen] = useState(false);
 	const drawerContentRef = useRef<HTMLDivElement>(null);
-	const isMobile = useMediaQuery({ maxWidth: 768 });
 	const logoRef = useRef<HTMLAnchorElement>(null);
+	const isMobile = useMediaQuery({ maxWidth: 768 });
 	const pathname = usePathname();
 
-	// GSAP animation setup on home page & desktop only
-	useGSAP(() => {
+	// GSAP animation on homepage for big screens only
+	useEffect(() => {
 		if (pathname === "/" && !isMobile && logoRef.current) {
-			gsap.set(logoRef.current, {
-				x: 530,
-				y: 300,
-				scale: 2.2,
-				visibility: "visible",
-			});
+			const logoEl = logoRef.current;
 
-			const animation = gsap.to(logoRef.current, {
+			// initial position
+			gsap.set(logoEl, { x: 530, y: 300, scale: 2.2, visibility: "visible" });
+
+			const animation = gsap.to(logoEl, {
 				x: 0,
 				y: 0,
 				scale: 1,
@@ -50,43 +48,24 @@ export const Nav = () => {
 			return () => {
 				ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
 				animation.kill();
-				if (logoRef.current) {
-					gsap.set(logoRef.current, {
-						x: 0,
-						y: 0,
-						scale: 1,
-						visibility: "visible",
-					});
-				}
+				gsap.set(logoEl, { x: 0, y: 0, scale: 1, visibility: "visible" });
 			};
 		} else if (logoRef.current) {
+			// reset logo for all other pages or small screens
 			gsap.set(logoRef.current, {
 				x: 0,
 				y: 0,
 				scale: 1,
 				visibility: "visible",
 			});
+			ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
 		}
 	}, [pathname, isMobile]);
-
-	// Ensure ScrollTrigger is killed and logo reset when navigating away from home
-	useEffect(() => {
-		if (pathname !== "/") {
-			ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-			if (logoRef.current) {
-				gsap.set(logoRef.current, {
-					x: 0,
-					y: 0,
-					scale: 1,
-					visibility: "visible",
-				});
-			}
-		}
-	}, [pathname]);
 
 	const showDrawer = () => setOpen(true);
 	const onClose = () => setOpen(false);
 
+	// Close drawer on outside click
 	useEffect(() => {
 		const handleClickOutside = (e: MouseEvent) => {
 			const drawerEl = drawerContentRef.current;
@@ -98,11 +77,14 @@ export const Nav = () => {
 		return () => document.removeEventListener("mousedown", handleClickOutside);
 	}, [open]);
 
+	// Sticky nav on scroll
 	useEffect(() => {
 		const handleScroll = () => {
 			const navId = document.getElementById("navId");
+			if (!navId) return;
+
 			if (window.scrollY > 0) {
-				navId?.classList.add(
+				navId.classList.add(
 					"shadow-md",
 					"sticky",
 					"top-0",
@@ -112,7 +94,7 @@ export const Nav = () => {
 					"backdrop-blur-md"
 				);
 			} else {
-				navId?.classList.remove(
+				navId.classList.remove(
 					"shadow-md",
 					"sticky",
 					"top-0",
@@ -131,13 +113,8 @@ export const Nav = () => {
 		<section id="navId" className="z-50">
 			<div className="px-4 py-3 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
 				<div className="relative flex items-center justify-between">
-					{/* logo */}
-					<Link
-						ref={logoRef}
-						href="/"
-						className="inline-flex items-center"
-						id={isMobile ? undefined : "logo"}
-					>
+					{/* Logo */}
+					<Link ref={logoRef} href="/" className="inline-flex items-center">
 						<Image
 							className="w-[80px] md:w-[140px] select-none"
 							src={logo}
@@ -146,7 +123,7 @@ export const Nav = () => {
 						/>
 					</Link>
 
-					{/* for big screens */}
+					{/* Desktop Menu */}
 					<nav className="hidden md:block">
 						<ul className="text-xl flex items-center justify-center gap-5 mr-5">
 							{menuItems.map((item) => (
@@ -162,8 +139,8 @@ export const Nav = () => {
 						</ul>
 					</nav>
 
-					{/* nav & drawer */}
-					<div className="flex items-center gap-4 lg:space-x-[90px] ">
+					{/* Buttons and Drawer */}
+					<div className="flex items-center gap-4 lg:space-x-[90px]">
 						<ul className="flex gap-2 items-center md:space-x-8">
 							<li>
 								<Link
@@ -178,7 +155,7 @@ export const Nav = () => {
 							</li>
 						</ul>
 
-						{/* for small devices */}
+						{/* Mobile Menu Button */}
 						<button
 							aria-label="Open Menu"
 							onClick={showDrawer}
@@ -200,7 +177,7 @@ export const Nav = () => {
 							</svg>
 						</button>
 
-						{/* drawer */}
+						{/* Drawer */}
 						<Drawer
 							placement="right"
 							closable={true}
@@ -214,10 +191,7 @@ export const Nav = () => {
 								initial={{ x: "100%" }}
 								animate={{ x: "6%" }}
 								exit={{ x: "100%" }}
-								transition={{
-									duration: 0.5,
-									ease: [0.25, 0.8, 0.5, 1],
-								}}
+								transition={{ duration: 0.5, ease: [0.25, 0.8, 0.5, 1] }}
 							>
 								<Link
 									href="/"
