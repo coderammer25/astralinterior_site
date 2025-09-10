@@ -30,7 +30,7 @@ export const Nav = () => {
 			const logoEl = logoRef.current;
 
 			// initial position
-			gsap.set(logoEl, { x: 530, y: 300, scale: 2.2, visibility: "visible" });
+			gsap.set(logoEl, { x: 490, y: 300, scale: 3.4, visibility: "visible" });
 
 			const animation = gsap.to(logoEl, {
 				x: 0,
