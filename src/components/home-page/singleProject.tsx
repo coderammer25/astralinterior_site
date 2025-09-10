@@ -10,28 +10,36 @@ type SingleProjectProps = {
 };
 
 const SingleProject = ({ project, project_number }: SingleProjectProps) => {
-
 	return (
-		<div
-			className="relative"
-		>
+		<div className="relative group overflow-hidden rounded-2xl">
+			{/* Project Image */}
 			<Image
 				src={project.project_img}
-				alt="Project Image 1"
+				alt={project.project_title}
 				width={800}
 				height={800}
-				className="w-full"
+				className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
 			/>
-			<div className="text-center space-y-2 absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 bg-black bg-opacity-10 p-5 rounded-full">
-				<h4 className="font-playfair italic text-[1.25rem] font-light leading-[1]">
+
+			{/* Overlay */}
+			<div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center p-4">
+				{/* Project Number */}
+				<h4 className="font-playfair italic text-lg font-light text-white mb-2">
 					{project_number < 10 ? `0${project_number + 1}` : project_number + 1}
 				</h4>
-				<h2 className="uppercase text-[2rem] lg:text-[5rem] leading-[1]">
+
+				{/* Project Title */}
+				<h2 className="uppercase text-2xl md:text-3xl font-bold text-white tracking-wide">
 					{project.project_title}
 				</h2>
-				<p className="uppercase text-[1rem]">{project.project_category}</p>
+
+				{/* Category */}
+				<p className="uppercase text-sm md:text-base text-gray-200 mt-1">
+					{project.project_category}
+				</p>
 			</div>
 		</div>
 	);
 };
+
 export default SingleProject;

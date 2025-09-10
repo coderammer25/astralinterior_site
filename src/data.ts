@@ -42,48 +42,77 @@ export const services = [
 			"We offer bespoke furniture design services, allowing you to integrate unique, custom-crafted pieces into your space. Whether you need a statement centerpiece or functional furnishings tailored to specific dimensions, we create solutions that blend aesthetics with practicality.",
 		img: transform_04,
 	},
-];
-
-export const projects = [
 	{
+		title: "Landscape",
+		description:
+			"We provide customized landscape design services, transforming outdoor spaces into visually stunning and functional environments. From elegant gardens to practical outdoor layouts, our designs balance beauty and usability to create inviting and unique landscapes.",
+		img: transform_04, // replace with a relevant landscape image if available
+	},
+];
+export interface Project {
+	id: number;
+	project_title: string;
+	project_category: string;
+	project_img: any;
+	project_description: string;
+}
+
+export const projects: Project[] = [
+	{
+		id: 1,
 		project_title: "Exterior",
 		project_category: "furniture selection",
 		project_img: project_01,
+		project_description: "A stunning exterior furniture selection project...",
 	},
 	{
+		id: 2,
 		project_title: "Interior",
 		project_category: "lighting design",
 		project_img: project_02,
+		project_description: "Interior lighting design that transforms the mood...",
 	},
 	{
+		id: 3,
 		project_title: "Office",
 		project_category: "project management",
 		project_img: project_03,
+		project_description: "Office project management with modern workflow...",
 	},
 	{
+		id: 4,
 		project_title: "Hospital",
 		project_category: "space planning",
 		project_img: project_04,
+		project_description: "Hospital space planning with functionality...",
 	},
 	{
+		id: 5,
 		project_title: "Showroom",
 		project_category: "furniture selection",
 		project_img: project_05,
+		project_description: "Showroom project showcasing elegant furniture...",
 	},
 	{
+		id: 6,
 		project_title: "Bar",
 		project_category: "lighting design",
 		project_img: project_06,
+		project_description: "Bar lighting design for a vibrant ambiance...",
 	},
 	{
-		project_title: "Resturent",
+		id: 7,
+		project_title: "Restaurant",
 		project_category: "project management",
 		project_img: project_07,
+		project_description: "Restaurant project management for fine dining...",
 	},
 	{
+		id: 8,
 		project_title: "Furniture",
 		project_category: "project management",
 		project_img: project_08,
+		project_description: "Furniture project with unique craftsmanship...",
 	},
 ];
 

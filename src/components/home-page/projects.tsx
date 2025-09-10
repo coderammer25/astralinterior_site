@@ -3,7 +3,7 @@
 import { projects } from "@/data";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { FaArrowRight } from "react-icons/fa";
+// import { FaArrowRight } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
 import { TextAnimate } from "../magicui/text-animate";
 import SingleProject from "./singleProject";
@@ -52,7 +52,7 @@ const Projects = () => {
 					animate={linkInView ? { opacity: 1, y: 0 } : {}}
 					transition={{ duration: 0.3, delay: 0.1 }}
 				>
-					<Link
+					{/* <Link
 						href="/projects"
 						className="flex items-center gap-2 uppercase text-[14px] text-[#2c2b28]"
 					>
@@ -60,7 +60,7 @@ const Projects = () => {
 						<span className="bg-[#135A58] p-1">
 							<FaArrowRight className="text-white" />
 						</span>
-					</Link>
+					</Link> */}
 				</motion.div>
 			</div>
 
@@ -72,15 +72,19 @@ const Projects = () => {
 					});
 
 					return (
-						<motion.div
-							ref={ref}
-							key={project.project_title}
-							initial={{ opacity: 0, y: 30 }}
-							animate={inView ? { opacity: 1, y: 0 } : {}}
-							transition={{ duration: 0.3, delay: idx * 0.1 }}
+						<Link
+							href={`/projects/${project.id}`}
+							key={project.id} // <-- key moved here (must be unique)
 						>
-							<SingleProject project={project} project_number={idx} />
-						</motion.div>
+							<motion.div
+								ref={ref}
+								initial={{ opacity: 0, y: 30 }}
+								animate={inView ? { opacity: 1, y: 0 } : {}}
+								transition={{ duration: 0.3, delay: idx * 0.1 }}
+							>
+								<SingleProject project={project} project_number={idx} />
+							</motion.div>
+						</Link>
 					);
 				})}
 			</div>
