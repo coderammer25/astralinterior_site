@@ -78,7 +78,7 @@ const ServicesComponent = () => {
 					<StickyImage
 						imageLink={serviceImage05.src}
 						title="Landscape"
-						style="h-[788px]"
+						style="h-[784px]"
 					/>
 				</div>
 			</div>

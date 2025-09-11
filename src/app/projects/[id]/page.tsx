@@ -10,11 +10,12 @@ export function generateStaticParams() {
 }
 
 interface ProjectPageProps {
-	params: { id: string };
+	params: Promise<{ id: string }>; // ✅ mark params as a Promise
 }
 
-const ProjectPage = ({ params }: ProjectPageProps) => {
-	const projectId = Number(params.id);
+const ProjectPage = async ({ params }: ProjectPageProps) => {
+	const { id } = await params; // ✅ await here
+	const projectId = Number(id);
 	const project = projects.find((p) => p.id === projectId);
 
 	if (!project) {
